@@ -10,3 +10,4 @@ __pycache__/
 
 # Streamlit secrets
 .streamlit/secrets.toml
+full_diagnostics_report_v2.txt
