@@ -1,0 +1,6 @@
+streamlit
+google-generativeai
+python-docx
+PyPDF2
+pyspellchecker
+python-dotenv
