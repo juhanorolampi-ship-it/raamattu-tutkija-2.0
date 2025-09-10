@@ -34,6 +34,7 @@ def laske_kustannus_arvio(token_counts):
     """Laskee karkean hinta-arvion perustuen token-määriin eri malleille."""
     hinnat = {"flash_input": 0.35, "flash_output": 1.05,
               "pro_input": 3.5, "pro_output": 10.5}
+    # Arvioidaan karkea jako mallien käytölle
     input_cost = (token_counts['input'] / 1_000_000) * \
         ((hinnat["flash_input"] + hinnat["pro_input"]) / 2)
     output_cost = (token_counts['output'] / 1_000_000) * \
@@ -93,7 +94,7 @@ def main():
     with st.sidebar:
         st.header("Asetukset")
         st.metric(
-            label="Tokenit (Sessio)",
+            label="Tokenit (Tämä istunto)",
             value=f"{st.session_state.token_count['total']:,}",
             help=laske_kustannus_arvio(st.session_state.token_count)
         )
@@ -105,9 +106,11 @@ def main():
 
     if st.session_state.step == "input":
         st.header("Vaihe 1: Syötä tutkimuksen aihe ja aineisto")
-        aihe_input = st.text_input(
+        # --- KORJATTU KOHTA: Turha muuttuja poistettu ---
+        st.text_input(
             "Tutkimuksen pääaihe:",
-            "Esim: Valheveljet, eksyttäjät ja nuori usko"
+            "Esim: Valheveljet, eksyttäjät ja nuori usko",
+            key="pääaihe_input"
         )
         aineisto_input = st.text_area(
             "Aihe ja sisällysluettelo:", "...", height=300)
@@ -125,12 +128,12 @@ def main():
 
             with st.spinner("Vaihe 1/4: Analysoidaan rakennetta... (Pro)"):
                 suunnitelma, usage = luo_hakusuunnitelma(
-                    aihe_input, yhdistetty_teksti)
+                    st.session_state.pääaihe_input, yhdistetty_teksti)
                 paivita_token_laskuri(usage)
 
                 if suunnitelma:
                     st.session_state.suunnitelma = suunnitelma
-                    st.session_state.pääaihe = aihe_input
+                    st.session_state.pääaihe = st.session_state.pääaihe_input
                     st.session_state.step = "review_plan"
                     st.rerun()
                 else:
@@ -216,7 +219,7 @@ def main():
                             otsikko_match = re.search(
                                 r"^{}\.?\s*(.*)".format(
                                     re.escape(osio.strip('.'))),
-                                st.session_state.suunnitelma["vahvistettu_sisallysluettelo"], re.MULTILINE)
+                                st.session_state.final_sisallysluettelo, re.MULTILINE)
                             teema = otsikko_match.group(
                                 1) if otsikko_match else ""
 
@@ -266,12 +269,12 @@ def main():
     elif st.session_state.step == "output":
         st.header("Vaihe 4: Valmis tutkimusraportti")
 
-        # --- KORJATTU KOHTA: Tarkistetaan, onko suunnitelma olemassa ---
-        if "suunnitelma" not in st.session_state:
+        if "suunnitelma" not in st.session_state or "pääaihe" not in st.session_state:
             st.warning("Istunnon data on vanhentunut. Aloita uusi tutkimus.")
-            st.button("Palaa alkuun", on_click=reset_session)
+            if st.button("Palaa alkuun"):
+                reset_session()
             st.stop()
-        
+
         if "jae_kartta" not in st.session_state:
             progress_bar = st.progress(0, "Valmistellaan...")
 
@@ -290,8 +293,9 @@ def main():
                 st.rerun()
 
         jae_kartta = st.session_state.jae_kartta
-        lopputulos = ""
-        # --- KORJATTU KOHTA: Käytetään luotettavaa muuttujaa ---
+
+        lopputulos = f"# {st.session_state.pääaihe}\n\n"
+
         sisallysluettelo = st.session_state.suunnitelma["vahvistettu_sisallysluettelo"]
         sorted_osiot = sorted(jae_kartta.items(
         ), key=lambda item: [int(p) for p in item[0].strip('.').split('.')])
@@ -319,8 +323,6 @@ def main():
                     "".join(f"- {j}\n" for j in v_rel) + "\n"
 
         st.markdown(lopputulos)
-        st.download_button(
-            "Lataa raportti", lopputulos, file_name="tutkimusraportti.txt")
 
         st.divider()
         st.subheader("Seuraavat askeleet: Jatko-ohjeet tekoälylle")
@@ -328,6 +330,13 @@ def main():
             "Voit muokata alla olevaa ohjetta jatkotoimia varten.",
             value=DEFAULT_INSTRUCTIONS, height=250, key="lisäohjeet_input"
         )
+
+        final_download_str = lopputulos
+        final_download_str += "\n---\n\n"
+        final_download_str += st.session_state.lisäohjeet_input
+
+        st.download_button(
+            "Lataa koko raportti", final_download_str, file_name="tutkimusraportti.txt")
 
 
 if __name__ == "__main__":
