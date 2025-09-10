@@ -7,7 +7,6 @@ import io
 import json
 import re
 import time
-# --- KORJATTU: Poistettu tarpeeton import ---
 
 import docx
 import google.generativeai as genai
@@ -153,16 +152,12 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
         "KÄYTTÄJÄN SYÖTE:\n---\n{syote_teksti}\n---\n\n"
         "OHJEET:\n"
         "1. **Tarkista ja viimeistele sisällysluettelo:** Lue käyttäjän syötteestä "
-        " löytyvä sisällysluettelo. Varmista, että se on looginen ja selkeä. "
-        " Palauta se sellaisenaan tai hienovaraisesti paranneltuna. "
-        " Käytä hierarkkista numerointia (esim. 1., 1.1, 2.).\n"
+        " löytyvä sisällysluettelo ja palauta se loogisena ja selkeänä.\n"
         "2. **Luo kohdennetut hakusanat:** Luo JOKAISELLE sisällysluettelon "
-        "osiolle (myös pääotsikoille) oma, räätälöity lista hakusanoja "
-        "(5-15 kpl). Ota AINA huomioon pääaiheen konteksti, kun luot sanoja "
-        "alaotsikoille.\n"
+        "osiolle oma, räätälöity lista hakusanoja (5-15 kpl).\n"
         "3. **Palauta vastaus TARKALLEEN seuraavassa JSON-muodossa:**\n\n"
         '{{\n'
-        '  "vahvistettu_sisallysluettelo": "1. Otsikko\\n1.1. Alaotsikko...",\n'
+        '  "vahvistettu_sisallysluettelo": "1. Otsikko...",\n'
         '  "hakukomennot": {{\n'
         '    "1.": ["avainsana1", "avainsana2"],\n'
         '    "1.1.": ["avainsana3", "avainsana4"]\n'
@@ -184,11 +179,48 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
         return None, usage
 
 
+def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
+    """
+    Laajentaa annetut avainsanat eri taivutusmuotoihin ja synonyymeihin
+    tekoälyn avulla.
+    """
+    prompt = (
+        "Olet suomen kielen asiantuntija. Tehtäväsi on laajentaa alla oleva lista "
+        "suomenkielisiä avainsanoja. Palauta JSON-objekti, jossa avaimena on "
+        "alkuperäinen sana ja arvona on lista, joka sisältää alkuperäisen sanan "
+        "sekä 1-3 siihen liittyvää sanaa tai taivutusmuotoa, jotka todennäköisesti "
+        "löytyvät Raamatusta (KR33/38).\n\n"
+        "Esimerkki:\n"
+        '{\n'
+        '  "opetuslapseuttaminen": ["opetuslapseuttaminen", "opetuslapsi", "opettaa"],\n'
+        '  "hengellinen kypsyys": ["hengellinen kypsyys", "kypsyys", "kasvu"]\n'
+        '}\n\n'
+        "AVAINSANAT:\n---\n"
+        f"{json.dumps(avainsanat, ensure_ascii=False)}\n"
+        "---\n\n"
+        "VASTAUSOHJE: Palauta VAIN JSON-objekti."
+    )
+    vastaus_str, usage = tee_api_kutsu(
+        prompt, "gemini-1.5-flash", is_json=True, temperature=0.1
+    )
+    paivita_token_laskuri_callback(usage)
+
+    if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
+        print(f"API-virhe avainsanojen rikastamisessa: {vastaus_str}")
+        return {sana: [sana] for sana in avainsanat}  # Palauta alkuperäiset virheessä
+
+    try:
+        return json.loads(vastaus_str)
+    except json.JSONDecodeError:
+        print("VIRHE: Avainsanojen rikastamisen JSON-jäsennys epäonnistui.")
+        return {sana: [sana] for sana in avainsanat}
+
+
 def etsi_ja_laajenna(book_data_map, book_name_map, sana, ennen, jälkeen):
     """Etsii sanaa koko Raamatusta ja laajentaa osumia mekaanisesti."""
     loydetyt_jakeet = set()
     try:
-        pattern = re.compile(r"\b" + re.escape(sana) + r"\b", re.IGNORECASE)
+        pattern = re.compile(re.escape(sana), re.IGNORECASE)
     except re.error:
         return set()
 
@@ -256,7 +288,7 @@ def pisteyta_ja_jarjestele(
 
     for osio_nro, jakeet in osio_kohtaiset_jakeet.items():
         current_step += 1
-        osion_teema = osiot.get(osio_nro, "")
+        osion_teema = osiot.get(osio_nro.strip('.'), "")
         if not jakeet or not osion_teema:
             final_jae_kartta[osio_nro] = {
                 "relevantimmat": [], "vahemman_relevantit": []}
@@ -278,11 +310,11 @@ def pisteyta_ja_jarjestele(
             "---\n\n"
             "VASTAUSOHJE: Palauta VAIN JSON-objekti, jossa avaimina ovat "
             "jaeviitteet ja arvoina kokonaisluvut 1-10. Esimerkki:\n"
-            '{\n  "1. Mooseksen kirja 1:1": 8,\n  "Roomalaiskirje 3:23": 10\n}'
+            '{\n  "1. Mooseksen kirje 1:1": 8,\n  "Roomalaiskirje 3:23": 10\n}'
         )
 
         vastaus_str, usage = tee_api_kutsu(
-            prompt, "gemini-1.5-pro", is_json=True, temperature=0.1)
+            prompt, "gemini-1.5-flash", is_json=True, temperature=0.1)
         paivita_token_laskuri_callback(usage)
 
         pisteet = {}
@@ -292,10 +324,14 @@ def pisteyta_ja_jarjestele(
             except json.JSONDecodeError:
                 print(f"JSON-jäsennysvirhe osiolle {osio_nro}.")
 
-        relevantimmat = [j for j in jakeet
-                         if pisteet.get(erota_jaeviite(j), 0) >= 7]
-        vahemman_relevantit = [j for j in jakeet
-                               if 4 <= pisteet.get(erota_jaeviite(j), 0) <= 6]
+        relevantimmat = [
+            j for j in jakeet
+            if int(pisteet.get(erota_jaeviite(j), 0)) >= 7
+        ]
+        vahemman_relevantit = [
+            j for j in jakeet
+            if 4 <= int(pisteet.get(erota_jaeviite(j), 0)) <= 6
+        ]
 
         final_jae_kartta[osio_nro] = {
             "relevantimmat": relevantimmat,

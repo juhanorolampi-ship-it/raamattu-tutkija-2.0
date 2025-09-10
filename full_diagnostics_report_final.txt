@@ -1,0 +1,435 @@
+
+================================================================================
+--- RAAMATTU-TUTKIJA 2.0 - LOPULLINEN DIAGNOSTIIKKA-AJO ---
+================================================================================
+
+[ALUSTUS] Ladataan resursseja...
+Syötetiedosto 'syote.txt' ladattu onnistuneesti.
+
+================================================================================
+--- VAIHE 1: ÄLYKÄS HAKUSUUNNITELMAN LUONTI (PRO) ---
+================================================================================
+Aikaa kului: 14.12 sekuntia.
+{
+  "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1 Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2 Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3 Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1 Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2 Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1 Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2 Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3 Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4 Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
+  "hakukomennot": {
+    "1.": [
+      "kutsu",
+      "viisaus",
+      "erottamiskyky",
+      "lamppu",
+      "susi",
+      "suojelu"
+    ],
+    "2.": [
+      "varoitus",
+      "eksyminen",
+      "harhaoppi"
+    ],
+    "2.1": [
+      "tunnistusmerkki",
+      "motiivi",
+      "ahneus",
+      "valta",
+      "metodi",
+      "mielistely",
+      "sana",
+      "hajaannus",
+      "hedelmä",
+      "moraali",
+      "eriseura"
+    ],
+    "2.2": [
+      "esimerkki",
+      "eksyttää",
+      "Vanha testamentti",
+      "Uusi testamentti"
+    ],
+    "2.3": [
+      "toimintaohje",
+      "käsky",
+      "ohje",
+      "vääristää",
+      "evankeliumi"
+    ],
+    "3.": [
+      "tasapaino",
+      "asenne",
+      "erottelu",
+      "tuomio"
+    ],
+    "3.1": [
+      "mittapuu",
+      "veli",
+      "eksynyt",
+      "lammasta",
+      "kärsivällisyys",
+      "ojentaa"
+    ],
+    "3.2": [
+      "kasvu",
+      "armo",
+      "kypsyys",
+      "kapina"
+    ],
+    "4.": [
+      "sovellus",
+      "nykyaika",
+      "nuori",
+      "herätys",
+      "haaste"
+    ],
+    "4.1": [
+      "kiitollisuus",
+      "hedelmä",
+      "ilo",
+      "pelastua"
+    ],
+    "4.2": [
+      "rakkaus",
+      "asenne",
+      "nuori",
+      "uskova",
+      "vanhempi",
+      "usko",
+      "isä",
+      "äiti"
+    ],
+    "4.3": [
+      "opetus",
+      "ratkaisu",
+      "oppi",
+      "Raamattu"
+    ],
+    "4.4": [
+      "viisaus",
+      "liike",
+      "arvioida",
+      "hedelmä",
+      "työ",
+      "vaara",
+      "koetella",
+      "hyvä"
+    ],
+    "5.": [
+      "totuus",
+      "rakkaus",
+      "valppaus",
+      "armo",
+      "kärsivällisyys",
+      "suojella",
+      "hoivata"
+    ]
+  }
+}
+
+================================================================================
+--- VAIHE 2: JAKEIDEN KERÄYS (OPTIMOITU -1/+1, VÄLIMUISTI) ---
+================================================================================
+
+Löytyi 71 uniikkia avainsanaa. Suoritetaan haut...
+Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
+
+================================================================================
+--- HAKUSANOJEN TEHOKKUUSRAPORTTI (RAAKAOSUMAT) ---
+================================================================================
+Tehokkaat hakusanat:
+  - 'Raamattu': 39 osumaa
+  - 'ahneus': 6 osumaa
+  - 'arvioida': 6 osumaa
+  - 'asenne': 6 osumaa
+  - 'eksynyt': 14 osumaa
+  - 'eksyttää': 15 osumaa
+  - 'eriseura': 5 osumaa
+  - 'esimerkki': 9 osumaa
+  - 'haaste': 3 osumaa
+  - 'hajaannus': 3 osumaa
+  - 'harhaoppi': 3 osumaa
+  - 'kapina': 53 osumaa
+  - 'kasvu': 62 osumaa
+  - 'koetella': 30 osumaa
+  - 'kärsivällisyys': 12 osumaa
+  - 'lammasta': 67 osumaa
+  - 'lamppu': 159 osumaa
+  - 'nuori': 233 osumaa
+  - 'ohje': 39 osumaa
+  - 'ojentaa': 60 osumaa
+  - 'pelastua': 35 osumaa
+  - 'rakkaus': 116 osumaa
+  - 'ratkaisu': 8 osumaa
+  - 'suojelu': 3 osumaa
+  - 'susi': 41 osumaa
+  - 'totuus': 78 osumaa
+  - 'uskova': 93 osumaa
+  - 'vaara': 45 osumaa
+  - 'vanhempi': 94 osumaa
+  - 'varoitus': 9 osumaa
+  - 'viisaus': 141 osumaa
+  - 'vääristää': 12 osumaa
+
+Tehottomat hakusanat (0 osumaa, suodatettu pois):
+  - Uusi testamentti, Vanha testamentti, eksyminen, erottamiskyky, erottelu, herätys, hoivata, kiitollisuus, kypsyys, liike, metodi, mielistely, mittapuu, moraali, motiivi, nykyaika, sovellus, suojella, tasapaino, toimintaohje, tunnistusmerkki, valppaus
+
+Liian yleiset hakusanat (yli 250 osumaa, suodatettu pois):
+  - 'armo' (1152 osumaa), 'evankeliumi' (285 osumaa), 'hedelmä' (624 osumaa), 'hyvä' (1821 osumaa), 'ilo' (1523 osumaa), 'isä' (3967 osumaa), 'kutsu' (1355 osumaa), 'käsky' (1511 osumaa), 'opetus' (708 osumaa), 'oppi' (567 osumaa), 'sana' (2856 osumaa), 'tuomio' (516 osumaa), 'työ' (835 osumaa), 'usko' (1995 osumaa), 'valta' (2165 osumaa), 'veli' (2871 osumaa), 'äiti' (631 osumaa)
+
+Käsitellään osiot ja suodatetaan jakeet välimuistista...
+
+Jakeiden keräys valmis. Aikaa kului: 143.96 sekuntia.
+Kerättyjä uniikkeja jakeita yhteensä: 152 kpl.
+
+================================================================================
+--- VAIHE 3: JAKEIDEN JÄRJESTELY JA PISTEYTYS (FLASH) ---
+================================================================================
+Järjestely valmis. Aikaa kului: 35.50 sekuntia.
+
+================================================================================
+--- LOPULLISET TULOKSET ---
+================================================================================
+KOKONAISKESTO: 3.2 minuuttia
+Kerätyt jakeet (uniikit): 152 kpl
+Järjestellyt jakeet (uniikit): 142 kpl
+Sijoituksia osioihin yhteensä: 186 kpl
+
+TOKEN-KULUTUS:
+  - Syöte: 118,289 tokenia
+  - Tuotos: 17,404 tokenia
+  - Yhteensä: 135,693 tokenia
+  - Kustannusarvio: ~$0.32821
+
+================================================================================
+--- YKSITYISKOHTAINEN JAEJAOTTELU ---
+================================================================================
+
+--- Osio 1. (Yhteensä: 23) ---
+  --- Relevantimmat (18 jaetta) ---
+    - Sananlaskut 6:23 - Sillä käsky on lamppu, opetus on valo, ja kurittava nuhde on elämän tie,
+    - Sananlaskut 6:24 - että varjeltuisit pahasta naisesta, vieraan vaimon liukkaasta kielestä.
+    - Sananlaskut 13:9 - Vanhurskasten valo loistaa iloisesti, mutta jumalattomien lamppu sammuu.
+    - Sananlaskut 24:20 - Sillä ei ole pahalla tulevaisuutta; jumalattomien lamppu sammuu.
+    - Matteus 5:14 - Te olette maailman valkeus. Ei voi ylhäällä vuorella oleva kaupunki olla kätkössä;
+    - Matteus 5:15 - eikä lamppua sytytetä ja panna vakan alle, vaan lampunjalkaan, ja niin se loistaa kaikille huoneessa oleville.
+    - Matteus 5:16 - Niin loistakoon teidän valonne ihmisten edessä, että he näkisivät teidän hyvät tekonne ja ylistäisivät teidän Isäänne, joka on taivaissa.
+    - Matteus 6:22 - Silmä on ruumiin lamppu. Jos siis silmäsi on terve, niin koko sinun ruumiisi on valaistu.
+    - Matteus 6:23 - Mutta jos silmäsi on viallinen, niin koko ruumiisi on pimeä. Jos siis se valo, joka sinussa on, on pimeyttä, kuinka suuri onkaan pimeys!
+    - Matteus 7:15 - Kavahtakaa vääriä profeettoja, jotka tulevat teidän luoksenne lammastenvaatteissa, mutta sisältä ovat raatelevaisia susia.
+    - Matteus 10:16 - Katso, minä lähetän teidät niinkuin lampaat susien keskelle; olkaa siis älykkäät kuin käärmeet ja viattomat kuin kyyhkyset.
+    - Luukas 10:3 - Menkää; katso, minä lähetän teidät niinkuin lampaat susien keskelle.
+    - Luukas 11:33 - Ei kukaan, joka sytyttää lampun, pane sitä kätköön eikä vakan alle, vaan panee sen lampunjalkaan, että sisälletulijat näkisivät valon.
+    - Luukas 11:34 - Sinun silmäsi on ruumiin lamppu. Kun silmäsi on terve, on koko sinun ruumiisi valaistu, mutta kun se on viallinen, on myös sinun ruumiisi pimeä.
+    - Luukas 11:35 - Katso siis, ettei valo, joka sinussa on, ole pimeyttä.
+    - Johannes 10:13 - Hän pakenee, sillä hän on palkattu eikä välitä lampaista.
+    - Apostolien teot 20:29 - Minä tiedän, että minun lähtöni jälkeen teidän keskuuteenne tulee julmia susia, jotka eivät laumaa säästä,
+    - Apostolien teot 20:30 - ja teidän omasta joukostanne nousee miehiä, jotka väärää puhetta puhuvat, vetääkseen opetuslapset mukaansa.
+  --- Vähemmän relevantit (5 jaetta) ---
+    - Psalmit 119:104 - Sinun asetuksistasi minä saan ymmärrystä; sentähden minä vihaan kaikkia valheen teitä.
+    - Psalmit 119:105 - Sinun sanasi on minun jalkaini lamppu ja valkeus minun tielläni.
+    - Sananlaskut 20:20 - Joka isäänsä ja äitiänsä kiroaa, sen lamppu sammuu pilkkopimeään.
+    - Johannes 5:35 - Hän oli palava ja loistava lamppu, mutta te tahdoitte ainoastaan hetken iloitella hänen valossansa.
+    - Johannes 10:12 - Mutta palkkalainen, joka ei ole paimen ja jonka omia lampaat eivät ole, kun hän näkee suden tulevan, niin hän jättää lampaat ja pakenee; ja susi ryöstää ja hajottaa ne.
+
+--- Osio 2. (Yhteensä: 2) ---
+  --- Relevantimmat (2 jaetta) ---
+    - Tiituskirje 3:10 - Harhaoppista ihmistä karta, varoitettuasi häntä kerran tai kahdesti,
+    - Tiituskirje 3:11 - sillä sinä tiedät, että semmoinen ihminen on joutunut harhaan ja tekee syntiä, ja hän on itse itsensä tuominnut.
+
+--- Osio 2.1 (Yhteensä: 6) ---
+  --- Relevantimmat (6 jaetta) ---
+    - Sananlaskut 18:1 - Eriseurainen noudattaa omia pyyteitään; kaikin neuvoin hän riitaa haastaa.
+    - Galatalaiskirje 5:19 - Mutta lihan teot ovat ilmeiset, ja ne ovat: haureus, saastaisuus, irstaus,
+    - Galatalaiskirje 5:20 - epäjumalanpalvelus, noituus, vihamielisyys, riita, kateellisuus, vihat, juonet, eriseurat, lahkot,
+    - Galatalaiskirje 5:21 - kateus, juomingit, mässäykset ja muut senkaltaiset, joista teille edeltäpäin sanon, niinkuin jo ennenkin olen sanonut, että ne, jotka semmoista harjoittavat, eivät peri Jumalan valtakuntaa.
+    - Juudaksen kirje 1:18 - sanoen teille: "Viimeisenä aikana tulee pilkkaajia, jotka vaeltavat jumalattomuutensa himojen mukaan".
+    - Juudaksen kirje 1:19 - Nämä juuri saavat aikaan hajaannusta, he ovat sielullisia, henkeä heillä ei ole.
+
+--- Osio 2.2 (Yhteensä: 6) ---
+  --- Relevantimmat (6 jaetta) ---
+    - Sananlaskut 12:26 - Vanhurskas opastaa lähimmäistänsä, mutta jumalattomat eksyttää heidän oma tiensä.
+    - Sananlaskut 28:10 - Joka eksyttää oikeamielisiä pahalle tielle, se lankeaa omaan kuoppaansa; mutta nuhteettomat perivät onnen.
+    - Markus 13:22 - Sillä vääriä kristuksia ja vääriä profeettoja nousee, ja he tekevät tunnustekoja ja ihmeitä, eksyttääkseen, jos mahdollista, valitut.
+    - 1. Johanneksen kirje 3:7 - Lapsukaiset, älköön kukaan saako teitä eksyttää. Se, joka vanhurskauden tekee, on vanhurskas, niinkuin hän on vanhurskas.
+    - 1. Johanneksen kirje 3:8 - Joka syntiä tekee, se on perkeleestä, sillä perkele on tehnyt syntiä alusta asti. Sitä varten Jumalan Poika ilmestyi, että hän tekisi tyhjäksi perkeleen teot.
+    - Ilmestyskirja 2:20 - Mutta se minulla on sinua vastaan, että sinä suvaitset tuota naista, Iisebeliä, joka sanoo itseään profeetaksi ja opettaa ja eksyttää minun palvelijoitani harjoittamaan haureutta ja syömään epäjumalille uhrattua.
+
+--- Osio 2.3 (Yhteensä: 3) ---
+  --- Relevantimmat (1 jaetta) ---
+    - Sananlaskut 17:23 - Jumalaton ottaa lahjuksen vastaan toisen povelta vääristääksensä oikeuden tiet.
+  --- Vähemmän relevantit (2 jaetta) ---
+    - 2. Mooseksen kirja 23:8 - Äläkä ota lahjusta, sillä lahjus sokaisee näkevät ja vääristää syyttömien asiat.
+    - 5. Mooseksen kirja 27:18 - Kirottu olkoon se, joka vie sokean harhaan tieltä. Ja kaikki kansa sanokoon: 'Amen'.
+
+--- Osio 3. (Yhteensä: 0) ---
+
+--- Osio 3.1 (Yhteensä: 9) ---
+  --- Relevantimmat (6 jaetta) ---
+    - Matteus 18:12 - Mitä arvelette? Jos jollakin ihmisellä on sata lammasta ja yksi niistä eksyy, eikö hän jätä niitä yhdeksääkymmentä yhdeksää vuorille ja mene etsimään eksynyttä?
+    - Matteus 18:13 - Ja jos hän sen löytää, totisesti minä sanon teille: hän iloitsee enemmän siitä kuin niistä yhdeksästäkymmenestä yhdeksästä, jotka eivät olleet eksyneet.
+    - 2. Timoteuskirje 2:24 - Mutta Herran palvelijan ei sovi riidellä, vaan hänen tulee olla lempeä kaikkia kohtaan, kyetä opettamaan ja pahaa kärsimään;
+    - 2. Timoteuskirje 2:25 - hänen tulee sävyisästi ojentaa vastustelijoita; ehkäpä Jumala antaa heille mielenmuutoksen, niin että tulevat tuntemaan totuuden
+    - 2. Timoteuskirje 2:26 - ja selviävät perkeleen pauloista, joka on heidät vanginnut tahtoansa tekemään.
+    - Ilmestyskirja 13:11 - Ja minä näin toisen pedon nousevan maasta, ja sillä oli kaksi sarvea niinkuin karitsan sarvet, ja se puhui niinkuin lohikäärme.
+  --- Vähemmän relevantit (3 jaetta) ---
+    - Job 12:16 - Hänen on väkevyys ja ymmärrys; hänen on niin eksynyt kuin eksyttäjäkin.
+    - Sananlaskut 9:8 - Älä nuhtele pilkkaajaa, ettei hän sinua vihaisi; nuhtele viisasta, niin hän sinua rakastaa.
+    - Jaakobin kirje 1:5 - Mutta jos joltakin teistä puuttuu viisautta, anokoon sitä Jumalalta, joka antaa kaikille alttiisti ja soimaamatta, niin se hänelle annetaan.
+
+--- Osio 3.2 (Yhteensä: 10) ---
+  --- Relevantimmat (9 jaetta) ---
+    - 1. Korinttilaiskirje 3:5 - Mikä Apollos sitten on? Ja mikä Paavali on? Palvelijoita, joiden kautta te olette tulleet uskoviksi, palvelijoita sen kykynsä mukaan, minkä Herra on heille kullekin antanut.
+    - 1. Korinttilaiskirje 3:6 - Minä istutin, Apollos kasteli, mutta Jumala on antanut kasvun.
+    - 1. Korinttilaiskirje 3:7 - Niin ei siis istuttaja ole mitään, eikä kastelijakaan, vaan Jumala, joka kasvun antaa.
+    - 1. Korinttilaiskirje 3:8 - Mutta istuttaja ja kastelija ovat yhtä; kuitenkin on kumpikin saava oman palkkansa oman työnsä mukaan.
+    - Kolossalaiskirje 2:18 - Älköön teiltä riistäkö voittopalkintoanne kukaan, joka on mieltynyt nöyryyteen ja enkelien palvelemiseen ja pöyhkeilee näyistään ja on lihallisen mielensä turhaan paisuttama
+    - Kolossalaiskirje 2:19 - eikä pitäydy häneen, joka on pää ja josta koko ruumis, nivelten ja jänteiden avulla koossa pysyen, kasvaa Jumalan antamaa kasvua.
+    - Heprealaiskirje 6:6 - ja sitten ovat luopuneet — taas uudistaa parannukseen, he kun jälleen itsellensä ristiinnaulitsevat Jumalan Pojan ja häntä julki häpäisevät.
+    - Heprealaiskirje 6:7 - Sillä maa, joka särpii sisäänsä sen päälle usein tulevan sateen ja kantaa kasvun hyödyksi niille, joita varten sitä viljelläänkin, saa siunauksen Jumalalta;
+    - Heprealaiskirje 6:8 - mutta se, joka tuottaa orjantappuroita ja ohdakkeita, on kelvoton ja lähellä kirousta, ja sen loppu on, että se poltetaan.
+  --- Vähemmän relevantit (1 jaetta) ---
+    - Kolossalaiskirje 2:20 - Jos te olette Kristuksen kanssa kuolleet pois maailman alkeisvoimista, miksi te, ikäänkuin eläisitte maailmassa, sallitte määrätä itsellenne säädöksiä:
+
+--- Osio 4. (Yhteensä: 50) ---
+  --- Relevantimmat (20 jaetta) ---
+    - Tuomarien kirja 9:5 - Sitten hän lähti isänsä taloon Ofraan ja surmasi veljensä, Jerubbaalin pojat, seitsemänkymmentä miestä, saman kiven päällä; mutta Jootam, Jerubbaalin nuorin poika, jäi henkiin, sillä hän oli piiloutunut.
+    - Tuomarien kirja 17:7 - Juudan Beetlehemissä oli nuori mies, Juudan sukukuntaa; hän oli leeviläinen ja asui siellä muukalaisena.
+    - Psalmit 37:25 - Olen ollut nuori ja olen vanhaksi tullut, mutta en ole nähnyt vanhurskasta hyljättynä enkä hänen lastensa kerjäävän leipää.
+    - Psalmit 68:28 - Tuolla on Benjamin, nuorin, heitä johtaen, Juudan ruhtinaat joukkoinensa, Sebulonin ruhtinaat, Naftalin ruhtinaat.
+    - Sananlaskut 1:4 - mielevyyden antamiseksi yksinkertaisille, tiedon ja taidollisuuden nuorille.
+    - Sananlaskut 23:32 - Lopulta se puree kuin käärme ja pistää kuin myrkkylisko.
+    - Sananlaskut 23:33 - Silmäsi outoja näkevät, ja sydämesi haastelee sekavia.
+    - Sananlaskut 28:1 - Jumalattomat pakenevat, vaikka ei kenkään aja takaa, mutta vanhurskaat ovat turvassa kuin nuori jalopeura.
+    - Jesaja 11:6 - Silloin susi asuu karitsan kanssa, ja pantteri makaa vohlan vieressä; vasikka ja nuori leijona ja syöttöhärkä ovat yhdessä, ja pieni poikanen niitä paimentaa.
+    - Jesaja 62:5 - Sillä niinkuin nuori mies ottaa neitsyen avioksi, niin sinun lapsesi ottavat sinut omaksensa; ja niinkuin ylkä iloitsee morsiamesta, niin sinun Jumalasi iloitsee sinusta.
+    - Jeremia 1:6 - Mutta minä sanoin: "Voi Herra, Herra! Katso, en minä kykene puhumaan, sillä minä olen nuori."
+    - Jeremia 2:24 - sinä villiaasi, erämaahan tottunut, joka himossasi ilmaa ahmit! Kuka hillitsee sen kiiman? Joka sitä etsii, sen ei tarvitse väsyttää itseään; sen löytää, kun tulee sen kuukausi.
+    - Hoosea 5:14 - Sillä minä olen Efraimille kuin leijona, Juudan heimolle kuin nuori jalopeura: minä, minä raatelen, menen ja kannan pois, eikä pelastajaa ole.
+    - Hoosea 11:1 - Kun Israel oli nuori, rakastin minä sitä, ja Egyptistä minä kutsuin poikani.
+    - Aamos 3:4 - Ärjyykö leijona metsässä, ellei sillä ole raadeltavaa? Kiljuuko nuori leijona luolastansa, ellei se ole saalista saanut?
+    - Matteus 9:17 - Eikä nuorta viiniä lasketa vanhoihin nahkaleileihin; muutoin leilit pakahtuvat, ja viini juoksee maahan, ja leilit turmeltuvat; vaan nuori viini lasketaan uusiin leileihin, ja niin molemmat säilyvät."
+    - Markus 5:4 - sillä hän oli monta kertaa ollut sidottuna jalkanuoriin ja kahleisiin, mutta oli särkenyt kahleet ja katkonut jalkanuorat, eikä kukaan kyennyt häntä hillitsemään.
+    - Luukas 22:26 - Mutta älkää te niin; vaan joka teidän keskuudessanne on suurin, se olkoon niinkuin nuorin, ja johtaja niinkuin se, joka palvelee.
+    - Johannes 21:18 - Totisesti, totisesti minä sanon sinulle: kun olit nuori, niin sinä vyötit itsesi ja kuljit, minne tahdoit; mutta kun vanhenet, niin sinä ojennat kätesi, ja sinut vyöttää toinen ja vie sinut, minne et tahdo."
+    - Tiituskirje 2:4 - voidakseen ohjata nuoria vaimoja rakastamaan miehiänsä ja lapsiansa,
+  --- Vähemmän relevantit (30 jaetta) ---
+    - Tuomarien kirja 8:20 - Ja hän sanoi Jeterille, esikoiselleen: "Nouse ja surmaa heidät". Mutta nuorukainen ei paljastanut miekkaansa, sillä hän pelkäsi, koska oli vielä nuori.
+    - Tuomarien kirja 14:6 - Silloin Herran henki tuli häneen, niin että hän repäisi sen, niinkuin olisi reväissyt vohlan, sulin käsin. Eikä hän ilmoittanut isälleen eikä äidilleen, mitä oli tehnyt.
+    - Ruut 2:5 - Sitten Booas sanoi palvelijallensa, joka oli leikkuuväen päällysmiehenä: "Kenen tuo nuori nainen on?"
+    - Ruut 2:6 - Palvelija, joka oli leikkuuväen päällysmiehenä, vastasi ja sanoi: "Se on se nuori mooabitar, joka tuli Noomin mukana Mooabin maasta.
+    - 1. Samuelin kirja 16:11 - Ja Samuel kysyi Iisailta: "Siinäkö olivat kaikki nuorukaiset?" Hän vastasi: "Vielä on nuorin jäljellä, mutta hän on kaitsemassa lampaita". Niin Samuel sanoi Iisaille: "Lähetä noutamaan hänet, sillä me emme istu ruualle, ennenkuin hän tulee tänne".
+    - 1. Samuelin kirja 17:14 - Daavid oli nuorin. Ja nuo kolme vanhinta olivat seuranneet Saulia.
+    - 1. Samuelin kirja 17:55 - Kun Saul näki Daavidin menevän filistealaista vastaan, kysyi hän sotapäälliköltään Abnerilta: "Kenen poika tuo nuorukainen on, Abner?" Abner vastasi: "Niin totta kuin sinä, kuningas, elät, minä en sitä tiedä".
+    - 1. Samuelin kirja 25:5 - lähetti hän sinne kymmenen nuorta miestä, ja Daavid sanoi nuorille miehille: "Menkää Karmeliin, ja kun tulette Naabalin luo, niin tervehtikää häntä minun nimessäni
+    - 1. Samuelin kirja 25:14 - Mutta eräs nuori mies toi sanan Abigailille, Naabalin vaimolle, ja sanoi: "Katso, Daavid on lähettänyt sanansaattajia erämaasta tervehtimään meidän isäntäämme, mutta hän vain haukkui heitä.
+    - 2. Samuelin kirja 1:5 - Daavid kysyi nuorelta mieheltä, joka kertoi tämän hänelle: "Mistä tiedät, että Saul ja hänen poikansa Joonatan ovat kuolleet?"
+    - 2. Samuelin kirja 1:6 - Nuori mies, joka oli kertonut hänelle tämän, vastasi: "Minä tulin sattumalta Gilboan vuorelle, ja katso, Saul nojasi keihääseensä, ja sotavaunut ja ratsumiehet ahdistivat häntä.
+    - 2. Samuelin kirja 2:14 - Ja Abner sanoi Jooabille: "Nouskoon nuoria miehiä pitämään taistelukisaa meidän edessämme". Jooab sanoi: "Nouskoon vain".
+    - 2. Samuelin kirja 2:21 - Ja Abner sanoi hänelle: "Käänny oikealle tai vasemmalle ja ota joku noista nuorista miehistä kiinni ja riistä siltä sota-asu". Mutta Asael ei tahtonut luopua hänestä.
+    - 2. Aikakirja 13:7 - Ja hänen luoksensa kokoontui tyhjäntoimittajia, kelvottomia miehiä, ja he pääsivät voitolle Rehabeamista, Salomon pojasta, sillä Rehabeam oli nuori ja arka eikä voinut heitä vastustaa.
+    - 2. Aikakirja 21:16 - Niin Herra herätti Jooramia vastaan filistealaisten hengen ja niiden arabialaisten hengen, jotka asuivat etiopialaisten naapureina,
+    - 2. Aikakirja 21:17 - ja he menivät Juudaa vastaan, valloittivat sen ja veivät saaliinaan kaiken tavaran, mitä oli kuninkaan linnassa, niin myöskin hänen poikansa ja vaimonsa, niin ettei hänelle jäänyt muuta poikaa kuin Jooahas, hänen nuorin poikansa.
+    - Job 32:6 - Niin buusilainen Elihu, Baarakelin poika, lausui ja sanoi: "Nuori minä olen iältäni, ja te olette vanhat; sentähden minä arkailin ja pelkäsin ilmoittaa tietoani teille.
+    - Psalmit 17:12 - Hän on niinkuin saalista himoitseva leijona, niinkuin nuori leijona, joka piilossa väijyy.
+    - Psalmit 35:17 - Herra, kuinka kauan sinä tätä katselet? Päästä minun sieluni turmiosta, jota he hankitsevat, minun ainokaiseni nuorista leijonista.
+    - Korkea veisu 2:17 - Kunnes päivä viilenee ja varjot pakenevat, kiertele, rakkaani, kuin gaselli, kuin nuori peura tuoksuisilla vuorilla.
+    - Korkea veisu 8:14 - "Riennä, rakkaani, kuin gaselli, kuin nuori peura balsamivuorille."
+    - Jesaja 9:16 - Sentähden Herra ei iloitse sen nuorista miehistä eikä armahda sen orpoja ja leskiä, sillä he ovat kaikki jumalattomia ja pahantekijöitä, ja jokainen suu puhuu hulluutta. Kaikesta tästä ei hänen vihansa ole asettunut, ja vielä on hänen kätensä ojennettu.
+    - Jesaja 31:4 - Sillä näin on Herra minulle sanonut: Niinkuin leijona, nuori leijona, murisee saaliinsa ääressä, kun sitä vastaan hälytetään paimenten parvi, eikä peljästy heidän huutoansa, ei huoli heidän hälinästään, niin Herra Sebaot on astuva alas sotimaan Siionin vuorella ja sen kukkulalla.
+    - Jeremia 25:38 - Hän on lähtenyt niinkuin nuori leijona pensaikostaan: heidän maansa on tullut autioksi hävittäjän vihan hehkusta, Herran vihan hehkusta."
+    - Hesekiel 19:3 - ja sai ylenemään yhden poikasistaan: siitä tuli nuori jalopeura, se oppi saalista raatelemaan, se söi ihmisiä.
+    - Hesekiel 19:5 - Kun emo näki, että viipyi, että hukkui hänen toivonsa, otti se toisen poikasistaan, sai sen nuoreksi jalopeuraksi.
+    - Hesekiel 19:6 - Se käyskenteli leijonain keskellä, siitä tuli nuori jalopeura, se oppi saalista raatelemaan, se söi ihmisiä.
+    - Hesekiel 32:2 - "Ihmislapsi, viritä itkuvirsi faraosta, Egyptin kuninkaasta, ja sano hänelle: Nuori leijona kansojen seassa, sinä olet hukassa! Sinä olit kuin krokodiili virroissa: sinä kuohutit virtojasi, sotkit vettä jaloillasi ja hämmensit sen virtoja.
+    - Miika 5:7 - Ja ne, jotka ovat jäljellä Jaakobista, pakanain seassa, monien kansain keskellä, ovat niinkuin leijona metsäneläinten seassa, niinkuin nuori jalopeura lammaslaumain keskellä: jos se hyökkää, tallaa maahan ja raatelee, ei pelastajaa ole.
+    - Luukas 5:37 - Eikä kukaan laske nuorta viiniä vanhoihin nahkaleileihin; muutoin nuori viini pakahuttaa leilit, ja viini juoksee maahan, ja leilit turmeltuvat.
+
+--- Osio 4.2 (Yhteensä: 55) ---
+  --- Relevantimmat (24 jaetta) ---
+    - Ruut 2:5 - Sitten Booas sanoi palvelijallensa, joka oli leikkuuväen päällysmiehenä: "Kenen tuo nuori nainen on?"
+    - Ruut 2:6 - Palvelija, joka oli leikkuuväen päällysmiehenä, vastasi ja sanoi: "Se on se nuori mooabitar, joka tuli Noomin mukana Mooabin maasta.
+    - Psalmit 37:25 - Olen ollut nuori ja olen vanhaksi tullut, mutta en ole nähnyt vanhurskasta hyljättynä enkä hänen lastensa kerjäävän leipää.
+    - Sananlaskut 1:4 - mielevyyden antamiseksi yksinkertaisille, tiedon ja taidollisuuden nuorille.
+    - Sananlaskut 28:1 - Jumalattomat pakenevat, vaikka ei kenkään aja takaa, mutta vanhurskaat ovat turvassa kuin nuori jalopeura.
+    - Jesaja 11:6 - Silloin susi asuu karitsan kanssa, ja pantteri makaa vohlan vieressä; vasikka ja nuori leijona ja syöttöhärkä ovat yhdessä, ja pieni poikanen niitä paimentaa.
+    - Jesaja 62:5 - Sillä niinkuin nuori mies ottaa neitsyen avioksi, niin sinun lapsesi ottavat sinut omaksensa; ja niinkuin ylkä iloitsee morsiamesta, niin sinun Jumalasi iloitsee sinusta.
+    - Jeremia 1:6 - Mutta minä sanoin: "Voi Herra, Herra! Katso, en minä kykene puhumaan, sillä minä olen nuori."
+    - Hoosea 11:1 - Kun Israel oli nuori, rakastin minä sitä, ja Egyptistä minä kutsuin poikani.
+    - Matteus 10:21 - Ja veli antaa veljensä kuolemaan ja isä lapsensa, ja lapset nousevat vanhempiansa vastaan ja tappavat heidät.
+    - Johannes 21:18 - Totisesti, totisesti minä sanon sinulle: kun olit nuori, niin sinä vyötit itsesi ja kuljit, minne tahdoit; mutta kun vanhenet, niin sinä ojennat kätesi, ja sinut vyöttää toinen ja vie sinut, minne et tahdo."
+    - 1. Korinttilaiskirje 13:13 - Niin pysyvät nyt usko, toivo, rakkaus, nämä kolme; mutta suurin niistä on rakkaus.
+    - 1. Timoteuskirje 1:5 - Mutta käskyn päämäärä on rakkaus, joka tulee puhtaasta sydämestä ja hyvästä omastatunnosta ja vilpittömästä uskosta.
+    - Tiituskirje 2:4 - voidakseen ohjata nuoria vaimoja rakastamaan miehiänsä ja lapsiansa,
+    - 1. Pietarin kirje 4:8 - Ennen kaikkea olkoon teidän rakkautenne toisianne kohtaan harras, sillä "rakkaus peittää syntien paljouden".
+    - 1. Johanneksen kirje 2:4 - Joka sanoo: "Minä tunnen hänet", eikä pidä hänen käskyjänsä, se on valhettelija, ja totuus ei ole hänessä.
+    - 1. Johanneksen kirje 2:14 - Minä olen kirjoittanut teille, isät, sillä te olette oppineet tuntemaan hänet, joka alusta on ollut. Minä olen kirjoittanut teille, nuorukaiset, sillä te olette väkevät, ja Jumalan sana pysyy teissä, ja te olette voittaneet sen, joka on paha.
+    - 1. Johanneksen kirje 2:15 - Älkää rakastako maailmaa älkääkä sitä, mikä maailmassa on. Jos joku maailmaa rakastaa, niin Isän rakkaus ei ole hänessä.
+    - 1. Johanneksen kirje 2:16 - Sillä kaikki, mikä maailmassa on, lihan himo, silmäin pyyntö ja elämän korskeus, se ei ole Isästä, vaan maailmasta.
+    - 1. Johanneksen kirje 4:6 - Me olemme Jumalasta. Joka tuntee Jumalan, se kuulee meitä; joka ei ole Jumalasta, se ei kuule meitä. Siitä me tunnemme totuuden hengen ja eksytyksen hengen.
+    - 1. Johanneksen kirje 4:7 - Rakkaani, rakastakaamme toinen toistamme, sillä rakkaus on Jumalasta; ja jokainen, joka rakastaa, on Jumalasta syntynyt ja tuntee Jumalan.
+    - 1. Johanneksen kirje 4:8 - Joka ei rakasta, se ei tunne Jumalaa, sillä Jumala on rakkaus.
+    - 1. Johanneksen kirje 5:3 - Sillä rakkaus Jumalaan on se, että pidämme hänen käskynsä. Ja hänen käskynsä eivät ole raskaat;
+    - 2. Johanneksen kirje 1:7 - Sillä monta villitsijää on lähtenyt maailmaan, jotka eivät tunnusta Jeesusta Kristukseksi, joka oli lihaan tuleva; tämä tämmöinen on villitsijä ja antikristus.
+  --- Vähemmän relevantit (31 jaetta) ---
+    - 2. Mooseksen kirja 24:5 - Ja hän lähetti israelilaisten joukosta nuoria miehiä uhraamaan polttouhreja ja teurastamaan härkiä yhteysuhriksi Herralle.
+    - 5. Mooseksen kirja 33:22 - Ja Daanista hän sanoi: "Daan on nuori leijona, joka syöksyy esiin Baasanista".
+    - 1. Samuelin kirja 16:11 - Ja Samuel kysyi Iisailta: "Siinäkö olivat kaikki nuorukaiset?" Hän vastasi: "Vielä on nuorin jäljellä, mutta hän on kaitsemassa lampaita". Niin Samuel sanoi Iisaille: "Lähetä noutamaan hänet, sillä me emme istu ruualle, ennenkuin hän tulee tänne".
+    - 1. Samuelin kirja 17:55 - Kun Saul näki Daavidin menevän filistealaista vastaan, kysyi hän sotapäälliköltään Abnerilta: "Kenen poika tuo nuorukainen on, Abner?" Abner vastasi: "Niin totta kuin sinä, kuningas, elät, minä en sitä tiedä".
+    - 1. Samuelin kirja 25:5 - lähetti hän sinne kymmenen nuorta miestä, ja Daavid sanoi nuorille miehille: "Menkää Karmeliin, ja kun tulette Naabalin luo, niin tervehtikää häntä minun nimessäni
+    - 1. Samuelin kirja 25:14 - Mutta eräs nuori mies toi sanan Abigailille, Naabalin vaimolle, ja sanoi: "Katso, Daavid on lähettänyt sanansaattajia erämaasta tervehtimään meidän isäntäämme, mutta hän vain haukkui heitä.
+    - 2. Aikakirja 21:17 - ja he menivät Juudaa vastaan, valloittivat sen ja veivät saaliinaan kaiken tavaran, mitä oli kuninkaan linnassa, niin myöskin hänen poikansa ja vaimonsa, niin ettei hänelle jäänyt muuta poikaa kuin Jooahas, hänen nuorin poikansa.
+    - Job 32:6 - Niin buusilainen Elihu, Baarakelin poika, lausui ja sanoi: "Nuori minä olen iältäni, ja te olette vanhat; sentähden minä arkailin ja pelkäsin ilmoittaa tietoani teille.
+    - Psalmit 17:12 - Hän on niinkuin saalista himoitseva leijona, niinkuin nuori leijona, joka piilossa väijyy.
+    - Psalmit 35:17 - Herra, kuinka kauan sinä tätä katselet? Päästä minun sieluni turmiosta, jota he hankitsevat, minun ainokaiseni nuorista leijonista.
+    - Psalmit 68:28 - Tuolla on Benjamin, nuorin, heitä johtaen, Juudan ruhtinaat joukkoinensa, Sebulonin ruhtinaat, Naftalin ruhtinaat.
+    - Korkea veisu 2:17 - Kunnes päivä viilenee ja varjot pakenevat, kiertele, rakkaani, kuin gaselli, kuin nuori peura tuoksuisilla vuorilla.
+    - Korkea veisu 6:8 - Kuusikymmentä on kuningatarta ja kahdeksankymmentä sivuvaimoa ja nuoria naisia ilman määrää:
+    - Korkea veisu 8:14 - "Riennä, rakkaani, kuin gaselli, kuin nuori peura balsamivuorille."
+    - Jesaja 9:16 - Sentähden Herra ei iloitse sen nuorista miehistä eikä armahda sen orpoja ja leskiä, sillä he ovat kaikki jumalattomia ja pahantekijöitä, ja jokainen suu puhuu hulluutta. Kaikesta tästä ei hänen vihansa ole asettunut, ja vielä on hänen kätensä ojennettu.
+    - Jesaja 31:4 - Sillä näin on Herra minulle sanonut: Niinkuin leijona, nuori leijona, murisee saaliinsa ääressä, kun sitä vastaan hälytetään paimenten parvi, eikä peljästy heidän huutoansa, ei huoli heidän hälinästään, niin Herra Sebaot on astuva alas sotimaan Siionin vuorella ja sen kukkulalla.
+    - Jeremia 2:23 - Kuinka saatat sanoa: 'En ole saastuttanut itseäni, en ole baaleja seurannut'! Katso menoasi laaksossa, huomaa, mitä olet tehnyt, sinä nopea, nuori naaraskameli, joka juokset sinne ja tänne;
+    - Jeremia 25:38 - Hän on lähtenyt niinkuin nuori leijona pensaikostaan: heidän maansa on tullut autioksi hävittäjän vihan hehkusta, Herran vihan hehkusta."
+    - Hoosea 5:14 - Sillä minä olen Efraimille kuin leijona, Juudan heimolle kuin nuori jalopeura: minä, minä raatelen, menen ja kannan pois, eikä pelastajaa ole.
+    - Aamos 3:4 - Ärjyykö leijona metsässä, ellei sillä ole raadeltavaa? Kiljuuko nuori leijona luolastansa, ellei se ole saalista saanut?
+    - Miika 5:7 - Ja ne, jotka ovat jäljellä Jaakobista, pakanain seassa, monien kansain keskellä, ovat niinkuin leijona metsäneläinten seassa, niinkuin nuori jalopeura lammaslaumain keskellä: jos se hyökkää, tallaa maahan ja raatelee, ei pelastajaa ole.
+    - Matteus 9:17 - Eikä nuorta viiniä lasketa vanhoihin nahkaleileihin; muutoin leilit pakahtuvat, ja viini juoksee maahan, ja leilit turmeltuvat; vaan nuori viini lasketaan uusiin leileihin, ja niin molemmat säilyvät."
+    - Matteus 24:11 - Ja monta väärää profeettaa nousee, ja he eksyttävät monta.
+    - Markus 13:12 - Ja veli antaa veljensä kuolemaan ja isä lapsensa, ja lapset nousevat vanhempiansa vastaan ja tappavat heidät.
+    - Luukas 5:38 - Vaan nuori viini on laskettava uusiin leileihin.
+    - Luukas 8:28 - Kun hän näki Jeesuksen, parkaisi hän ja lankesi maahan hänen eteensä ja huusi suurella äänellä: "Mitä sinulla on minun kanssani tekemistä, Jeesus, Jumalan, Korkeimman, Poika? Minä rukoilen sinua: älä minua vaivaa."
+    - Luukas 22:26 - Mutta älkää te niin; vaan joka teidän keskuudessanne on suurin, se olkoon niinkuin nuorin, ja johtaja niinkuin se, joka palvelee.
+    - Roomalaiskirje 9:11 - ja ennenkuin kaksoset olivat syntyneetkään ja ennenkuin olivat tehneet mitään, hyvää tai pahaa, niin — että Jumalan valinnan mukainen aivoitus pysyisi, ei tekojen tähden, vaan kutsujan tähden —
+    - Roomalaiskirje 9:12 - sanottiin hänelle: "Vanhempi on palveleva nuorempaa",
+    - Roomalaiskirje 9:13 - niinkuin kirjoitettu on: "Jaakobia minä rakastin, mutta Eesauta minä vihasin".
+    - Juudaksen kirje 1:11 - Voi heitä, sillä he kulkevat Kainin tietä ja heittäytyvät palkan tähden Bileamin eksytykseen ja hukkuvat niskoitteluunsa niinkuin Koora!
+
+--- Osio 4.3 (Yhteensä: 4) ---
+  --- Relevantimmat (4 jaetta) ---
+    - Johannes 7:41 - Toiset sanoivat: "Tämä on Kristus". Mutta toiset sanoivat: "Ei suinkaan Kristus tule Galileasta?
+    - Johannes 7:42 - Eikö Raamattu sano, että Kristus on oleva Daavidin jälkeläisiä ja tuleva pienestä Beetlehemin kaupungista, jossa Daavid oli?"
+    - Johannes 7:43 - Niin syntyi kansassa eripuraisuutta hänen tähtensä.
+    - Jaakobin kirje 4:4 - Te avionrikkojat, ettekö tiedä, että maailman ystävyys on vihollisuutta Jumalaa vastaan? Joka siis tahtoo olla maailman ystävä, siitä tulee Jumalan vihollinen.
+
+--- Osio 5. (Yhteensä: 18) ---
+  --- Relevantimmat (17 jaetta) ---
+    - Roomalaiskirje 5:3 - Eikä ainoastaan se, vaan meidän kerskauksenamme ovat myös ahdistukset, sillä me tiedämme, että ahdistus saa aikaan kärsivällisyyttä,
+    - Roomalaiskirje 5:4 - mutta kärsivällisyys koettelemuksen kestämistä, ja koettelemuksen kestäminen toivoa;
+    - Roomalaiskirje 5:5 - mutta toivo ei saata häpeään; sillä Jumalan rakkaus on vuodatettu meidän sydämiimme Pyhän Hengen kautta, joka on meille annettu.
+    - 1. Korinttilaiskirje 13:13 - Niin pysyvät nyt usko, toivo, rakkaus, nämä kolme; mutta suurin niistä on rakkaus.
+    - 1. Timoteuskirje 1:5 - Mutta käskyn päämäärä on rakkaus, joka tulee puhtaasta sydämestä ja hyvästä omastatunnosta ja vilpittömästä uskosta.
+    - 1. Pietarin kirje 4:8 - Ennen kaikkea olkoon teidän rakkautenne toisianne kohtaan harras, sillä "rakkaus peittää syntien paljouden".
+    - 1. Johanneksen kirje 2:4 - Joka sanoo: "Minä tunnen hänet", eikä pidä hänen käskyjänsä, se on valhettelija, ja totuus ei ole hänessä.
+    - 1. Johanneksen kirje 2:14 - Minä olen kirjoittanut teille, isät, sillä te olette oppineet tuntemaan hänet, joka alusta on ollut. Minä olen kirjoittanut teille, nuorukaiset, sillä te olette väkevät, ja Jumalan sana pysyy teissä, ja te olette voittaneet sen, joka on paha.
+    - 1. Johanneksen kirje 2:15 - Älkää rakastako maailmaa älkääkä sitä, mikä maailmassa on. Jos joku maailmaa rakastaa, niin Isän rakkaus ei ole hänessä.
+    - 1. Johanneksen kirje 2:16 - Sillä kaikki, mikä maailmassa on, lihan himo, silmäin pyyntö ja elämän korskeus, se ei ole Isästä, vaan maailmasta.
+    - 1. Johanneksen kirje 4:6 - Me olemme Jumalasta. Joka tuntee Jumalan, se kuulee meitä; joka ei ole Jumalasta, se ei kuule meitä. Siitä me tunnemme totuuden hengen ja eksytyksen hengen.
+    - 1. Johanneksen kirje 4:7 - Rakkaani, rakastakaamme toinen toistamme, sillä rakkaus on Jumalasta; ja jokainen, joka rakastaa, on Jumalasta syntynyt ja tuntee Jumalan.
+    - 1. Johanneksen kirje 4:8 - Joka ei rakasta, se ei tunne Jumalaa, sillä Jumala on rakkaus.
+    - 1. Johanneksen kirje 5:3 - Sillä rakkaus Jumalaan on se, että pidämme hänen käskynsä. Ja hänen käskynsä eivät ole raskaat;
+    - 1. Johanneksen kirje 5:4 - sillä kaikki, mikä on syntynyt Jumalasta, voittaa maailman; ja tämä on se voitto, joka on maailman voittanut, meidän uskomme.
+    - 2. Johanneksen kirje 1:7 - Sillä monta villitsijää on lähtenyt maailmaan, jotka eivät tunnusta Jeesusta Kristukseksi, joka oli lihaan tuleva; tämä tämmöinen on villitsijä ja antikristus.
+    - Juudaksen kirje 1:11 - Voi heitä, sillä he kulkevat Kainin tietä ja heittäytyvät palkan tähden Bileamin eksytykseen ja hukkuvat niskoitteluunsa niinkuin Koora!
+  --- Vähemmän relevantit (1 jaetta) ---
+    - Jaakobin kirje 1:5 - Mutta jos joltakin teistä puuttuu viisautta, anokoon sitä Jumalalta, joka antaa kaikille alttiisti ja soimaamatta, niin se hänelle annetaan.
+
+================================================================================
+--- DIAGNOSTIIKKA VALMIS ---
+================================================================================
+Täydellinen raportti tallennettu tiedostoon: full_diagnostics_report_final.txt

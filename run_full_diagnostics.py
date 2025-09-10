@@ -9,11 +9,11 @@ from dotenv import load_dotenv
 
 from logic import (
     lataa_raamattu, luo_kanoninen_avain, luo_hakusuunnitelma,
-    etsi_ja_laajenna, valitse_relevantti_konteksti, pisteyta_ja_jarjestele
+    etsi_ja_laajenna, pisteyta_ja_jarjestele
 )
 
 # --- LOKITIEDOSTON MÄÄRITYS ---
-LOG_FILENAME = 'full_diagnostics_report_v2.txt'
+LOG_FILENAME = 'full_diagnostics_report_NopeaHaku.txt'
 if os.path.exists(LOG_FILENAME):
     os.remove(LOG_FILENAME)
 
@@ -32,7 +32,6 @@ logging.basicConfig(
 def log_header(title):
     """Tulostaa selkeän otsikon lokiin."""
     logging.info("\n" + "=" * 80)
-    # --- KORJATTU KOHTA: ToUpper() -> upper() ---
     logging.info(f"--- {title.upper()} ---")
     logging.info("=" * 80)
 
@@ -55,7 +54,6 @@ def laske_kustannus_arvio(token_counts):
     """Laskee karkean hinta-arvion."""
     hinnat = {"flash_input": 0.35, "flash_output": 1.05,
               "pro_input": 3.5, "pro_output": 10.5}
-    # Arvioidaan karkea jako mallien käytölle
     input_cost = (token_counts['input'] / 1_000_000) * \
         ((hinnat["flash_input"] + hinnat["pro_input"]) / 2)
     output_cost = (token_counts['output'] / 1_000_000) * \
@@ -68,7 +66,7 @@ def laske_kustannus_arvio(token_counts):
 def run_diagnostics():
     """Suorittaa koko version 2.0 prosessin ja kirjaa tulokset."""
     total_start_time = time.perf_counter()
-    log_header("Raamattu-tutkija 2.0 - KATTAVA DIAGNOSTIIKKA-AJO")
+    log_header("Raamattu-tutkija 2.0 - DIAGNOSTIIKKA-AJO (NOPEA HAKU)")
 
     # 1. Ladataan resurssit
     logging.info("\n[ALUSTUS] Ladataan resursseja...")
@@ -98,51 +96,32 @@ def run_diagnostics():
         logging.error("TESTI KESKEYTETTY: Hakusuunnitelman luonti epäonnistui.")
         return
     logging.info(f"Aikaa kului: {end_time - start_time:.2f} sekuntia.")
-    logging.info("\n--- Tekoälyn tuottama hakusuunnitelma: ---")
     logging.info(json.dumps(suunnitelma, indent=2, ensure_ascii=False))
-    logging.info("------------------------------------------")
 
-    # VAIHE 2: Jakeiden keräys (testataan "Tarkka haku" -metodia)
-    log_header("VAIHE 2: JAKEIDEN KERÄYS ('TARKKA HAKU')")
+    # VAIHE 2: Jakeiden keräys (NOPEA HAKU -LOGIIKKA)
+    log_header("VAIHE 2: JAKEIDEN KERÄYS (NOPEA HAKU, -0/+1 MEKAANINEN)")
     start_time = time.perf_counter()
     osio_kohtaiset_jakeet = defaultdict(set)
     hakukomennot = suunnitelma["hakukomennot"]
-    total_sections = len(hakukomennot)
-    current_section = 0
 
-    logging.info("Käytetään 'Tarkka haku' -metodia (laajempi haku + Flash-suodatus).")
-
+    logging.info("Suoritetaan hakuja ilman tekoälysuodatusta...")
     for osio_nro, avainsanat in hakukomennot.items():
-        current_section += 1
-        logging.info(
-            f"\n({current_section}/{total_sections}) Kerätään jakeita "
-            f"osiolle {osio_nro}..."
-        )
         for sana in avainsanat:
-            # 1. Laaja mekaaninen haku
-            osumat = etsi_ja_laajenna(
-                book_data_map, book_name_map, sana, 3, 3)
-            if osumat:
-                # 2. Älykäs kontekstin suodatus
-                teema = f"{pääaihe} - {osio_nro}"
-                relevantit, usage = valitse_relevantti_konteksti(
-                    "\n".join(sorted(list(osumat))), teema)
-                paivita_token_laskuri(usage)
-                if relevantit:
-                    osio_kohtaiset_jakeet[osio_nro].update(relevantit)
+            if sana:
+                jakeet = etsi_ja_laajenna(
+                    book_data_map, book_name_map, sana, 0, 1)
+                osio_kohtaiset_jakeet[osio_nro].update(jakeet)
 
     kaikki_jakeet = set()
     for jakeet in osio_kohtaiset_jakeet.values():
         kaikki_jakeet.update(jakeet)
-
     end_time = time.perf_counter()
     logging.info(f"\nJakeiden keräys valmis. Aikaa kului: {end_time - start_time:.2f} sekuntia.")
     logging.info(f"Kerättyjä uniikkeja jakeita yhteensä: {len(kaikki_jakeet)} kpl.")
 
     # VAIHE 3: Jakeiden järjestely
-    log_header("VAIHE 3: JAKEIDEN JÄRJESTELY JA PISTEYTYS (PRO)")
+    log_header("VAIHE 3: JAKEIDEN JÄRJESTELY JA PISTEYTYS (FLASH)")
     start_time = time.perf_counter()
-
     def progress_logger(percent, text):
         logging.info(f"  - Edistyminen: {percent}% - {text}")
 
@@ -164,8 +143,7 @@ def run_diagnostics():
     for data in jae_kartta.values():
         uniikit_jarjestellyt.update(data.get('relevantimmat', []))
         uniikit_jarjestellyt.update(data.get('vahemman_relevantit', []))
-        sijoituksia += len(data.get('relevantimmat', []))
-        sijoituksia += len(data.get('vahemman_relevantit', []))
+        sijoituksia += len(data.get('relevantimmat', [])) + len(data.get('vahemman_relevantit', []))
 
     logging.info(f"KOKONAISKESTO: {(total_end_time - total_start_time) / 60:.1f} minuuttia")
     logging.info(f"Kerätyt jakeet (uniikit): {len(kaikki_jakeet)} kpl")
@@ -175,16 +153,13 @@ def run_diagnostics():
     logging.info(f"  - Syöte: {TOKEN_COUNT['input']:,} tokenia")
     logging.info(f"  - Tuotos: {TOKEN_COUNT['output']:,} tokenia")
     logging.info(f"  - Yhteensä: {TOKEN_COUNT['total']:,} tokenia")
-    logging.info(
-        f"  - Kustannusarvio: {laske_kustannus_arvio(TOKEN_COUNT)}")
+    logging.info(f"  - Kustannusarvio: {laske_kustannus_arvio(TOKEN_COUNT)}")
 
     log_header("YKSITYISKOHTAINEN JAEJAOTTELU")
-    # Tulostetaan jaejaottelu...
-    for osio, data in jae_kartta.items():
+    for osio, data in sorted(jae_kartta.items(), key=lambda item: [int(p) for p in item[0].strip('.').split('.')]):
         rel = data.get('relevantimmat', [])
         v_rel = data.get('vahemman_relevantit', [])
-        logging.info(
-            f"\n--- Osio {osio} (Yhteensä: {len(rel) + len(v_rel)}) ---")
+        logging.info(f"\n--- Osio {osio} (Yhteensä: {len(rel) + len(v_rel)}) ---")
         if not rel and not v_rel:
             logging.info("  - Ei jakeita tähän osioon.")
             continue
@@ -202,11 +177,9 @@ if __name__ == "__main__":
     load_dotenv()
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        logging.error(
-            "KRIITTINEN VIRHE: GEMINI_API_KEY ei löydy .env-tiedostosta.")
+        logging.error("KRIITTINEN VIRHE: GEMINI_API_KEY ei löydy .env-tiedostosta.")
     else:
         genai.configure(api_key=api_key)
         run_diagnostics()
         log_header("DIAGNOSTIIKKA VALMIS")
-        logging.info(
-            f"Täydellinen raportti tallennettu tiedostoon: {LOG_FILENAME}")
+        logging.info(f"Täydellinen raportti tallennettu tiedostoon: {LOG_FILENAME}")
