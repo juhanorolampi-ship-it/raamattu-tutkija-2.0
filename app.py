@@ -34,7 +34,6 @@ def laske_kustannus_arvio(token_counts):
     """Laskee karkean hinta-arvion perustuen token-määriin eri malleille."""
     hinnat = {"flash_input": 0.35, "flash_output": 1.05,
               "pro_input": 3.5, "pro_output": 10.5}
-    # Arvioidaan karkea jako mallien käytölle
     input_cost = (token_counts['input'] / 1_000_000) * \
         ((hinnat["flash_input"] + hinnat["pro_input"]) / 2)
     output_cost = (token_counts['output'] / 1_000_000) * \
@@ -184,7 +183,6 @@ def main():
                     alkuperaiset, paivita_token_laskuri)
 
                 p_bar.progress(0.25, text="Haetaan jakeita välimuistiin...")
-                # --- KORJATTU KOHTA: Muuttujan nimi 'l' -> 'laajennos_lista' ---
                 uniikit_sanat = sorted(list(set(
                     laajennettu for laajennos_lista in rikastetut_map.values()
                     for laajennettu in laajennos_lista
@@ -218,7 +216,7 @@ def main():
                             otsikko_match = re.search(
                                 r"^{}\.?\s*(.*)".format(
                                     re.escape(osio.strip('.'))),
-                                st.session_state.final_sisallysluettelo, re.MULTILINE)
+                                st.session_state.suunnitelma["vahvistettu_sisallysluettelo"], re.MULTILINE)
                             teema = otsikko_match.group(
                                 1) if otsikko_match else ""
 
@@ -268,6 +266,12 @@ def main():
     elif st.session_state.step == "output":
         st.header("Vaihe 4: Valmis tutkimusraportti")
 
+        # --- KORJATTU KOHTA: Tarkistetaan, onko suunnitelma olemassa ---
+        if "suunnitelma" not in st.session_state:
+            st.warning("Istunnon data on vanhentunut. Aloita uusi tutkimus.")
+            st.button("Palaa alkuun", on_click=reset_session)
+            st.stop()
+        
         if "jae_kartta" not in st.session_state:
             progress_bar = st.progress(0, "Valmistellaan...")
 
@@ -277,7 +281,7 @@ def main():
             with st.spinner("Vaihe 4/4: Järjestellään ja pisteytetään jakeita... (Flash)"):
                 jae_kartta = pisteyta_ja_jarjestele(
                     st.session_state.pääaihe,
-                    st.session_state.final_sisallysluettelo,
+                    st.session_state.suunnitelma["vahvistettu_sisallysluettelo"],
                     st.session_state.osio_kohtaiset_jakeet,
                     paivita_token_laskuri,
                     progress_callback=update_progress
@@ -287,13 +291,15 @@ def main():
 
         jae_kartta = st.session_state.jae_kartta
         lopputulos = ""
+        # --- KORJATTU KOHTA: Käytetään luotettavaa muuttujaa ---
+        sisallysluettelo = st.session_state.suunnitelma["vahvistettu_sisallysluettelo"]
         sorted_osiot = sorted(jae_kartta.items(
         ), key=lambda item: [int(p) for p in item[0].strip('.').split('.')])
 
         for osio_nro, data in sorted_osiot:
             otsikko_match = re.search(
                 r"^{}\.?\s*(.*)".format(re.escape(osio_nro.strip('.'))),
-                st.session_state.final_sisallysluettelo, re.MULTILINE)
+                sisallysluettelo, re.MULTILINE)
             otsikko = otsikko_match.group(
                 1) if otsikko_match else f"Osio {osio_nro}"
 
