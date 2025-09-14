@@ -315,22 +315,26 @@ def pisteyta_ja_jarjestele(
     for osio_nro, jakeet in osio_kohtaiset_jakeet.items():
         current_osio_index += 1
         osion_teema = osiot.get(osio_nro.strip('.'), "")
-        final_jae_kartta[osio_nro] = {"relevantimmat": [], "vahemman_relevantit": []}
-        
+        final_jae_kartta[osio_nro] = {
+            "relevantimmat": [], "vahemman_relevantit": []}
+
         if not jakeet or not osion_teema:
             continue
 
         if progress_callback:
             progress_text = f"Järjestellään osiota {osio_nro}: {osion_teema}..."
-            progress_percent = int((current_osio_index / total_osiot) * 100)
+            progress_percent = int(
+                (current_osio_index / total_osiot) * 100)
             progress_callback(progress_percent, progress_text)
 
-        BATCH_SIZE = 50  # Pienempi eräkoko pisteytykselle
+        BATCH_SIZE = 50
         pisteet = {}
         jae_viitteet_lista = [erota_jaeviite(j) for j in jakeet]
 
         for i in range(0, len(jae_viitteet_lista), BATCH_SIZE):
             batch = jae_viitteet_lista[i:i + BATCH_SIZE]
+            print(
+                f"  - Pisteytetään jakeita osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}/{(len(jae_viitteet_lista) + BATCH_SIZE - 1)//BATCH_SIZE}...")
             
             prompt = (
                 "Olet teologinen asiantuntija. Pisteytä jokainen alla oleva "
@@ -347,13 +351,14 @@ def pisteyta_ja_jarjestele(
             vastaus_str, usage = tee_api_kutsu(
                 prompt, "llama3-70b-8192", is_json=True, temperature=0.1)
             paivita_token_laskuri_callback(usage)
-            
+
             if vastaus_str and not vastaus_str.startswith("API-VIRHE:"):
                 try:
                     pisteet.update(json.loads(vastaus_str))
                 except json.JSONDecodeError:
-                    print(f"JSON-jäsennysvirhe osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}.")
-            
+                    print(
+                        f"JSON-jäsennysvirhe osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}.")
+
             time.sleep(0.5)
 
         for jae in jakeet:

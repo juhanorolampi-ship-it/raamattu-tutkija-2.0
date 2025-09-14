@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: ÄLYKÄS HAKUSUUNNITELMAN LUONTI (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 17.22 sekuntia.
+Aikaa kului: 18.73 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -17,116 +17,100 @@ Aikaa kului: 17.22 sekuntia.
       "kutsu",
       "viisaus",
       "erottamiskyky",
-      "valheen henki",
-      "petolla",
-      "eksytys",
-      "susi lammasten vaatteissa",
-      "väärien profeettojen varoitus"
-    ],
-    "2.": [
-      "väärät opettajat",
-      "eksyttäjät",
-      "harhaoppi",
-      "tunnistusmerkit",
-      "petolliset henget",
-      "viettelykset"
+      "valheen isä",
+      "petolliset profeetat",
+      "sudet lammasten vaatteissa",
+      "väärien profeettojen hedelmät"
     ],
     "2.1.": [
-      "väärien opettajien tuntomerkit",
-      "motiivit",
+      "väärät profeetat",
+      "eksyttäjät",
+      "tunnistusmerkit",
       "ahneus",
       "valta",
-      "metodit",
       "mielistely",
       "ovelat sanat",
       "hajaannuksen luominen",
-      "hedelmät",
       "moraalittomuus",
-      "eriseurat"
+      "eriseurat",
+      "hedelmätön",
+      "paha hedelmä"
     ],
     "2.2.": [
-      "väärien opettajien esimerkit",
+      "väärät profeetat",
+      "eksyttäjät",
       "Vanha testamentti",
       "Uusi testamentti",
-      "eksytys",
+      "Jerobeam",
       "Baalin profeetat",
-      "valheprofeetat"
+      "Simon noita",
+      "Hymeneus",
+      "Filetos",
+      "Aleksanteri, vaskenpaja"
     ],
     "2.3.": [
-      "harhaopin kohtaaminen",
-      "toimintaohjeet",
-      "suhtautuminen harhaopettajiin",
-      "erottautuminen",
-      "ojentaminen",
-      "kurinpito"
-    ],
-    "3.": [
-      "tasapaino",
-      "oikea asenne",
-      "erottelu",
-      "tuomitseminen",
-      "armo",
-      "kärsivällisyys",
-      "heikko veli",
-      "eksyttäjä"
+      "harhaoppi",
+      "suhtautuminen harhaoppiin",
+      "kurinpito",
+      "erottaminen seurakunnasta",
+      "käskyt harhaopin suhteen",
+      "ohjeet harhaopin suhteen",
+      "nuhtelu",
+      "ojentaminen"
     ],
     "3.1.": [
       "heikko veli",
+      "eksynyt",
       "eksyttäjä",
-      "suhtautuminen",
-      "eri mittapuut",
-      "ojentaminen",
       "kärsivällisyys",
-      "armo"
+      "rakkaus",
+      "ojentaminen",
+      "armo",
+      "suden lammasten vaatteissa"
     ],
     "3.2.": [
-      "kasvun prosessi",
+      "kasvu",
       "armo",
-      "kärsivällisyys",
       "hengellinen kypsyys",
-      "opillinen kasvu",
+      "kypsymättömyys",
       "tietoinen kapina",
-      "eksytys"
-    ],
-    "4.": [
-      "nuorten herätys",
-      "haasteet",
-      "nykyaika",
-      "sovellus",
-      "opetuslapseus",
-      "hengellinen ohjaus"
+      "eksytys",
+      "kärsivällisyys",
+      "opetuslapseus"
     ],
     "4.1.": [
-      "kiitollisuus",
-      "hedelmä",
+      "Jumalan työ",
       "pelastus",
       "ilo",
-      "Jumalan työ",
+      "kiitollisuus",
+      "hedelmä",
+      "armo",
       "epätäydelliset olosuhteet"
     ],
     "4.2.": [
-      "rakkaus",
-      "armo",
-      "kärsivällisyys",
       "nuoret uskovat",
-      "lähestymistapa",
-      "uskon sammuttaminen",
-      "evankelioimisinto",
-      "vanhempien uskovien rooli"
+      "rakkaus",
+      "kärsivällisyys",
+      "vanhemmat uskovat",
+      "isät uskossa",
+      "äidit uskossa",
+      "evankelioimispalo",
+      "sammuttaminen",
+      "huolenaihe",
+      "pelko"
     ],
     "4.3.": [
       "opetuslapseuttaminen",
-      "pitkäjänteisyys",
       "terve oppi",
       "raamatuntuntemus",
       "kärsivällisyys",
       "rakkaus",
       "Akylas",
-      "Priskilla",
+      "Priscilla",
       "Apollos"
     ],
     "4.4.": [
-      "liikkeiden arviointi",
+      "liikkeet",
       "YWAM",
       "Circuit Riders",
       "Carry the Love",
@@ -137,16 +121,37 @@ Aikaa kului: 17.22 sekuntia.
       "koetelkaa kaikki",
       "pitäkää se mikä hyvää on"
     ],
+    "2.": [
+      "eksytys",
+      "harhaopetus",
+      "väärien profeettojen tunnistaminen",
+      "väärien opettajien vaarat"
+    ],
+    "3.": [
+      "tasapaino",
+      "erottelu",
+      "tuomitseminen",
+      "armo",
+      "kärsivällisyys",
+      "rakkaus"
+    ],
+    "4.": [
+      "nuorten herätys",
+      "haasteet",
+      "rakkaus",
+      "opetuslapseuttaminen",
+      "kärsivällisyys",
+      "liikkeet",
+      "arviointi"
+    ],
     "5.": [
-      "yhteenveto",
       "totuus",
       "rakkaus",
       "valppaus",
-      "eksytys",
       "armo",
       "kärsivällisyys",
-      "lauman suojeleminen",
-      "karitsoiden hoivaaminen"
+      "lauma",
+      "karitsat"
     ]
   }
 }
@@ -160,287 +165,307 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-Aikaa kului: 8.34 sekuntia.
+Aikaa kului: 19.07 sekuntia.
 {
   "Akylas": [
     "Akylas",
-    "Apollos",
-    "apostoli"
+    "Akylas",
+    "Akylas"
+  ],
+  "Aleksanteri, vaskenpaja": [
+    "Aleksanteri, vaskenpaja",
+    "Aleksanteri",
+    "vaskenpaja"
   ],
   "Apollos": [
     "Apollos",
-    "Akylas",
-    "apostoli"
+    "Apollos",
+    "Apollossa"
   ],
   "Baalin profeetat": [
     "Baalin profeetat",
-    "profeetta",
-    "profeetallisuus"
+    "Baali",
+    "profeetta"
   ],
   "Carry the Love": [
     "Carry the Love",
     "rakkaus",
-    "evankeliointi"
+    "rakkauden"
   ],
   "Circuit Riders": [
     "Circuit Riders",
-    "evankeliointi",
-    "lähetystyö"
+    "keräily",
+    "keräilylähettiläät"
+  ],
+  "Filetos": [
+    "Filetos",
+    "Filetos",
+    "Filetos"
+  ],
+  "Hymeneus": [
+    "Hymeneus",
+    "Hymeneus",
+    "Hymeneus"
+  ],
+  "Jerobeam": [
+    "Jerobeam",
+    "Jerobeam",
+    "Jerobeamin"
   ],
   "Jumalan työ": [
     "Jumalan työ",
     "työ",
-    "palvelus"
+    "työt"
   ],
-  "Priskilla": [
-    "Priskilla",
-    "evankelista",
-    "nainen"
+  "Priscilla": [
+    "Priscilla",
+    "Priscilla",
+    "Priscillan"
   ],
   "SEND": [
     "SEND",
     "lähetys",
-    "evankeliointi"
+    "lähetys"
+  ],
+  "Simon noita": [
+    "Simon noita",
+    "Simon",
+    "noita"
   ],
   "Uusi testamentti": [
     "Uusi testamentti",
     "testamentti",
-    "Raamattu"
+    "uusi"
   ],
   "Vanha testamentti": [
     "Vanha testamentti",
     "testamentti",
-    "Raamattu"
+    "vanha"
   ],
   "YWAM": [
     "YWAM",
-    "lähetys",
-    "evankeliointi"
+    "Yhdistys",
+    "Yhteisö"
   ],
   "ahneus": [
     "ahneus",
-    "häpeä",
-    "rikollisuus"
+    "ahne",
+    "ahneutta"
   ],
   "armo": [
     "armo",
-    "rakkaus",
-    "salvattu"
+    "armollinen",
+    "antaa"
+  ],
+  "arviointi": [
+    "arviointi",
+    "arvioi",
+    "arvio"
+  ],
+  "eksynyt": [
+    "eksynyt",
+    "eksynyt",
+    "eksynyt"
   ],
   "eksyttäjä": [
     "eksyttäjä",
-    "paholainen",
-    "vastustaja"
+    "eksyttää",
+    "eksyttäjät"
   ],
   "eksyttäjät": [
     "eksyttäjät",
-    "vastustajat",
-    "paholaiset"
+    "eksyttää",
+    "eksyttäjä"
   ],
   "eksytys": [
     "eksytys",
-    "eksyttäminen",
-    "eksyttää"
+    "eksyttää",
+    "eksyttäjä"
   ],
   "epätäydelliset olosuhteet": [
     "epätäydelliset olosuhteet",
-    "epätäydellisyys",
-    "täydellisyys"
-  ],
-  "eri mittapuut": [
-    "eri mittapuut",
-    "mittapuu",
-    "mittapuut"
+    "epätäydellinen",
+    "olosuhteet"
   ],
   "eriseurat": [
     "eriseurat",
-    "eriseurassa",
-    "yhteisurassa"
+    "eris",
+    "seurat"
+  ],
+  "erottaminen seurakunnasta": [
+    "erottaminen seurakunnasta",
+    "erottaa",
+    "seurakunta"
   ],
   "erottamiskyky": [
     "erottamiskyky",
-    "erottaminen",
-    "erottaminen"
-  ],
-  "erottautuminen": [
-    "erottautuminen",
-    "erottautua",
-    "erottautuminen"
+    "erottaa",
+    "kyky"
   ],
   "erottelu": [
     "erottelu",
     "erottaa",
     "erottaminen"
   ],
-  "evankelioimisinto": [
-    "evankelioimisinto",
-    "evankelioiminen",
-    "evankelioiminen"
+  "evankelioimispalo": [
+    "evankelioimispalo",
+    "evankelioi",
+    "palo"
   ],
   "haasteet": [
     "haasteet",
     "haastaa",
-    "haastaminen"
+    "haastattelu"
   ],
   "hajaannuksen luominen": [
     "hajaannuksen luominen",
     "hajaannus",
-    "hajaannuksen"
+    "jakautuminen"
   ],
-  "harhaopin kohtaaminen": [
-    "harhaopin kohtaaminen",
+  "harhaopetus": [
+    "harhaopetus",
     "harhaoppi",
-    "harhaopin"
-  ],
-  "harhaoppi": [
-    "harhaoppi",
-    "harhaoppinen",
-    "harhaoppisuus"
+    "väärä opetus"
   ],
   "hedelmä": [
     "hedelmä",
-    "hedelmällisyys",
-    "hedelmällinen"
-  ],
-  "hedelmät": [
     "hedelmät",
-    "hedelmällisyys",
-    "hedelmällinen"
+    "kasvu"
+  ],
+  "hedelmätön": [
+    "hedelmätön",
+    "hedelmättömyys",
+    "tuottamaton"
   ],
   "heikko veli": [
     "heikko veli",
     "heikko",
-    "vahva"
+    "vahva veli"
   ],
   "hengellinen kypsyys": [
     "hengellinen kypsyys",
     "kypsyys",
     "kasvu"
   ],
-  "hengellinen ohjaus": [
-    "hengellinen ohjaus",
-    "ohjaus",
-    "johtaminen"
+  "huolenaihe": [
+    "huolenaihe",
+    "huoli",
+    "epäilys"
   ],
   "ilo": [
     "ilo",
-    "ilolla",
-    "iloinen"
+    "iloinen",
+    "iloksi"
   ],
   "inhimilliset ylilyönnit": [
+    "inhimilliset ylilyönnit",
     "ylilyönnit",
-    "ylilyönti",
-    "yllyönti"
+    "ylly"
   ],
-  "karitsoiden hoivaaminen": [
-    "hoivaaminen",
-    "hoiva",
-    "hoitaa"
+  "isät uskossa": [
+    "isät uskossa",
+    "isien uskossa",
+    "isien usko"
   ],
-  "kasvun prosessi": [
-    "kasvun",
+  "karitsat": [
+    "karitsat",
+    "karitsa",
+    "lammas"
+  ],
+  "kasvu": [
     "kasvu",
-    "kasvaa"
+    "kasvaa",
+    "kasvaminen"
   ],
   "kiitollisuus": [
     "kiitollisuus",
     "kiitollinen",
-    "kiittää"
+    "kiittoa"
   ],
   "koetelkaa kaikki": [
-    "koetelkaa",
+    "koetelkaa kaikki",
     "koetella",
     "tarkkaile"
   ],
   "kurinpito": [
     "kurinpito",
-    "kuri",
-    "pitää"
+    "korjaaminen",
+    "korjaus"
   ],
   "kutsu": [
     "kutsu",
     "kutsua",
-    "kutsua"
+    "kutsuttu"
+  ],
+  "kypsymättömyys": [
+    "kypsymättömyys",
+    "kypsyys",
+    "kasvu"
   ],
   "kärsivällisyys": [
     "kärsivällisyys",
     "kärsivällinen",
-    "kärsi"
+    "kärsivällisyyden"
   ],
-  "lauman suojeleminen": [
-    "suojeleminen",
-    "suojele",
-    "suojella"
+  "käskyt harhaopin suhteen": [
+    "käskyt",
+    "käskyn",
+    "käskynä"
   ],
-  "liikkeiden arviointi": [
-    "liikkeiden",
+  "lauma": [
+    "lauma",
+    "laumaa",
+    "laumojen"
+  ],
+  "liikkeet": [
     "liikkeet",
-    "arvioida"
-  ],
-  "lähestymistapa": [
-    "lähestymistapa",
-    "lähestyä",
-    "lähestyminen"
-  ],
-  "metodit": [
-    "metodit",
-    "metodi",
-    "metodinen"
+    "liikkeen",
+    "liikkeessä"
   ],
   "mielistely": [
     "mielistely",
-    "rakkaus",
-    "ystävyys"
+    "mielisesti",
+    "mielisyyden"
   ],
   "moraalittomuus": [
     "moraalittomuus",
-    "syyllisyys",
-    "vastuuttomuus"
+    "moraalittomia",
+    "moraalittomuuden"
   ],
-  "motiivit": [
-    "motiivit",
-    "syynä",
-    "pyrkimys"
+  "nuhtelu": [
+    "nuhtelu",
+    "nuhdistaa",
+    "nuhdistus"
   ],
   "nuoret uskovat": [
     "nuoret uskovat",
-    "uskon nuoret",
-    "uskon kasvu"
+    "nuoret",
+    "uskovat"
   ],
   "nuorten herätys": [
     "nuorten herätys",
-    "herätysliike",
-    "nuorten liike"
+    "nuorten",
+    "herätys"
   ],
-  "nykyaika": [
-    "nykyaika",
-    "aika",
-    "nyky"
-  ],
-  "oikea asenne": [
-    "oikea asenne",
-    "asenne",
-    "mielipide"
+  "ohjeet harhaopin suhteen": [
+    "ohjeet",
+    "ohjeen",
+    "ohjeen"
   ],
   "ojentaminen": [
     "ojentaminen",
-    "ohjaus",
-    "opetus"
+    "ojentaa",
+    "ojentaminen"
   ],
   "opetuslapseus": [
     "opetuslapseus",
-    "lapsuus",
-    "kasvu"
+    "opetuslapsi",
+    "opetuslapseuttaminen"
   ],
   "opetuslapseuttaminen": [
     "opetuslapseuttaminen",
     "opetuslapsi",
     "opettaa"
-  ],
-  "opillinen kasvu": [
-    "opillinen kasvu",
-    "kasvu",
-    "kasvaminen"
   ],
   "opilliset vaarat": [
     "opilliset vaarat",
@@ -452,110 +477,95 @@ Aikaa kului: 8.34 sekuntia.
     "sanat",
     "sana"
   ],
+  "paha hedelmä": [
+    "paha hedelmä",
+    "hedelmä",
+    "hedelmät"
+  ],
   "pelastus": [
     "pelastus",
-    "pelastaja",
-    "vapautus"
+    "pelastaa",
+    "pelastunut"
   ],
-  "petolla": [
-    "petolla",
-    "petos",
-    "pettäminen"
+  "pelko": [
+    "pelko",
+    "pelkää",
+    "pelkoon"
   ],
-  "petolliset henget": [
-    "petolliset henget",
-    "petollinen",
-    "petollisuus"
-  ],
-  "pitkäjänteisyys": [
-    "pitkäjänteisyys",
-    "pitkäjänteinen",
-    "pitkäjänteisyyden"
+  "petolliset profeetat": [
+    "petolliset profeetat",
+    "profeetta",
+    "profeetan"
   ],
   "pitäkää se mikä hyvää on": [
     "pitäkää se mikä hyvää on",
     "pitää",
-    "pitää"
+    "hyvä"
   ],
   "raamatuntuntemus": [
     "raamatuntuntemus",
     "tuntemus",
-    "tuntemus"
+    "tuntea"
   ],
   "rakkaus": [
     "rakkaus",
     "rakkauden",
-    "rakkauden"
+    "rakastaa"
   ],
-  "sovellus": [
-    "sovellus",
-    "sovelluksia",
-    "sovelluksia"
+  "sammuttaminen": [
+    "sammuttaminen",
+    "sammuttaa",
+    "sammuttunut"
   ],
-  "suhtautuminen": [
-    "suhtautuminen",
+  "suden lammasten vaatteissa": [
+    "suden lammasten vaatteissa",
+    "vaatteet",
+    "vaatteita"
+  ],
+  "sudet lammasten vaatteissa": [
+    "sudet lammasten vaatteissa",
+    "sudet",
+    "suden"
+  ],
+  "suhtautuminen harhaoppiin": [
+    "suhtautuminen harhaoppiin",
     "suhtautua",
-    "suhtautuminen"
-  ],
-  "suhtautuminen harhaopettajiin": [
-    "suhtautuminen harhaopettajiin",
-    "harhaopetus",
-    "harhaopettajat"
-  ],
-  "susi lammasten vaatteissa": [
-    "susi lammasten vaatteissa",
-    "susi",
-    "susi"
+    "harhaoppi"
   ],
   "tasapaino": [
     "tasapaino",
-    "tasapainoinen",
-    "tasapainoisuus"
+    "tasapainua",
+    "tasapainu"
   ],
   "terve oppi": [
     "terve oppi",
-    "terve",
-    "terve"
+    "opetus",
+    "oppi"
   ],
   "tietoinen kapina": [
     "tietoinen kapina",
     "kapina",
     "kapinallinen"
   ],
-  "toimintaohjeet": [
-    "toimintaohjeet",
-    "toiminta",
-    "toimintaohje"
-  ],
   "totuus": [
     "totuus",
-    "totuuden",
-    "totuus"
+    "totuuden tietäjä",
+    "totuudenmukainen"
   ],
   "tunnistusmerkit": [
     "tunnistusmerkit",
-    "tunnistus",
-    "tunnistusmerkki"
+    "merkit",
+    "tunnistus"
   ],
   "tuomitseminen": [
     "tuomitseminen",
-    "tuomita",
-    "tuomio"
+    "tuomio",
+    "tuomita"
   ],
-  "uskon sammuttaminen": [
-    "uskon sammuttaminen",
-    "sammuttaa",
-    "sammutus"
-  ],
-  "valheen henki": [
-    "valheen henki",
-    "valhe",
-    "valheellinen"
-  ],
-  "valheprofeetat": [
-    "valheprofeetat",
-    "profeetta",
-    "profeetallisuus"
+  "valheen isä": [
+    "valheen isä",
+    "isä",
+    "valhe"
   ],
   "valppaus": [
     "valppaus",
@@ -564,48 +574,43 @@ Aikaa kului: 8.34 sekuntia.
   ],
   "valta": [
     "valta",
-    "valtaa",
-    "valtias"
+    "valtaisa",
+    "valtaa"
   ],
-  "vanhempien uskovien rooli": [
-    "vanhempien uskovien rooli",
-    "vanhempien rooli",
-    "vanhempien vastuu"
-  ],
-  "viettelykset": [
-    "viettelykset",
-    "viettely",
-    "viettelys"
+  "vanhemmat uskovat": [
+    "vanhemmat uskovat",
+    "vanhemmat",
+    "uskovainen"
   ],
   "viisaus": [
     "viisaus",
     "viisas",
-    "viisauden"
+    "visio"
   ],
-  "väärien opettajien esimerkit": [
-    "väärien opettajien esimerkit",
-    "esimerkki",
-    "esimerkit"
-  ],
-  "väärien opettajien tuntomerkit": [
-    "väärien opettajien tuntomerkit",
-    "tuntomerkki",
-    "tuntomerkit"
-  ],
-  "väärien profeettojen varoitus": [
-    "väärien profeettojen varoitus",
-    "varoitus",
-    "varoituksen"
-  ],
-  "väärät opettajat": [
-    "väärät opettajat",
+  "väärien opettajien vaarat": [
+    "väärien opettajien vaarat",
     "opettaja",
-    "opettajat"
+    "vaara"
   ],
-  "yhteenveto": [
-    "yhteenveto",
-    "yhteenvetoa",
-    "yhteenvetoja"
+  "väärien profeettojen hedelmät": [
+    "väärien profeettojen hedelmät",
+    "profeetta",
+    "hedelmä"
+  ],
+  "väärien profeettojen tunnistaminen": [
+    "väärien profeettojen tunnistaminen",
+    "tunnistaminen",
+    "profeetta"
+  ],
+  "väärät profeetat": [
+    "väärät profeetat",
+    "profeetta",
+    "väärä"
+  ],
+  "äidit uskossa": [
+    "äidit uskossa",
+    "äiti",
+    "uskossakin"
   ]
 }
 
@@ -613,7 +618,7 @@ Aikaa kului: 8.34 sekuntia.
 --- VAIHE 2: JAKEIDEN KERÄYS (-1/+1, RIKASTETTU HAKU) ---
 ================================================================================
 
-Löytyi 232 uniikkia laajennettua avainsanaa. Suoritetaan haut...
+Löytyi 228 uniikkia laajennettua avainsanaa. Suoritetaan haut...
 Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 
 ================================================================================
@@ -621,258 +626,147 @@ Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 ================================================================================
 
 Liian yleiset hakusanat (yli 500 osumaa, suodatettu pois):
-  - 'aika' (2687 osumaa), 'armo' (1152 osumaa), 'hedelmä' (624 osumaa), 'häpeä' (637 osumaa), 'ilo' (1523 osumaa), 'kutsu' (1355 osumaa), 'kärsi' (520 osumaa), 'opetus' (708 osumaa), 'pitää' (548 osumaa), 'profeetta' (714 osumaa), 'sana' (2856 osumaa), 'tuomio' (516 osumaa), 'työ' (835 osumaa), 'valta' (2165 osumaa)
+  - 'antaa' (1455 osumaa), 'armo' (1152 osumaa), 'hedelmä' (624 osumaa), 'hyvä' (1821 osumaa), 'ilo' (1523 osumaa), 'isä' (3967 osumaa), 'kutsu' (1355 osumaa), 'käskyn' (639 osumaa), 'opetus' (708 osumaa), 'oppi' (567 osumaa), 'pelkää' (664 osumaa), 'pitää' (548 osumaa), 'profeetta' (714 osumaa), 'sana' (2856 osumaa), 'tuomio' (516 osumaa), 'työ' (835 osumaa), 'uusi' (1613 osumaa), 'valta' (2165 osumaa), 'vanha' (678 osumaa), 'äiti' (631 osumaa)
 
 Käsitellään osiot ja suodatetaan jakeet (Groq Llama3-8b)...
   (1/14) Suodatetaan osiolle 1....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 29.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 6.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 27.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 27.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (2/14) Suodatetaan osiolle 2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+  (2/14) Suodatetaan osiolle 2.1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 24.000000 seconds
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 4.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 9.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 25.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (3/14) Suodatetaan osiolle 2.1....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 20.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 8.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 49.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 1.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 4.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (4/14) Suodatetaan osiolle 2.2....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 6.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+  (3/14) Suodatetaan osiolle 2.2....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 26.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 47.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 35.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 11.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (5/14) Suodatetaan osiolle 2.3....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 7.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 3.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-  (6/14) Suodatetaan osiolle 3....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 5.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 20.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 60.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+  (4/14) Suodatetaan osiolle 2.3....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 45.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 6.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 52.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (7/14) Suodatetaan osiolle 3.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 45.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 2.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 7.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 53.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (8/14) Suodatetaan osiolle 3.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 45.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+  (5/14) Suodatetaan osiolle 3.1....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 6.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 16.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 29.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
-  (9/14) Suodatetaan osiolle 4....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 21.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 2.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
-  (10/14) Suodatetaan osiolle 4.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 8.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 35.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 2.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
-  (11/14) Suodatetaan osiolle 4.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+  (6/14) Suodatetaan osiolle 3.2....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 35.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (12/14) Suodatetaan osiolle 4.3....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-  (13/14) Suodatetaan osiolle 4.4....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 39.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 2.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 21.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 43.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+  (7/14) Suodatetaan osiolle 4.1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+  (8/14) Suodatetaan osiolle 4.2....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+  (9/14) Suodatetaan osiolle 4.3....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+  (10/14) Suodatetaan osiolle 4.4....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+  (11/14) Suodatetaan osiolle 2....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+  (12/14) Suodatetaan osiolle 3....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+  (13/14) Suodatetaan osiolle 4....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
   (14/14) Suodatetaan osiolle 5....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 22.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 7.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 54.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 5.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 17.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 21.000000 seconds
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
 
-Jakeiden keräys valmis. Aikaa kului: 1512.09 sekuntia.
-Kerättyjä uniikkeja jakeita yhteensä: 198 kpl.
+Jakeiden keräys valmis. Aikaa kului: 102.88 sekuntia.
+Kerättyjä uniikkeja jakeita yhteensä: 2 kpl.
 
 ================================================================================
 --- VAIHE 3: JAKEIDEN JÄRJESTELY JA PISTEYTYS (GROQ LLAMA3-70B) ---
 ================================================================================
-  - Edistyminen: 7% - Järjestellään osiota 1.: Johdanto: Kutsu vaatii viisautta ja erottamiskykyä...
+  - Edistyminen: 50% - Järjestellään osiota 1.: Johdanto: Kutsu vaatii viisautta ja erottamiskykyä...
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 14% - Järjestellään osiota 2.: Raamatun selkeä varoitus: Tunnista ja vältä eksytystä...
+  - Edistyminen: 100% - Järjestellään osiota 2.1.: Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?...
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 21% - Järjestellään osiota 2.1.: Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 28% - Järjestellään osiota 2.2.: Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 35% - Järjestellään osiota 2.3.: Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 42% - Järjestellään osiota 3.: Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 50% - Järjestellään osiota 3.1.: Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 57% - Järjestellään osiota 3.2.: Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 64% - Järjestellään osiota 4.: Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 71% - Järjestellään osiota 4.1.: Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 78% - Järjestellään osiota 4.2.: Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 85% - Järjestellään osiota 4.3.: Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 92% - Järjestellään osiota 4.4.: Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 100% - Järjestellään osiota 5.: Yhteenveto: Totuus rakkaudessa...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-Järjestely valmis. Aikaa kului: 1.46 sekuntia.
+Järjestely valmis. Aikaa kului: 1.20 sekuntia.
 
 ================================================================================
 --- LOPULLISET TULOKSET ---
 ================================================================================
-KOKONAISKESTO: 25.7 minuuttia
-Kerätyt jakeet (uniikit): 198 kpl
+KOKONAISKESTO: 2.4 minuuttia
+Kerätyt jakeet (uniikit): 2 kpl
 Järjestellyt jakeet (uniikit): 0 kpl
 Sijoituksia osioihin yhteensä: 0 kpl
 
 TOKEN-KULUTUS:
-  - Syöte: 135,328 tokenia
-  - Tuotos: 121,037 tokenia
-  - Yhteensä: 256,365 tokenia
-  - Kustannusarvio: ~$0.12503 (Groq + Gemini)
+  - Syöte: 9,285 tokenia
+  - Tuotos: 7,939 tokenia
+  - Yhteensä: 17,224 tokenia
+  - Kustannusarvio: ~$0.07367 (Groq + Gemini)
 
 ================================================================================
 --- YKSITYISKOHTAINEN JAEJAOTTELU ---
@@ -881,43 +775,7 @@ TOKEN-KULUTUS:
 --- Osio 1. (Yhteensä: 0) ---
   - Ei jakeita tähän osioon.
 
---- Osio 2. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
 --- Osio 2.1. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 2.2. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 2.3. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 3. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 3.1. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 3.2. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.1. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.2. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.3. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.4. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 5. (Yhteensä: 0) ---
   - Ei jakeita tähän osioon.
 
 ================================================================================
