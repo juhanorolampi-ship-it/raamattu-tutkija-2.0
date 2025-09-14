@@ -223,7 +223,6 @@ def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
             "VASTAUSOHJE: Palauta VAIN JSON-objekti."
         )
 
-        # --- KORJATTU KOHTA: Käytetään oikeaa, tuettua mallinimeä ---
         vastaus_str, usage = tee_api_kutsu(
             prompt, "llama-3.1-8b-instant", is_json=True, temperature=0.1
         )
@@ -285,7 +284,6 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
         "muuttumattomat merkkijonot, kukin omalla rivillään. "
         "Älä lisää numerointeja, selityksiä tai mitään muuta."
     )
-    # --- KORJATTU KOHTA: Käytetään oikeaa, tuettua mallinimeä ---
     vastaus_str, usage = tee_api_kutsu(
         prompt, "llama-3.1-8b-instant", temperature=0.0)
 
@@ -301,7 +299,9 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
 def pisteyta_ja_jarjestele(
         aihe, sisallysluettelo, osio_kohtaiset_jakeet,
         paivita_token_laskuri_callback, progress_callback=None):
-    """Pisteyttää ja järjestelee jakeet käyttäen tehokasta Groq-mallia."""
+    """
+    Pisteyttää ja järjestelee jakeet erissä käyttäen tehokasta Groq-mallia.
+    """
     final_jae_kartta = {}
     osiot = {
         match.group(1): match.group(3)
@@ -309,60 +309,58 @@ def pisteyta_ja_jarjestele(
         and (match := re.match(r"^\s*(\d+(\.\d+)*)\.?\s*(.*)", rivi.strip()))
     }
 
-    total_steps = len(osio_kohtaiset_jakeet)
-    current_step = 0
+    total_osiot = len(osio_kohtaiset_jakeet)
+    current_osio_index = 0
 
     for osio_nro, jakeet in osio_kohtaiset_jakeet.items():
-        current_step += 1
+        current_osio_index += 1
         osion_teema = osiot.get(osio_nro.strip('.'), "")
+        final_jae_kartta[osio_nro] = {"relevantimmat": [], "vahemman_relevantit": []}
+        
         if not jakeet or not osion_teema:
-            final_jae_kartta[osio_nro] = {
-                "relevantimmat": [], "vahemman_relevantit": []}
             continue
 
         if progress_callback:
             progress_text = f"Järjestellään osiota {osio_nro}: {osion_teema}..."
-            progress_percent = int((current_step / total_steps) * 100)
+            progress_percent = int((current_osio_index / total_osiot) * 100)
             progress_callback(progress_percent, progress_text)
 
-        jae_viitteet = [erota_jaeviite(j) for j in jakeet]
-        prompt = (
-            "Olet teologinen asiantuntija. Pisteytä jokainen alla oleva "
-            f"Raamatun jae asteikolla 1-10 sen mukaan, kuinka relevantti se on "
-            f"seuraavaan teemaan: '{osion_teema}'. Ota huomioon myös tutkimuksen "
-            f"pääaihe: '{aihe}'.\n\n"
-            "ARVIOITAVAT JAKEET:\n---\n"
-            f"{'\\n'.join(jae_viitteet)}\n"
-            "---\n\n"
-            "VASTAUSOHJE: Palauta VAIN JSON-objekti, jossa avaimina ovat "
-            "jaeviitteet ja arvoina kokonaisluvut 1-10. Esimerkki:\n"
-            '{\n  "1. Mooseksen kirja 1:1": 8,\n  "Roomalaiskirje 3:23": 10\n}'
-        )
-
-        # --- KORJATTU KOHTA: Käytetään oikeaa, tuettua mallinimeä ---
-        vastaus_str, usage = tee_api_kutsu(
-            prompt, "llama3-70b-8192", is_json=True, temperature=0.1)
-        paivita_token_laskuri_callback(usage)
-
+        BATCH_SIZE = 50  # Pienempi eräkoko pisteytykselle
         pisteet = {}
-        if vastaus_str and not vastaus_str.startswith("API-VIRHE:"):
-            try:
-                pisteet = json.loads(vastaus_str)
-            except json.JSONDecodeError:
-                print(f"JSON-jäsennysvirhe osiolle {osio_nro}.")
+        jae_viitteet_lista = [erota_jaeviite(j) for j in jakeet]
 
-        relevantimmat = [
-            j for j in jakeet
-            if int(pisteet.get(erota_jaeviite(j), 0)) >= 7
-        ]
-        vahemman_relevantit = [
-            j for j in jakeet
-            if 4 <= int(pisteet.get(erota_jaeviite(j), 0)) <= 6
-        ]
+        for i in range(0, len(jae_viitteet_lista), BATCH_SIZE):
+            batch = jae_viitteet_lista[i:i + BATCH_SIZE]
+            
+            prompt = (
+                "Olet teologinen asiantuntija. Pisteytä jokainen alla oleva "
+                f"Raamatun jae asteikolla 1-10 sen mukaan, kuinka relevantti se on "
+                f"seuraavaan teemaan: '{osion_teema}'. Ota huomioon myös tutkimuksen "
+                f"pääaihe: '{aihe}'.\n\n"
+                "ARVIOITAVAT JAKEET:\n---\n"
+                f"{'\\n'.join(batch)}\n"
+                "---\n\n"
+                "VASTAUSOHJE: Palauta VAIN JSON-objekti, jossa avaimina ovat "
+                "jaeviitteet ja arvoina kokonaisluvut 1-10."
+            )
 
-        final_jae_kartta[osio_nro] = {
-            "relevantimmat": relevantimmat,
-            "vahemman_relevantit": vahemman_relevantit
-        }
+            vastaus_str, usage = tee_api_kutsu(
+                prompt, "llama3-70b-8192", is_json=True, temperature=0.1)
+            paivita_token_laskuri_callback(usage)
+            
+            if vastaus_str and not vastaus_str.startswith("API-VIRHE:"):
+                try:
+                    pisteet.update(json.loads(vastaus_str))
+                except json.JSONDecodeError:
+                    print(f"JSON-jäsennysvirhe osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}.")
+            
+            time.sleep(0.5)
+
+        for jae in jakeet:
+            piste = int(pisteet.get(erota_jaeviite(jae), 0))
+            if piste >= 7:
+                final_jae_kartta[osio_nro]["relevantimmat"].append(jae)
+            elif 4 <= piste <= 6:
+                final_jae_kartta[osio_nro]["vahemman_relevantit"].append(jae)
 
     return final_jae_kartta
