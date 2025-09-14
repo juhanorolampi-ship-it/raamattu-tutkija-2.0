@@ -158,7 +158,6 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
 def luo_hakusuunnitelma(pääaihe, syote_teksti):
     """
     Luo älykkään hakusuunnitelman analysoimalla käyttäjän syötettä.
-    Käyttää tehokkainta mallia (Gemini 1.5 Pro).
     """
     prompt = (
         f"{TEOLOGINEN_PERUSOHJE}\n\n"
@@ -201,11 +200,12 @@ def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
     """
     BATCH_SIZE = 15
     final_results = {}
-    
+
     for i in range(0, len(avainsanat), BATCH_SIZE):
         batch = avainsanat[i:i + BATCH_SIZE]
-        print(f"Rikastetaan avainsanoja, erä {i//BATCH_SIZE + 1}/{(len(avainsanat) + BATCH_SIZE - 1)//BATCH_SIZE}...")
-        
+        print(
+            f"Rikastetaan avainsanoja, erä {i//BATCH_SIZE + 1}/{(len(avainsanat) + BATCH_SIZE - 1)//BATCH_SIZE}...")
+
         prompt = (
             "Olet suomen kielen asiantuntija. Tehtäväsi on laajentaa alla oleva lista "
             "suomenkielisiä avainsanoja. Palauta JSON-objekti, jossa avaimena on "
@@ -222,15 +222,15 @@ def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
             "---\n\n"
             "VASTAUSOHJE: Palauta VAIN JSON-objekti."
         )
-        
+
+        # --- KORJATTU KOHTA: Käytetään oikeaa, tuettua mallinimeä ---
         vastaus_str, usage = tee_api_kutsu(
-            prompt, "llama3-8b-8192", is_json=True, temperature=0.1
+            prompt, "llama-3.1-8b-instant", is_json=True, temperature=0.1
         )
         paivita_token_laskuri_callback(usage)
 
         if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
             print(f"API-virhe erän rikastamisessa: {vastaus_str}")
-            # Lisätään alkuperäiset sanat virheen sattuessa
             final_results.update({sana: [sana] for sana in batch})
             continue
 
@@ -240,8 +240,8 @@ def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
         except json.JSONDecodeError:
             print("VIRHE: Erän rikastamisen JSON-jäsennys epäonnistui.")
             final_results.update({sana: [sana] for sana in batch})
-        
-        time.sleep(0.5) # Pieni tauko kutsujen välillä
+
+        time.sleep(0.5)
 
     return final_results
 
@@ -285,8 +285,9 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
         "muuttumattomat merkkijonot, kukin omalla rivillään. "
         "Älä lisää numerointeja, selityksiä tai mitään muuta."
     )
+    # --- KORJATTU KOHTA: Käytetään oikeaa, tuettua mallinimeä ---
     vastaus_str, usage = tee_api_kutsu(
-        prompt, "llama3-8b-8192", temperature=0.0)
+        prompt, "llama-3.1-8b-instant", temperature=0.0)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe kontekstin valinnassa: {vastaus_str}")
@@ -338,6 +339,7 @@ def pisteyta_ja_jarjestele(
             '{\n  "1. Mooseksen kirja 1:1": 8,\n  "Roomalaiskirje 3:23": 10\n}'
         )
 
+        # --- KORJATTU KOHTA: Käytetään oikeaa, tuettua mallinimeä ---
         vastaus_str, usage = tee_api_kutsu(
             prompt, "llama3-70b-8192", is_json=True, temperature=0.1)
         paivita_token_laskuri_callback(usage)

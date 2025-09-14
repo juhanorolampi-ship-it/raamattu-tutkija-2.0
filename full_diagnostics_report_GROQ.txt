@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: ÄLYKÄS HAKUSUUNNITELMAN LUONTI (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 19.24 sekuntia.
+Aikaa kului: 16.11 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -17,91 +17,114 @@ Aikaa kului: 19.24 sekuntia.
       "kutsu",
       "viisaus",
       "erottamiskyky",
-      "valheen henki",
-      "petolla",
+      "valheen tunnistaminen",
       "eksytys",
-      "susi lammasten vaatteissa",
-      "väärien profeettojen varoitus"
+      "susi lampaan vaatteissa",
+      "hengellinen suojelu"
+    ],
+    "2.": [
+      "väärä opettaja",
+      "eksyttäjä",
+      "harhaoppi",
+      "peto",
+      "viettelys",
+      "Raamatun varoitukset"
     ],
     "2.1.": [
-      "väärien opettajien tuntomerkit",
+      "tunnistusmerkit",
+      "väärät profeetat",
+      "motiivit",
+      "metodit",
+      "hedelmät",
       "ahneus",
       "valta",
       "mielistely",
       "ovelat sanat",
-      "hajaannuksen luominen",
+      "hajaannus",
       "moraalittomuus",
-      "eriseurat",
-      "hedelmätön",
-      "petollinen oppi"
+      "eriseurat"
     ],
     "2.2.": [
-      "väärien profeettojen esimerkkejä",
+      "Raamatulliset esimerkit",
+      "harhaopettajat",
+      "eksytys",
+      "Vanha testamentti",
+      "Uusi testamentti",
       "Bileam",
       "Simson",
-      "Saul",
-      "Juudas",
-      "Ananias ja Safira",
-      "valheprofeetat Vanhassa testamentissa",
-      "valheprofeetat Uudessa testamentissa"
+      "Jeesus ja fariseukset"
     ],
     "2.3.": [
+      "toimintaohjeet",
       "harhaoppi",
-      "suhtautuminen harhaoppiin",
-      "eksytys",
-      "kurinpito",
-      "erottaminen seurakunnasta",
-      "käskyt harhaopin suhteen",
-      "ohjeet harhaopin suhteen"
+      "suhtautuminen",
+      "erottautuminen",
+      "ojentaminen",
+      "kurkuri",
+      "väärän opin torjuminen"
+    ],
+    "3.": [
+      "tasapaino",
+      "erottelu",
+      "tuomitseminen",
+      "armo",
+      "kärsivällisyys",
+      "ymmärryksellisyys",
+      "heikko veli"
     ],
     "3.1.": [
       "heikko veli",
-      "eksynyt",
       "eksyttäjä",
-      "kärsivällisyys",
+      "suhtautuminen",
       "ojentaminen",
+      "kurkuri",
       "armo",
-      "suden ja lampaan erottaminen"
+      "tasapaino",
+      "erottelu"
     ],
     "3.2.": [
       "kasvu",
       "armo",
+      "kärsivällisyys",
       "hengellinen kypsyys",
-      "kypsymättömyys",
-      "tietoinen kapina",
-      "eksytys",
-      "opetuslapseus"
+      "opetuslapseus",
+      "virheiden tekeminen"
+    ],
+    "4.": [
+      "nuoret",
+      "herätys",
+      "haasteet",
+      "nykyaika",
+      "sovellus",
+      "opetuslapseus",
+      "hengellinen ohjaus"
     ],
     "4.1.": [
-      "Jumalan työ",
-      "pelastus",
-      "ilo",
       "kiitollisuus",
       "hedelmä",
-      "epätäydelliset olosuhteet",
+      "ilo",
+      "pelastus",
+      "Jumalan työ",
       "armo",
-      "uudestisyntyminen"
+      "positiivisuus"
     ],
     "4.2.": [
-      "nuoret uskovat",
       "rakkaus",
       "kärsivällisyys",
-      "vanhemmat uskovat",
-      "isät uskossa",
-      "äidit uskossa",
-      "evankelioimispalo",
-      "opetus",
-      "ohjaus"
+      "nuoret uskovat",
+      "lähestymistapa",
+      "ohjaus",
+      "tuomitseminen",
+      "vanhemmat uskossa"
     ],
     "4.3.": [
       "opetuslapseuttaminen",
+      "pitkäjänteisyys",
+      "kestävä ratkaisu",
+      "Raamatun opetus",
       "terve oppi",
-      "raamatuntuntemus",
-      "kärsivällisyys",
-      "rakkaus",
-      "Akylas ja Priskilla",
-      "Apollos",
-      "hengellinen kasvu"
+      "hengellinen kasvu",
+      "mentorointi"
     ],
     "4.4.": [
       "liikkeet",
@@ -110,45 +133,21 @@ Aikaa kului: 19.24 sekuntia.
       "Carry the Love",
       "SEND",
       "arviointi",
-      "Jumalan työ",
-      "inhimilliset ylilyönnit",
-      "opilliset vaarat",
+      "erottelukyky",
+      "hedelmä",
       "koetelkaa kaikki",
-      "pitäkää se mikä hyvää on"
-    ],
-    "2.": [
-      "valheveljet",
-      "eksyttäjät",
-      "harhaopettajat",
-      "väärien opettajien tunnistaminen",
-      "väärien opettajien merkit"
-    ],
-    "3.": [
-      "tasapaino",
-      "erottelu",
-      "tuomitseminen",
-      "rakkaus",
-      "kärsivällisyys",
-      "armo",
-      "ymmärtämys"
-    ],
-    "4.": [
-      "nuorten herätys",
-      "haasteet",
-      "nykyajan sovellus",
-      "hengellinen ohjaus",
-      "opetuslapseus",
-      "uskonelämä"
+      "vaarat"
     ],
     "5.": [
+      "yhteenveto",
       "totuus",
       "rakkaus",
+      "tasapaino",
       "valppaus",
-      "eksytys",
       "armo",
       "kärsivällisyys",
-      "lauman suojeleminen",
-      "karitsoiden hoivaaminen"
+      "suojelu",
+      "hoivaaminen"
     ]
   }
 }
@@ -156,18 +155,14 @@ Aikaa kului: 19.24 sekuntia.
 ================================================================================
 --- VAIHE 1.5: AVAINSANOJEN RIKASTAMINEN (GROQ LLAMA3-8B) ---
 ================================================================================
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-Aikaa kului: 0.74 sekuntia.
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+Aikaa kului: 1.00 sekuntia.
 {
-  "Akylas ja Priskilla": [
-    "Akylas ja Priskilla"
-  ],
-  "Ananias ja Safira": [
-    "Ananias ja Safira"
-  ],
-  "Apollos": [
-    "Apollos"
-  ],
   "Bileam": [
     "Bileam"
   ],
@@ -177,20 +172,32 @@ Aikaa kului: 0.74 sekuntia.
   "Circuit Riders": [
     "Circuit Riders"
   ],
+  "Jeesus ja fariseukset": [
+    "Jeesus ja fariseukset"
+  ],
   "Jumalan työ": [
     "Jumalan työ"
   ],
-  "Juudas": [
-    "Juudas"
+  "Raamatulliset esimerkit": [
+    "Raamatulliset esimerkit"
+  ],
+  "Raamatun opetus": [
+    "Raamatun opetus"
+  ],
+  "Raamatun varoitukset": [
+    "Raamatun varoitukset"
   ],
   "SEND": [
     "SEND"
   ],
-  "Saul": [
-    "Saul"
-  ],
   "Simson": [
     "Simson"
+  ],
+  "Uusi testamentti": [
+    "Uusi testamentti"
+  ],
+  "Vanha testamentti": [
+    "Vanha testamentti"
   ],
   "YWAM": [
     "YWAM"
@@ -204,41 +211,32 @@ Aikaa kului: 0.74 sekuntia.
   "arviointi": [
     "arviointi"
   ],
-  "eksynyt": [
-    "eksynyt"
-  ],
   "eksyttäjä": [
     "eksyttäjä"
-  ],
-  "eksyttäjät": [
-    "eksyttäjät"
   ],
   "eksytys": [
     "eksytys"
   ],
-  "epätäydelliset olosuhteet": [
-    "epätäydelliset olosuhteet"
-  ],
   "eriseurat": [
     "eriseurat"
-  ],
-  "erottaminen seurakunnasta": [
-    "erottaminen seurakunnasta"
   ],
   "erottamiskyky": [
     "erottamiskyky"
   ],
+  "erottautuminen": [
+    "erottautuminen"
+  ],
   "erottelu": [
     "erottelu"
   ],
-  "evankelioimispalo": [
-    "evankelioimispalo"
+  "erottelukyky": [
+    "erottelukyky"
   ],
   "haasteet": [
     "haasteet"
   ],
-  "hajaannuksen luominen": [
-    "hajaannuksen luominen"
+  "hajaannus": [
+    "hajaannus"
   ],
   "harhaopettajat": [
     "harhaopettajat"
@@ -249,8 +247,8 @@ Aikaa kului: 0.74 sekuntia.
   "hedelmä": [
     "hedelmä"
   ],
-  "hedelmätön": [
-    "hedelmätön"
+  "hedelmät": [
+    "hedelmät"
   ],
   "heikko veli": [
     "heikko veli"
@@ -264,20 +262,23 @@ Aikaa kului: 0.74 sekuntia.
   "hengellinen ohjaus": [
     "hengellinen ohjaus"
   ],
+  "hengellinen suojelu": [
+    "hengellinen suojelu"
+  ],
+  "herätys": [
+    "herätys"
+  ],
+  "hoivaaminen": [
+    "hoivaaminen"
+  ],
   "ilo": [
     "ilo"
   ],
-  "inhimilliset ylilyönnit": [
-    "inhimilliset ylilyönnit"
-  ],
-  "isät uskossa": [
-    "isät uskossa"
-  ],
-  "karitsoiden hoivaaminen": [
-    "karitsoiden hoivaaminen"
-  ],
   "kasvu": [
     "kasvu"
+  ],
+  "kestävä ratkaisu": [
+    "kestävä ratkaisu"
   ],
   "kiitollisuus": [
     "kiitollisuus"
@@ -285,26 +286,26 @@ Aikaa kului: 0.74 sekuntia.
   "koetelkaa kaikki": [
     "koetelkaa kaikki"
   ],
-  "kurinpito": [
-    "kurinpito"
+  "kurkuri": [
+    "kurkuri"
   ],
   "kutsu": [
     "kutsu"
   ],
-  "kypsymättömyys": [
-    "kypsymättömyys"
-  ],
   "kärsivällisyys": [
     "kärsivällisyys"
   ],
-  "käskyt harhaopin suhteen": [
-    "käskyt harhaopin suhteen"
-  ],
-  "lauman suojeleminen": [
-    "lauman suojeleminen"
-  ],
   "liikkeet": [
     "liikkeet"
+  ],
+  "lähestymistapa": [
+    "lähestymistapa"
+  ],
+  "mentorointi": [
+    "mentorointi"
+  ],
+  "metodit": [
+    "metodit"
   ],
   "mielistely": [
     "mielistely"
@@ -312,26 +313,23 @@ Aikaa kului: 0.74 sekuntia.
   "moraalittomuus": [
     "moraalittomuus"
   ],
+  "motiivit": [
+    "motiivit"
+  ],
+  "nuoret": [
+    "nuoret"
+  ],
   "nuoret uskovat": [
     "nuoret uskovat"
   ],
-  "nuorten herätys": [
-    "nuorten herätys"
-  ],
-  "nykyajan sovellus": [
-    "nykyajan sovellus"
+  "nykyaika": [
+    "nykyaika"
   ],
   "ohjaus": [
     "ohjaus"
   ],
-  "ohjeet harhaopin suhteen": [
-    "ohjeet harhaopin suhteen"
-  ],
   "ojentaminen": [
     "ojentaminen"
-  ],
-  "opetus": [
-    "opetus"
   ],
   "opetuslapseus": [
     "opetuslapseus"
@@ -339,38 +337,35 @@ Aikaa kului: 0.74 sekuntia.
   "opetuslapseuttaminen": [
     "opetuslapseuttaminen"
   ],
-  "opilliset vaarat": [
-    "opilliset vaarat"
-  ],
   "ovelat sanat": [
     "ovelat sanat"
   ],
   "pelastus": [
     "pelastus"
   ],
-  "petolla": [
-    "petolla"
+  "peto": [
+    "peto"
   ],
-  "petollinen oppi": [
-    "petollinen oppi"
+  "pitkäjänteisyys": [
+    "pitkäjänteisyys"
   ],
-  "pitäkää se mikä hyvää on": [
-    "pitäkää se mikä hyvää on"
-  ],
-  "raamatuntuntemus": [
-    "raamatuntuntemus"
+  "positiivisuus": [
+    "positiivisuus"
   ],
   "rakkaus": [
     "rakkaus"
   ],
-  "suden ja lampaan erottaminen": [
-    "suden ja lampaan erottaminen"
+  "sovellus": [
+    "sovellus"
   ],
-  "suhtautuminen harhaoppiin": [
-    "suhtautuminen harhaoppiin"
+  "suhtautuminen": [
+    "suhtautuminen"
   ],
-  "susi lammasten vaatteissa": [
-    "susi lammasten vaatteissa"
+  "suojelu": [
+    "suojelu"
+  ],
+  "susi lampaan vaatteissa": [
+    "susi lampaan vaatteissa"
   ],
   "tasapaino": [
     "tasapaino"
@@ -378,32 +373,23 @@ Aikaa kului: 0.74 sekuntia.
   "terve oppi": [
     "terve oppi"
   ],
-  "tietoinen kapina": [
-    "tietoinen kapina"
+  "toimintaohjeet": [
+    "toimintaohjeet"
   ],
   "totuus": [
     "totuus"
   ],
+  "tunnistusmerkit": [
+    "tunnistusmerkit"
+  ],
   "tuomitseminen": [
     "tuomitseminen"
   ],
-  "uskonelämä": [
-    "uskonelämä"
+  "vaarat": [
+    "vaarat"
   ],
-  "uudestisyntyminen": [
-    "uudestisyntyminen"
-  ],
-  "valheen henki": [
-    "valheen henki"
-  ],
-  "valheprofeetat Uudessa testamentissa": [
-    "valheprofeetat Uudessa testamentissa"
-  ],
-  "valheprofeetat Vanhassa testamentissa": [
-    "valheprofeetat Vanhassa testamentissa"
-  ],
-  "valheveljet": [
-    "valheveljet"
+  "valheen tunnistaminen": [
+    "valheen tunnistaminen"
   ],
   "valppaus": [
     "valppaus"
@@ -411,32 +397,32 @@ Aikaa kului: 0.74 sekuntia.
   "valta": [
     "valta"
   ],
-  "vanhemmat uskovat": [
-    "vanhemmat uskovat"
+  "vanhemmat uskossa": [
+    "vanhemmat uskossa"
+  ],
+  "viettelys": [
+    "viettelys"
   ],
   "viisaus": [
     "viisaus"
   ],
-  "väärien opettajien merkit": [
-    "väärien opettajien merkit"
+  "virheiden tekeminen": [
+    "virheiden tekeminen"
   ],
-  "väärien opettajien tunnistaminen": [
-    "väärien opettajien tunnistaminen"
+  "väärä opettaja": [
+    "väärä opettaja"
   ],
-  "väärien opettajien tuntomerkit": [
-    "väärien opettajien tuntomerkit"
+  "väärän opin torjuminen": [
+    "väärän opin torjuminen"
   ],
-  "väärien profeettojen esimerkkejä": [
-    "väärien profeettojen esimerkkejä"
+  "väärät profeetat": [
+    "väärät profeetat"
   ],
-  "väärien profeettojen varoitus": [
-    "väärien profeettojen varoitus"
+  "yhteenveto": [
+    "yhteenveto"
   ],
-  "ymmärtämys": [
-    "ymmärtämys"
-  ],
-  "äidit uskossa": [
-    "äidit uskossa"
+  "ymmärryksellisyys": [
+    "ymmärryksellisyys"
   ]
 }
 
@@ -444,7 +430,7 @@ Aikaa kului: 0.74 sekuntia.
 --- VAIHE 2: JAKEIDEN KERÄYS (-1/+1, RIKASTETTU HAKU) ---
 ================================================================================
 
-Löytyi 93 uniikkia laajennettua avainsanaa. Suoritetaan haut...
+Löytyi 87 uniikkia laajennettua avainsanaa. Suoritetaan haut...
 Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 
 ================================================================================
@@ -452,52 +438,53 @@ Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 ================================================================================
 
 Liian yleiset hakusanat (yli 500 osumaa, suodatettu pois):
-  - 'Saul' (660 osumaa), 'armo' (1152 osumaa), 'hedelmä' (624 osumaa), 'ilo' (1523 osumaa), 'kutsu' (1355 osumaa), 'opetus' (708 osumaa), 'valta' (2165 osumaa)
+  - 'armo' (1152 osumaa), 'hedelmä' (624 osumaa), 'ilo' (1523 osumaa), 'kutsu' (1355 osumaa), 'valta' (2165 osumaa)
 
 Käsitellään osiot ja suodatetaan jakeet (Groq Llama3-8b)...
   (1/14) Suodatetaan osiolle 1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (2/14) Suodatetaan osiolle 2.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (3/14) Suodatetaan osiolle 2.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (4/14) Suodatetaan osiolle 2.3....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (5/14) Suodatetaan osiolle 3.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (6/14) Suodatetaan osiolle 3.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (7/14) Suodatetaan osiolle 4.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (8/14) Suodatetaan osiolle 4.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (9/14) Suodatetaan osiolle 4.3....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (10/14) Suodatetaan osiolle 4.4....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (11/14) Suodatetaan osiolle 2....
-  (12/14) Suodatetaan osiolle 3....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (13/14) Suodatetaan osiolle 4....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (2/14) Suodatetaan osiolle 2....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (3/14) Suodatetaan osiolle 2.1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (4/14) Suodatetaan osiolle 2.2....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (5/14) Suodatetaan osiolle 2.3....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (6/14) Suodatetaan osiolle 3....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (7/14) Suodatetaan osiolle 3.1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (8/14) Suodatetaan osiolle 3.2....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (9/14) Suodatetaan osiolle 4....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (10/14) Suodatetaan osiolle 4.1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (11/14) Suodatetaan osiolle 4.2....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+  (12/14) Suodatetaan osiolle 4.3....
+  (13/14) Suodatetaan osiolle 4.4....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
   (14/14) Suodatetaan osiolle 5....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
 
-Jakeiden keräys valmis. Aikaa kului: 5.65 sekuntia.
+Jakeiden keräys valmis. Aikaa kului: 5.80 sekuntia.
 Kerättyjä uniikkeja jakeita yhteensä: 0 kpl.
 
 ================================================================================
@@ -515,9 +502,9 @@ Sijoituksia osioihin yhteensä: 0 kpl
 
 TOKEN-KULUTUS:
   - Syöte: 1,562 tokenia
-  - Tuotos: 1,167 tokenia
-  - Yhteensä: 2,729 tokenia
-  - Kustannusarvio: ~$0.03557 (Groq Llama3)
+  - Tuotos: 1,082 tokenia
+  - Yhteensä: 2,644 tokenia
+  - Kustannusarvio: ~$0.03555 (Groq Llama3)
 
 ================================================================================
 --- YKSITYISKOHTAINEN JAEJAOTTELU ---
