@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: ÄLYKÄS HAKUSUUNNITELMAN LUONTI (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 19.27 sekuntia.
+Aikaa kului: 18.57 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -23,141 +23,124 @@ Aikaa kului: 19.27 sekuntia.
       "susi lammasten vaatteissa",
       "väärien profeettojen varoitus"
     ],
-    "2.": [
-      "harhaoppi",
-      "eksytys",
-      "väärät profeetat",
-      "valheopettajat",
-      "viettelijät",
-      "väärien apostolien varoitus"
-    ],
     "2.1.": [
-      "tunnistusmerkit",
-      "väärät opettajat",
-      "motiivit",
+      "väärien opettajien tuntomerkit",
       "ahneus",
       "valta",
-      "metodit",
       "mielistely",
       "ovelat sanat",
       "hajaannuksen luominen",
-      "hedelmät",
       "moraalittomuus",
       "eriseurat",
-      "väärien profeettojen tuntomerkit"
+      "hedelmätön",
+      "paha hedelmä"
     ],
     "2.2.": [
-      "raamatulliset esimerkit",
-      "harhaopettajat",
-      "eksyttäjät",
-      "Vanha testamentti",
-      "Uusi testamentti",
-      "valheprofeetat",
+      "väärien profeettojen esimerkkejä",
       "Bileam",
-      "Gehasi",
-      "Ananias ja Safira"
+      "väärien profeettojen toiminta VT:ssa",
+      "Jeesuksen varoitukset vääristä profeetoista",
+      "Paavalin varoitukset vääristä opettajista",
+      "eksytys UT:ssa",
+      "harhaopit"
     ],
     "2.3.": [
-      "toimintaohjeet",
-      "harhaoppi",
-      "eksytys",
-      "suhtautuminen",
-      "kurinpito",
-      "erottaminen",
-      "nuhtelu",
-      "opetus",
-      "evankeliumi",
-      "väärien opettajien nuhtelu"
-    ],
-    "3.": [
-      "tasapaino",
-      "oikea asenne",
-      "erottelu",
-      "tuomitseminen",
-      "armo",
-      "kärsivällisyys",
-      "heikko veli",
-      "eksyttäjä"
+      "harhaopin vastustaminen",
+      "suhtautuminen vääriin opettajiin",
+      "erottautuminen",
+      "ojentaminen",
+      "kurinpito seurakunnassa",
+      "väärän opin nuhtelu"
     ],
     "3.1.": [
-      "eri mittapuut",
       "heikko veli",
-      "eksyttäjä",
-      "suhtautuminen",
+      "eksynyt lammas",
       "kärsivällisyys",
-      "ojentaminen",
       "armo",
-      "suden ja lampaan erottaminen"
+      "ojentaminen",
+      "restaurointi",
+      "suden erottaminen laumasta"
     ],
     "3.2.": [
-      "kasvun prosessi",
+      "hengellinen kasvu",
+      "kypsyys",
       "armo",
       "kärsivällisyys",
-      "hengellinen kypsyys",
       "opetuslapseus",
-      "hengellinen kasvu",
-      "uskon kasvu"
-    ],
-    "4.": [
-      "nuorten herätys",
-      "haasteet",
-      "nykyaika",
-      "sovellus",
-      "Suomi",
-      "hengellinen kasvu nuorilla",
-      "uskon haasteet"
+      "virheiden tekeminen",
+      "oppiminen"
     ],
     "4.1.": [
-      "kiitollisuus",
-      "hedelmä",
-      "ilo",
-      "pelastus",
       "Jumalan työ",
-      "hengellinen hedelmä",
-      "pelastuksen ilo"
+      "hedelmä",
+      "kiitollisuus",
+      "pelastus",
+      "ilo",
+      "armo",
+      "herätys"
     ],
     "4.2.": [
-      "rakkaudellinen asenne",
+      "rakkaus",
       "nuoret uskovat",
-      "lähestymistapa",
-      "vanhemmat uskovat",
+      "kärsivällisyys",
       "opetus",
-      "neuvonta",
-      "rohkaisu"
+      "ohjaus",
+      "mentorointi",
+      "vanhemmat uskossa"
     ],
     "4.3.": [
-      "pitkäjänteinen opetuslapseuttaminen",
-      "kestävä ratkaisu",
-      "opetus",
+      "opetuslapseuttaminen",
       "raamatuntutkismus",
+      "terve oppi",
       "hengellinen kasvu",
-      "mentorointi",
+      "pitkäjänteisyys",
       "Akylas ja Priscilla",
       "Apollos"
     ],
     "4.4.": [
-      "liikkeet",
+      "liikkeiden arviointi",
       "YWAM",
       "Circuit Riders",
       "Carry the love",
       "SEND",
-      "arviointi",
-      "tuomitseminen",
-      "hedelmä",
+      "hedelmän arviointi",
+      "opillinen tarkastelu",
       "koetelkaa kaikki",
-      "hengelliset liikkeet",
-      "liikkeiden arviointi"
+      "pitäkää se mikä hyvää on"
+    ],
+    "2.": [
+      "eksytys",
+      "harhaoppi",
+      "väärien opettajien tunnistaminen",
+      "väärien profeettojen varoitukset Raamatussa",
+      "harhaopit Raamatussa",
+      "hengellinen erottamiskyky"
+    ],
+    "3.": [
+      "tasapaino",
+      "erottelu",
+      "tuomitseminen",
+      "armo",
+      "kärsivällisyys",
+      "heikko uskova",
+      "hengellinen kypsyys"
+    ],
+    "4.": [
+      "nuorten herätys",
+      "haasteet",
+      "kiitollisuus",
+      "rakkaus",
+      "opetuslapseuttaminen",
+      "liikkeiden arviointi",
+      "nykyajan sovellus"
     ],
     "5.": [
-      "yhteenveto",
       "totuus",
       "rakkaus",
       "tasapaino",
-      "valppaus",
-      "armo",
-      "kärsivällisyys",
-      "lauma",
-      "karitsat"
+      "lauman suojelu",
+      "karitsoiden hoivaaminen",
+      "yhteenveto"
     ]
   }
 }
@@ -171,28 +154,22 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-Aikaa kului: 8.42 sekuntia.
+Aikaa kului: 7.61 sekuntia.
 {
   "Akylas ja Priscilla": [
     "Akylas ja Priscilla",
     "Akylas",
     "Priscilla"
   ],
-  "Ananias ja Safira": [
-    "Ananias ja Safira",
-    "Ananias",
-    "Safira"
-  ],
   "Apollos": [
     "Apollos",
     "Apollossa",
-    "Apollossa oleva"
+    "Apollossen"
   ],
   "Bileam": [
     "Bileam",
     "Bileamin",
-    "Bileamin tietä"
+    "Bileamin taulu"
   ],
   "Carry the love": [
     "Carry the love",
@@ -201,263 +178,218 @@ Aikaa kului: 8.42 sekuntia.
   ],
   "Circuit Riders": [
     "Circuit Riders",
-    "kierrosajajat",
-    "kierrosajaja"
+    "kierrosajot",
+    "kierrosajot"
   ],
-  "Gehasi": [
-    "Gehasi",
-    "Gehasin",
-    "Gehasin tuli"
+  "Jeesuksen varoitukset vääristä profeetoista": [
+    "Jeesuksen varoitukset vääristä profeetoista",
+    "vääristä profeetoista",
+    "vääristä profeetan"
   ],
   "Jumalan työ": [
     "Jumalan työ",
     "Jumalan työn",
-    "Jumalan työn teko"
+    "Jumalan työn"
+  ],
+  "Paavalin varoitukset vääristä opettajista": [
+    "Paavalin varoitukset vääristä opettajista",
+    "vääristä opettajista",
+    "vääristä opettajan"
   ],
   "SEND": [
     "SEND",
     "lähettäminen",
     "lähetys"
   ],
-  "Suomi": [
-    "Suomi",
-    "suomalainen",
-    "suomalaiset"
-  ],
-  "Uusi testamentti": [
-    "Uusi testamentti",
-    "Uuden testamentin",
-    "Uuden testamentin kirjoitukset"
-  ],
-  "Vanha testamentti": [
-    "Vanha testamentti",
-    "Vanhan testamentin",
-    "Vanhan testamentin kirjoitukset"
-  ],
   "YWAM": [
     "YWAM",
-    "Nuoret maailmalla",
-    "Nuoret maailmalla"
+    "nuoriso",
+    "nuorisotyö"
   ],
   "ahneus": [
     "ahneus",
     "ahneuden",
-    "ahneuden tarkoitus"
+    "ahneutta"
   ],
   "armo": [
     "armo",
-    "armoisen",
-    "armoisen rakkauden"
+    "armahdus",
+    "armahdusta"
   ],
-  "arviointi": [
-    "arviointi",
-    "arvioida",
-    "arvio"
-  ],
-  "eksyttäjä": [
-    "eksyttäjä",
-    "eksyttää",
-    "eksyttäjät"
-  ],
-  "eksyttäjät": [
-    "eksyttäjät",
-    "eksyttäjä",
-    "eksyttää"
+  "eksynyt lammas": [
+    "eksynyt lammas",
+    "eksynyt lammas",
+    "eksynyt lammas"
   ],
   "eksytys": [
     "eksytys",
-    "eksyttäjä",
-    "eksyttää"
+    "eksytys",
+    "eksytys"
   ],
-  "eri mittapuut": [
-    "eri mittapuut",
-    "mittapuu",
-    "mittapuut"
+  "eksytys UT:ssa": [
+    "eksytys UT:ssa",
+    "eksytys",
+    "eksytys"
   ],
   "eriseurat": [
     "eriseurat",
-    "eriseura",
-    "eriseurassa"
-  ],
-  "erottaminen": [
-    "erottaminen",
-    "erottaa",
+    "erilliset",
     "erottaminen"
   ],
   "erottamiskyky": [
     "erottamiskyky",
-    "erottamiskykyä",
-    "erottamiskykyä"
+    "erottaminen",
+    "erottautuminen"
+  ],
+  "erottautuminen": [
+    "erottautuminen",
+    "erottaminen",
+    "erillisyys"
   ],
   "erottelu": [
     "erottelu",
-    "erottaa",
-    "erottelua"
-  ],
-  "evankeliumi": [
-    "evankeliumi",
-    "evankeliumeja",
-    "evankeliumeja"
+    "erottaminen",
+    "erillisyys"
   ],
   "haasteet": [
     "haasteet",
-    "haaste",
-    "haastaa"
+    "haastaa",
+    "kokea"
   ],
   "hajaannuksen luominen": [
     "hajaannuksen luominen",
     "hajaannus",
-    "hajaannuksen"
+    "erillisyys"
   ],
-  "harhaopettajat": [
-    "harhaopettajat",
-    "harhaopettaja",
-    "harhaopettajat"
+  "harhaopin vastustaminen": [
+    "harhaopin vastustaminen",
+    "vastustaa",
+    "torjua"
+  ],
+  "harhaopit": [
+    "harhaopit",
+    "harhaoppi",
+    "pahuus"
+  ],
+  "harhaopit Raamatussa": [
+    "harhaopit Raamatussa",
+    "harhaoppi",
+    "pahuus"
   ],
   "harhaoppi": [
     "harhaoppi",
-    "harhaoppien",
-    "harhaoppi"
+    "harhaopit",
+    "pahuus"
   ],
   "hedelmä": [
     "hedelmä",
     "hedelmät",
-    "hedelmällinen"
+    "kasvu"
   ],
-  "hedelmät": [
-    "hedelmät",
-    "hedelmä",
-    "hedelmällinen"
+  "hedelmän arviointi": [
+    "hedelmän arviointi",
+    "arvioida",
+    "tarkastaa"
+  ],
+  "hedelmätön": [
+    "hedelmätön",
+    "hedelmätön puu",
+    "kuolema"
+  ],
+  "heikko uskova": [
+    "heikko uskova",
+    "heikko",
+    "uskon heikko"
   ],
   "heikko veli": [
     "heikko veli",
     "heikko",
     "veli"
   ],
-  "hengellinen hedelmä": [
-    "hengellinen hedelmä",
-    "hedelmä",
-    "hengellinen"
+  "hengellinen erottamiskyky": [
+    "hengellinen erottamiskyky",
+    "erottamiskyky",
+    "erottaa"
   ],
   "hengellinen kasvu": [
     "hengellinen kasvu",
     "kasvu",
-    "hengellinen"
-  ],
-  "hengellinen kasvu nuorilla": [
-    "hengellinen kasvu nuorilla",
-    "kasvu",
-    "nuoret"
+    "kasvaa"
   ],
   "hengellinen kypsyys": [
     "hengellinen kypsyys",
     "kypsyys",
-    "hengellinen"
+    "kasvu"
   ],
-  "hengelliset liikkeet": [
-    "hengelliset liikkeet",
-    "liikkeet",
-    "hengelliset"
+  "herätys": [
+    "herätys",
+    "herättää",
+    "herätyksen"
   ],
   "ilo": [
     "ilo",
-    "iloinen",
-    "ilolla"
+    "ilolla",
+    "iloinen"
   ],
-  "karitsat": [
-    "karitsat",
-    "karitsa",
-    "karitsan"
-  ],
-  "kasvun prosessi": [
-    "kasvun prosessi",
-    "prosessi",
-    "kasvun"
-  ],
-  "kestävä ratkaisu": [
-    "kestävä ratkaisu",
-    "ratkaisu",
-    "kestävä"
+  "karitsoiden hoivaaminen": [
+    "karitsoiden hoivaaminen",
+    "hoivaaminen",
+    "hoitaa"
   ],
   "kiitollisuus": [
     "kiitollisuus",
-    "kiitollinen",
-    "kiitokset"
+    "kiittää",
+    "kiitollinen"
   ],
   "koetelkaa kaikki": [
     "koetelkaa kaikki",
-    "kaikki",
-    "koetella"
+    "koettaa",
+    "kaikki"
   ],
-  "kurinpito": [
+  "kurinpito seurakunnassa": [
+    "kurinpito seurakunnassa",
     "kurinpito",
-    "kurin",
-    "pitää"
+    "seurakunta"
   ],
   "kutsu": [
     "kutsu",
     "kutsua",
-    "kutsuun"
+    "kutsuttu"
+  ],
+  "kypsyys": [
+    "kypsyys",
+    "kypsyä",
+    "kypsyys"
   ],
   "kärsivällisyys": [
     "kärsivällisyys",
     "kärsivällinen",
-    "kärsivällisyyden"
+    "kärsi"
   ],
-  "lauma": [
-    "lauma",
-    "laumassa",
-    "laumojen"
-  ],
-  "liikkeet": [
-    "liikkeet",
-    "liikkeen",
-    "liikkeiden"
+  "lauman suojelu": [
+    "lauman suojelu",
+    "suojelu",
+    "suojella"
   ],
   "liikkeiden arviointi": [
     "liikkeiden arviointi",
     "arviointi",
     "arvioi"
   ],
-  "lähestymistapa": [
-    "lähestymistapa",
-    "lähestyminen",
-    "lähesty"
-  ],
   "mentorointi": [
     "mentorointi",
-    "mentor",
+    "mentoroi",
     "mentori"
-  ],
-  "metodit": [
-    "metodit",
-    "metodi",
-    "metodien"
   ],
   "mielistely": [
     "mielistely",
-    "mieliseltä",
-    "mieliseltävä"
+    "mielipuoli",
+    "mielipuolinen"
   ],
   "moraalittomuus": [
     "moraalittomuus",
     "moraaliton",
-    "moraalittomuuden"
-  ],
-  "motiivit": [
-    "motiivit",
-    "motiivi",
-    "motivaatio"
-  ],
-  "neuvonta": [
-    "neuvonta",
-    "neuvo",
-    "neuvon"
-  ],
-  "nuhtelu": [
-    "nuhtelu",
-    "nuhdistaa",
-    "nuhdistus"
+    "moraalit"
   ],
   "nuoret uskovat": [
     "nuoret uskovat",
@@ -469,40 +401,55 @@ Aikaa kului: 8.42 sekuntia.
     "herätys",
     "herättää"
   ],
-  "nykyaika": [
-    "nykyaika",
-    "nyky",
-    "nykyinen"
+  "nykyajan sovellus": [
+    "nykyajan sovellus",
+    "sovellus",
+    "soveltaa"
   ],
-  "oikea asenne": [
-    "oikea asenne",
-    "oikea",
-    "asenne"
+  "ohjaus": [
+    "ohjaus",
+    "ohjata",
+    "ohjaaja"
   ],
   "ojentaminen": [
     "ojentaminen",
-    "johtaminen",
-    "johtaja"
+    "ojentaa",
+    "ojentaja"
   ],
   "opetus": [
     "opetus",
-    "opettaminen",
+    "opettaa",
     "opettaja"
   ],
   "opetuslapseus": [
     "opetuslapseus",
-    "lapsi",
-    "lapsuus"
+    "lapseus",
+    "lapsi"
+  ],
+  "opetuslapseuttaminen": [
+    "opetuslapseuttaminen",
+    "opetuslapsi",
+    "opettaa"
+  ],
+  "opillinen tarkastelu": [
+    "opillinen tarkastelu",
+    "tarkastelu",
+    "tarkastella"
+  ],
+  "oppiminen": [
+    "oppiminen",
+    "oppia",
+    "opettaja"
   ],
   "ovelat sanat": [
     "ovelat sanat",
     "sanat",
     "sana"
   ],
-  "pelastuksen ilo": [
-    "pelastuksen ilo",
-    "ilo",
-    "iloinen"
+  "paha hedelmä": [
+    "paha hedelmä",
+    "hedelmä",
+    "hedelmällinen"
   ],
   "pelastus": [
     "pelastus",
@@ -511,158 +458,133 @@ Aikaa kului: 8.42 sekuntia.
   ],
   "petolla": [
     "petolla",
-    "petos",
+    "pettäminen",
     "petturi"
   ],
-  "pitkäjänteinen opetuslapseuttaminen": [
-    "pitkäjänteinen opetuslapseuttaminen",
+  "pitkäjänteisyys": [
     "pitkäjänteisyys",
-    "jäntevä"
+    "pitkäjänteinen",
+    "pitkäjänteisyyden"
   ],
-  "raamatulliset esimerkit": [
-    "raamatulliset esimerkit",
-    "esimerkki",
-    "esimerkki raamatusta"
+  "pitäkää se mikä hyvää on": [
+    "pitäkää se mikä hyvää on",
+    "pitää",
+    "pitää"
   ],
   "raamatuntutkismus": [
     "raamatuntutkismus",
-    "tutkimus",
-    "tutkija"
+    "raamatuntutkija",
+    "raamatuntutkimus"
   ],
-  "rakkaudellinen asenne": [
-    "rakkaudellinen asenne",
+  "rakkaus": [
     "rakkaus",
-    "rakkaudellinen"
+    "rakastaa",
+    "rakastunut"
   ],
-  "rohkaisu": [
-    "rohkaisu",
-    "rohkaisija",
-    "rohkaiseminen"
+  "restaurointi": [
+    "restaurointi",
+    "restauroi",
+    "restauroitu"
   ],
-  "suden ja lampaan erottaminen": [
-    "suden ja lampaan erottaminen",
-    "erottaminen",
-    "erot"
+  "suden erottaminen laumasta": [
+    "suden erottaminen laumasta",
+    "suden erottaminen",
+    "suden"
   ],
-  "suhtautuminen": [
+  "suhtautuminen vääriin opettajiin": [
+    "suhtautuminen vääriin opettajiin",
     "suhtautuminen",
-    "suhtautua",
-    "suhtautuminen"
+    "opettaja"
   ],
   "susi lammasten vaatteissa": [
     "susi lammasten vaatteissa",
     "susi",
-    "vaatteet"
+    "lammasten"
   ],
   "tasapaino": [
     "tasapaino",
-    "tasapainuus",
-    "tasa"
+    "tasapainu",
+    "tasapainuinen"
   ],
-  "toimintaohjeet": [
-    "toimintaohjeet",
-    "ohjeet",
-    "toiminta"
+  "terve oppi": [
+    "terve oppi",
+    "terve",
+    "oppia"
   ],
   "totuus": [
     "totuus",
-    "totuus",
-    "totuudentunnustus"
-  ],
-  "tunnistusmerkit": [
-    "tunnistusmerkit",
-    "merkit",
-    "tunnistus"
+    "totuuden",
+    "totuudenmukainen"
   ],
   "tuomitseminen": [
     "tuomitseminen",
-    "tuomio",
-    "tuomita"
-  ],
-  "uskon haasteet": [
-    "uskon haasteet",
-    "haasteet",
-    "uskon haaste"
-  ],
-  "uskon kasvu": [
-    "uskon kasvu",
-    "kasvu",
-    "uskon kasvaminen"
+    "tuomita",
+    "tuomio"
   ],
   "valheen henki": [
     "valheen henki",
-    "valheen henki",
-    "valhe"
-  ],
-  "valheopettajat": [
-    "valheopettajat",
-    "opettajat",
-    "valhe"
-  ],
-  "valheprofeetat": [
-    "valheprofeetat",
-    "profeetat",
-    "valhe"
-  ],
-  "valppaus": [
-    "valppaus",
-    "valppuus",
-    "valppu"
+    "valhe",
+    "valheellinen"
   ],
   "valta": [
     "valta",
-    "valta",
-    "valta"
+    "valtaa",
+    "valtias"
   ],
-  "vanhemmat uskovat": [
-    "vanhemmat uskovat",
-    "vanhemmat",
-    "uskova"
-  ],
-  "viettelijät": [
-    "viettelijät",
-    "viettelijä",
-    "vetää"
+  "vanhemmat uskossa": [
+    "vanhemmat uskossa",
+    "uskossa",
+    "uskon"
   ],
   "viisaus": [
     "viisaus",
-    "viisas",
-    "visailu"
+    "viisaus on",
+    "viisautta"
   ],
-  "väärien apostolien varoitus": [
-    "väärien apostolien varoitus",
-    "apostolit",
+  "virheiden tekeminen": [
+    "virheiden tekeminen",
+    "virheitä",
+    "virhe"
+  ],
+  "väärien opettajien tunnistaminen": [
+    "väärien opettajien tunnistaminen",
+    "väärien opettajien",
+    "opettajat"
+  ],
+  "väärien opettajien tuntomerkit": [
+    "väärien opettajien tuntomerkit",
+    "tuntomerkit",
+    "merkit"
+  ],
+  "väärien profeettojen esimerkkejä": [
+    "väärien profeettojen esimerkkejä",
+    "esimerkkejä",
+    "esimerkki"
+  ],
+  "väärien profeettojen toiminta VT:ssa": [
+    "väärien profeettojen toiminta VT:ssa",
+    "toiminta",
+    "toimia"
+  ],
+  "väärien profeettojen varoitukset Raamatussa": [
+    "väärien profeettojen varoitukset Raamatussa",
+    "varoitukset",
     "varoitus"
-  ],
-  "väärien opettajien nuhtelu": [
-    "väärien opettajien nuhtelu",
-    "opettajat",
-    "nuhdistaa"
-  ],
-  "väärien profeettojen tuntomerkit": [
-    "väärien profeettojen tuntomerkit",
-    "profeetat",
-    "tunnusmerkki"
   ],
   "väärien profeettojen varoitus": [
     "väärien profeettojen varoitus",
-    "profeetat",
-    "varoitus"
+    "varoitus",
+    "varoittaa"
   ],
-  "väärät opettajat": [
-    "väärät opettajat",
-    "opettajat",
-    "väärä"
-  ],
-  "väärät profeetat": [
-    "väärät profeetat",
-    "profeetat",
-    "väärä"
+  "väärän opin nuhtelu": [
+    "väärän opin nuhtelu",
+    "nuhtelu",
+    "nuhdistaa"
   ],
   "yhteenveto": [
     "yhteenveto",
     "yhteenvetoa",
-    "yhteenvedota"
+    "yhteenvetä"
   ]
 }
 
@@ -670,7 +592,7 @@ Aikaa kului: 8.42 sekuntia.
 --- VAIHE 2: JAKEIDEN KERÄYS (-1/+1, RIKASTETTU HAKU) ---
 ================================================================================
 
-Löytyi 251 uniikkia laajennettua avainsanaa. Suoritetaan haut...
+Löytyi 223 uniikkia laajennettua avainsanaa. Suoritetaan haut...
 Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 
 ================================================================================
@@ -678,12 +600,17 @@ Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 ================================================================================
 
 Liian yleiset hakusanat (yli 500 osumaa, suodatettu pois):
-  - 'armo' (1152 osumaa), 'hedelmä' (624 osumaa), 'ilo' (1523 osumaa), 'kaikki' (8050 osumaa), 'kutsu' (1355 osumaa), 'lapsi' (1290 osumaa), 'neuvo' (710 osumaa), 'oikea' (990 osumaa), 'opetus' (708 osumaa), 'pitää' (548 osumaa), 'sana' (2856 osumaa), 'tuomio' (516 osumaa), 'valta' (2165 osumaa), 'veli' (2871 osumaa)
+  - 'armo' (1152 osumaa), 'hedelmä' (624 osumaa), 'ilo' (1523 osumaa), 'kaikki' (8050 osumaa), 'kuolema' (843 osumaa), 'kutsu' (1355 osumaa), 'kärsi' (520 osumaa), 'lapsi' (1290 osumaa), 'opetus' (708 osumaa), 'pitää' (548 osumaa), 'sana' (2856 osumaa), 'tuomio' (516 osumaa), 'valta' (2165 osumaa), 'veli' (2871 osumaa)
 
 Käsitellään osiot ja suodatetaan jakeet (Groq Llama3-8b)...
   (1/14) Suodatetaan osiolle 1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-Retrying request to /openai/v1/chat/completions in 38.000000 seconds
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 51.000000 seconds

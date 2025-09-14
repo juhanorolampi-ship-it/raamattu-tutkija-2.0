@@ -8,15 +8,15 @@ from collections import defaultdict
 import google.generativeai as genai
 from dotenv import load_dotenv
 
-load_dotenv()  # TÄMÄ TULEE OLLA HETI TÄSSÄ
+load_dotenv()
 
-from logic import (  # VASTA TÄMÄN JÄLKEEN
+from logic import (
     lataa_raamattu, luo_kanoninen_avain, luo_hakusuunnitelma, rikasta_avainsanat,
     etsi_ja_laajenna, valitse_relevantti_konteksti, pisteyta_ja_jarjestele
 )
 
 # --- ASETUKSET ---
-MAX_HITS = 500  # Salliva kattoraja
+MAX_HITS = 500
 
 # --- LOKITIEDOSTON MÄÄRITYS ---
 LOG_FILENAME = 'full_diagnostics_report_GROQ.txt'
@@ -32,11 +32,8 @@ logging.basicConfig(
     ]
 )
 
-# --- APUFUNKTIOT ---
-
 
 def log_header(title):
-    """Tulostaa selkeän otsikon lokiin."""
     logging.info("\n" + "=" * 80)
     logging.info(f"--- {title.upper()} ---")
     logging.info("=" * 80)
@@ -46,7 +43,6 @@ TOKEN_COUNT = {"input": 0, "output": 0, "total": 0}
 
 
 def paivita_token_laskuri(usage_metadata):
-    """Päivittää globaalia token-laskuria."""
     if not usage_metadata:
         return
     input_tokens = getattr(usage_metadata, 'prompt_token_count', 0)
@@ -57,34 +53,22 @@ def paivita_token_laskuri(usage_metadata):
 
 
 def laske_kustannus_arvio(token_counts):
-    """Laskee hinta-arvion Groqin Llama3-mallien mukaan."""
     hinnat = {"llama3_8b_input": 0.05, "llama3_8b_output": 0.15,
               "llama3_70b_input": 0.59, "llama3_70b_output": 0.79}
-
-    # Oletetaan karkea jako: 8b-mallia käytetään enemmän syötteessä (suodatus)
-    # ja 70b-mallia enemmän tuotoksessa (pisteytys).
     input_cost = (token_counts['input'] / 1_000_000) * \
         ((hinnat["llama3_8b_input"] * 0.8) +
          (hinnat["llama3_70b_input"] * 0.2))
     output_cost = (token_counts['output'] / 1_000_000) * \
         ((hinnat["llama3_8b_output"] * 0.8) +
          (hinnat["llama3_70b_output"] * 0.2))
+    gemini_pro_cost = (20000 / 1_000_000) * 3.5
+    return f"~${input_cost + output_cost + gemini_pro_cost:.5f} (Groq + Gemini)"
 
-    # Hakusuunnitelma käyttää edelleen Gemini Prota, lisätään sen kertakustannus
-    gemini_pro_cost = (10000 / 1_000_000) * 3.5  # Karkea arvio
-
-    return f"~${input_cost + output_cost + gemini_pro_cost:.5f} (Groq Llama3)"
-
-
-# --- DIAGNOSTIIKKA-AJON PÄÄFUNKTIO ---
 
 def run_diagnostics():
-    """Suorittaa koko version 2.0 prosessin ja kirjaa tulokset."""
     total_start_time = time.perf_counter()
-    log_header(
-        "Raamattu-tutkija 2.0 - DIAGNOSTIIKKA-AJO (GROQ API)")
+    log_header("Raamattu-tutkija 2.0 - DIAGNOSTIIKKA-AJO (GROQ API)")
 
-    # 1. Ladataan resurssit
     logging.info("\n[ALUSTUS] Ladataan resursseja...")
     raamattu_data = lataa_raamattu()
     if not raamattu_data:
@@ -101,7 +85,6 @@ def run_diagnostics():
         logging.error("KRIITTINEN: 'syote.txt' ei löytynyt tai on tyhjä.")
         return
 
-    # VAIHE 1: Hakusuunnitelman luonti (Pidetään Gemini Pro parhaan laadun vuoksi)
     log_header("VAIHE 1: ÄLYKÄS HAKUSUUNNITELMAN LUONTI (GEMINI PRO)")
     start_time = time.perf_counter()
     suunnitelma, usage = luo_hakusuunnitelma(pääaihe, syote_teksti)
@@ -109,13 +92,11 @@ def run_diagnostics():
     end_time = time.perf_counter()
 
     if not suunnitelma:
-        logging.error(
-            "TESTI KESKEYTETTY: Hakusuunnitelman luonti epäonnistui.")
+        logging.error("TESTI KESKEYTETTY: Hakusuunnitelman luonti epäonnistui.")
         return
     logging.info(f"Aikaa kului: {end_time - start_time:.2f} sekuntia.")
     logging.info(json.dumps(suunnitelma, indent=2, ensure_ascii=False))
 
-    # VAIHE 1.5: Avainsanojen rikastaminen (Groq Llama3-8b)
     log_header("VAIHE 1.5: AVAINSANOJEN RIKASTAMINEN (GROQ LLAMA3-8B)")
     start_time = time.perf_counter()
     alkuperaiset_sanat = sorted(list(set(
@@ -129,7 +110,6 @@ def run_diagnostics():
     logging.info(json.dumps(rikastetut_sanat_map,
                    indent=2, ensure_ascii=False))
 
-    # VAIHE 2: Jakeiden keräys (Groq Llama3-8b suodatus)
     log_header("VAIHE 2: JAKEIDEN KERÄYS (-1/+1, RIKASTETTU HAKU)")
     start_time = time.perf_counter()
     osio_kohtaiset_jakeet = defaultdict(set)
@@ -194,9 +174,7 @@ def run_diagnostics():
                 if relevantit:
                     osio_kohtaiset_jakeet[osio_nro].update(relevantit)
                 
-                # --- KORJATTU KOHTA: Lisätty tauko rate limitin välttämiseksi ---
-                time.sleep(0.5)
-
+                time.sleep(0.5) # Tauko rate limitin välttämiseksi
 
     kaikki_jakeet = set()
     for jakeet in osio_kohtaiset_jakeet.values():
@@ -207,7 +185,6 @@ def run_diagnostics():
     logging.info(
         f"Kerättyjä uniikkeja jakeita yhteensä: {len(kaikki_jakeet)} kpl.")
 
-    # VAIHE 3: Jakeiden järjestely (Groq Llama3-70b)
     log_header("VAIHE 3: JAKEIDEN JÄRJESTELY JA PISTEYTYS (GROQ LLAMA3-70B)")
     start_time = time.perf_counter()
 
@@ -225,7 +202,6 @@ def run_diagnostics():
     logging.info(
         f"Järjestely valmis. Aikaa kului: {end_time - start_time:.2f} sekuntia.")
 
-    # LOPPUTULOKSET
     log_header("LOPULLISET TULOKSET")
     total_end_time = time.perf_counter()
     uniikit_jarjestellyt = set()
@@ -270,7 +246,6 @@ def run_diagnostics():
 
 
 if __name__ == "__main__":
-    load_dotenv()
     # Varmistetaan, että molemmat avaimet ovat saatavilla
     google_api_key = os.getenv("GEMINI_API_KEY")
     groq_api_key = os.getenv("GROQ_API_KEY")
