@@ -8,6 +8,8 @@ from collections import defaultdict
 import google.generativeai as genai
 from dotenv import load_dotenv
 
+load_dotenv()  # Siirretty tänne, heti alkuun
+
 from logic import (
     lataa_raamattu, luo_kanoninen_avain, luo_hakusuunnitelma, rikasta_avainsanat,
     etsi_ja_laajenna, valitse_relevantti_konteksti, pisteyta_ja_jarjestele
