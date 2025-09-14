@@ -4,3 +4,4 @@ python-docx
 PyPDF2
 pyspellchecker
 python-dotenv
+groq

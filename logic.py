@@ -1,17 +1,18 @@
 # logic.py
-"""
-Sovelluksen ydinlogiikka, versio 2.0.
-Sisältää älykkään hakusuunnitelman luonnin ja kohdennetun jae-keräyksen.
-"""
 import io
 import json
 import re
 import time
+import os  # Lisätty os-moduuli API-avaimen lukemista varten
 
 import docx
 import google.generativeai as genai
 import PyPDF2
+from groq import Groq  # Uusi Groq-kirjasto
 from google.generativeai.types import GenerationConfig
+
+# Alustetaan Groq-client
+groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 TEOLOGINEN_PERUSOHJE = (
     "Olet teologinen assistentti. Perusta kaikki vastauksesi ja tulkintasi "
@@ -23,6 +24,7 @@ TEOLOGINEN_PERUSOHJE = (
 
 def lataa_raamattu(tiedostonimi="bible.json"):
     """Lataa ja jäsentää Raamattu-datan JSON-tiedostosta."""
+    # ... (tämä funktio pysyy ennallaan) ...
     try:
         with open(tiedostonimi, "r", encoding="utf-8") as f:
             bible_data = json.load(f)
@@ -58,6 +60,7 @@ def lataa_raamattu(tiedostonimi="bible.json"):
 
 def luo_kanoninen_avain(jae_str, book_name_to_id_map):
     """Luo järjestelyavaimen (kirja, luku, jae) merkkijonosta."""
+    # ... (tämä funktio pysyy ennallaan) ...
     match = re.match(r"^(.*?)\s+(\d+):(\d+)", jae_str)
     if not match:
         return (999, 999, 999)
@@ -68,6 +71,7 @@ def luo_kanoninen_avain(jae_str, book_name_to_id_map):
 
 def luo_osio_avain(osion_numero_str):
     """Muuntaa osionumeron (esim. '10.2.1') lajittelua varten."""
+    # ... (tämä funktio pysyy ennallaan) ...
     try:
         return [int(part) for part in osion_numero_str.split('.')]
     except (ValueError, AttributeError):
@@ -76,6 +80,7 @@ def luo_osio_avain(osion_numero_str):
 
 def erota_jaeviite(jae_kokonainen):
     """Erottaa ja palauttaa jaeviitteen tekoälyä varten."""
+    # ... (tämä funktio pysyy ennallaan) ...
     try:
         return jae_kokonainen.split(' - ')[0].strip()
     except IndexError:
@@ -84,6 +89,7 @@ def erota_jaeviite(jae_kokonainen):
 
 def lue_ladattu_tiedosto(uploaded_file):
     """Lukee käyttäjän lataaman tiedoston sisällön tekstiksi."""
+    # ... (tämä funktio pysyy ennallaan) ...
     if not uploaded_file:
         return ""
     try:
@@ -106,36 +112,52 @@ def lue_ladattu_tiedosto(uploaded_file):
 
 
 def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
-    """Tekee API-kutsun ja palauttaa tekstin sekä käyttötiedot."""
-    safety_settings = [
-        {"category": c, "threshold": "BLOCK_NONE"}
-        for c in [
-            "HARM_CATEGORY_HARASSMENT", "HARM_CATEGORY_HATE_SPEECH",
-            "HARM_CATEGORY_SEXUALLY_EXPLICIT", "HARM_CATEGORY_DANGEROUS_CONTENT"
-        ]
-    ]
+    """
+    Tekee API-kutsun joko Googleen tai Groqiin model_name-perusteella
+    ja palauttaa tekstin sekä käyttötiedot.
+    """
     try:
-        gen_config_params = {"temperature": temperature}
-        if is_json:
-            gen_config_params["response_mime_type"] = "application/json"
+        if "gemma" in model_name or "gemini" in model_name:
+            # Käytetään Google-clientiä
+            safety_settings = [
+                {"category": c, "threshold": "BLOCK_NONE"}
+                for c in ["HARM_CATEGORY_HARASSMENT", "HARM_CATEGORY_HATE_SPEECH",
+                          "HARM_CATEGORY_SEXUALLY_EXPLICIT", "HARM_CATEGORY_DANGEROUS_CONTENT"]
+            ]
+            gen_config_params = {"temperature": temperature}
+            if is_json:
+                gen_config_params["response_mime_type"] = "application/json"
 
-        generation_config = GenerationConfig(**gen_config_params)
-        model = genai.GenerativeModel(model_name)
-        response = model.generate_content(
-            prompt,
-            generation_config=generation_config,
-            safety_settings=safety_settings
-        )
-        time.sleep(0.8)
+            generation_config = GenerationConfig(**gen_config_params)
+            model = genai.GenerativeModel(model_name)
+            response = model.generate_content(
+                prompt,
+                generation_config=generation_config,
+                safety_settings=safety_settings
+            )
+            time.sleep(0.8)
+            return response.text, getattr(response, 'usage_metadata', None)
+        else:
+            # Käytetään Groq-clientiä (Llama, Mixtral, etc.)
+            chat_completion = groq_client.chat.completions.create(
+                messages=[{"role": "user", "content": prompt}],
+                model=model_name,
+                temperature=temperature,
+                response_format={"type": "json_object"} if is_json else None,
+            )
+            response_text = chat_completion.choices[0].message.content
+            # Groqin usage-data on eri muodossa, normalisoidaan se
+            usage_data = chat_completion.usage
+            if usage_data:
+                usage_metadata = {
+                    'prompt_token_count': usage_data.prompt_tokens,
+                    'candidates_token_count': usage_data.completion_tokens,
+                    'total_token_count': usage_data.total_tokens
+                }
+                # Muunnetaan sanakirja objektiksi yhteensopivuuden vuoksi
+                return response_text, type('obj', (object,), usage_metadata)()
+            return response_text, None
 
-        if not response.parts:
-            reason = "Tuntematon"
-            if hasattr(response, 'prompt_feedback') and \
-               hasattr(response.prompt_feedback, 'block_reason'):
-                reason = response.prompt_feedback.block_reason.name
-            return f"API-VIRHE: Vastaus estettiin syystä '{reason}'.", None
-
-        return response.text, getattr(response, 'usage_metadata', None)
     except Exception as e:
         return f"API-VIRHE: {e}", None
 
@@ -143,7 +165,9 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
 def luo_hakusuunnitelma(pääaihe, syote_teksti):
     """
     Luo älykkään hakusuunnitelman analysoimalla käyttäjän syötettä.
+    Käyttää tehokkainta mallia (Gemini 1.5 Pro).
     """
+    # ... (tämä funktio pysyy ennallaan, mutta käytetään Gemini Prota laadun vuoksi) ...
     prompt = (
         f"{TEOLOGINEN_PERUSOHJE}\n\n"
         "Tehtäväsi on luoda yksityiskohtainen hakusuunnitelma Raamattu-tutkimusta varten. "
@@ -166,7 +190,7 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
     )
     final_prompt = prompt.format(pääaihe=pääaihe, syote_teksti=syote_teksti)
     vastaus_str, usage = tee_api_kutsu(
-        final_prompt, "gemini-1.5-pro", is_json=True, temperature=0.2)
+        final_prompt, "gemini-1.5-pro-latest", is_json=True, temperature=0.2)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe hakusuunnitelman luonnissa: {vastaus_str}")
@@ -180,10 +204,8 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
 
 
 def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
-    """
-    Laajentaa annetut avainsanat eri taivutusmuotoihin ja synonyymeihin
-    tekoälyn avulla.
-    """
+    """Laajentaa avainsanat käyttäen nopeaa Groq-mallia."""
+    # ... (tämä funktio pysyy ennallaan, mutta kutsu ohjautuu Groqiin) ...
     prompt = (
         "Olet suomen kielen asiantuntija. Tehtäväsi on laajentaa alla oleva lista "
         "suomenkielisiä avainsanoja. Palauta JSON-objekti, jossa avaimena on "
@@ -201,13 +223,13 @@ def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
         "VASTAUSOHJE: Palauta VAIN JSON-objekti."
     )
     vastaus_str, usage = tee_api_kutsu(
-        prompt, "gemini-1.5-flash", is_json=True, temperature=0.1
+        prompt, "llama3-8b-8192", is_json=True, temperature=0.1
     )
     paivita_token_laskuri_callback(usage)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe avainsanojen rikastamisessa: {vastaus_str}")
-        return {sana: [sana] for sana in avainsanat}  # Palauta alkuperäiset virheessä
+        return {sana: [sana] for sana in avainsanat}
 
     try:
         return json.loads(vastaus_str)
@@ -218,6 +240,7 @@ def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
 
 def etsi_ja_laajenna(book_data_map, book_name_map, sana, ennen, jälkeen):
     """Etsii sanaa koko Raamatusta ja laajentaa osumia mekaanisesti."""
+    # ... (tämä funktio pysyy ennallaan) ...
     loydetyt_jakeet = set()
     try:
         pattern = re.compile(re.escape(sana), re.IGNORECASE)
@@ -243,10 +266,8 @@ def etsi_ja_laajenna(book_data_map, book_name_map, sana, ennen, jälkeen):
 
 
 def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
-    """
-    Käyttää nopeaa AI-mallia valitsemaan temaattisesti relevantit
-    jakeet annetusta listasta.
-    """
+    """Käyttää nopeaa Groq-mallia kontekstin valintaan."""
+    # ... (tämä funktio pysyy ennallaan, mutta kutsu ohjautuu Groqiin) ...
     prompt = (
         "Tehtävä: Olet teologinen asiantuntija. Valitse alla olevasta "
         "jaelistasta VAIN ne jakeet, jotka ovat temaattisesti relevantteja "
@@ -259,7 +280,7 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
         "Älä lisää numerointeja, selityksiä tai mitään muuta."
     )
     vastaus_str, usage = tee_api_kutsu(
-        prompt, "gemini-1.5-flash", temperature=0.0)
+        prompt, "llama3-8b-8192", temperature=0.0)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe kontekstin valinnassa: {vastaus_str}")
@@ -273,9 +294,8 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
 def pisteyta_ja_jarjestele(
         aihe, sisallysluettelo, osio_kohtaiset_jakeet,
         paivita_token_laskuri_callback, progress_callback=None):
-    """
-    Pisteyttää ja järjestelee osiokohtaiset jakeet.
-    """
+    """Pisteyttää ja järjestelee jakeet käyttäen tehokasta Groq-mallia."""
+    # ... (tämä funktio pysyy ennallaan, mutta kutsu ohjautuu Groqiin) ...
     final_jae_kartta = {}
     osiot = {
         match.group(1): match.group(3)
@@ -310,11 +330,11 @@ def pisteyta_ja_jarjestele(
             "---\n\n"
             "VASTAUSOHJE: Palauta VAIN JSON-objekti, jossa avaimina ovat "
             "jaeviitteet ja arvoina kokonaisluvut 1-10. Esimerkki:\n"
-            '{\n  "1. Mooseksen kirje 1:1": 8,\n  "Roomalaiskirje 3:23": 10\n}'
+            '{\n  "1. Mooseksen kirja 1:1": 8,\n  "Roomalaiskirje 3:23": 10\n}'
         )
 
         vastaus_str, usage = tee_api_kutsu(
-            prompt, "gemini-1.5-flash", is_json=True, temperature=0.1)
+            prompt, "llama3-70b-8192", is_json=True, temperature=0.1)
         paivita_token_laskuri_callback(usage)
 
         pisteet = {}
