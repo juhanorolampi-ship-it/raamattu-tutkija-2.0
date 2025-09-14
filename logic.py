@@ -196,37 +196,54 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
 
 
 def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
-    """Laajentaa avainsanat käyttäen nopeaa Groq-mallia."""
-    prompt = (
-        "Olet suomen kielen asiantuntija. Tehtäväsi on laajentaa alla oleva lista "
-        "suomenkielisiä avainsanoja. Palauta JSON-objekti, jossa avaimena on "
-        "alkuperäinen sana ja arvona on lista, joka sisältää alkuperäisen sanan "
-        "sekä 1-3 siihen liittyvää sanaa tai taivutusmuotoa, jotka todennäköisesti "
-        "löytyvät Raamatusta (KR33/38).\n\n"
-        "Esimerkki:\n"
-        '{\n'
-        '  "opetuslapseuttaminen": ["opetuslapseuttaminen", "opetuslapsi", "opettaa"],\n'
-        '  "hengellinen kypsyys": ["hengellinen kypsyys", "kypsyys", "kasvu"]\n'
-        '}\n\n'
-        "AVAINSANAT:\n---\n"
-        f"{json.dumps(avainsanat, ensure_ascii=False)}\n"
-        "---\n\n"
-        "VASTAUSOHJE: Palauta VAIN JSON-objekti."
-    )
-    vastaus_str, usage = tee_api_kutsu(
-        prompt, "llama3-8b-8192", is_json=True, temperature=0.1
-    )
-    paivita_token_laskuri_callback(usage)
+    """
+    Laajentaa annetut avainsanat erissä käyttäen nopeaa Groq-mallia.
+    """
+    BATCH_SIZE = 15
+    final_results = {}
+    
+    for i in range(0, len(avainsanat), BATCH_SIZE):
+        batch = avainsanat[i:i + BATCH_SIZE]
+        print(f"Rikastetaan avainsanoja, erä {i//BATCH_SIZE + 1}/{(len(avainsanat) + BATCH_SIZE - 1)//BATCH_SIZE}...")
+        
+        prompt = (
+            "Olet suomen kielen asiantuntija. Tehtäväsi on laajentaa alla oleva lista "
+            "suomenkielisiä avainsanoja. Palauta JSON-objekti, jossa avaimena on "
+            "alkuperäinen sana ja arvona on lista, joka sisältää alkuperäisen sanan "
+            "sekä 1-3 siihen liittyvää sanaa tai taivutusmuotoa, jotka todennäköisesti "
+            "löytyvät Raamatusta (KR33/38).\n\n"
+            "Esimerkki:\n"
+            '{\n'
+            '  "opetuslapseuttaminen": ["opetuslapseuttaminen", "opetuslapsi", "opettaa"],\n'
+            '  "hengellinen kypsyys": ["hengellinen kypsyys", "kypsyys", "kasvu"]\n'
+            '}\n\n'
+            "AVAINSANAT:\n---\n"
+            f"{json.dumps(batch, ensure_ascii=False)}\n"
+            "---\n\n"
+            "VASTAUSOHJE: Palauta VAIN JSON-objekti."
+        )
+        
+        vastaus_str, usage = tee_api_kutsu(
+            prompt, "llama3-8b-8192", is_json=True, temperature=0.1
+        )
+        paivita_token_laskuri_callback(usage)
 
-    if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
-        print(f"API-virhe avainsanojen rikastamisessa: {vastaus_str}")
-        return {sana: [sana] for sana in avainsanat}
+        if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
+            print(f"API-virhe erän rikastamisessa: {vastaus_str}")
+            # Lisätään alkuperäiset sanat virheen sattuessa
+            final_results.update({sana: [sana] for sana in batch})
+            continue
 
-    try:
-        return json.loads(vastaus_str)
-    except json.JSONDecodeError:
-        print("VIRHE: Avainsanojen rikastamisen JSON-jäsennys epäonnistui.")
-        return {sana: [sana] for sana in avainsanat}
+        try:
+            batch_results = json.loads(vastaus_str)
+            final_results.update(batch_results)
+        except json.JSONDecodeError:
+            print("VIRHE: Erän rikastamisen JSON-jäsennys epäonnistui.")
+            final_results.update({sana: [sana] for sana in batch})
+        
+        time.sleep(0.5) # Pieni tauko kutsujen välillä
+
+    return final_results
 
 
 def etsi_ja_laajenna(book_data_map, book_name_map, sana, ennen, jälkeen):
