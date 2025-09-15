@@ -304,7 +304,7 @@ def pisteyta_ja_jarjestele(
                     print(
                         f"JSON-jäsennysvirhe osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}.")
 
-            time.sleep(0.5)
+            time.sleep(1)
 
         for jae in jakeet:
             piste = int(pisteet.get(erota_jaeviite(jae), 0))

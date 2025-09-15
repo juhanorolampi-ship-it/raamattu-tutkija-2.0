@@ -17,15 +17,16 @@ from logic import (
 )
 
 # --- ASETUKSET ---
-MAX_HITS = 500  # Raja, jonka jälkeen sana tulkitaan yleiseksi
-SAMPLE_SIZE = 200  # Otoskoko yleisille sanoille
+MAX_HITS = 500
+SAMPLE_SIZE = 200
 ESTOLISTA = [
     "YWAM", "Circuit Riders", "Carry the Love", "SEND",
     "Uusi testamentti", "Vanha testamentti"
 ]
+VERSE_BATCH_SIZE = 100
 
 # --- LOKITIEDOSTON MÄÄRITYS ---
-LOG_FILENAME = 'full_diagnostics_report_final_D.txt'
+LOG_FILENAME = 'full_diagnostics_report_final_E.txt'
 if os.path.exists(LOG_FILENAME):
     os.remove(LOG_FILENAME)
 
@@ -40,7 +41,6 @@ logging.basicConfig(
 
 
 def log_header(title):
-    """Tulostaa selkeän otsikon lokiin."""
     logging.info("\n" + "=" * 80)
     logging.info(f"--- {title.upper()} ---")
     logging.info("=" * 80)
@@ -50,7 +50,6 @@ TOKEN_COUNT = {"input": 0, "output": 0, "total": 0}
 
 
 def paivita_token_laskuri(usage_metadata):
-    """Päivittää globaalia token-laskuria."""
     if not usage_metadata:
         return
     input_tokens = getattr(usage_metadata, 'prompt_token_count', 0)
@@ -61,7 +60,6 @@ def paivita_token_laskuri(usage_metadata):
 
 
 def laske_kustannus_arvio(token_counts):
-    """Laskee hinta-arvion Groqin Llama3-mallien mukaan."""
     hinnat = {"llama3_8b_input": 0.05, "llama3_8b_output": 0.15,
               "llama3_70b_input": 0.59, "llama3_70b_output": 0.79}
     input_cost = (token_counts['input'] / 1_000_000) * \
@@ -70,15 +68,14 @@ def laske_kustannus_arvio(token_counts):
     output_cost = (token_counts['output'] / 1_000_000) * \
         ((hinnat["llama3_8b_output"] * 0.8) +
          (hinnat["llama3_70b_output"] * 0.2))
-    gemini_pro_cost = (20000 / 1_000_000) * 3.5  # Karkea arvio
+    gemini_pro_cost = (20000 / 1_000_000) * 3.5
     return f"~${input_cost + output_cost + gemini_pro_cost:.5f} (Groq + Gemini)"
 
 
 def run_diagnostics():
-    """Suorittaa koko prosessin ja kirjaa tulokset."""
     total_start_time = time.perf_counter()
     log_header(
-        "Raamattu-tutkija 2.0 - DIAGNOSTIIKKA-AJO (Älykäs Otanta)")
+        "Raamattu-tutkija 2.0 - DIAGNOSTIIKKA-AJO (Vakaa Groq)")
 
     logging.info("\n[ALUSTUS] Ladataan resursseja...")
     raamattu_data = lataa_raamattu()
@@ -148,7 +145,7 @@ def run_diagnostics():
             f"\nLiian yleiset hakusanat (otettu {SAMPLE_SIZE} kpl satunnaisotos):")
         logging.info(f"  - {', '.join(otannalla_kasitellyt)}")
 
-    logging.info("\nKäsitellään osiot ja suodatetaan jakeet...")
+    logging.info("\nKäsitellään osiot ja suodatetaan jakeet erissä...")
     total_sections = len(hakukomennot)
     for i, (osio_nro, avainsanat) in enumerate(hakukomennot.items()):
         logging.info(
@@ -160,18 +157,21 @@ def run_diagnostics():
 
         if osumat_yhteensa:
             teema_match = re.search(
-                r"^{}\.?\s*(.*)".format(re.escape(osio_nro.strip('.'))),
-                suunnitelma["vahvistettu_sisallysluettelo"],
-                re.MULTILINE
+                r"^{}\.?\s*(.*)".format(
+                    re.escape(osio_nro.strip('.'))),
+                suunnitelma["vahvistettu_sisallysluettelo"], re.MULTILINE
             )
             teema = teema_match.group(1) if teema_match else ""
 
-            relevantit, usage = valitse_relevantti_konteksti(
-                "\n".join(sorted(list(osumat_yhteensa))), teema)
-            paivita_token_laskuri(usage)
-            if relevantit:
-                osio_kohtaiset_jakeet[osio_nro].update(relevantit)
-            time.sleep(1)  # Pidempi tauko varmuuden vuoksi
+            osumat_lista = sorted(list(osumat_yhteensa))
+            for j in range(0, len(osumat_lista), VERSE_BATCH_SIZE):
+                batch = osumat_lista[j:j + VERSE_BATCH_SIZE]
+                relevantit, usage = valitse_relevantti_konteksti(
+                    "\n".join(batch), teema)
+                paivita_token_laskuri(usage)
+                if relevantit:
+                    osio_kohtaiset_jakeet[osio_nro].update(relevantit)
+                time.sleep(1)
 
     kaikki_jakeet = set()
     for jakeet in osio_kohtaiset_jakeet.values():
