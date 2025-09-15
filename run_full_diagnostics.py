@@ -60,17 +60,69 @@ def laske_kustannus_arvio(token_counts):
     return f"~${total_cost:.4f} (Groq + Gemini)"
 
 
+def onko_sana_hyvaksyttava(sana, sanakirja):
+    """
+    Tarkistaa, onko sana tai sen osa raamatullinen.
+    Sallii moniosaiset termit, jos yksikin osa löytyy.
+    """
+    clean_sana = sana.lower().strip()
+    if not clean_sana:
+        return False
+
+    osat = clean_sana.split()
+    for osa in osat:
+        # Poistetaan yleisimmät taivutuspäätteet karkeasti
+        # ja tarkistetaan, josko perusmuoto löytyisi
+        if osa in sanakirja:
+            return True
+        if len(osa) > 6 and osa.endswith(('n', 'ä', 'a')):  # Genetiivi, partitiivi
+            if osa[:-1] in sanakirja:
+                return True
+        if len(osa) > 7 and osa.endswith(('ssa', 'ssä')):  # Inessiivi
+            if osa[:-3] in sanakirja:
+                return True
+        if len(osa) > 7 and osa.endswith(('sta', 'stä')):  # Elatiivi
+            if osa[:-3] in sanakirja:
+                return True
+    return False
+
+
+def hae_jae_viitteella(viite_str, book_data_map, book_name_map_by_id):
+    """Hakee tarkan jakeen tekstin viitteen perusteella."""
+    match = re.match(r'^(.*?)\s+(\d+):(\d+)', viite_str.strip())
+    if not match:
+        return None
+
+    kirja_nimi_str, luku, jae = match.groups()
+
+    # Etsitään oikea kirjan ID nimen perusteella
+    kirja_id = None
+    for b_id, b_name in book_name_map_by_id.items():
+        if b_name.lower() == kirja_nimi_str.lower().strip():
+            kirja_id = b_id
+            break
+
+    if kirja_id:
+        try:
+            oikea_nimi = book_name_map_by_id[kirja_id]
+            jae_teksti = book_data_map[kirja_id]['chapter'][luku]['verse'][jae]['text']
+            return f"{oikea_nimi} {luku}:{jae} - {jae_teksti}"
+        except KeyError:
+            return None
+    return None
+
+
 def run_diagnostics():
     """Suorittaa koko diagnostiikka-ajon."""
     total_start_time = time.perf_counter()
-    log_header("Raamattu-tutkija 2.5 - DIAGNOSTIIKKA (Sanakirja + Debug-loki)")
+    log_header("Raamattu-tutkija 2.5 - DIAGNOSTIIKKA (Älykäs suodatus)")
 
     logging.info("\n[ALUSTUS] Ladataan resursseja...")
     raamattu_resurssit = lataa_raamattu()
     if not raamattu_resurssit:
         return
     (
-        _, _, book_name_map, book_data_map, _,
+        _, _, book_name_map_by_id, book_data_map, _,
         book_name_to_id_map, raamattu_sanakirja
     ) = raamattu_resurssit
 
@@ -83,7 +135,7 @@ def run_diagnostics():
         logging.error("KRIITTINEN: 'syote.txt' ei löytynyt tai on tyhjä.")
         return
 
-    log_header("VAIHE 1: Tarkennettu hakusuunnitelma (GEMINI PRO)")
+    log_header("VAIHE 1: HAKUSUUNNITELMA & AVAINSANOJEN SUODATUS")
     start_time = time.perf_counter()
     suunnitelma, usage = luo_hakusuunnitelma(pääaihe, syote_teksti)
     paivita_token_laskuri(usage)
@@ -91,9 +143,26 @@ def run_diagnostics():
         logging.error("TESTI KESKEYTETTY: Hakusuunnitelman luonti epäonnistui.")
         return
     logging.info(f"Aikaa kului: {time.perf_counter() - start_time:.2f} sekuntia.")
-    logging.info(json.dumps(suunnitelma, indent=2, ensure_ascii=False))
 
-    log_header("VAIHE 2: JAKEIDEN KERÄYS (ESIHAKU + ÄLYKÄS SUODATUS)")
+    # Vaihe 1.5: Älykäs avainsanojen suodatus
+    puhdistetut_komennot = {}
+    logging.info("\n--- Avainsanojen suodatus Raamattu-sanakirjalla ---")
+    for osio, avainsanat in suunnitelma["hakukomennot"].items():
+        hyvaksytyt, poistetut = [], []
+        for sana in avainsanat:
+            if onko_sana_hyvaksyttava(sana, raamattu_sanakirja):
+                hyvaksytyt.append(sana)
+            else:
+                poistetut.append(sana)
+        puhdistetut_komennot[osio] = hyvaksytyt
+        if poistetut:
+            logging.info(
+                f"Osio {osio}: Poistettiin ei-raamatulliset sanat: "
+                f"{', '.join(poistetut)}"
+            )
+    suunnitelma["hakukomennot"] = puhdistetut_komennot
+
+    log_header("VAIHE 2: JAKEIDEN KERÄYS (ESIHAKU + ÄLYKÄS VALINTA)")
     start_time = time.perf_counter()
     osio_kohtaiset_jakeet = defaultdict(set)
     hakukomennot = suunnitelma["hakukomennot"]
@@ -104,32 +173,15 @@ def run_diagnostics():
             suunnitelma["vahvistettu_sisallysluettelo"], re.MULTILINE
         )
         teema = teema_match.group(1).strip() if teema_match else ""
-        if not teema:
+        if not teema or not avainsanat:
             continue
 
         logging.info(
             f"\n  ({i+1}/{len(hakukomennot)}) Käsitellään osiota {osio_nro}: "
             f"{teema}..."
         )
-
-        alkuperaiset = set(s.lower() for s in avainsanat)
-        siivotut_sanat = {s for s in alkuperaiset if s in raamattu_sanakirja}
-        poistetut_sanat = alkuperaiset - siivotut_sanat
-        if poistetut_sanat:
-            logging.info(
-                f"    - Poistettiin ei-raamatulliset sanat: "
-                f"{', '.join(sorted(list(poistetut_sanat)))}"
-            )
-        if not siivotut_sanat:
-            logging.info("    - Ei raamatullisia avainsanoja jäljellä.")
-            continue
-
-        logging.info(
-            f"    - Vaihe 2.1: Etsitään mekaanisesti "
-            f"{len(siivotut_sanat)} avainsanalla..."
-        )
         kandidaatit = etsi_mekaanisesti(
-            siivotut_sanat, book_data_map, book_name_map
+            avainsanat, book_data_map, book_name_map_by_id
         )
         logging.info(f"    - Löytyi {len(kandidaatit)} kandidaattijaetta.")
 
@@ -139,12 +191,9 @@ def run_diagnostics():
                 suodatetut, (usage, lahetetty_prompt, raaka_vastaus)
             ) = suodata_semanttisesti(kandidaatit, teema)
             paivita_token_laskuri(usage)
-            osio_kohtaiset_jakeet[osio_nro].update(suodatetut)
-            logging.info(
-                f"    - Suodatuksen jälkeen jäljellä {len(suodatetut)} jaetta."
-            )
+            logging.info(f"    - AI valitsi {len(suodatetut)} jaeviitettä.")
 
-            if len(suodatetut) < 10:
+            if len(suodatetut) < 5 and len(kandidaatit) > 0:
                 logging.warning(
                     f"    - VAROITUS: Epäilyttävän vähän tuloksia "
                     f"({len(suodatetut)} kpl). Tulostetaan debug-tiedot."
@@ -154,6 +203,31 @@ def run_diagnostics():
                 logging.info("\nSAATU RAAKAVASTAUS:\n" + raaka_vastaus)
                 logging.info("-" * 20 + " DEBUG-LOKI PÄÄTTYY " + "-" * 20)
 
+            for valinta in suodatetut:
+                if not isinstance(valinta, dict):
+                    continue
+                viite_str = valinta.get("viite")
+                laajenna = valinta.get("laajenna_kontekstia", False)
+
+                if not viite_str:
+                    continue
+                jae = hae_jae_viitteella(
+                    viite_str, book_data_map, book_name_map_by_id
+                )
+                if jae:
+                    osio_kohtaiset_jakeet[osio_nro].add(jae)
+                    if laajenna:
+                        match = re.match(r'^(.*?)\s+(\d+):(\d+)', jae)
+                        if not match:
+                            continue
+                        b_name, ch, v_num = match.groups()
+                        for j in range(1, 3):
+                            seuraava_jae = hae_jae_viitteella(
+                                f"{b_name} {ch}:{int(v_num) + j}",
+                                book_data_map, book_name_map_by_id
+                            )
+                            if seuraava_jae:
+                                osio_kohtaiset_jakeet[osio_nro].add(seuraava_jae)
         time.sleep(1.5)
 
     kaikki_jakeet = set().union(*osio_kohtaiset_jakeet.values())
@@ -161,7 +235,7 @@ def run_diagnostics():
         f"\nJakeiden keräys valmis. Aikaa kului: "
         f"{time.perf_counter() - start_time:.2f} sekuntia."
     )
-    logging.info(f"Kerättyjä uniikkeja jakeita yhteensä: {len(kaikki_jakeet)} kpl.")
+    logging.info(f"Kerättyjä uniikkeja jakeita: {len(kaikki_jakeet)} kpl.")
 
     log_header("VAIHE 3: JAKEIDEN JÄRJESTELY JA PISTEYTYS (GROQ)")
     start_time = time.perf_counter()

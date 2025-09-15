@@ -1,4 +1,4 @@
-# logic.py
+# logic.py (Versio 2.5)
 import io
 import json
 import re
@@ -121,8 +121,7 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
     try:
         if "gemini" in model_name:
             safety_settings = [
-                {"category": c, "threshold": "BLOCK_NONE"}
-                for c in [
+                {"category": c, "threshold": "BLOCK_NONE"} for c in [
                     "HARM_CATEGORY_HARASSMENT",
                     "HARM_CATEGORY_HATE_SPEECH",
                     "HARM_CATEGORY_SEXUALLY_EXPLICIT",
@@ -208,7 +207,7 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
     try:
         return json.loads(vastaus_str), usage
     except json.JSONDecodeError:
-        print("VIRHE: Hakusuunnitelman JSON-jäsennys eponnistui.")
+        print(f"VIRHE: Hakusuunnitelman JSON-jäsennys epäonnistui: {vastaus_str}")
         return None, usage
 
 
@@ -233,34 +232,44 @@ def etsi_mekaanisesti(avainsanat, book_data_map, book_name_map):
 
 
 def suodata_semanttisesti(kandidaattijakeet, osion_teema):
-    """Käyttää nopeaa Groq-mallia suodattamaan relevanteimmat jakeet."""
+    """
+    Pyytää tekoälyä valitsemaan relevanteimmat jakeet ja ilmoittamaan,
+    milloin kontekstia tulisi laajentaa. Palauttaa JSON-vastauksen.
+    """
     if not kandidaattijakeet:
         return [], (None, None, "")
+
     prompt = (
-        "Tehtävä: Olet teologinen asiantuntija. Valitse ja palauta alla "
-        "olevasta jaelistasta kaikki jakeet, jotka ovat temaattisesti "
-        "relevantteja annettuun teemaan. On parempi palauttaa hieman "
-        "enemmän jakeita kuin liian vähän. Jos olet epävarma, sisällytä "
-        "jae mukaan.\n\n"
+        "Olet teologinen asiantuntija. Tehtäväsi on arvioida alla olevaa "
+        "jaelistaa ja valita sieltä ne, jotka liittyvät annettuun teemaan.\n\n"
         f"**Teema:**\n{osion_teema}\n\n"
         "**Kandidaattijakeet:**\n---\n"
         f"{'\n'.join(kandidaattijakeet)}\n"
         "---\n\n"
-        "VASTAUSOHJE: Palauta VAIN valitsemiesi jakeiden täydelliset, "
-        "muuttumattomat merkkijonot, kukin omalla rivillään. Älä lisää "
-        "mitään muuta."
+        "**OHJEET:**\n"
+        "1. Käy läpi kaikki kandidaattijakeet.\n"
+        "2. Valitse niistä temaattisesti relevantit.\n"
+        "3. Aseta `laajenna_kontekstia`-arvoksi `true` **VAIN**, jos uskot "
+        "jakeen teologisen ytimen jäävän ymmärtämättä ilman sitä **seuraavia** "
+        "jakeita. Muutoin aseta arvoksi `false`.\n"
+        "4. Palauta vastauksesi JSON-muotoisena listana objekteja:\n"
+        '[{"viite": "Kirjan nimi Luku:Jae", "laajenna_kontekstia": false}]'
     )
-    vastaus_str, usage = tee_api_kutsu(prompt, FAST_MODEL, temperature=0.0)
+    vastaus_str, usage = tee_api_kutsu(
+        prompt, FAST_MODEL, is_json=True, temperature=0.1
+    )
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe semanttisessa suodatuksessa: {vastaus_str}")
         return [], (usage, prompt, vastaus_str)
 
-    alkuperaiset_set = set(kandidaattijakeet)
-    palautetut_set = set(
-        line for line in vastaus_str.strip().split('\n') if line.strip()
-    )
-    return list(alkuperaiset_set.intersection(palautetut_set)), \
-        (usage, prompt, vastaus_str)
+    try:
+        valitut_viitteet = json.loads(vastaus_str)
+        if not isinstance(valitut_viitteet, list):
+            raise json.JSONDecodeError("Vastaus ei ollut lista.", vastaus_str, 0)
+        return valitut_viitteet, (usage, prompt, vastaus_str)
+    except json.JSONDecodeError:
+        print(f"JSON-jäsennysvirhe suodatuksessa: {vastaus_str}")
+        return [], (usage, prompt, vastaus_str)
 
 
 def pisteyta_ja_jarjestele(
@@ -292,6 +301,11 @@ def pisteyta_ja_jarjestele(
         BATCH_SIZE = 50
         for j in range(0, len(jae_viitteet_lista), BATCH_SIZE):
             batch = jae_viitteet_lista[j:j + BATCH_SIZE]
+            num_batches = (len(jae_viitteet_lista) + BATCH_SIZE - 1) // BATCH_SIZE
+            print(
+                f"  - Pisteytetään jakeita osiolle {osio_nro}, "
+                f"erä {j//BATCH_SIZE + 1}/{num_batches}..."
+            )
             prompt = (
                 "Olet teologinen asiantuntija. Pisteytä jokainen alla oleva "
                 f"Raamatun jae asteikolla 1-10 sen mukaan, kuinka relevantti "
