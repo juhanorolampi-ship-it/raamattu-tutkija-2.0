@@ -278,8 +278,9 @@ def pisteyta_ja_jarjestele(
 
         for i in range(0, len(jae_viitteet_lista), BATCH_SIZE):
             batch = jae_viitteet_lista[i:i + BATCH_SIZE]
+            num_batches = (len(jae_viitteet_lista) + BATCH_SIZE - 1) // BATCH_SIZE
             print(
-                f"  - Pisteytetään jakeita osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}/{(len(jae_viitteet_lista) + BATCH_SIZE - 1)//BATCH_SIZE}...")
+                f"  - Pisteytetään jakeita osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}/{num_batches}...")
 
             prompt = (
                 "Olet teologinen asiantuntija. Pisteytä jokainen alla oleva "
@@ -303,7 +304,8 @@ def pisteyta_ja_jarjestele(
                 except json.JSONDecodeError:
                     print(
                         f"JSON-jäsennysvirhe osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}.")
-
+            
+            # Lisätään pieni viive API-rajojen kunnioittamiseksi
             time.sleep(1)
 
         for jae in jakeet:
