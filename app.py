@@ -217,6 +217,7 @@ def main():
                         laajenna = valinta.get("laajenna_kontekstia", False)
                         if not viite_str:
                             continue
+
                         jae = hae_jae_viitteella(
                             viite_str, book_data_map, book_name_map
                         )
@@ -233,8 +234,10 @@ def main():
                                         book_data_map, book_name_map
                                     )
                                     if next_v:
-                                        osio_kohtaiset_jakeet[osio_nro].add(next_v)
-                elif kandidaatit: # Yksinkertainen haku
+                                        osio_kohtaiset_jakeet[osio_nro].add(
+                                            next_v
+                                        )
+                elif kandidaatit:  # Yksinkertainen haku
                     osio_kohtaiset_jakeet[osio_nro].update(kandidaatit)
 
             p_bar.progress(1.0, text="Jakeiden keräys valmis!")
