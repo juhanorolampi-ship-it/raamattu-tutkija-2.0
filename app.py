@@ -70,8 +70,13 @@ DEFAULT_INSTRUCTIONS = (
 def main():
     """Sovelluksen pääfunktio, joka ohjaa näkymiä."""
     st.set_page_config(
-        page_title="Älykäs Raamattu-tutkija 2.0", layout="wide")
+        page_title="Älykäs Raamattu-tutkija 2.5", layout="wide")
     st.title("📖 Älykäs Raamattu-tutkija v.2.5 (Älykäs Haku)")
+
+    # Määritellään tiedostojen raakalinkit GitHubissa
+    BASE_URL = "https://raw.githubusercontent.com/juhanorolampi-ship-it/raamattu-tutkija-2.0/version-2.5/"
+    URL_BIBLE_JSON = f"{BASE_URL}bible.json"
+    URL_DICTIONARY_JSON = f"{BASE_URL}bible_dictionary.json"
 
     # Alustukset
     if "step" not in st.session_state:
@@ -86,14 +91,18 @@ def main():
             "API-avainta (GEMINI_API_KEY) ei löydy Streamlitin secreteistä.")
         st.stop()
 
-    raamattu_data = lataa_raamattu()
-    if not raamattu_data:
-        st.error("KRIITTINEN VIRHE: Raamatun lataus epäonnistui.")
+    raamattu_resurssit = lataa_raamattu(URL_BIBLE_JSON, URL_DICTIONARY_JSON)
+    if not raamattu_resurssit:
+        st.error(
+            "KRIITTINEN VIRHE: Raamatun ja/tai sanakirjan lataus epäonnistui. "
+            "Varmista, että tiedostot ovat saatavilla GitHubissa."
+        )
         st.stop()
+
     (
         _, _, book_name_map, book_data_map, _,
         book_name_to_id_map, raamattu_sanakirja
-    ) = raamattu_data
+    ) = raamattu_resurssit
 
     # --- SIVUPALKKI ---
     with st.sidebar:
