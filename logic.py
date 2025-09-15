@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 import docx
 import google.generativeai as genai
 import PyPDF2
-from groq import Groq
+from groq import Groq, BadRequestError
 from google.generativeai.types import GenerationConfig
 
 load_dotenv()
@@ -143,6 +143,12 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
                 return response_text, type('obj', (object,), usage_metadata)()
             return response_text, None
 
+    except BadRequestError as e:
+        print("\n--- GROQ BAD REQUEST VIRHE (400) ---")
+        print(f"API palautti virheen kutsussa mallille: {model_name}")
+        print(f"Vastaus: {e.response.text}")
+        print("-------------------------------------\n")
+        return f"API-VIRHE: {e}", None
     except Exception as e:
         return f"API-VIRHE: {e}", None
 
@@ -305,7 +311,6 @@ def pisteyta_ja_jarjestele(
                     print(
                         f"JSON-jäsennysvirhe osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}.")
             
-            # Lisätään pieni viive API-rajojen kunnioittamiseksi
             time.sleep(1)
 
         for jae in jakeet:
