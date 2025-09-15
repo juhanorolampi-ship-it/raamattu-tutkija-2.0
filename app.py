@@ -1,20 +1,21 @@
-# app.py
+# app.py Vakaa versio 2.0, jossa mekaaninen haku ja otanta
 import re
+import random
 from collections import defaultdict
 import streamlit as st
 import google.generativeai as genai
 
 from logic import (
     lataa_raamattu, luo_kanoninen_avain, lue_ladattu_tiedosto,
-    luo_hakusuunnitelma, rikasta_avainsanat, etsi_ja_laajenna,
+    luo_hakusuunnitelma, etsi_ja_laajenna,
     valitse_relevantti_konteksti, pisteyta_ja_jarjestele
 )
 
 # --- ASETUKSET ---
-MAX_HITS = 500  # Salliva kattoraja yleisille sanoille
+MAX_HITS = 500  # Raja, jonka jälkeen sana tulkitaan yleiseksi
+SAMPLE_SIZE = 75 # Otannan koko liian yleisille sanoille
 
 # --- APUFUNKTIOT ---
-
 
 def paivita_token_laskuri(usage_metadata):
     """Päivittää sessionin token-laskureita saadun datan perusteella."""
@@ -32,14 +33,18 @@ def paivita_token_laskuri(usage_metadata):
 
 def laske_kustannus_arvio(token_counts):
     """Laskee karkean hinta-arvion perustuen token-määriin eri malleille."""
-    hinnat = {"flash_input": 0.35, "flash_output": 1.05,
-              "pro_input": 3.5, "pro_output": 10.5}
-    # Arvioidaan karkea jako mallien käytölle
-    input_cost = (token_counts['input'] / 1_000_000) * \
-        ((hinnat["flash_input"] + hinnat["pro_input"]) / 2)
-    output_cost = (token_counts['output'] / 1_000_000) * \
-        ((hinnat["flash_output"] + hinnat["pro_output"]) / 2)
-    return f"~${input_cost + output_cost:.4f}"
+    # Hinnat per miljoona tokenia (syyskuu 2025 oletus)
+    # Gemini 1.5 Pro: $3.5 / 1M
+    # Groq Llama 3.1 8B: ~$0.07 / 1M
+    # Groq Llama 3.3 70B: ~$0.70 / 1M
+    
+    # Karkea arvio mallien käytön jakautumisesta
+    groq_input_cost = (token_counts['input'] / 1_000_000) * (0.07 * 0.5 + 0.70 * 0.5)
+    groq_output_cost = (token_counts['output'] / 1_000_000) * (0.07 * 0.5 + 0.70 * 0.5)
+    gemini_pro_cost = (20000 / 1_000_000) * 3.5
+    
+    total_cost = groq_input_cost + groq_output_cost + gemini_pro_cost
+    return f"~${total_cost:.4f} (Groq + Gemini)"
 
 
 def reset_session():
@@ -69,7 +74,7 @@ def main():
     """Sovelluksen pääfunktio, joka ohjaa näkymiä."""
     st.set_page_config(
         page_title="Älykäs Raamattu-tutkija 2.0", layout="wide")
-    st.title("📖 Älykäs Raamattu-tutkija v.2.5 (Finaali)")
+    st.title("📖 Älykäs Raamattu-tutkija v.2.0 (Vakaa)")
 
     # Alustukset
     if "step" not in st.session_state:
@@ -106,7 +111,6 @@ def main():
 
     if st.session_state.step == "input":
         st.header("Vaihe 1: Syötä tutkimuksen aihe ja aineisto")
-        # --- KORJATTU KOHTA: Turha muuttuja poistettu ---
         st.text_input(
             "Tutkimuksen pääaihe:",
             "Esim: Valheveljet, eksyttäjät ja nuori usko",
@@ -126,7 +130,7 @@ def main():
                 [lue_ladattu_tiedosto(f) for f in ladatut_tiedostot])
             yhdistetty_teksti = aineisto_input + "\n\n" + lisamateriaali
 
-            with st.spinner("Vaihe 1/4: Analysoidaan rakennetta... (Pro)"):
+            with st.spinner("Vaihe 1/4: Analysoidaan rakennetta... (Gemini Pro)"):
                 suunnitelma, usage = luo_hakusuunnitelma(
                     st.session_state.pääaihe_input, yhdistetty_teksti)
                 paivita_token_laskuri(usage)
@@ -151,11 +155,11 @@ def main():
         )
         haku_tapa = st.radio(
             "Valitse jakeiden keräystapa:",
-            ["Nopea haku (edullisin)", "Tarkka haku (laadukkain)"],
+            ["Nopea haku", "Tarkka haku (Älykäs otanta)"],
             index=1,
             help=(
-                "**Nopea haku:** Etsii avainsanat ja ottaa mekaanisesti mukaan sitä seuraavan jakeen. Erittäin nopea ja edullinen, mutta tulokset voivat olla epätarkkoja.\n\n"
-                "**Tarkka haku:** Käyttää monivaiheista tekoälyprosessia, joka tuottaa laadukkaimman ja kattavimman tuloksen. Hitaampi ja kalliimpi."
+                "**Nopea haku:** Etsii avainsanat ja ottaa mekaanisesti mukaan sitä edeltävän ja seuraavan jakeen. Nopea, mutta voi tuottaa epätarkkoja tuloksia.\n\n"
+                "**Tarkka haku:** Käyttää monivaiheista tekoälyprosessia, joka tuottaa laadukkaimman tuloksen. Ottaa yleisistä hakusanoista älykkään otannan."
             )
         )
         if st.button("Kerää jakeet →", type="primary"):
@@ -167,73 +171,65 @@ def main():
 
             p_bar = st.progress(0, text="Valmistellaan hakua...")
 
-            if haku_tapa == "Nopea haku (edullisin)":
+            if haku_tapa == "Nopea haku":
                 p_bar.progress(0.1, text="Kerätään jakeita...")
                 for osio, avainsanat in hakukomennot.items():
                     for sana in avainsanat:
                         if sana:
                             jakeet = etsi_ja_laajenna(
-                                book_data_map, book_name_map, sana, 0, 1)
+                                book_data_map, book_name_map, sana, 1, 1)
                             osio_kohtaiset_jakeet[osio].update(jakeet)
                 p_bar.progress(1.0, text="Jakeet kerätty!")
 
-            else:  # Tarkka haku (laadukkain)
-                p_bar.progress(0.1, text="Rikastetaan avainsanoja... (Flash)")
-                alkuperaiset = sorted(list(set(
-                    s for sanat in hakukomennot.values() for s in sanat if s
-                )))
-                rikastetut_map = rikasta_avainsanat(
-                    alkuperaiset, paivita_token_laskuri)
-
-                p_bar.progress(0.25, text="Haetaan jakeita välimuistiin...")
+            else:  # Tarkka haku (Älykäs otanta)
+                p_bar.progress(0.1, text="Suoritetaan haut välimuistiin...")
                 uniikit_sanat = sorted(list(set(
-                    laajennettu for laajennos_lista in rikastetut_map.values()
-                    for laajennettu in laajennos_lista
+                    sana for avainsanat in hakukomennot.values() for sana in avainsanat if sana
                 )))
-                haku_cache = {
-                    s: etsi_ja_laajenna(book_data_map,
-                                       book_name_map, s, 1, 1)
-                    for s in uniikit_sanat
-                }
+                
+                with st.spinner("Haetaan kaikkia avainsanoja Raamatusta..."):
+                    haku_cache = {
+                        sana: etsi_ja_laajenna(book_data_map, book_name_map, sana, 1, 1)
+                        for sana in uniikit_sanat
+                    }
 
-                liian_yleiset = {
-                    s for s, o in haku_cache.items() if len(o) > MAX_HITS}
+                p_bar.progress(0.3, text="Käsitellään yleisiä sanoja...")
+                with st.expander("Hakusanojen tehokkuusraportti"):
+                    for sana, osumat in haku_cache.items():
+                        if len(osumat) > MAX_HITS:
+                            st.write(f"Sana '{sana}' on yleinen ({len(osumat)} osumaa) -> Otetaan {SAMPLE_SIZE} jakeen satunnaisotos.")
+                            haku_cache[sana] = set(random.sample(list(osumat), SAMPLE_SIZE))
 
-                p_bar.progress(
-                    0.5, text="Suodatetaan jakeita osioille... (Flash)")
+                p_bar.progress(0.5, text="Suodatetaan jakeita osioille... (Groq)")
                 total_sections = len(hakukomennot)
                 for i, (osio, avainsanat) in enumerate(hakukomennot.items()):
                     progress_text = f"Suodatetaan osiolle {osio} ({i+1}/{total_sections})"
-                    p_bar.progress(
-                        0.5 + (i / total_sections) * 0.5, text=progress_text)
+                    p_bar.progress(0.5 + (i / total_sections) * 0.5, text=progress_text)
+                    
+                    osumat_yhteensa = set()
+                    for sana in avainsanat:
+                        if sana in haku_cache:
+                            osumat_yhteensa.update(haku_cache[sana])
 
-                    for alkup_sana in avainsanat:
-                        laajennetut = rikastetut_map.get(
-                            alkup_sana, [alkup_sana])
-                        osumat_yhteensa = set()
-                        for sana in laajennetut:
-                            if sana in haku_cache and sana not in liian_yleiset:
-                                osumat_yhteensa.update(haku_cache[sana])
+                    if osumat_yhteensa:
+                        otsikko_match = re.search(
+                            r"^{}\.?\s*(.*)".format(re.escape(osio.strip('.'))),
+                            st.session_state.final_sisallysluettelo, re.MULTILINE)
+                        teema = otsikko_match.group(1) if otsikko_match else ""
 
-                        if osumat_yhteensa:
-                            otsikko_match = re.search(
-                                r"^{}\.?\s*(.*)".format(
-                                    re.escape(osio.strip('.'))),
-                                st.session_state.final_sisallysluettelo, re.MULTILINE)
-                            teema = otsikko_match.group(
-                                1) if otsikko_match else ""
-
-                            relevantit, usage = valitse_relevantti_konteksti(
-                                "\n".join(sorted(list(osumat_yhteensa))), teema)
+                        # Pilkotaan jakeet eriin, jos niitä on paljon
+                        osumat_lista = sorted(list(osumat_yhteensa))
+                        VERSE_BATCH_SIZE = 100
+                        for j in range(0, len(osumat_lista), VERSE_BATCH_SIZE):
+                            batch = osumat_lista[j:j + VERSE_BATCH_SIZE]
+                            relevantit, usage = valitse_relevantti_konteksti("\n".join(batch), teema)
                             paivita_token_laskuri(usage)
-                            osio_kohtaiset_jakeet[osio].update(
-                                relevantit)
-
+                            osio_kohtaiset_jakeet[osio].update(relevantit)
+                
                 p_bar.progress(1.0, text="Jakeet kerätty!")
 
             st.session_state.osio_kohtaiset_jakeet = {
-                k: sorted(list(v), key=lambda j: luo_kanoninen_avain(
-                    j, book_name_to_id_map))
+                k: sorted(list(v), key=lambda j: luo_kanoninen_avain(j, book_name_to_id_map))
                 for k, v in osio_kohtaiset_jakeet.items()
             }
             st.session_state.step = "review_verses"
@@ -244,8 +240,7 @@ def main():
         kaikki_jakeet = set()
         for jakeet in st.session_state.osio_kohtaiset_jakeet.values():
             kaikki_jakeet.update(jakeet)
-        st.info(
-            f"Yhteensä uniikkeja jakeita löydetty: {len(kaikki_jakeet)} kpl")
+        st.info(f"Yhteensä uniikkeja jakeita löydetty: {len(kaikki_jakeet)} kpl")
 
         st.text_area(
             "Voit poistaa tai lisätä jakeita manuaalisesti ennen lopullista järjestelyä:",
@@ -256,13 +251,17 @@ def main():
             key="final_verses_str"
         )
         if st.button("Järjestele ja viimeistele →", type="primary"):
-            muokatut = set(
-                st.session_state.final_verses_str.strip().split("\n"))
+            muokatut_jakeet_str = st.session_state.final_verses_str.strip()
+            muokatut_jakeet = set(line for line in muokatut_jakeet_str.split('\n') if line.strip())
+
+            # Varmistetaan, että osio_kohtaiset_jakeet säilyttää rakenteensa,
+            # mutta sisältää vain muokatussa listassa olevat jakeet.
             alkuperaiset = st.session_state.osio_kohtaiset_jakeet
             st.session_state.osio_kohtaiset_jakeet = {
-                osio: [j for j in jakeet if j in muokatut]
+                osio: [j for j in jakeet if j in muokatut_jakeet]
                 for osio, jakeet in alkuperaiset.items()
             }
+            
             st.session_state.step = "output"
             st.rerun()
 
@@ -281,7 +280,7 @@ def main():
             def update_progress(percent, text):
                 progress_bar.progress(percent / 100.0, text=text)
 
-            with st.spinner("Vaihe 4/4: Järjestellään ja pisteytetään jakeita... (Flash)"):
+            with st.spinner("Vaihe 4/4: Järjestellään ja pisteytetään jakeita... (Groq)"):
                 jae_kartta = pisteyta_ja_jarjestele(
                     st.session_state.pääaihe,
                     st.session_state.suunnitelma["vahvistettu_sisallysluettelo"],
@@ -293,19 +292,15 @@ def main():
                 st.rerun()
 
         jae_kartta = st.session_state.jae_kartta
-
         lopputulos = f"# {st.session_state.pääaihe}\n\n"
-
         sisallysluettelo = st.session_state.suunnitelma["vahvistettu_sisallysluettelo"]
-        sorted_osiot = sorted(jae_kartta.items(
-        ), key=lambda item: [int(p) for p in item[0].strip('.').split('.')])
+        sorted_osiot = sorted(jae_kartta.items(), key=lambda item: [int(p) for p in item[0].strip('.').split('.')])
 
         for osio_nro, data in sorted_osiot:
             otsikko_match = re.search(
                 r"^{}\.?\s*(.*)".format(re.escape(osio_nro.strip('.'))),
                 sisallysluettelo, re.MULTILINE)
-            otsikko = otsikko_match.group(
-                1) if otsikko_match else f"Osio {osio_nro}"
+            otsikko = otsikko_match.group(1) if otsikko_match else f"Osio {osio_nro}"
 
             taso = osio_nro.count('.') + 2
             lopputulos += f"{'#' * taso} {osio_nro} {otsikko}\n\n"
@@ -316,11 +311,9 @@ def main():
             if not rel and not v_rel:
                 lopputulos += "*Ei löytynyt jakeita tähän osioon.*\n\n"
             if rel:
-                lopputulos += "**Relevantimmat jakeet:**\n" + \
-                    "".join(f"- {j}\n" for j in rel) + "\n"
+                lopputulos += "**Relevantimmat jakeet:**\n" + "".join(f"- {j}\n" for j in rel) + "\n"
             if v_rel:
-                lopputulos += "**Vähemmän relevantit jakeet:**\n" + \
-                    "".join(f"- {j}\n" for j in v_rel) + "\n"
+                lopputulos += "**Vähemmän relevantit jakeet:**\n" + "".join(f"- {j}\n" for j in v_rel) + "\n"
 
         st.markdown(lopputulos)
 
