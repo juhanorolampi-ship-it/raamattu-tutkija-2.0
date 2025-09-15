@@ -10,6 +10,7 @@ import google.generativeai as genai
 import PyPDF2
 from groq import Groq, BadRequestError
 from google.generativeai.types import GenerationConfig
+import requests
 
 load_dotenv()
 groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
@@ -25,30 +26,28 @@ TEOLOGINEN_PERUSOHJE = (
 )
 
 
-def lataa_raamattu(
-    tiedostonimi="bible.json", sanakirja_tiedosto="bible_dictionary.json"
-):
-    """Lataa Raamattu-datan JA valmiin sanakirjan tiedostoista."""
+def lataa_raamattu(raamattu_url, sanakirja_url):
+    """Lataa Raamattu-datan ja sanakirjan suoraan URL-osoitteista."""
     try:
-        with open(tiedostonimi, "r", encoding="utf-8") as f:
-            bible_data = json.load(f)
-    except FileNotFoundError:
-        print(f"KRIITTINEN VIRHE: {tiedostonimi} ei löytynyt.")
+        print(f"Ladataan Raamattu-dataa osoitteesta: {raamattu_url}")
+        response_bible = requests.get(raamattu_url)
+        response_bible.raise_for_status()  # Nostaa virheen, jos lataus epäonnistuu
+        bible_data = response_bible.json()
+    except (requests.exceptions.RequestException, json.JSONDecodeError) as e:
+        print(f"KRIITTINEN VIRHE Raamattu-datan latauksessa: {e}")
         return None
 
     try:
-        with open(sanakirja_tiedosto, "r", encoding="utf-8") as f:
-            raamattu_sanakirja = set(json.load(f))
-        print(
-            f"Ladattu {len(raamattu_sanakirja)} sanaa Raamattu-sanakirjasta."
-        )
-    except FileNotFoundError:
-        print(
-            f"KRIITTINEN VIRHE: {sanakirja_tiedosto} ei löytynyt. "
-            "Aja create_dictionary.py ensin."
-        )
+        print(f"Ladataan sanakirjaa osoitteesta: {sanakirja_url}")
+        response_dict = requests.get(sanakirja_url)
+        response_dict.raise_for_status()
+        raamattu_sanakirja = set(response_dict.json())
+        print(f"Ladattu {len(raamattu_sanakirja)} sanaa Raamattu-sanakirjasta.")
+    except (requests.exceptions.RequestException, json.JSONDecodeError) as e:
+        print(f"KRIITTINEN VIRHE sanakirjan latauksessa: {e}")
         return None
 
+    # Jäsennellään kirjat kuten ennenkin
     book_map, book_name_map, book_data_map, book_name_to_id_map = {}, {}, {}, {}
     sorted_book_ids = sorted(bible_data.get("book", {}).keys(), key=int)
     for book_id in sorted_book_ids:
@@ -65,7 +64,7 @@ def lataa_raamattu(
                 key = name.lower().replace(".", "").replace(" ", "")
                 if key:
                     book_map[key] = (book_id, book_content)
-
+    
     sorted_aliases = sorted(
         list(set(alias for alias in book_map if alias)), key=len, reverse=True
     )
