@@ -1,4 +1,4 @@
-# logic.py Vakaa versio 2.0, jossa mekaaninen haku ja otanta
+# logic.py
 import io
 import json
 import re
@@ -13,15 +13,11 @@ from google.generativeai.types import GenerationConfig
 
 load_dotenv()
 
-# Alustetaan Groq-client
 groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # --- MALLIASETUKSET ---
-# Nämä ovat Groqin virallisesti suosittelemat mallit (syyskuu 2025).
-# Jos ne joskus poistuvat käytöstä, päivitä vain nämä kaksi riviä.
 FAST_MODEL = "llama-3.1-8b-instant"
 POWERFUL_MODEL = "llama-3.3-70b-versatile"
-
 
 TEOLOGINEN_PERUSOHJE = (
     "Olet teologinen assistentti. Perusta kaikki vastauksesi ja tulkintasi "
@@ -29,7 +25,6 @@ TEOLOGINEN_PERUSOHJE = (
     "materiaaliin. Vältä nojaamasta tiettyihin teologisiin järjestelmiin ja "
     "pyri tulkitsemaan jakeita koko Raamatun kokonaisilmoituksen valossa."
 )
-
 
 def lataa_raamattu(tiedostonimi="bible.json"):
     """Lataa ja jäsentää Raamattu-datan JSON-tiedostosta."""
@@ -65,16 +60,14 @@ def lataa_raamattu(tiedostonimi="bible.json"):
         sorted_aliases, book_name_to_id_map
     )
 
-
 def luo_kanoninen_avain(jae_str, book_name_to_id_map):
     """Luo järjestelyavaimen (kirja, luku, jae) merkkijonosta."""
-    match = re.match(r"^(.*?)\s+(\d+):(\d+)", jae_str)
+    match = re.match(r'^(.*?)\s+(\d+):(\d+)', jae_str)
     if not match:
         return (999, 999, 999)
     book_name, chapter, verse = match.groups()
     book_id = book_name_to_id_map.get(book_name.strip(), 999)
     return (book_id, int(chapter), int(verse))
-
 
 def erota_jaeviite(jae_kokonainen):
     """Erottaa ja palauttaa jaeviitteen tekoälyä varten."""
@@ -82,7 +75,6 @@ def erota_jaeviite(jae_kokonainen):
         return jae_kokonainen.split(' - ')[0].strip()
     except IndexError:
         return jae_kokonainen
-
 
 def lue_ladattu_tiedosto(uploaded_file):
     """Lukee käyttäjän lataaman tiedoston sisällön tekstiksi."""
@@ -106,12 +98,8 @@ def lue_ladattu_tiedosto(uploaded_file):
         return f"VIRHE TIEDOSTON '{uploaded_file.name}' LUKEMISESSA: {e}"
     return ""
 
-
 def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
-    """
-    Tekee API-kutsun joko Googleen tai Groqiin model_name-perusteella
-    ja palauttaa tekstin sekä käyttötiedot.
-    """
+    """Tekee API-kutsun ja palauttaa tekstin sekä käyttötiedot."""
     try:
         if "gemma" in model_name or "gemini" in model_name:
             safety_settings = [
@@ -122,7 +110,6 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
             gen_config_params = {"temperature": temperature}
             if is_json:
                 gen_config_params["response_mime_type"] = "application/json"
-
             generation_config = GenerationConfig(**gen_config_params)
             model = genai.GenerativeModel(model_name)
             response = model.generate_content(
@@ -149,7 +136,6 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
                 }
                 return response_text, type('obj', (object,), usage_metadata)()
             return response_text, None
-
     except BadRequestError as e:
         print("\n--- GROQ BAD REQUEST VIRHE (400) ---")
         print(f"API palautti virheen kutsussa mallille: {model_name}")
@@ -159,11 +145,8 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
     except Exception as e:
         return f"API-VIRHE: {e}", None
 
-
 def luo_hakusuunnitelma(pääaihe, syote_teksti):
-    """
-    Luo älykkään hakusuunnitelman, joka sisältää valmiiksi rikastettuja avainsanoja.
-    """
+    """Luo älykkään hakusuunnitelman Geminillä."""
     prompt = (
         f"{TEOLOGINEN_PERUSOHJE}\n\n"
         "Tehtäväsi on luoda yksityiskohtainen hakusuunnitelma Raamattu-tutkimusta varten. "
@@ -191,110 +174,87 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
     final_prompt = prompt.format(pääaihe=pääaihe, syote_teksti=syote_teksti)
     vastaus_str, usage = tee_api_kutsu(
         final_prompt, "gemini-1.5-pro-latest", is_json=True, temperature=0.3)
-
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe hakusuunnitelman luonnissa: {vastaus_str}")
         return None, usage
-
     try:
         return json.loads(vastaus_str), usage
     except json.JSONDecodeError:
         print("VIRHE: Hakusuunnitelman JSON-jäsennys eponnistui.")
         return None, usage
 
-
-def etsi_ja_laajenna(book_data_map, book_name_map, sana, ennen, jälkeen):
-    """Etsii sanaa koko Raamatusta ja laajentaa osumia mekaanisesti."""
+def etsi_mekaanisesti(avainsanat, book_data_map, book_name_map):
+    """Etsii avainsanoja koko Raamatusta ja palauttaa osumat."""
     loydetyt_jakeet = set()
-    try:
-        pattern = re.compile(re.escape(sana), re.IGNORECASE)
-    except re.error:
-        return set()
+    for sana in avainsanat:
+        try:
+            pattern = re.compile(re.escape(sana), re.IGNORECASE)
+        except re.error:
+            continue
+        for book_id, book_content in book_data_map.items():
+            oikea_nimi = book_name_map.get(book_id, "")
+            for luku_nro, luku_data in book_content.get("chapter", {}).items():
+                for jae_nro, jae_data in luku_data.get("verse", {}).items():
+                    if pattern.search(jae_data.get("text", "")):
+                        loydetyt_jakeet.add(
+                            f"{oikea_nimi} {luku_nro}:{jae_nro} - {jae_data['text']}"
+                        )
+    return list(loydetyt_jakeet)
 
-    for book_id, book_content in book_data_map.items():
-        oikea_nimi = book_name_map.get(book_id, "")
-        for luku_nro, luku_data in book_content.get("chapter", {}).items():
-            for jae_nro, jae_data in luku_data.get("verse", {}).items():
-                if pattern.search(jae_data.get("text", "")):
-                    for i in range(int(jae_nro) - ennen,
-                                   int(jae_nro) + jälkeen + 1):
-                        try:
-                            jae_teksti = book_data_map[book_id]["chapter"][
-                                luku_nro]["verse"][str(i)]["text"]
-                            loydetyt_jakeet.add(
-                                f"{oikea_nimi} {luku_nro}:{i} - {jae_teksti}"
-                            )
-                        except KeyError:
-                            continue
-    return loydetyt_jakeet
-
-
-def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
-    """Käyttää nopeaa Groq-mallia kontekstin valintaan."""
+def suodata_semanttisesti(kandidaattijakeet, osion_teema):
+    """Käyttää nopeaa Groq-mallia suodattamaan relevanteimmat jakeet."""
+    if not kandidaattijakeet:
+        return [], None
     prompt = (
-        "Tehtävä: Olet teologinen asiantuntija. Valitse alla olevasta "
-        "jaelistasta VAIN ne jakeet, jotka ovat temaattisesti relevantteja "
-        f"aiheeseen: '{osion_teema}'.\n\n"
-        "JAE-LISTA:\n---\n"
-        f"{kontekstijakeet}\n"
+        "Tehtävä: Olet teologinen asiantuntija. Valitse alla olevasta jaelistasta "
+        "noin 20-30 **kaikkein relevanteinta** jaetta, jotka liittyvät annettuun teemaan.\n\n"
+        f"**Teema:**\n{osion_teema}\n\n"
+        "**Kandidaattijakeet:**\n---\n"
+        f"{'\n'.join(kandidaattijakeet)}\n"
         "---\n\n"
-        "VASTAUSOHJE: Palauta VAIN relevanttien jakeiden TÄYDELLISET, "
-        "muuttumattomat merkkijonot, kukin omalla rivillään. "
-        "Älä lisää numerointeja, selityksiä tai mitään muuta."
+        "VASTAUSOHJE: Palauta VAIN valitsemiesi jakeiden täydelliset, muuttumattomat "
+        "merkkijonot, kukin omalla rivillään. Älä lisää mitään muuta."
     )
-    vastaus_str, usage = tee_api_kutsu(
-        prompt, FAST_MODEL, temperature=0.0)
-
+    vastaus_str, usage = tee_api_kutsu(prompt, FAST_MODEL, temperature=0.0)
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
-        print(f"API-virhe kontekstin valinnassa: {vastaus_str}")
+        print(f"API-virhe semanttisessa suodatuksessa: {vastaus_str}")
         return [], usage
-
-    alkuperaiset_set = set(kontekstijakeet.strip().split('\n'))
+    alkuperaiset_set = set(kandidaattijakeet)
     palautetut_set = set(vastaus_str.strip().split('\n'))
     return list(alkuperaiset_set.intersection(palautetut_set)), usage
-
 
 def pisteyta_ja_jarjestele(
         aihe, sisallysluettelo, osio_kohtaiset_jakeet,
         paivita_token_laskuri_callback, progress_callback=None):
-    """
-    Pisteyttää ja järjestelee jakeet erissä käyttäen tehokasta Groq-mallia.
-    """
+    """Pisteyttää ja järjestelee jakeet erissä tehokkaalla Groq-mallilla."""
     final_jae_kartta = {}
     osiot = {
         match.group(1): match.group(3)
         for rivi in sisallysluettelo.split("\n") if rivi.strip()
         and (match := re.match(r"^\s*(\d+(\.\d+)*)\.?\s*(.*)", rivi.strip()))
     }
-
     total_osiot = len(osio_kohtaiset_jakeet)
     current_osio_index = 0
-
     for osio_nro, jakeet in osio_kohtaiset_jakeet.items():
         current_osio_index += 1
         osion_teema = osiot.get(osio_nro.strip('.'), "")
         final_jae_kartta[osio_nro] = {
             "relevantimmat": [], "vahemman_relevantit": []}
-
         if not jakeet or not osion_teema:
             continue
-
         if progress_callback:
             progress_text = f"Järjestellään osiota {osio_nro}: {osion_teema}..."
             progress_percent = int(
                 (current_osio_index / total_osiot) * 100)
             progress_callback(progress_percent, progress_text)
-
         BATCH_SIZE = 50
         pisteet = {}
         jae_viitteet_lista = [erota_jaeviite(j) for j in jakeet]
-
         for i in range(0, len(jae_viitteet_lista), BATCH_SIZE):
             batch = jae_viitteet_lista[i:i + BATCH_SIZE]
             num_batches = (len(jae_viitteet_lista) + BATCH_SIZE - 1) // BATCH_SIZE
             print(
                 f"  - Pisteytetään jakeita osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}/{num_batches}...")
-
             prompt = (
                 "Olet teologinen asiantuntija. Pisteytä jokainen alla oleva "
                 f"Raamatun jae asteikolla 1-10 sen mukaan, kuinka relevantti se on "
@@ -306,11 +266,9 @@ def pisteyta_ja_jarjestele(
                 "VASTAUSOHJE: Palauta VAIN JSON-objekti, jossa avaimina ovat "
                 "jaeviitteet ja arvoina kokonaisluvut 1-10."
             )
-
             vastaus_str, usage = tee_api_kutsu(
                 prompt, POWERFUL_MODEL, is_json=True, temperature=0.1)
             paivita_token_laskuri_callback(usage)
-
             if vastaus_str and not vastaus_str.startswith("API-VIRHE:"):
                 try:
                     pisteet.update(json.loads(vastaus_str))
@@ -319,12 +277,10 @@ def pisteyta_ja_jarjestele(
                         f"JSON-jäsennysvirhe osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}.")
             
             time.sleep(1)
-
         for jae in jakeet:
             piste = int(pisteet.get(erota_jaeviite(jae), 0))
             if piste >= 7:
                 final_jae_kartta[osio_nro]["relevantimmat"].append(jae)
             elif 4 <= piste <= 6:
                 final_jae_kartta[osio_nro]["vahemman_relevantit"].append(jae)
-
     return final_jae_kartta

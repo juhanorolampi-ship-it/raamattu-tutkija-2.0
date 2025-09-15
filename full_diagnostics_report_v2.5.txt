@@ -1,0 +1,130 @@
+
+================================================================================
+--- RAAMATTU-TUTKIJA 2.5 - DIAGNOSTIIKKA-AJO (ÄLYKÄS HAKU) ---
+================================================================================
+
+[ALUSTUS] Ladataan resursseja...
+Muodostetaan Raamatusta yksi merkkijono tekoälyä varten...
+Raamattu ladattu, 4,656,561 merkkiä.
+Syötetiedosto 'syote.txt' ladattu onnistuneesti.
+
+================================================================================
+--- VAIHE 1: TARKENNETTU HAKUSUUNNITELMA (GEMINI PRO) ---
+================================================================================
+Aikaa kului: 13.24 sekuntia.
+{
+  "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
+  "hakukomennot": {
+    "1.": [
+      "kutsu",
+      "kutsua",
+      "kutsuttu",
+      "viisaus",
+      "viisas",
+      "ymmärrys"
+    ],
+    "2.1.": [
+      "väärä",
+      "valhe",
+      "opettaja",
+      "eksyttää",
+      "eksytys",
+      "harha",
+      "ahneus",
+      "ahne",
+      "petos",
+      "pettää",
+      "mielistely",
+      "ovela",
+      "hajaannus",
+      "moraalittomuus",
+      "eriseura"
+    ],
+    "2.2.": [
+      "esimerkki",
+      "eksyttää",
+      "harhauttaa",
+      "lankeemus",
+      "synti"
+    ],
+    "2.3.": [
+      "harhaoppi",
+      "vääryys",
+      "toimia",
+      "käsky",
+      "ohje",
+      "neuvo",
+      "suhtautua",
+      "vääristää",
+      "evankeliumi"
+    ],
+    "3.1.": [
+      "heikko",
+      "veljes",
+      "eksynyt",
+      "suden",
+      "lampaan",
+      "kärsivällisyys",
+      "rakkaus",
+      "ojentaa"
+    ],
+    "3.2.": [
+      "kasvu",
+      "matka",
+      "armo",
+      "kypsymättömyys",
+      "kapina",
+      "eksyminen"
+    ],
+    "4.1.": [
+      "hedelmä",
+      "ilo",
+      "pelastus",
+      "Jumalan työ",
+      "epätäydellinen"
+    ],
+    "4.2.": [
+      "rakkaus",
+      "nuori",
+      "uskova",
+      "vanhempi",
+      "isä",
+      "äiti",
+      "usko",
+      "sammuttaa",
+      "evankelioida",
+      "huoli"
+    ],
+    "4.3.": [
+      "opetuslapseus",
+      "opetuslapsi",
+      "oppi",
+      "Raamattu",
+      "kärsivällisyys",
+      "rakkaus",
+      "Akylas",
+      "Priskilla",
+      "Apollos"
+    ],
+    "4.4.": [
+      "liike",
+      "YWAM",
+      "Circuit Riders",
+      "Carry the love",
+      "SEND",
+      "Jumalan työ",
+      "inhimillinen",
+      "opillinen",
+      "vaara",
+      "koetella",
+      "hyvä"
+    ]
+  }
+}
+
+================================================================================
+--- VAIHE 2: JAKEIDEN KERÄYS (ÄLYKÄS SEMANTTINEN HAKU) ---
+================================================================================
+  (1/10) Haetaan jakeita osiolle 1.: Johdanto: Kutsu vaatii viisautta ja erottamiskykyä...
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+  (2/10) Haetaan jakeita osiolle 2.1.: Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?...

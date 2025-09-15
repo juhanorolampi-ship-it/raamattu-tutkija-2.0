@@ -1,0 +1,185 @@
+
+================================================================================
+--- RAAMATTU-TUTKIJA 2.5B - DIAGNOSTIIKKA-AJO (ESIHAKU + SUODATUS) ---
+================================================================================
+
+[ALUSTUS] Ladataan resursseja...
+Syötetiedosto 'syote.txt' ladattu onnistuneesti.
+
+================================================================================
+--- VAIHE 1: TARKENNETTU HAKUSUUNNITELMA (GEMINI PRO) ---
+================================================================================
+Aikaa kului: 15.32 sekuntia.
+{
+  "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
+  "hakukomennot": {
+    "1.": [
+      "kutsu",
+      "kutsua",
+      "kutsuttu",
+      "viisaus",
+      "viisas",
+      "ymmärrys"
+    ],
+    "2.1.": [
+      "väärä",
+      "vääriä",
+      "opettaja",
+      "opettajat",
+      "eksyttäjä",
+      "eksyttäjät",
+      "ahneus",
+      "ahne",
+      "petos",
+      "pettää",
+      "mielistely",
+      "ovela",
+      "ovelat",
+      "sanat",
+      "hajaannus",
+      "hajaannusta",
+      "moraalittomuus",
+      "eriseura",
+      "eriseurat"
+    ],
+    "2.2.": [
+      "esimerkki",
+      "esimerkkejä",
+      "eksyttää",
+      "eksynyt",
+      "eksyneet",
+      "Jumalan kansa",
+      "harha",
+      "harhaan"
+    ],
+    "2.3.": [
+      "harhaoppi",
+      "harhaopit",
+      "vääristää",
+      "vääristellä",
+      "evankeliumi",
+      "käsky",
+      "käskyt",
+      "ohje",
+      "ohjeet",
+      "toimia",
+      "toiminta"
+    ],
+    "3.1.": [
+      "heikko",
+      "heikot",
+      "veli",
+      "veljet",
+      "sisaret",
+      "eksynyt",
+      "eksyneet",
+      "lammasta",
+      "lampaat",
+      "kärsivällisyys",
+      "ojentaa",
+      "ojentaminen"
+    ],
+    "3.2.": [
+      "kasvu",
+      "kasvaa",
+      "kasvamassa",
+      "armo",
+      "armoa",
+      "kypsymättömyys",
+      "kapina",
+      "eksytys"
+    ],
+    "4.1.": [
+      "ilo",
+      "iloita",
+      "pelastua",
+      "pelastuneet",
+      "Jumalan työ",
+      "epätäydellinen",
+      "epätäydellisissä"
+    ],
+    "4.2.": [
+      "rakkaus",
+      "rakastava",
+      "rakastavia",
+      "nuori",
+      "nuoret",
+      "uskova",
+      "uskovat",
+      "sammuttaa",
+      "evankelioimispalo",
+      "huoli",
+      "huolenaihe",
+      "huolenaiheita"
+    ],
+    "4.3.": [
+      "opetuslapseus",
+      "opetuslapseuttaminen",
+      "terve",
+      "oppi",
+      "Raamattu",
+      "raamatuntuntemus",
+      "kärsivällisyys",
+      "rakkaus"
+    ],
+    "4.4.": [
+      "liike",
+      "liikkeet",
+      "arvioida",
+      "Jumalan työ",
+      "inhimillinen",
+      "ylilyönti",
+      "ylilyönnit",
+      "opillinen",
+      "opilliset",
+      "vaara",
+      "vaarallinen",
+      "koetella",
+      "hyvä",
+      "hyvää"
+    ],
+    "5.": [
+      "totuus",
+      "rakkaus",
+      "valpas",
+      "valppaus",
+      "armollinen",
+      "kärsivällinen",
+      "suojella",
+      "lauma",
+      "hoivata",
+      "karitsa",
+      "karitsat"
+    ]
+  }
+}
+
+================================================================================
+--- VAIHE 2: JAKEIDEN KERÄYS (MEKAANINEN ESIHAKU + ÄLYKÄS SUODATUS) ---
+================================================================================
+
+  (1/11) Käsitellään osiota 1.: Johdanto: Kutsu vaatii viisautta ja erottamiskykyä...
+    - Vaihe 2.1: Etsitään mekaanisesti 6 avainsanalla...
+    - Löytyi 668 kandidaattijaetta.
+    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+    - Suodatuksen jälkeen jäljellä 1 jaetta.
+
+  (2/11) Käsitellään osiota 2.1.: Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?...
+    - Vaihe 2.1: Etsitään mekaanisesti 19 avainsanalla...
+    - Löytyi 419 kandidaattijaetta.
+    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+    - Suodatuksen jälkeen jäljellä 0 jaetta.
+
+  (3/11) Käsitellään osiota 2.2.: Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista...
+    - Vaihe 2.1: Etsitään mekaanisesti 8 avainsanalla...
+    - Löytyi 66 kandidaattijaetta.
+    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+    - Suodatuksen jälkeen jäljellä 0 jaetta.
+
+  (4/11) Käsitellään osiota 2.3.: Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?...
+    - Vaihe 2.1: Etsitään mekaanisesti 11 avainsanalla...
+    - Löytyi 708 kandidaattijaetta.
+    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
