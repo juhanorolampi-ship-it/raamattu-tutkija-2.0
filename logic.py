@@ -209,7 +209,51 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
     except json.JSONDecodeError:
         print(f"VIRHE: Hakusuunnitelman JSON-jäsennys epäonnistui: {vastaus_str}")
         return None, usage
+    
+def validoi_avainsanat_ai(avainsanat, paivita_token_laskuri_callback):
+    """
+    Validoi avainsanat tekoälyn avulla ja palauttaa hyväksytyt sanat.
+    """
+    prompt = (
+        "Olet suomen kielen ja teologian asiantuntija. Alla on lista hakusanoja. "
+        "Tehtäväsi on analysoida jokainen sana ja palauttaa sen todennäköisin "
+        "raamatullinen perusmuoto tai käsite.\n\n"
+        "Säännöt:\n"
+        "1. Jos sana on selkeästi raamatullinen (esim. 'opetuslapsi'), "
+        "palauta se sellaisenaan.\n"
+        "2. Jos sana on taivutettu muoto tai johdannainen (esim. "
+        "'opetuslapseus'), palauta sen tärkein raamatullinen kantasana "
+        "(esim. 'opetuslapsi').\n"
+        "3. Jos sana on moniosainen raamatullinen käsite (esim. 'terve oppi'), "
+        "palauta se sellaisenaan.\n"
+        "4. Jos sana on täysin epäraamatullinen (esim. 'YWAM', 'sudenkorento'), "
+        "palauta sen arvoksi TYHJÄ MERKKIJONO \"\".\n\n"
+        "Hakusanat:\n"
+        f"{json.dumps(avainsanat, ensure_ascii=False)}\n\n"
+        "VASTAUSOHJE: Palauta VAIN JSON-objekti, jossa avaimena on "
+        "alkuperäinen hakusana ja arvona on joko raamatullinen perusmuoto tai "
+        "tyhjä merkkijono."
+    )
+    vastaus_str, usage = tee_api_kutsu(
+        prompt, FAST_MODEL, is_json=True, temperature=0.0
+    )
+    paivita_token_laskuri_callback(usage)
 
+    if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
+        print(f"API-virhe avainsanojen validoinnissa: {vastaus_str}")
+        return set()  # Palautetaan tyhjä set virhetilanteessa
+
+    try:
+        validointi_tulos = json.loads(vastaus_str)
+        hyvaksytyt_sanat = {
+            alkuperainen_sana
+            for alkuperainen_sana, pätivä_muoto in validointi_tulos.items()
+            if pätivä_muoto  # Hyväksytään, jos arvo ei ole tyhjä merkkijono
+        }
+        return hyvaksytyt_sanat
+    except json.JSONDecodeError:
+        print(f"JSON-jäsennysvirhe avainsanojen validoinnissa: {vastaus_str}")
+        return set()
 
 def etsi_mekaanisesti(avainsanat, book_data_map, book_name_map):
     """Etsii avainsanoja koko Raamatusta ja palauttaa osumat."""
@@ -266,21 +310,19 @@ def suodata_semanttisesti(kandidaattijakeet, osion_teema):
         response_json = json.loads(vastaus_str)
         valitut_viitteet = []
 
-        # TARKISTUS: Onko vastaus objekti, jolla on 'data'-avain?
-        if isinstance(response_json, dict) and 'data' in response_json:
-            # Käytetään listaa sen sisältä
-            valitut_viitteet = response_json['data']
-        # Oletetaan muuten, että se on suoraan lista
-        elif isinstance(response_json, list):
+        # JOUSTAVA KÄSITTELY: Etsitään jaelista riippumatta avaimesta
+        if isinstance(response_json, list):
             valitut_viitteet = response_json
-        else:
-            raise json.JSONDecodeError(
-                "Vastaus ei ollut lista tai odotettu objekti.", vastaus_str, 0
-            )
-        
-        if not isinstance(valitut_viitteet, list):
+        elif isinstance(response_json, dict):
+            # Etsitään avain, jonka arvo on lista
+            for key, value in response_json.items():
+                if isinstance(value, list):
+                    valitut_viitteet = value
+                    break  # Käytetään ensimmäistä löytynyttä listaa
+
+        if not valitut_viitteet and isinstance(response_json, dict):
              raise json.JSONDecodeError(
-                "Objektin 'data'-avain ei sisältänyt listaa.", vastaus_str, 0
+                "JSON-objekti ei sisältänyt listaa.", vastaus_str, 0
             )
 
         return valitut_viitteet, (usage, prompt, vastaus_str)

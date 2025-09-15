@@ -10,7 +10,8 @@ import google.generativeai as genai
 
 from logic import (
     lataa_raamattu, luo_kanoninen_avain, luo_hakusuunnitelma,
-    etsi_mekaanisesti, suodata_semanttisesti, pisteyta_ja_jarjestele
+    validoi_avainsanat_ai, etsi_mekaanisesti, suodata_semanttisesti,
+    pisteyta_ja_jarjestele
 )
 
 LOG_FILENAME = 'full_diagnostics_report_v2.5.txt'
@@ -135,32 +136,46 @@ def run_diagnostics():
         logging.error("KRIITTINEN: 'syote.txt' ei löytynyt tai on tyhjä.")
         return
 
-    log_header("VAIHE 1: HAKUSUUNNITELMA & AVAINSANOJEN SUODATUS")
+    log_header("VAIHE 1: HAKUSUUNNITELMA & AVAINSANOJEN VALIDointi")
     start_time = time.perf_counter()
     suunnitelma, usage = luo_hakusuunnitelma(pääaihe, syote_teksti)
     paivita_token_laskuri(usage)
+
     if not suunnitelma:
         logging.error("TESTI KESKEYTETTY: Hakusuunnitelman luonti epäonnistui.")
         return
-    logging.info(f"Aikaa kului: {time.perf_counter() - start_time:.2f} sekuntia.")
+    logging.info(
+        f"Aikaa kului (Gemini): {time.perf_counter() - start_time:.2f} sek."
+    )
+    logging.info("--- Alkuperäinen hakusuunnitelma ---")
+    logging.info(json.dumps(suunnitelma, indent=2, ensure_ascii=False))
 
-    # Vaihe 1.5: Älykäs avainsanojen suodatus
+    # Vaihe 1.5: Älykäs avainsanojen validointi tekoälyllä
+    logging.info("\n--- Avainsanojen validointi tekoälyllä (Groq) ---")
+    start_time_val = time.perf_counter()
+    kaikki_avainsanat = list(set(
+        sana for avainsanalista in suunnitelma["hakukomennot"].values()
+        for sana in avainsanalista
+    ))
+    hyvaksytyt_sanat_setti = validoi_avainsanat_ai(
+        kaikki_avainsanat, paivita_token_laskuri
+    )
+
     puhdistetut_komennot = {}
-    logging.info("\n--- Avainsanojen suodatus Raamattu-sanakirjalla ---")
     for osio, avainsanat in suunnitelma["hakukomennot"].items():
-        hyvaksytyt, poistetut = [], []
-        for sana in avainsanat:
-            if onko_sana_hyvaksyttava(sana, raamattu_sanakirja):
-                hyvaksytyt.append(sana)
-            else:
-                poistetut.append(sana)
+        hyvaksytyt = [s for s in avainsanat if s in hyvaksytyt_sanat_setti]
+        poistetut = [s for s in avainsanat if s not in hyvaksytyt_sanat_setti]
         puhdistetut_komennot[osio] = hyvaksytyt
         if poistetut:
             logging.info(
-                f"Osio {osio}: Poistettiin ei-raamatulliset sanat: "
+                f"Osio {osio}: Hylättiin epäraamatulliset käsitteet: "
                 f"{', '.join(poistetut)}"
             )
     suunnitelma["hakukomennot"] = puhdistetut_komennot
+    logging.info(
+        f"Avainsanojen validointi kesti: "
+        f"{time.perf_counter() - start_time_val:.2f} sek."
+    )
 
     log_header("VAIHE 2: JAKEIDEN KERÄYS (ESIHAKU + ÄLYKÄS VALINTA)")
     start_time = time.perf_counter()
@@ -186,24 +201,20 @@ def run_diagnostics():
         logging.info(f"    - Löytyi {len(kandidaatit)} kandidaattijaetta.")
 
         if kandidaatit:
-            logging.info("    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...")
-            (
-                suodatetut, (usage, lahetetty_prompt, raaka_vastaus)
-            ) = suodata_semanttisesti(kandidaatit, teema)
+            valinnat, (usage, prompt, resp) = suodata_semanttisesti(
+                kandidaatit, teema
+            )
             paivita_token_laskuri(usage)
-            logging.info(f"    - AI valitsi {len(suodatetut)} jaeviitettä.")
-
-            if len(suodatetut) < 5 and len(kandidaatit) > 0:
+            logging.info(f"    - AI valitsi {len(valinnat)} jaeviitettä.")
+            if len(valinnat) < 5 and len(kandidaatit) > 0:
                 logging.warning(
-                    f"    - VAROITUS: Epäilyttävän vähän tuloksia "
-                    f"({len(suodatetut)} kpl). Tulostetaan debug-tiedot."
+                    "    - Vähän tuloksia. Debug-loki:"
                 )
-                logging.info("-" * 20 + " DEBUG-LOKI ALKAA " + "-" * 20)
-                logging.info("LÄHETETTY PROMPT:\n" + lahetetty_prompt)
-                logging.info("\nSAATU RAAKAVASTAUS:\n" + raaka_vastaus)
-                logging.info("-" * 20 + " DEBUG-LOKI PÄÄTTYY " + "-" * 20)
+                logging.info(
+                    f"      PROMPT:\n{prompt}\n      VASTAUS:\n{resp}"
+                )
 
-            for valinta in suodatetut:
+            for valinta in valinnat:
                 if not isinstance(valinta, dict):
                     continue
                 viite_str = valinta.get("viite")
@@ -227,7 +238,9 @@ def run_diagnostics():
                                 book_data_map, book_name_map_by_id
                             )
                             if seuraava_jae:
-                                osio_kohtaiset_jakeet[osio_nro].add(seuraava_jae)
+                                osio_kohtaiset_jakeet[osio_nro].add(
+                                    seuraava_jae
+                                )
         time.sleep(1.5)
 
     kaikki_jakeet = set().union(*osio_kohtaiset_jakeet.values())
