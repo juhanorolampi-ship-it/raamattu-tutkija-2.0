@@ -4,7 +4,6 @@ import json
 import re
 import time
 import os
-from dotenv import load_dotenv
 import docx
 import google.generativeai as genai
 import PyPDF2
@@ -12,7 +11,6 @@ from groq import Groq, BadRequestError
 from google.generativeai.types import GenerationConfig
 import requests
 
-load_dotenv()
 groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # --- MALLIASETUKSET ---
