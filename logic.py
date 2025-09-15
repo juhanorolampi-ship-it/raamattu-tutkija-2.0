@@ -236,7 +236,7 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
         "Älä lisää numerointeja, selityksiä tai mitään muuta."
     )
     vastaus_str, usage = tee_api_kutsu(
-        prompt, "llama-3.1-8b-instant", temperature=0.0)
+    prompt, "llama-3.1-70b-versatile", is_json=True, temperature=0.1)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe kontekstin valinnassa: {vastaus_str}")

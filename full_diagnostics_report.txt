@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: TARKENNETTU HAKUSUUNNITELMA (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 14.17 sekuntia.
+Aikaa kului: 12.72 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -26,102 +26,85 @@ Aikaa kului: 14.17 sekuntia.
       "valhe",
       "opettaja",
       "eksyttää",
-      "eksyminen",
+      "eksytys",
       "harha",
-      "harhaoppi",
       "ahneus",
       "ahne",
       "petos",
       "pettää",
-      "mielistä",
       "mielistely",
       "ovela",
-      "kavala",
       "hajaannus",
-      "eripura",
       "moraalittomuus",
-      "synti"
+      "eriseura"
     ],
     "2.2.": [
       "eksyttää",
-      "eksyminen",
-      "harhauttaa",
-      "lankeemus",
-      "synti",
-      "epäusko",
-      "luopumus"
+      "eksytys",
+      "harha",
+      "valhe",
+      "profeetta",
+      "väärä profeetta"
     ],
     "2.3.": [
       "harhaoppi",
-      "väärä oppi",
       "eksytys",
-      "nuhtelu",
+      "nuhdella",
       "ojentaa",
       "varoittaa",
-      "erottaa",
-      "hännyttää"
+      "karttaa",
+      "erottaa"
     ],
     "3.1.": [
       "heikko",
       "veljes",
-      "sisar",
       "eksynyt",
       "sudenkorento",
-      "peto",
-      "susi",
       "lammas",
       "kärsivällisyys",
-      "armo",
-      "ojentaminen",
-      "rakkaus"
+      "rakkaus",
+      "ojentaa"
     ],
     "3.2.": [
       "kasvu",
-      "hengellinen",
-      "kypsyys",
       "armo",
       "kärsivällisyys",
-      "matka",
-      "opetuslapsi"
+      "kypsymättömyys",
+      "kapina"
     ],
     "4.1.": [
       "ilo",
-      "kiitollisuus",
-      "hedelmä",
       "pelastus",
-      "Jumalan työ",
-      "armo"
+      "pelastaa",
+      "hedelmä",
+      "Jumalan työ"
     ],
     "4.2.": [
       "rakkaus",
-      "kärsivällisyys",
       "nuori",
       "uskova",
-      "opetus",
-      "ohjaus",
       "vanhempi",
+      "uskova",
       "isä",
-      "äiti"
+      "äiti",
+      "uskossa",
+      "evankeliumi"
     ],
     "4.3.": [
       "opetuslapseus",
       "opetuslapsi",
       "raamattu",
-      "opetus",
+      "raamatun tuntemus",
       "kärsivällisyys",
-      "rakkaus",
-      "kasvu"
+      "rakkaus"
     ],
     "4.4.": [
       "koetella",
-      "arvioida",
-      "erottaa",
       "hyvä",
-      "paha",
-      "oikea",
-      "väärä",
-      "harhaoppi",
-      "hedelmä"
+      "arvioida",
+      "liike",
+      "opillinen",
+      "vaara"
     ],
     "5.": [
       "totuus",
@@ -129,10 +112,9 @@ Aikaa kului: 14.17 sekuntia.
       "armo",
       "kärsivällisyys",
       "valppaus",
-      "suoja",
-      "hoiva",
-      "lauma",
-      "karitsa"
+      "eksytys",
+      "suojella",
+      "hoivata"
     ]
   }
 }
@@ -141,7 +123,7 @@ Aikaa kului: 14.17 sekuntia.
 --- VAIHE 2: JAKEIDEN KERÄYS (-1/+1, ÄLYKÄS OTANTA) ---
 ================================================================================
 
-Löytyi 78 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 78.
+Löytyi 66 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 66.
 Suoritetaan haut...
 Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 
@@ -150,7 +132,7 @@ Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 ================================================================================
 
 Liian yleiset hakusanat (otettu 200 kpl satunnaisotos):
-  - 'armo' (1152 -> 200 osumaa), 'hedelmä' (624 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'isä' (3967 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'matka' (581 -> 200 osumaa), 'oikea' (990 -> 200 osumaa), 'opetus' (708 -> 200 osumaa), 'paha' (1642 -> 200 osumaa), 'synti' (1491 -> 200 osumaa), 'äiti' (631 -> 200 osumaa)
+  - 'armo' (1152 -> 200 osumaa), 'hedelmä' (624 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'isä' (3967 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'profeetta' (714 -> 200 osumaa), 'äiti' (631 -> 200 osumaa)
 
 Käsitellään osiot ja suodatetaan jakeet erissä...
   (1/11) Suodatetaan osiolle 1....
@@ -160,261 +142,3 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (2/11) Suodatetaan osiolle 2.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (3/11) Suodatetaan osiolle 2.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (4/11) Suodatetaan osiolle 2.3....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (5/11) Suodatetaan osiolle 3.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (6/11) Suodatetaan osiolle 3.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (7/11) Suodatetaan osiolle 4.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (8/11) Suodatetaan osiolle 4.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (9/11) Suodatetaan osiolle 4.3....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (10/11) Suodatetaan osiolle 4.4....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-  (11/11) Suodatetaan osiolle 5....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-
-Jakeiden keräys valmis. Aikaa kului: 956.85 sekuntia.
-Kerättyjä uniikkeja jakeita yhteensä: 2957 kpl.
-
-================================================================================
---- VAIHE 3: JAKEIDEN JÄRJESTELY JA PISTEYTYS (GROQ LLAMA3-70B) ---
-================================================================================
-  - Edistyminen: 9% - Järjestellään osiota 1.: Johdanto: Kutsu vaatii viisautta ja erottamiskykyä...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 18% - Järjestellään osiota 2.1.: Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 27% - Järjestellään osiota 2.2.: Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 36% - Järjestellään osiota 2.3.: Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 45% - Järjestellään osiota 3.1.: Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 54% - Järjestellään osiota 3.2.: Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 63% - Järjestellään osiota 4.1.: Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 72% - Järjestellään osiota 4.2.: Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 81% - Järjestellään osiota 4.3.: Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 90% - Järjestellään osiota 4.4.: Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  - Edistyminen: 100% - Järjestellään osiota 5.: Yhteenveto: Totuus rakkaudessa...
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-Järjestely valmis. Aikaa kului: 85.55 sekuntia.
-
-================================================================================
---- LOPULLISET TULOKSET ---
-================================================================================
-KOKONAISKESTO: 17.6 minuuttia
-Kerätyt jakeet (uniikit): 2957 kpl
-Järjestellyt jakeet (uniikit): 0 kpl
-Sijoituksia osioihin yhteensä: 0 kpl
-
-TOKEN-KULUTUS:
-  - Syöte: 598,810 tokenia
-  - Tuotos: 340,807 tokenia
-  - Yhteensä: 939,617 tokenia
-  - Kustannusarvio: ~$0.43884 (Groq + Gemini)
-
-================================================================================
---- YKSITYISKOHTAINEN JAEJAOTTELU ---
-================================================================================
-
---- Osio 1. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 2.1. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 2.2. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 2.3. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 3.1. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 3.2. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.1. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.2. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.3. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 4.4. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
---- Osio 5. (Yhteensä: 0) ---
-  - Ei jakeita tähän osioon.
-
-================================================================================
---- DIAGNOSTIIKKA VALMIS ---
-================================================================================
