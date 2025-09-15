@@ -71,7 +71,7 @@ def main():
     """Sovelluksen pääfunktio, joka ohjaa näkymiä."""
     st.set_page_config(
         page_title="Älykäs Raamattu-tutkija 2.0", layout="wide")
-    st.title("📖 Älykäs Raamattu-tutkija v.2.0 (Vakaa)")
+    st.title("📖 Älykäs Raamattu-tutkija v.2.5 (Älykäs Haku)")
 
     # Alustukset
     if "step" not in st.session_state:
@@ -90,7 +90,10 @@ def main():
     if not raamattu_data:
         st.error("KRIITTINEN VIRHE: Raamatun lataus epäonnistui.")
         st.stop()
-    _, _, book_name_map, book_data_map, _, book_name_to_id_map = raamattu_data
+    (
+        _, _, book_name_map, book_data_map, _,
+        book_name_to_id_map, raamattu_sanakirja
+    ) = raamattu_data
 
     # --- SIVUPALKKI ---
     with st.sidebar:
