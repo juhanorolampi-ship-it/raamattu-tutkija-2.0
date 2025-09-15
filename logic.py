@@ -263,12 +263,29 @@ def suodata_semanttisesti(kandidaattijakeet, osion_teema):
         return [], (usage, prompt, vastaus_str)
 
     try:
-        valitut_viitteet = json.loads(vastaus_str)
+        response_json = json.loads(vastaus_str)
+        valitut_viitteet = []
+
+        # TARKISTUS: Onko vastaus objekti, jolla on 'data'-avain?
+        if isinstance(response_json, dict) and 'data' in response_json:
+            # Käytetään listaa sen sisältä
+            valitut_viitteet = response_json['data']
+        # Oletetaan muuten, että se on suoraan lista
+        elif isinstance(response_json, list):
+            valitut_viitteet = response_json
+        else:
+            raise json.JSONDecodeError(
+                "Vastaus ei ollut lista tai odotettu objekti.", vastaus_str, 0
+            )
+        
         if not isinstance(valitut_viitteet, list):
-            raise json.JSONDecodeError("Vastaus ei ollut lista.", vastaus_str, 0)
+             raise json.JSONDecodeError(
+                "Objektin 'data'-avain ei sisältänyt listaa.", vastaus_str, 0
+            )
+
         return valitut_viitteet, (usage, prompt, vastaus_str)
-    except json.JSONDecodeError:
-        print(f"JSON-jäsennysvirhe suodatuksessa: {vastaus_str}")
+    except json.JSONDecodeError as e:
+        print(f"JSON-jäsennysvirhe suodatuksessa: {e}")
         return [], (usage, prompt, vastaus_str)
 
 

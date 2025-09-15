@@ -9,3 +9,1080 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: HAKUSUUNNITELMA & AVAINSANOJEN SUODATUS ---
 ================================================================================
+Aikaa kului: 14.89 sekuntia.
+
+--- Avainsanojen suodatus Raamattu-sanakirjalla ---
+Osio 2.1.: Poistettiin ei-raamatulliset sanat: eksyttäjä, eksyttäjät, mielivalta, hajaannus, eripura
+Osio 2.2.: Poistettiin ei-raamatulliset sanat: eksyminen, harhauttaa, lankeemukset
+Osio 2.3.: Poistettiin ei-raamatulliset sanat: harhaoppi, harhaopit, vääristely, torua
+Osio 3.1.: Poistettiin ei-raamatulliset sanat: kärsivällinen, ojentaminen
+Osio 3.2.: Poistettiin ei-raamatulliset sanat: kasvu, anteeksianto, kypsyys, epäkypsä
+Osio 4.1.: Poistettiin ei-raamatulliset sanat: kiitollisuus, kiitollinen, pelastettu
+Osio 4.2.: Poistettiin ei-raamatulliset sanat: kärsivällinen, uskova
+Osio 4.3.: Poistettiin ei-raamatulliset sanat: opetuslapseus
+Osio 5.: Poistettiin ei-raamatulliset sanat: kärsivällinen, suojella, suojelus, hoivata
+
+================================================================================
+--- VAIHE 2: JAKEIDEN KERÄYS (ESIHAKU + ÄLYKÄS VALINTA) ---
+================================================================================
+
+  (1/11) Käsitellään osiota 1.: Johdanto: Kutsu vaatii viisautta ja erottamiskykyä...
+    - Löytyi 668 kandidaattijaetta.
+    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+    - AI valitsi 0 jaeviitettä.
+    - VAROITUS: Epäilyttävän vähän tuloksia (0 kpl). Tulostetaan debug-tiedot.
+-------------------- DEBUG-LOKI ALKAA --------------------
+LÄHETETTY PROMPT:
+Olet teologinen asiantuntija. Tehtäväsi on arvioida alla olevaa jaelistaa ja valita sieltä ne, jotka liittyvät annettuun teemaan.
+
+**Teema:**
+Johdanto: Kutsu vaatii viisautta ja erottamiskykyä
+
+**Kandidaattijakeet:**
+---
+Sananlaskut 21:30 - Ei auta viisaus, ei ymmärrys, ei mikään neuvo Herraa vastaan.
+1. Samuelin kirja 12:6 - Samuel sanoi kansalle: "Todistaja on Herra, joka kutsui Mooseksen ja Aaronin ja johdatti teidän isänne Egyptin maasta.
+Apostolien teot 24:2 - Ja kun Paavali oli kutsuttu esille, rupesi Tertullus syyttämään ja sanoi:
+Esra 2:61 - Ja pappien poikain joukossa olivat Habaijan jälkeläiset, Koosin jälkeläiset ja Barsillain jälkeläiset, sen, joka oli ottanut vaimon gileadilaisen Barsillain tyttäristä ja jota kutsuttiin heidän nimellään.
+Roomalaiskirje 1:7 - kaikille Roomassa oleville Jumalan rakkaille, kutsutuille pyhille. Armo teille ja rauha Jumalalta, meidän Isältämme, ja Herralta Jeesukselta Kristukselta!
+2. Kuningasten kirja 18:4 - Hän poisti uhrikukkulat, murskasi patsaat, hakkasi maahan asera-karsikon ja löi palasiksi vaskikäärmeen, jonka Mooses oli tehnyt; sillä niihin aikoihin asti israelilaiset olivat polttaneet uhreja sille; sitä kutsuttiin nimellä Nehustan.
+Sananlaskut 7:4 - Sano viisaudelle: "Sinä olet sisareni", kutsu ymmärrystä sukulaiseksi,
+Sananlaskut 11:2 - Mihin ylpeys tulee, sinne tulee häpeäkin, mutta nöyräin tykönä on viisaus.
+Jesaja 51:2 - Katsokaa Aabrahamia, isäänne, ja Saaraa, joka teidät synnytti. Sillä hän oli vain yksi, kun minä hänet kutsuin; mutta minä siunasin hänet ja enensin hänet.
+2. Kuningasten kirja 10:20 - Niin Jeehu sanoi: "Kuuluttakaa pyhä juhlakokous Baalin kunniaksi". Ja se kutsuttiin koolle.
+Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.
+Job 12:2 - "Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus!
+2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: "Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta."
+Ruut 1:20 - Mutta hän vastasi heille: "Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.
+1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.
+1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.
+Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.
+2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: "Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.
+Matteus 18:32 - Silloin hänen herransa kutsui hänet eteensä ja sanoi hänelle: 'Sinä paha palvelija! Minä annoin sinulle anteeksi kaiken sen velan, koska sitä minulta pyysit;
+Luukas 16:2 - Ja hän kutsui hänet eteensä ja sanoi hänelle: 'Mitä minä kuulenkaan sinusta? Tee tili huoneenhallituksestasi; sillä sinä et saa enää minun huonettani hallita.'
+Galatalaiskirje 5:13 - Te olette näet kutsutut vapauteen, veljet; älkää vain salliko vapauden olla yllykkeeksi lihalle, vaan palvelkaa toisianne rakkaudessa.
+Tuomarien kirja 4:6 - Hän lähetti kutsumaan Baarakin, Abinoamin pojan, Naftalin Kedeksestä, ja hän sanoi hänelle: "Näin käskee Herra, Israelin Jumala: Lähde ja mene Taaborin vuorelle ja ota mukaasi kymmenentuhatta miestä naftalilaisia ja sebulonilaisia.
+1. Kuningasten kirja 3:28 - Ja koko Israel kuuli tästä tuomiosta, jonka kuningas oli antanut, ja he pelkäsivät kuningasta; sillä he näkivät, että hänessä oli Jumalan viisaus oikeuden jakamiseen.
+Job 34:35 - 'Job puhuu taitamattomasti, ja hänen sanansa ovat ymmärrystä vailla.
+Sananlaskut 4:1 - Kuulkaa, lapset, isän kuritusta ja kuunnelkaa oppiaksenne ymmärrystä.
+1. Tessalonikalaiskirje 4:7 - Sillä ei Jumala ole kutsunut meitä saastaisuuteen, vaan pyhitykseen.
+Saarnaaja 7:11 - (12) Viisaus on yhtä hyvä kuin perintöosa ja on etu niille, jotka ovat näkemässä aurinkoa.
+Sananlaskut 14:24 - Viisasten kruunu on heidän rikkautensa, mutta tyhmäin hulluus hulluudeksi jää.
+2. Aikakirja 18:12 - Ja sanansaattaja, joka oli mennyt kutsumaan Miikaa, puhui hänelle sanoen: "Katso, kaikki profeetat ovat yhdestä suusta luvanneet kuninkaalle hyvää. Olkoon sinun sanasi heidän sanansa kaltainen, ja lupaa sinäkin hyvää."
+Apostolien teot 7:14 - Niin Joosef lähetti kutsumaan luokseen isänsä Jaakobin ja koko sukunsa, seitsemänkymmentä viisi henkeä.
+Tuomarien kirja 6:35 - Ja hän lähetti sanansaattajia koko Manasseen, niin että heidätkin kutsuttiin koolle seuraamaan häntä; samoin hän lähetti sanansaattajat Asseriin, Sebuloniin ja Naftaliin, ja nämä lähtivät vihollisia vastaan.
+1. Pietarin kirje 3:6 - niin oli Saara kuuliainen Aabrahamille, kutsuen häntä herraksi; ja hänen lapsikseen te olette tulleet, kun teette sitä, mikä hyvää on, ettekä anna minkään itseänne peljättää.
+Hoosea 11:7 - Minun kansallani on halu kääntyä minusta pois; ja kun sitä kutsutaan korkeutta kohti, ei kenkään heistä ylenny.
+1. Samuelin kirja 29:6 - Niin Aakis kutsui Daavidin ja sanoi hänelle: "Niin totta kuin Herra elää: sinä olet rehellinen, ja minulle olisi mieleen, että olisit täällä leirissä, lähtisit ja tulisit minun kanssani; sillä minä en ole havainnut mitään pahaa sinussa siitä päivästä alkaen, jona tulit minun luokseni, tähän päivään asti. Mutta ruhtinaille sinä et ole mieluinen.
+Valitusvirret 1:15 - Herra hylkäsi kaikki minun urhoni, joita minun keskuudessani oli; hän kutsui kokoon juhlan minua vastaan murskatakseen minun nuorukaiseni. Herra polki viinikuurnan neitsyelle, tytär Juudalle.
+Luukas 15:19 - enkä enää ansaitse, että minua sinun pojaksesi kutsutaan; tee minut yhdeksi palkkalaisistasi.'
+Roomalaiskirje 2:17 - Mutta jos sinä kutsut itseäsi juutalaiseksi ja luotat lakiin ja Jumala on sinun kerskauksesi
+Sananlaskut 14:8 - Mielevän viisaus on, että hän vaelluksestaan vaarin pitää; tyhmien hulluus on petos.
+Sananlaskut 9:15 - kutsumassa ohikulkijoita, jotka käyvät polkujansa suoraan eteenpäin:
+2. Samuelin kirja 5:9 - Sitten Daavid asettui vuorilinnaan ja kutsui sen Daavidin kaupungiksi. Ja Daavid rakenteli sitä yltympäri, Millosta sisälle päin.
+Roomalaiskirje 11:29 - Sillä ei Jumala armolahjojansa ja kutsumistansa kadu.
+1. Samuelin kirja 6:2 - Ja filistealaiset kutsuivat papit ja tietäjät ja sanoivat: "Mitä me teemme Herran arkille? Antakaa meidän tietää, millä tavalla me lähettäisimme sen kotiinsa."
+2. Kuningasten kirja 4:12 - Ja hän sanoi palvelijallensa Geehasille: "Kutsu se suunemilainen vaimo". Ja hän kutsui tämän, ja hän astui hänen eteensä.
+1. Tessalonikalaiskirje 5:24 - Hän, joka teitä kutsuu, on uskollinen, ja hän on sen myös tekevä.
+Job 32:8 - Mutta onhan ihmisissä henki, ja Kaikkivaltiaan henkäys antaa heille ymmärrystä.
+Jesaja 61:6 - Mutta teitä kutsutaan Herran papeiksi, sanotaan meidän Jumalamme palvelijoiksi; te saatte nauttia kansain rikkaudet ja periä heidän kunniansa.
+3. Mooseksen kirja 9:1 - Ja kahdeksantena päivänä Mooses kutsui Aaronin ja hänen poikansa ja Israelin vanhimmat
+1. Korinttilaiskirje 1:19 - Onhan kirjoitettu: "Minä hävitän viisasten viisauden, ja ymmärtäväisten ymmärryksen minä teen mitättömäksi".
+4. Mooseksen kirja 25:2 - Nämä kutsuivat kansaa jumaliensa uhreille, ja kansa söi ja kumarsi heidän jumaliansa.
+Apostolien teot 9:41 - Ja Pietari ojensi hänelle kätensä ja nosti hänet seisomaan ja kutsui sisään pyhät ja lesket ja asetti hänet elävänä heidän eteensä.
+1. Mooseksen kirja 12:18 - Silloin farao kutsui Abramin luoksensa ja sanoi: "Mitä olet minulle tehnyt? Miksi et ilmoittanut minulle, että hän on sinun vaimosi?
+1. Pietarin kirje 2:21 - Sillä siihen te olette kutsutut, koska Kristuskin kärsi teidän puolestanne, jättäen teille esikuvan, että te noudattaisitte hänen jälkiänsä,
+Matteus 25:14 - Sillä tapahtuu, niinkuin tapahtui, kun mies matkusti muille maille: hän kutsui palvelijansa ja uskoi heille omaisuutensa;
+Sananlaskut 15:12 - Pilkkaaja ei pidä siitä, että häntä nuhdellaan; viisasten luo hän ei mene.
+Jeremia 51:27 - Nostakaa lippu maassa, puhaltakaa pasunaan kansoissa, vihkikää kansat häntä vastaan, kutsukaa häntä vastaan Araratin, Minnin ja Askenaan valtakunnat, asettakaa päämies häntä vastaan, antakaa tulla hevosia kuin pörheitä heinäsirkkoja.
+1. Mooseksen kirja 26:9 - Niin Abimelek kutsutti Iisakin ja sanoi: "Katso, hänhän on sinun vaimosi! Miksi olet sanonut: 'Hän on minun sisareni'?" Iisak vastasi hänelle: "Minä ajattelin, että minut muuten ehkä tapetaan hänen tähtensä".
+1. Korinttilaiskirje 7:21 - Jos olet kutsuttu orjana, älä siitä murehdi; mutta vaikka voisitkin päästä vapaaksi, niin ole ennemmin siinä osassasi.
+Matteus 1:16 - Jaakobille syntyi Joosef, Marian mies, hänen, josta syntyi Jeesus, jota kutsutaan Kristukseksi.
+Saarnaaja 8:1 - Kuka on viisaan vertainen, ja kuka taitaa selittää asian? Ihmisen viisaus kirkastaa hänen kasvonsa, ja hänen kasvojensa kovuus muuttuu.
+Matteus 27:8 - Sentähden sitä peltoa vielä tänäkin päivänä kutsutaan Veripelloksi.
+Psalmit 119:73 - Sinun kätesi ovat minut tehneet ja valmistaneet; anna minulle ymmärrys oppiakseni sinun käskysi.
+1. Samuelin kirja 14:20 - Silloin Saul kutsutti koolle kaiken väen, joka oli hänen kanssaan, ja he tulivat taistelupaikalle, ja katso, toisen miekka oli toista vastaan, ja oli mitä suurin hämminki.
+1. Aikakirja 11:7 - Sitten Daavid asettui vuorilinnaan; sentähden kutsuttiin sitä Daavidin kaupungiksi.
+1. Samuelin kirja 16:5 - Hän vastasi: "Rauhaa. Minä olen tullut uhraamaan Herralle. Pyhittäytykää ja tulkaa minun kanssani uhrille." Ja hän pyhitti Iisain ja hänen poikansa ja kutsui heidät uhrille.
+Luukas 13:12 - Hänet nähdessään Jeesus kutsui hänet luoksensa ja sanoi hänelle: "Nainen, sinä olet päässyt heikkoudestasi",
+Jeremia 9:12 - (11) Kuka on viisas mies, joka tämän ymmärtää ja jolle Herran suu on puhunut, että hän sen ilmoittaisi? Minkätähden on maa hävitetty, poltettu kuin erämaa, jossa ei kukaan kulje?
+Jesaja 54:5 - Sillä hän, joka sinut teki, on sinun aviomiehesi, Herra Sebaot on hänen nimensä, sinun lunastajasi on Israelin Pyhä, hän joka kaiken maan Jumalaksi kutsutaan.
+Luukas 22:3 - Niin saatana meni Juudaaseen, jota kutsuttiin Iskariotiksi ja joka oli yksi niistä kahdestatoista.
+Daniel 1:20 - Ja kaikissa viisautta ja ymmärrystä vaativissa asioissa, joita kuningas heiltä kyseli, hän havaitsi heidät kymmentä vertaa etevämmiksi kuin kaikki tietäjät ja noidat, mitä koko hänen valtakunnassaan oli.
+Jesaja 48:12 - Kuule minua, Jaakob, ja sinä, Israel, jonka minä olen kutsunut: Minä olen aina sama, minä olen ensimmäinen, minä olen myös viimeinen.
+4. Mooseksen kirja 32:41 - Ja Jaair, Manassen poika, meni ja valloitti heidän leirikylänsä ja kutsui ne Jaairin leirikyliksi.
+Job 21:22 - Onko opetettava ymmärrystä Jumalalle, hänelle, joka taivaallisetkin tuomitsee?
+1. Mooseksen kirja 21:31 - Siitä kutsuttiin paikkaa Beersebaksi , koska he molemmat vannoivat siinä toisilleen valan.
+Tuomarien kirja 1:17 - Mutta Juuda meni veljensä Simeonin kanssa, ja he voittivat kanaanilaiset, jotka asuivat Sefatissa, ja he vihkivät kaupungin tuhon omaksi ja kutsuivat sen Hormaksi .
+Sananlaskut 14:33 - Ymmärtäväisen sydämeen ottaa majansa viisaus, ja tyhmien keskellä se itsensä tiettäväksi tekee.
+Matteus 10:2 - Ja nämä ovat niiden kahdentoista apostolin nimet: ensimmäinen oli Simon, jota kutsuttiin Pietariksi, ja Andreas, hänen veljensä, sitten Jaakob, Sebedeuksen poika, ja Johannes, hänen veljensä,
+Markus 3:13 - Ja hän nousi vuorelle ja kutsui tykönsä ne, jotka hän itse tahtoi, ja he menivät hänen tykönsä.
+4. Mooseksen kirja 22:37 - Ja Baalak sanoi Bileamille: "Enkö minä vartavasten lähettänyt kutsumaan sinua? Minkätähden et tahtonut tulla minun luokseni? Enkö minä muka voi sinua palkita?"
+Saarnaaja 12:9 - Sen lisäksi, että saarnaaja oli viisas, hän myös opetti kansalle tietoa, punnitsi, harkitsi ja sommitteli sananlaskuja paljon.
+Nehemia 5:12 - He vastasivat: "Me luovutamme ne emmekä vaadi heiltä mitään; me teemme, niinkuin olet sanonut". Ja minä kutsuin papit ja vannotin heidät tekemään näin.
+Sananlaskut 9:10 - Herran pelko on viisauden alku, ja Pyhimmän tunteminen on ymmärrystä. —
+Efesolaiskirje 3:10 - että Jumalan moninainen viisaus seurakunnan kautta nyt tulisi taivaallisten hallitusten ja valtojen tietoon
+Jesaja 44:19 - Ei tule heidän mieleensä, ei ole heillä järkeä eikä ymmärrystä, että sanoisivat: "Osan siitä olen polttanut tulessa, olen paistanut sen hiilillä leipää, paistanut lihaa ja syönyt; tekisinkö tähteestä kauhistuksen, lankeaisinko maahan puupölkyn eteen!"
+Ester 4:5 - Niin Ester kutsui Hatakin, joka oli kuninkaan hoviherroja ja jonka tämä oli asettanut häntä palvelemaan, ja käski hänet Mordokain luo, saadakseen tietää, mitä ja mistä syystä tämä kaikki oli.
+Juudaksen kirje 1:1 - Juudas, Jeesuksen Kristuksen palvelija ja Jaakobin veli, kutsutuille, jotka ovat Isässä Jumalassa rakastetut ja Jeesukselle Kristukselle varjellut.
+Markus 15:44 - Niin Pilatus ihmetteli, oliko hän jo kuollut, ja kutsuttuaan luoksensa sadanpäämiehen kysyi tältä, oliko hän jo kauan sitten kuollut.
+1. Johanneksen kirje 3:1 - Katsokaa, minkäkaltaisen rakkauden Isä on meille antanut, että meitä kutsutaan Jumalan lapsiksi, joita me olemmekin. Sentähden ei maailma tunne meitä, sillä se ei tunne häntä.
+Apostolien teot 10:18 - ja tiedustelivat kuuluvalla äänellä, majailiko siellä Simon, jota myös Pietariksi kutsuttiin.
+2. Tessalonikalaiskirje 1:11 - Sitä varten me aina rukoilemmekin teidän puolestanne, että meidän Jumalamme katsoisi teidät kutsumisensa arvoisiksi ja voimallisesti saattaisi täydelliseksi kaiken teidän halunne hyvään ja teidän uskonne teot,
+1. Korinttilaiskirje 7:20 - Pysyköön kukin siinä asemassa, missä hänet on kutsuttu.
+1. Samuelin kirja 9:22 - Mutta Samuel otti Saulin palvelijoinensa ja vei heidät ruokailuhuoneeseen ja antoi heille ylimmän sijan kutsuvierasten joukossa, joita oli noin kolmekymmentä miestä.
+Luukas 23:13 - Niin Pilatus kutsui kokoon ylipapit ja hallitusmiehet ja kansan
+Jeremia 9:17 - (16) Näin sanoo Herra Sebaot: Ottakaa vaari, kutsukaa itkijävaimoja tulemaan tänne. Lähettäkää hakemaan viisaita vaimoja, jotta he tulisivat,
+2. Aikakirja 24:6 - Silloin kuningas kutsui luokseen ylimmäisen papin Joojadan ja sanoi hänelle: "Miksi et ole pitänyt huolta siitä, että leeviläiset toisivat Juudasta ja Jerusalemista Herran palvelijan Mooseksen määräämän Israelin seurakunnan veron lainmajaa varten?
+Jesaja 40:26 - Nostakaa silmänne korkeuteen ja katsokaa: kuka on nämä luonut? Hän, joka johdattaa esiin niitten joukot täysilukuisina, joka nimeltä kutsuu ne kaikki; suuri on hänen voimansa ja valtainen hänen väkensä: ei yksikään jää häneltä pois.
+2. Timoteuskirje 2:7 - Tarkkaa, mitä sanon; Herra on antava sinulle ymmärrystä kaikkeen.
+2. Samuelin kirja 21:2 - Niin kuningas kutsui gibeonilaiset ja puhutteli heitä. Mutta gibeonilaiset eivät olleet israelilaisia, vaan amorilaisten jätteitä, ja israelilaiset olivat vannoneet heille valan, mutta Saul oli kiivaillessaan israelilaisten ja Juudan puolesta koettanut hävittää heidät.
+Sananlaskut 8:1 - Eikö viisaus kutsu, eikö taito anna äänensä kuulua?
+Luukas 6:15 - ja Matteuksen ja Tuomaan, ja Jaakobin, Alfeuksen pojan, ja Simonin, jota kutsuttiin Kiivailijaksi,
+Roomalaiskirje 9:26 - Ja on tapahtuva, että siinä paikassa, jossa heille on sanottu: 'Te ette ole minun kansani', siinä heitä kutsutaan elävän Jumalan lapsiksi."
+Roomalaiskirje 9:24 - Ja sellaisiksi hän myös on kutsunut meidät, ei ainoastaan juutalaisista, vaan myös pakanoista,
+Heprealaiskirje 3:1 - Sentähden, pyhät veljet, jotka olette taivaallisesta kutsumuksesta osalliset, kiinnittäkää mielenne meidän tunnustuksemme apostoliin ja ylimmäiseen pappiin, Jeesukseen,
+Apostolien teot 13:9 - Niin Saulus, myös Paavaliksi kutsuttu, täynnä Pyhää Henkeä loi katseensa häneen
+1. Timoteuskirje 6:12 - Kilvoittele hyvä uskon kilvoitus, tartu kiinni iankaikkiseen elämään, johon olet kutsuttu ja johon hyvällä tunnustuksella olet tunnustautunut monen todistajan edessä.
+Sananlaskut 9:3 - Hän on palvelijattarensa lähettänyt kutsua kuuluttamaan kaupungin kumpujen rinteiltä:
+2. Samuelin kirja 12:25 - Ja Daavid laittoi hänet profeetta Naatanin hoitoon, ja tämä kutsui häntä Jedidjaksi Herran tähden.
+Apostolien teot 20:17 - Mutta Miletosta hän lähetti sanan Efesoon ja kutsui tykönsä seurakunnan vanhimmat.
+Psalmit 119:104 - Sinun asetuksistasi minä saan ymmärrystä; sentähden minä vihaan kaikkia valheen teitä.
+Luukas 14:13 - Vaan kun laitat pidot, kutsu köyhiä, raajarikkoja, rampoja, sokeita;
+Filippiläiskirje 3:14 - minä riennän kohti päämäärää, voittopalkintoa, johon Jumala on minut taivaallisella kutsumisella kutsunut Kristuksessa Jeesuksessa.
+5. Mooseksen kirja 3:13 - Loput Gileadista ja koko Baasanin, Oogin valtakunnan, minä annoin toiselle puolelle Manassen sukukuntaa, koko Argobin seudun; koko tätä Baasania kutsutaan refalaisten maaksi.
+Markus 11:17 - Ja hän opetti ja sanoi heille: "Eikö ole kirjoitettu: 'Minun huoneeni on kutsuttava kaikkien kansojen rukoushuoneeksi'? Mutta te olette tehneet siitä ryövärien luolan."
+Sananlaskut 20:26 - Viisas kuningas perkaa jumalattomat pois viskimellään ja antaa puimajyrän käydä heidän ylitsensä.
+1. Samuelin kirja 3:9 - Ja Eeli sanoi Samuelille: "Mene ja pane maata; ja jos sinua vielä kutsutaan, niin sano: 'Puhu, Herra; palvelijasi kuulee'". Samuel meni ja pani maata sijallensa.
+Johannes 18:33 - Niin Pilatus meni taas sisälle palatsiin ja kutsui Jeesuksen ja sanoi hänelle: "Oletko sinä juutalaisten kuningas?"
+Job 26:3 - Kuinka oletkaan neuvonut taitamatonta ja ilmituonut paljon ymmärrystä!
+Joosua 5:9 - Niin Herra sanoi Joosualle: "Tänä päivänä minä olen vierittänyt teidän päältänne Egyptin häväistyksen". Sentähden kutsutaan paikkaa vielä tänäkin päivänä Gilgaliksi .
+Jesaja 48:2 - sillä heitä kutsutaan pyhän kaupungin mukaan ja he pitävät tukenansa Israelin Jumalaa, jonka nimi on Herra Sebaot:
+4. Mooseksen kirja 16:12 - Ja Mooses kutsutti Daatanin ja Abiramin, Eliabin pojat. Mutta he sanoivat: "Emme tule.
+Matteus 20:25 - Mutta Jeesus kutsui heidät tykönsä ja sanoi: "Te tiedätte, että kansojen ruhtinaat herroina niitä hallitsevat, ja että mahtavat käyttävät valtaansa niitä kohtaan.
+Luukas 14:10 - Vaan kun olet kutsuttu, mene ja asetu viimeiselle sijalle, ja niin on se, joka on sinut kutsunut, sisään tullessaan sanova sinulle: 'Ystäväni, astu ylemmäksi'. Silloin tulee sinulle kunnia kaikkien pöytäkumppaniesi edessä.
+Heprealaiskirje 5:4 - Eikä kukaan sitä arvoa itselleen ota, vaan Jumala kutsuu hänet niinkuin Aaroninkin.
+2. Kuningasten kirja 9:1 - Profeetta Elisa kutsui erään profeetanoppilaan ja sanoi hänelle: "Vyötä kupeesi ja ota tämä öljyastia mukaasi ja mene Gileadin Raamotiin.
+2. Aikakirja 24:5 - Ja hän kutsui kokoon papit ja leeviläiset ja sanoi heille: "Menkää Juudan kaupunkeihin ja kootkaa kaikesta Israelista rahaa Jumalanne temppelin korjaamiseksi, vuodesta vuoteen, ja jouduttakaa tätä asiaa". Mutta leeviläiset eivät jouduttaneet sitä.
+Roomalaiskirje 4:17 - — niinkuin kirjoitettu on: "Monen kansan isäksi minä olen sinut asettanut" — sen Jumalan edessä, johon hän uskoi ja joka kuolleet eläviksi tekee ja kutsuu olemattomat, ikäänkuin ne olisivat.
+1. Korinttilaiskirje 15:9 - Sillä minä olen apostoleista halvin enkä ole sen arvoinen, että minua apostoliksi kutsutaan, koska olen vainonnut Jumalan seurakuntaa.
+1. Pietarin kirje 3:9 - Älkää kostako pahaa pahalla, älkää herjausta herjauksella, vaan päinvastoin siunatkaa; sillä siihen te olette kutsututkin, että siunauksen perisitte.
+Luukas 1:35 - Enkeli vastasi ja sanoi hänelle: "Pyhä Henki tulee sinun päällesi, ja Korkeimman voima varjoaa sinut; sentähden myös se pyhä, mikä syntyy, pitää kutsuttaman Jumalan Pojaksi.
+1. Samuelin kirja 3:6 - Mutta Herra kutsui taas Samuelia; ja Samuel nousi ja meni Eelin tykö ja sanoi: "Tässä olen, sinä kutsuit minua". Mutta tämä vastasi: "En minä kutsunut, poikani; pane jälleen maata".
+2. Kuningasten kirja 18:18 - Kun he sitten kutsuivat kuningasta, menivät Eljakim, Hilkian poika, joka oli linnan päällikkönä, ja kirjuri Sebna ja kansleri Jooah, Aasafin poika, heidän luoksensa.
+Sananlaskut 4:5 - Hanki viisautta, hanki ymmärrystä, älä sitä unhota, älä väisty pois minun suuni sanoista.
+Job 12:3 - Onhan minullakin ymmärrystä yhtä hyvin kuin teillä; en ole minä teitä huonompi, ja kuka ei moisia tietäisi?
+2. Kuningasten kirja 3:10 - sanoi Israelin kuningas: "Voi, Herra on kutsunut nämä kolme kuningasta kokoon antaakseen heidät Mooabin käsiin!"
+Aamos 9:6 - hän, joka rakentaa yliskammionsa taivaisiin ja perustaa holvinsa maan päälle, joka kutsuu meren vedet ja vuodattaa ne maan pinnalle — Herra on hänen nimensä.
+Jeremia 42:8 - ja hän kutsui Joohananin, Kaareahin pojan, ja kaikki sotaväen päälliköt, jotka olivat tämän kanssa, ynnä kaiken kansan, pienimmästä suurimpaan.
+4. Mooseksen kirja 32:42 - Ja Noobah meni ja valloitti Kenatin ynnä sen alueella olevat kylät ja kutsui sen, nimensä mukaan, Noobahiksi.
+Apostolien teot 12:12 - Ja päästyään siitä selville hän kulki kohti Marian, Johanneksen äidin, taloa, sen Johanneksen, jota myös Markukseksi kutsuttiin. Siellä oli monta koolla rukoilemassa.
+2. Mooseksen kirja 2:7 - Niin lapsen sisar sanoi faraon tyttärelle: "Menenkö kutsumaan sinulle hebrealaisen imettäjän, joka voi imettää sen lapsen sinulle?"
+Ester 3:12 - Niin kutsuttiin kuninkaan kirjurit ensimmäisessä kuussa, sen kolmantenatoista päivänä, ja kirjoitettiin, aivan niinkuin Haaman käski, määräys kuninkaan satraapeille ja jokaisen maakunnan käskynhaltijoille ja jokaisen kansan ruhtinaille, kuhunkin maakuntaan sen omalla kirjoituksella ja kullekin kansalle sen omalla kielellä. Kuningas Ahasveroksen nimessä se kirjoitettiin ja sinetöitiin kuninkaan sinettisormuksella.
+1. Korinttilaiskirje 3:18 - Älköön kukaan pettäkö itseään. Jos joku teidän joukossanne luulee olevansa viisas tässä maailmassa, tulkoon hän tyhmäksi, että hänestä tulisi viisas.
+Apostolien teot 10:24 - Ja sen jälkeisenä päivänä he saapuivat Kesareaan; ja Kornelius odotti heitä ja oli kutsunut koolle sukulaisensa ja lähimmät ystävänsä.
+Markus 7:14 - Ja hän kutsui taas kansan tykönsä ja sanoi heille: "Kuulkaa minua kaikki ja ymmärtäkää:
+5. Mooseksen kirja 2:20 - Tämäkin on luettu refalaisten maaksi; refalaiset asuivat muinoin siellä, mutta ammonilaiset kutsuivat heitä samsumilaisiksi.
+4. Mooseksen kirja 10:2 - "Tee itsellesi kaksi hopeatorvea, tee ne kohotakoista tekoa, käyttääksesi niitä kansan kokoonkutsumiseen ja leirien liikkeelle-panemiseen.
+Roomalaiskirje 9:11 - ja ennenkuin kaksoset olivat syntyneetkään ja ennenkuin olivat tehneet mitään, hyvää tai pahaa, niin — että Jumalan valinnan mukainen aivoitus pysyisi, ei tekojen tähden, vaan kutsujan tähden —
+1. Korinttilaiskirje 1:9 - Jumala on uskollinen, hän, jonka kautta te olette kutsutut hänen Poikansa Jeesuksen Kristuksen, meidän Herramme, yhteyteen.
+Daniel 2:20 - Daniel lausui ja sanoi: "Olkoon Jumalan nimi kiitetty iankaikkisesta iankaikkiseen, sillä hänen on viisaus ja voima.
+Sananlaskut 12:18 - Moni viskoo sanoja kuin miekanpistoja, mutta viisasten kieli on lääke.
+Apostolien teot 19:25 - Hän kutsui kokoon nämä sekä muut, jotka sellaista työtä tekivät, ja sanoi: "Miehet, te tiedätte, että meillä on hyvä toimeentulomme tästä työstä;
+1. Mooseksen kirja 31:54 - Ja Jaakob uhrasi vuorella teurasuhrin ja kutsui heimonsa miehet aterioimaan, ja he aterioivat ja olivat yötä vuorella.
+Job 15:2 - "Vastaako viisas tuulta pieksämällä, täyttääkö hän rintansa itätuulella?
+Sananlaskut 10:8 - Viisassydäminen ottaa käskyt varteen, mutta hulluhuulinen kukistuu.
+2. Samuelin kirja 15:2 - Ja Absalomilla oli tapana asettua varhain aamulla sen tien viereen, joka vei portille; ja kun joku oli tulossa kuninkaan eteen saamaan oikeutta riita-asiassaan, kutsui Absalom hänet ja kysyi: "Mistä kaupungista sinä olet?" Kun tämä vastasi: "Palvelijasi on siitä tai siitä Israelin sukukunnasta",
+Sananlaskut 24:5 - Viisas mies on väkevä, ja taidon mies on voipa voimaltansa.
+Aamos 5:8 - Hän, joka on tehnyt Otavan ja Kalevanmiekan ja muuttaa synkeyden aamuksi ja pimentää päivän yöksi ja kutsuu kokoon meren vedet ja vuodattaa ne maan pinnalle — Herra on hänen nimensä,
+5. Mooseksen kirja 32:28 - Sillä he ovat neuvoton kansa, eikä heissä ole ymmärrystä.
+Luukas 21:37 - Ja hän opetti päivät pyhäkössä, mutta öiksi hän lähti pois ja vietti ne vuorella, jota kutsutaan Öljymäeksi.
+Job 28:12 - Mutta viisaus — mistä se löytyy, ja missä on ymmärryksen asuinpaikka?
+Sananlaskut 17:24 - Ymmärtäväisellä on viisaus kasvojensa edessä, mutta tyhmän silmät kiertävät maailman rantaa.
+Joosua 4:4 - Niin Joosua kutsui ne kaksitoista miestä, jotka hän oli määrännyt otettaviksi israelilaisista, yhden miehen kustakin sukukunnasta,
+2. Mooseksen kirja 3:15 - Ja Jumala sanoi vielä Moosekselle: "Sano israelilaisille näin: Herra, teidän isienne Jumala, Aabrahamin Jumala, Iisakin Jumala ja Jaakobin Jumala, lähetti minut teidän luoksenne; tämä on minun nimeni iankaikkisesti, ja näin minua kutsuttakoon sukupolvesta sukupolveen.
+Luukas 20:44 - Daavid siis kutsuu häntä Herraksi; kuinka hän sitten on hänen poikansa?"
+2. Samuelin kirja 1:15 - Ja Daavid kutsui yhden palvelijoistaan ja sanoi: "Käy tänne, lyö hänet kuoliaaksi". Ja hän iski hänet kuoliaaksi.
+Joosua 24:9 - Silloin nousi Baalak, Sipporin poika, Mooabin kuningas ja taisteli Israelia vastaan; ja hän lähetti kutsumaan Bileamin, Beorin pojan, että hän kiroaisi teidät.
+5. Mooseksen kirja 33:19 - He kutsuvat kansoja vuorellensa, siellä he uhraavat oikeita uhreja. Sillä he imevät merten rikkauden ja hiekkaan kätketyt aarteet."
+Matteus 4:18 - Ja kulkiessaan Galilean järven rantaa hän näki kaksi veljestä, Simonin, jota kutsutaan Pietariksi, ja Andreaan, hänen veljensä, heittämässä verkkoa järveen; sillä he olivat kalastajia.
+Saarnaaja 8:17 - niin minä tulin näkemään kaikista Jumalan teoista, että ihminen ei voi käsittää sitä, mitä tapahtuu auringon alla; sillä ihminen saa kyllä nähdä vaivaa etsiessään, mutta ei hän käsitä. Ja jos viisas luuleekin tietävänsä, ei hän kuitenkaan voi käsittää.
+Sananlaskut 1:5 - Viisas kuulkoon ja saakoon oppia lisää, ja ymmärtäväinen hankkikoon elämänohjetta
+Luukas 14:24 - sillä minä sanon teille, ettei yksikään niistä miehistä, jotka olivat kutsutut, ole maistava minun illallisiani'."
+Saarnaaja 2:19 - Ja kuka tietää, onko hän viisas vai tyhmä? Mutta hallitsemaan hän tulee kaikkia minun vaivannäköni hedelmiä, joiden tähden minä olen vaivannut itseäni ja ollut viisas auringon alla. Tämäkin on turhuutta.
+2. Aikakirja 1:12 - niin annetaan sinulle viisaus ja taito; ja lisäksi minä annan sinulle rikkautta, tavaraa ja kunniaa, niin ettei sitä ole ollut niin paljoa kenelläkään kuninkaalla ennen sinua eikä tule olemaan sinun jälkeesi".
+Hoosea 11:1 - Kun Israel oli nuori, rakastin minä sitä, ja Egyptistä minä kutsuin poikani.
+2. Mooseksen kirja 1:18 - Niin Egyptin kuningas kutsui kätilövaimot ja sanoi heille: "Miksi te näin teette ja annatte poikalasten elää?"
+1. Samuelin kirja 9:26 - Niin Samuel aamun sarastaessa kutsui Saulia katolta ja sanoi: "Nouse, minä lähden saattamaan sinua". Saul nousi, ja hän ja Samuel menivät yhdessä ulos.
+2. Aikakirja 1:10 - Anna siis minulle viisaus ja taito lähteä ja tulla tämän kansan edellä, sillä kuka voi muuten tätä sinun suurta kansaasi tuomita?"
+1. Mooseksen kirja 28:1 - Silloin Iisak kutsui Jaakobin ja siunasi hänet; hän käski häntä ja sanoi hänelle: "Älä ota vaimoksesi ketään Kanaanin tyttäristä,
+Matteus 4:21 - Ja käydessään siitä eteenpäin hän näki toiset kaksi veljestä, Jaakobin, Sebedeuksen pojan, ja Johanneksen, hänen veljensä, venheessä isänsä Sebedeuksen kanssa laittamassa verkkojaan kuntoon; ja hän kutsui heidät.
+1. Korinttilaiskirje 7:24 - Pysyköön kukin, veljet, Jumalan edessä siinä asemassa, missä hänet on kutsuttu.
+Tuomarien kirja 16:18 - Kun Delila huomasi, että hän oli paljastanut hänelle koko sydämensä, niin hän lähetti kutsumaan filistealaisten ruhtinaat sanoen: "Nyt tulkaa, sillä hän on paljastanut minulle koko sydämensä". Niin filistealaisten ruhtinaat tulivat hänen luoksensa tuoden mukanaan rahat.
+1. Pietarin kirje 5:10 - Mutta kaiken armon Jumala, joka on kutsunut teidät iankaikkiseen kirkkauteensa Kristuksessa, vähän aikaa kärsittyänne, hän on teidät valmistava, teitä tukeva, vahvistava ja lujittava.
+Apostolien teot 13:7 - Hän oleskeli käskynhaltijan, Sergius Pauluksen, luona, joka oli ymmärtäväinen mies. Tämä kutsui luoksensa Barnabaan ja Sauluksen ja halusi kuulla Jumalan sanaa.
+1. Mooseksen kirja 47:29 - Kun lähestyi aika, jolloin Israelin oli kuoltava, kutsui hän poikansa Joosefin ja sanoi hänelle: "Jos olen saanut armon sinun silmiesi edessä, niin pane nyt kätesi minun kupeeni alle ja osoita minulle laupeus ja uskollisuus: älä hautaa minua Egyptiin,
+Psalmit 50:1 - Aasafin virsi. Jumala, Herra Jumala, puhuu ja kutsuu maan auringon noususta hamaan sen laskuun.
+1. Pietarin kirje 1:15 - vaan sen Pyhän mukaan, joka on teidät kutsunut, tulkaa tekin kaikessa vaelluksessanne pyhiksi.
+5. Mooseksen kirja 31:7 - Ja Mooses kutsui Joosuan ja sanoi hänelle koko Israelin läsnä ollessa: "Ole luja ja rohkea, sillä sinä viet tämän kansan siihen maahan, jonka Herra heidän isillensä vannotulla valalla on luvannut antaa heille, ja sinä jaat sen heille perinnöksi.
+Jesaja 42:6 - Minä, Herra, olen vanhurskaudessa kutsunut sinut, olen tarttunut sinun käteesi, varjellut sinut ja pannut sinut kansoille liitoksi, pakanoille valkeudeksi,
+5. Mooseksen kirja 4:6 - Noudattakaa ja seuratkaa niitä, sillä se on oleva teidän viisautenne ja ymmärryksenne kansojen silmissä. Kun he kuulevat kaikki nämä käskyt, sanovat he: 'Totisesti, viisas ja ymmärtäväinen kansa on tämä suuri kansa'.
+2. Aikakirja 2:12 - (11) Ja Huuram sanoi vielä: "Kiitetty olkoon Herra, Israelin Jumala, joka on tehnyt taivaan ja maan, siitä että hän on antanut kuningas Daavidille viisaan pojan, jolla on älyä ja ymmärrystä rakentaa temppeli Herralle ja kuninkaallinen linna itsellensä.
+Luukas 18:16 - Mutta Jeesus kutsui lapset tykönsä ja sanoi: "Sallikaa lasten tulla minun tyköni älkääkä estäkö heitä, sillä senkaltaisten on Jumalan valtakunta.
+Joosua 8:16 - Silloin kaupungin koko väki kutsuttiin ajamaan heitä takaa; ja he ajoivat Joosuaa takaa, ja niin heidät eristettiin kaupungista.
+Sananlaskut 23:19 - Kuule, poikani, ja viisastu, ja ohjaa sydämesi oikealle tielle.
+Job 38:36 - Kuka on pannut viisautta pilvenlonkiin, tahi kuka antoi pilvenhattaroille ymmärrystä?
+1. Korinttilaiskirje 5:11 - Vaan minä kirjoitin teille, että jos joku, jota kutsutaan veljeksi, on huorintekijä tai ahne tai epäjumalanpalvelija tai pilkkaaja tai juomari tai anastaja, te ette seurustelisi ettekä söisikään semmoisen kanssa.
+Matteus 22:43 - Hän sanoi heille: "Kuinka sitten Daavid Hengessä kutsuu häntä Herraksi, sanoen:
+Sananlaskut 1:28 - Silloin he minua kutsuvat, mutta minä en vastaa, etsivät minua, mutta eivät löydä.
+1. Pietarin kirje 2:9 - Mutta te olette "valittu suku, kuninkaallinen papisto, pyhä heimo, omaisuuskansa, julistaaksenne sen jaloja tekoja", joka on pimeydestä kutsunut teidät ihmeelliseen valkeuteensa;
+2. Pietarin kirje 1:3 - Koska hänen jumalallinen voimansa on lahjoittanut meille kaiken, mikä elämään ja jumalisuuteen tarvitaan, hänen tuntemisensa kautta, joka on kutsunut meidät kirkkaudellaan ja täydellisyydellään,
+1. Mooseksen kirja 20:8 - Niin Abimelek nousi varhain aamulla ja kutsui kaikki palvelijansa ja kertoi heille tämän kaiken; ja miehet olivat kovin peloissaan.
+Sananlaskut 2:11 - taidollisuus on sinua varjeleva ja ymmärrys suojeleva sinut.
+2. Samuelin kirja 20:4 - Ja kuningas sanoi Amasalle: "Kutsu koolle Juudan miehet kolmen päivän kuluessa ja ole silloin itse paikallasi täällä".
+Roomalaiskirje 1:31 - vailla ymmärrystä, luotettavuutta, rakkautta ja laupeutta;
+Jeremia 33:16 - Niinä päivinä Juuda pelastetaan, ja Jerusalem asuu turvassa, ja tämä on se nimi, jolla sitä kutsutaan: 'Herra, meidän vanhurskautemme'.
+Psalmit 111:10 - Herran pelko on viisauden alku, hyvä ymmärrys kaikille, jotka sitä noudattavat. Hänen ylistyksensä pysyy iankaikkisesti.
+Jooel 2:15 - Puhaltakaa pasunaan Siionissa, kuuluttakaa pyhä paasto, kutsukaa koolle juhlakokous.
+Sananlaskut 16:22 - Ymmärrys on omistajalleen elämän lähde, mutta hulluus on hulluille kuritus.
+1. Kuningasten kirja 18:3 - Ja Ahab kutsui Obadjan, joka oli palatsin päällikkönä. Mutta Obadja oli hyvin Herraa pelkääväinen mies;
+1. Aikakirja 23:2 - Ja hän kutsui kokoon kaikki Israelin päämiehet, papit ja leeviläiset.
+1. Korinttilaiskirje 7:22 - Sillä joka orjana on kutsuttu Herrassa, on Herran vapaa; samoin vapaana kutsuttu on Kristuksen orja.
+2. Kuningasten kirja 4:22 - Sitten hän kutsui miehensä ja sanoi: "Lähetä minulle palvelija ja aasintamma, niin minä riennän Jumalan miehen tykö ja tulen heti takaisin".
+Sananlaskut 21:11 - Kun pilkkaajaa rangaistaan, viisastuu yksinkertainen; ja kun viisasta neuvotaan, ottaa hän sen opiksensa.
+Jeremia 1:15 - Sillä katso, minä kutsun kaikki pohjoisten valtakuntain kansanheimot, sanoo Herra, ja ne tulevat ja asettavat kukin valtaistuimensa Jerusalemin porttien oville ja kaikkia sen muureja vastaan, yltympäri, ja kaikkia Juudan kaupunkeja vastaan.
+2. Mooseksen kirja 31:2 - "Katso, minä olen nimeltään kutsunut Besalelin, Uurin pojan, Huurin pojanpojan, Juudan sukukunnasta;
+Sananlaskut 25:12 - Kultainen korvarengas ja hienokultainen kaulakoru ovat viisas neuvoja ynnä kuuleva korva.
+1. Mooseksen kirja 1:5 - Ja Jumala kutsui valkeuden päiväksi, ja pimeyden hän kutsui yöksi. Ja tuli ehtoo, ja tuli aamu, ensimmäinen päivä.
+Luukas 9:1 - Niin hän kutsui kokoon ne kaksitoista ja antoi heille voiman ja vallan kaikkia riivaajia vastaan ja voiman parantaa tauteja.
+Jooel 1:14 - Kuuluttakaa pyhä paasto, kutsukaa koolle juhlakokous, kootkaa vanhimmat ja kaikki maan asukkaat Herran, teidän Jumalanne, huoneeseen ja huutakaa Herran puoleen.
+1. Kuningasten kirja 2:9 - Mutta älä sinä jätä häntä rankaisematta, sillä sinä olet viisas mies ja tiedät, mitä sinun on hänelle tehtävä, saattaaksesi hänen harmaat hapsensa verisinä alas tuonelaan."
+Job 12:16 - Hänen on väkevyys ja ymmärrys; hänen on niin eksynyt kuin eksyttäjäkin.
+1. Mooseksen kirja 27:1 - Kun Iisak oli tullut vanhaksi ja hänen silmänsä olivat hämärtyneet, niin ettei hän enää voinut nähdä, kutsui hän Eesaun, vanhemman poikansa, ja sanoi hänelle: "Poikani!" Tämä vastasi hänelle: "Tässä olen".
+Job 28:28 - Ja ihmiselle hän sanoi: 'Katso, Herran pelko — se on viisautta, ja pahan karttaminen on ymmärrystä'."
+1. Samuelin kirja 19:7 - Niin Joonatan kutsui Daavidin, ja Joonatan ilmoitti hänelle kaiken tämän. Ja sitten Joonatan vei Daavidin Saulin tykö, ja hän palveli häntä niinkuin ennenkin.
+Jesaja 48:8 - Et ole sinä niistä kuullut etkä tietänyt, ei ole sinun korvasi niille aikaisemmin auennut; sillä minä tiesin, että sinä olet aivan uskoton ja luopioksi kutsuttu hamasta äidin kohdusta.
+5. Mooseksen kirja 2:11 - Ja samoin kuin anakilaiset luettiin heidätkin refalaisiin; mutta mooabilaiset kutsuivat heitä eemiläisiksi.
+Sananlaskut 17:16 - Mitä hyötyä on rahasta tyhmän käsissä? Viisauden hankkimiseen ei ole ymmärrystä.
+Ilmestyskirja 13:18 - Tässä on viisaus. Jolla ymmärrys on, se laskekoon pedon luvun; sillä se on ihmisen luku. Ja sen luku on kuusisataa kuusikymmentä kuusi.
+Ester 4:11 - "Kaikki kuninkaan palvelijat ja kuninkaan maakuntien kansa tietävät, että kuka ikinä, mies tai nainen, kutsumatta menee kuninkaan luo sisempään esipihaan, on laki sama jokaiselle: hänet surmataan; ainoastaan se, jota kohti kuningas ojentaa kultavaltikkansa, jää eloon. Mutta minua ei ole kolmeenkymmeneen päivään kutsuttu tulemaan kuninkaan tykö."
+Jesaja 43:22 - Mutta et ole sinä, Jaakob, minua kutsunut, et ole sinä, Israel, itseäsi minun tähteni vaivannut.
+Saarnaaja 10:1 - Myrkkykärpäset saavat haisemaan ja käymään voiteentekijän voiteen. Pieni tyhmyys painaa enemmän kuin viisaus ja kunnia.
+Matteus 23:8 - Mutta te älkää antako kutsua itseänne rabbiksi, sillä yksi on teidän opettajanne, ja te olette kaikki veljiä.
+Psalmit 147:4 - Hän on määrännyt tähtien luvun, hän kutsuu niitä kaikkia nimeltä.
+2. Timoteuskirje 1:9 - hän, joka on meidät pelastanut ja kutsunut pyhällä kutsumuksella, ei meidän tekojemme mukaan, vaan oman aivoituksensa ja armonsa mukaan, joka meille on annettu Kristuksessa Jeesuksessa ennen ikuisia aikoja,
+1. Mooseksen kirja 17:15 - Ja Jumala sanoi Aabrahamille: "Älä kutsu vaimoasi Saaraita enää Saaraiksi, vaan Saara olkoon hänen nimensä.
+1. Mooseksen kirja 35:10 - Ja Jumala sanoi hänelle: "Sinun nimesi on Jaakob; mutta älköön sinua enää kutsuttako Jaakobiksi, vaan nimesi olkoon Israel". — Niin hän sai nimen Israel.
+Luukas 1:32 - Hän on oleva suuri, ja hänet pitää kutsuttaman Korkeimman Pojaksi, ja Herra Jumala antaa hänelle Daavidin, hänen isänsä, valtaistuimen,
+1. Samuelin kirja 3:4 - että Herra kutsui Samuelia. Hän vastasi: "Tässä olen".
+Jaakobin kirje 5:14 - Jos joku teistä sairastaa, kutsukoon tykönsä seurakunnan vanhimmat, ja he rukoilkoot hänen edestään, voidellen häntä öljyllä Herran nimessä.
+Psalmit 107:43 - Joka viisas on, se ottakoon näistä vaarin ja ajatelkoon Herran armotekoja.
+Johannes 12:17 - Niin kansa, joka oli ollut hänen kanssansa, kun hän kutsui Lasaruksen haudasta ja herätti hänet kuolleista, todisti hänestä.
+Johannes 10:3 - Hänelle ovenvartija avaa, ja lampaat kuulevat hänen ääntänsä; ja hän kutsuu omat lampaansa nimeltä ja vie heidät ulos.
+1. Kuningasten kirja 1:49 - Silloin kaikki Adonian kutsuvieraat joutuivat kauhun valtaan ja nousivat ja menivät kukin tiehensä.
+1. Kuningasten kirja 1:28 - Kuningas Daavid vastasi ja sanoi: "Kutsukaa minun luokseni Batseba". Kun hän tuli kuninkaan eteen ja seisoi kuninkaan edessä,
+1. Aikakirja 15:11 - Ja Daavid kutsui papit Saadokin ja Ebjatarin sekä leeviläiset Uurielin, Asajan, Jooelin, Semajan, Elielin ja Amminadabin
+Sananlaskut 9:9 - Anna viisaalle, niin hän yhä viisastuu; opeta vanhurskasta, niin hän saa oppia lisää.
+Markus 8:34 - Ja hän kutsui tykönsä kansan ynnä opetuslapsensa ja sanoi heille: "Jos joku tahtoo minun perässäni kulkea, hän kieltäköön itsensä ja ottakoon ristinsä ja seuratkoon minua.
+1. Kuningasten kirja 1:19 - Hän on teurastanut paljon härkiä, juottovasikoita ja lampaita ja kutsunut kaikki kuninkaan pojat, pappi Ebjatarin ja sotapäällikkö Jooabin; mutta palvelijasi Salomon hän on jättänyt kutsumatta.
+Jeremia 36:9 - Mutta Juudan kuninkaan Joojakimin, Joosian pojan, viidentenä hallitusvuotena, yhdeksännessä kuussa, oli kaikki Jerusalemin kansa ja kaikki se kansa, joka oli tullut Juudan kaupungeista Jerusalemiin, kutsuttu pitämään paastoa Herran edessä.
+Daniel 5:12 - sentähden, että erinomainen henki ja tieto ynnä myös taito selittää unia, arvata arvoituksia ja ratkaista ongelmia havaittiin juuri hänessä, Danielissa, jolle kuningas oli antanut nimen Beltsassar. Kutsuttakoon nyt Daniel, niin hän ilmoittaa selityksen."
+Tuomarien kirja 4:13 - niin Siisera kutsui koolle kaikki sotavaununsa, yhdeksätsadat raudoitetut sotavaunut, ja kaiken väen, mikä hänellä oli, Haroset-Goojimista Kiisonin purolle.
+Job 1:4 - Hänen pojillansa oli tapana laittaa pitoja, kullakin oli pidot talossaan vuoropäivänänsä; he lähettivät silloin sanan ja kutsuivat kolme sisartansa syömään ja juomaan kanssansa.
+Tuomarien kirja 18:22 - He olivat ehtineet vähän matkaa Miikan talosta, kun Miikan talon lähitalojen miehet kutsuttiin koolle, ja he pääsivät daanilaisten kintereille.
+Luukas 7:39 - Mutta kun fariseus, joka oli hänet kutsunut, sen näki, ajatteli hän mielessään näin: "Jos tämä olisi profeetta, tietäisi hän, mikä ja millainen tuo nainen on, joka häneen koskee: että hän on syntinen."
+1. Samuelin kirja 3:5 - Ja hän riensi Eelin tykö ja sanoi: "Tässä olen, sinä kutsuit minua". Mutta hän vastasi: "En minä kutsunut; pane jälleen maata". Ja hän meni ja pani maata.
+Sananlaskut 24:14 - Samankaltaiseksi tunne viisaus sielullesi; jos sen löydät, on sinulla tulevaisuus, ja toivosi ei mene turhaan.
+2. Tessalonikalaiskirje 2:4 - tuo vastustaja, joka korottaa itsensä yli kaiken, mitä jumalaksi tai jumaloitavaksi kutsutaan, niin että hän asettuu Jumalan temppeliin ja julistaa olevansa Jumala.
+Sefanja 1:7 - Vaiti Herran, Herran edessä! Sillä Herran päivä on lähellä; sillä Herra on laittanut teurasuhrin, on vihkinyt kutsuttunsa.
+2. Samuelin kirja 20:16 - Silloin huusi viisas vaimo kaupungista: "Kuulkaa! Kuulkaa! Sanokaa Jooabille, että hän tulee tänne lähelle puhutellakseni häntä".
+Joosua 7:26 - Ja he kasasivat hänen päällensä suuren kiviroukkion, joka vielä tänäkin päivänä on olemassa; ja niin Herra lauhtui vihansa hehkusta. Sentähden kutsutaan sitä paikkaa vielä tänäkin päivänä Aakorin laaksoksi.
+Matteus 11:19 - Ihmisen Poika tuli, hän syö ja juo, ja he sanovat: 'Katso syömäriä ja viininjuojaa, publikaanien ja syntisten ystävää!' Ja viisaus on oikeaksi näytetty teoissansa."
+Efesolaiskirje 4:1 - Niin kehoitan siis minä, joka olen vankina Herrassa, teitä vaeltamaan, niinkuin saamanne kutsumuksen arvo vaatii,
+Jesaja 62:4 - Ei sinua enää sanota "hyljätyksi", eikä sinun maatasi enää sanota "autioksi"; vaan sinua kutsutaan "minun rakkaakseni" ja sinun maatasi "aviovaimoksi", sillä Herra rakastaa sinua, ja sinun maasi otetaan avioksi.
+Tuomarien kirja 6:34 - Silloin Herran henki täytti Gideonin; hän puhalsi pasunaan, ja niin abieserilaiset kutsuttiin koolle seuraamaan häntä.
+1. Korinttilaiskirje 1:24 - mutta joka niille, jotka ovat kutsutut, olkootpa juutalaisia tai kreikkalaisia, on Kristus, Jumalan voima ja Jumalan viisaus.
+Sananlaskut 1:21 - meluisten katujen kulmissa se kutsuu, porttien ovilta kaupungissa sanansa sanoo:
+1. Korinttilaiskirje 7:17 - Vaeltakoon vain kukin sen mukaan, kuin Herra on hänelle hänen osansa antanut, ja siinä asemassa, missä hänet Jumala on kutsunut; näin minä säädän kaikissa seurakunnissa.
+Psalmit 49:21 - Ihminen, mahtavinkin, on ymmärrystä vailla, hän on verrattava eläimiin, jotka hukkuvat.
+Apostolien teot 14:27 - Ja sinne saavuttuaan he kutsuivat seurakunnan koolle ja kertoivat, kuinka Jumala oli ollut heidän kanssansa ja tehnyt suuria ja kuinka hän oli avannut pakanoille uskon oven.
+Matteus 18:2 - Niin hän kutsui tykönsä lapsen, asetti sen heidän keskellensä
+Sananlaskut 23:4 - Älä näe vaivaa rikastuaksesi, lakkaa käyttämästä ymmärrystäsi siihen.
+Apostolien teot 23:17 - Niin Paavali kutsui luoksensa erään sadanpäämiehen ja sanoi: "Vie tämä nuorukainen päällikön luo, sillä hänellä on jotakin hänelle ilmoitettavaa".
+Saarnaaja 9:16 - Niin minä sanoin: Viisaus on parempi kuin voima, mutta köyhän viisautta halveksitaan, eikä hänen sanojansa kuulla.
+Psalmit 82:5 - Ei ole heillä älyä, ei ymmärrystä, he vaeltavat pimeydessä: kaikki maan perustukset horjuvat.
+Matteus 2:23 - Ja sinne tultuaan hän asettui asumaan kaupunkiin, jonka nimi on Nasaret; että kävisi toteen, mikä profeettain kautta on puhuttu: "Hän on kutsuttava Nasaretilaiseksi" .
+4. Mooseksen kirja 11:16 - Silloin Herra puhui Moosekselle: "Kutsu kokoon minua varten seitsemänkymmentä miestä Israelin vanhimpia, jotka tiedät kansan vanhimmiksi ja päällysmiehiksi; tuo heidät ilmestysmajalle, ja he asettukoot sinne sinun kanssasi.
+Sananlaskut 19:11 - Ymmärrys tekee ihmisen pitkämieliseksi, ja hänen kunniansa on antaa rikos anteeksi.
+Matteus 21:13 - Ja hän sanoi heille: "Kirjoitettu on: 'Minun huoneeni pitää kutsuttaman rukoushuoneeksi', mutta te teette siitä ryövärien luolan."
+Job 38:37 - Kuka on niin viisas, että laskee pilvien luvun, kuka kaataa tyhjiksi taivaan leilit,
+Psalmit 119:169 - Herra, suo minun valitukseni tulla sinun kasvojesi eteen, anna minulle ymmärrys sanasi jälkeen.
+Jesaja 45:3 - Minä annan sinulle aarteet pimeän peitosta, kalleudet kätköistänsä, tietääksesi, että minä, Herra, olen se, joka sinut nimeltä kutsuin, minä, Israelin Jumala.
+Tuomarien kirja 4:10 - Silloin Baarak kutsui Sebulonin ja Naftalin koolle Kedekseen; kymmenentuhatta miestä seurasi häntä, ja Debora lähti hänen kanssaan.
+1. Kuningasten kirja 1:32 - Ja kuningas Daavid sanoi: "Kutsukaa minun luokseni pappi Saadok, profeetta Naatan ja Benaja, Joojadan poika". Niin he tulivat kuninkaan eteen.
+Matteus 20:8 - Mutta kun ilta tuli, sanoi viinitarhan herra tilansa hoitajalle: 'Kutsu työmiehet ja maksa heille palkka, viimeisistä alkaen ensimmäisiin asti'.
+Jesaja 47:5 - Istu äänetönnä ja väisty pimeään, sinä Kaldean tytär; sillä ei sinua enää kutsuta valtakuntien valtiattareksi.
+Luukas 7:35 - Ja viisaus on kaikkien lastensa puolelta oikeaksi näytetty."
+Luukas 14:9 - niin hän, joka on sinut ja hänet kutsunut, ehkä tulee ja sanoo sinulle: 'Anna tälle sija', ja silloin sinä saat häveten siirtyä viimeiselle paikalle.
+Ilmestyskirja 7:12 - sanoen: "Amen! Ylistys ja kirkkaus ja viisaus ja kiitos ja kunnia ja voima ja väkevyys meidän Jumalallemme aina ja iankaikkisesti, amen!"
+1. Kuningasten kirja 9:13 - Hän sanoi: "Mitä kaupunkeja nämä ovat, jotka sinä olet antanut minulle, veljeni!" Ja niin kutsutaan niitä Kaabulin maaksi vielä tänäkin päivänä.
+Markus 15:16 - Niin sotamiehet veivät hänet sisälle linnaan, se on palatsiin, ja kutsuivat siihen koko sotilasjoukon.
+Luukas 1:76 - Ja sinä, lapsukainen, olet kutsuttava Korkeimman profeetaksi, sillä sinä olet käyvä Herran edellä valmistaaksesi hänen teitään,
+Psalmit 89:27 - Hän kutsuu minua: 'Sinä olet minun isäni, sinä minun Jumalani ja pelastukseni kallio'.
+Job 11:12 - Onttopäinen mies voi viisastua ja villiaasin varsa ihmistyä.
+Ilmestyskirja 11:8 - Ja heidän ruumiinsa viruvat sen suuren kaupungin kadulla, jota hengellisesti puhuen kutsutaan Sodomaksi ja Egyptiksi ja jossa myös heidän Herransa ristiinnaulittiin.
+1. Mooseksen kirja 27:36 - Niin hän sanoi: "Oikeinpa häntä kutsutaankin Jaakobiksi . Sillä hän on nyt kahdesti minut pettänyt: esikoisuuteni hän on minulta vienyt, ja katso, nyt hän riisti minulta myöskin siunauksen." Ja hän kysyi: "Eikö sinulla ole mitään siunausta minun varalleni?"
+Luukas 19:13 - Ja hän kutsui luoksensa kymmenen palvelijaansa, antoi heille kymmenen leiviskää ja sanoi heille: 'Asioikaa näillä, kunnes minä tulen'.
+Apostolien teot 1:12 - Silloin he palasivat Jerusalemiin vuorelta, jota kutsutaan Öljymäeksi ja joka on lähellä Jerusalemia, sapatinmatkan päässä.
+Matteus 13:54 - Ja hän tuli kotikaupunkiinsa ja opetti heitä heidän synagoogassaan, niin että he hämmästyivät ja sanoivat: "Mistä hänellä on tämä viisaus ja nämä voimalliset teot?
+1. Kuningasten kirja 7:14 - Hän oli leskivaimon poika Naftalin sukukunnasta, ja hänen isänsä oli ollut tyyrolainen, vaskiseppä. Hän oli täynnä taidollisuutta, ymmärrystä ja tietoa, niin että hän kykeni valmistamaan kaikkinaisia vaskitöitä. Ja hän tuli kuningas Salomon luo ja valmisti kaikki hänen työnsä.
+Johannes 9:11 - Hän vastasi: "Se mies, jota kutsutaan Jeesukseksi, teki tahtaan ja voiteli minun silmäni ja sanoi minulle: 'Mene ja peseydy Siiloan lammikossa'; niin minä menin ja peseydyin ja sain näköni".
+Johannes 1:48 - Natanael sanoi hänelle: "Mistä minut tunnet?" Jeesus vastasi ja sanoi hänelle: "Ennenkuin Filippus sinua kutsui, kun olit viikunapuun alla, näin minä sinut".
+Matteus 10:1 - Ja hän kutsui tykönsä ne kaksitoista opetuslastaan ja antoi heille vallan ajaa ulos saastaisia henkiä ja parantaa kaikkinaisia tauteja ja kaikkinaista raihnautta.
+Kolossalaiskirje 3:15 - Ja vallitkoon teidän sydämissänne Kristuksen rauha, johon te olette kutsututkin yhdessä ruumiissa, ja olkaa kiitolliset.
+Sananlaskut 29:11 - Tyhmä purkaa kaiken sisunsa, mutta viisas sen viimein tyynnyttää.
+Apostolien teot 4:18 - Niin he kutsuivat heidät ja kielsivät heitä mitään puhumasta ja opettamasta Jeesuksen nimeen.
+Jeremia 25:29 - Sillä katso, siitä kaupungista alkaen, joka on otettu minun nimiini, minä alotan onnettomuuden tuottamisen; ja tekö jäisitte rankaisematta! Te ette jää rankaisematta, sillä minä kutsun miekan kaikkia maan asukkaita vastaan, sanoo Herra Sebaot.
+4. Mooseksen kirja 11:24 - Niin Mooses meni ulos ja kertoi kansalle Herran sanat. Sitten hän kutsui kokoon seitsemänkymmentä miestä kansan vanhimpia ja asetti heidät majan ympärille.
+Sananlaskut 23:23 - Osta totuutta, älä myy, osta viisautta, kuria ja ymmärrystä.
+Heprealaiskirje 11:16 - mutta nyt he pyrkivät parempaan, se on taivaalliseen. Sentähden Jumala ei heitä häpeä, vaan sallii kutsua itseään heidän Jumalaksensa; sillä hän on valmistanut heille kaupungin.
+1. Kuningasten kirja 20:7 - Silloin Israelin kuningas kutsui kaikki maan vanhimmat ja sanoi: "Ymmärtäkää ja nähkää, että hän hankkii meille onnettomuutta; sillä kun hän lähetti vaatimaan minulta vaimojani ja lapsiani, hopeatani ja kultaani, en minä niitä häneltä kieltänyt".
+Hesekiel 36:29 - Minä vapahdan teidät kaikista saastaisuuksistanne. Ja minä kutsun esiin viljan ja teen sen runsaaksi enkä anna teille nälänhätää.
+3. Mooseksen kirja 1:1 - Ja Herra kutsui Mooseksen ja puhui hänelle sisältä ilmestysmajasta sanoen:
+1. Kuningasten kirja 22:9 - Niin Israelin kuningas kutsui erään hoviherran ja sanoi: "Nouda kiiruusti Miika, Jimlan poika".
+Luukas 5:32 - En minä ole tullut kutsumaan vanhurskaita, vaan syntisiä parannukseen."
+Jesaja 41:4 - Kuka on tämän tehnyt ja toimittanut? Hän, joka alusta asti kutsuu sukupolvet esiin: minä, Herra, joka olen ensimmäinen ja viimeisten luona vielä sama.
+Apostolien teot 13:2 - Ja heidän toimittaessaan palvelusta Herralle ja paastotessaan Pyhä Henki sanoi: "Erottakaa minulle Barnabas ja Saulus siihen työhön, johon minä olen heidät kutsunut".
+1. Tessalonikalaiskirje 2:12 - ja teroitimme teille, että teidän on vaeltaminen arvollisesti Jumalan edessä, joka kutsuu teitä valtakuntaansa ja kirkkauteensa.
+2. Samuelin kirja 17:5 - Kuitenkin sanoi Absalom: "Kutsukaa myös arkilainen Huusai, kuullaksemme, mitä hänellä on sanottavana".
+Jesaja 1:26 - Ja minä palautan sinun tuomarisi muinaiselleen ja sinun neuvonantajasi sellaisiksi, kuin alkuaan olivat. Sitten sinua kutsutaan "vanhurskauden linnaksi", "uskolliseksi kaupungiksi".
+2. Samuelin kirja 13:23 - Kahden vuoden kuluttua tapahtui, että Absalomilla oli lammasten keritsiäiset Baal-Haasorissa, joka on Efraimin luona. Ja Absalom kutsui sinne kaikki kuninkaan pojat.
+2. Kuningasten kirja 4:36 - Hän kutsui Geehasin ja sanoi: "Kutsu se suunemilainen vaimo". Niin hän kutsui vaimon, ja tämä tuli hänen luokseen. Hän sanoi: "Ota poikasi".
+Matteus 2:15 - Ja hän oli siellä Herodeksen kuolemaan asti; että kävisi toteen, minkä Herra on puhunut profeetan kautta, joka sanoo: "Egyptistä minä kutsuin poikani".
+Sananlaskut 9:18 - Eikä toinen tiedä, että haamuja on siellä, että hänen kutsuvieraansa ovat tuonelan laaksoissa.
+Apostolien teot 4:36 - Niinpä Joosef, jota apostolit kutsuivat Barnabaaksi — se on käännettynä: kehoittaja — leeviläinen, syntyisin Kyprosta,
+1. Samuelin kirja 22:11 - Silloin kuningas lähetti kutsumaan pappi Ahimelekin, Ahitubin pojan, ja koko hänen isänsä suvun, Noobin papit. Ja he tulivat kaikki kuninkaan luo.
+4. Mooseksen kirja 24:10 - Silloin Baalak vihastui Bileamiin ja löi kätensä yhteen. Ja Baalak sanoi Bileamille: "Minä kutsuin sinut vihollisiani kiroamaan, ja nyt sinä olet siunannut heidät jo kolme kertaa.
+Nehemia 7:63 - Ja pappeja: Habaijan jälkeläiset, Koosin jälkeläiset, Barsillain jälkeläiset, sen, joka oli ottanut itsellensä vaimon gileadilaisen Barsillain tyttäristä ja jota kutsuttiin heidän nimellään.
+Jesaja 22:20 - Mutta sinä päivänä minä kutsun palvelijani Eljakimin, Hilkian pojan,
+Valitusvirret 1:19 - Minä kutsuin rakastajiani: ne pettivät minut. Minun pappini ja vanhimpani ovat kuolleet kaupungissa, kun he etsivät ruokaa tyydyttääkseen nälkäänsä.
+Ester 5:12 - Ja Haaman sanoi: "Eipä kuningatar Esterkään antanut laittamiinsa pitoihin kuninkaan kanssa tulla kenenkään muun kuin minun. Ja huomiseksikin minä olen kuninkaan kanssa kutsuttu hänen luoksensa.
+2. Tessalonikalaiskirje 2:14 - Siihen hän on myös kutsunut teidät meidän evankeliumimme kautta, omistamaan meidän Herramme Jeesuksen Kristuksen kirkkauden.
+Matteus 23:10 - Älkääkä antako kutsua itseänne mestareiksi, sillä yksi on teidän mestarinne, Kristus.
+Luukas 14:12 - Ja hän sanoi myös sille, joka oli hänet kutsunut: "Kun laitat päivälliset tai illalliset, älä kutsu ystäviäsi, älä veljiäsi, älä sukulaisiasi äläkä rikkaita naapureita, etteivät hekin vuorostaan kutsuisi sinua, ja ettet sinä siten saisi maksua.
+Jesaja 22:12 - Ja sinä päivänä Herra, Herra Sebaot, kutsui itkuun ja valitukseen, pään paljaaksi ajamaan ja säkkiin vyöttäytymään.
+Apostolien teot 15:30 - Niin heidät lähetettiin matkalle, ja he tulivat Antiokiaan; siellä he kutsuivat koolle seurakunnan ja antoivat heille kirjeen.
+Apostolien teot 6:9 - Niin nousi muutamia niin kutsutusta libertiinien ja kyreneläisten ja aleksandrialaisten synagoogasta sekä niiden joukosta, jotka olivat Kilikiasta ja Aasiasta, väittelemään Stefanuksen kanssa,
+Psalmit 105:16 - Ja kun hän kutsui nälänhädän maahan ja kokonaan mursi leivän tuen,
+2. Mooseksen kirja 36:2 - Niin Mooses kutsui luoksensa Besalelin ja Oholiabin ja kaikki taidolliset, joiden sydämeen Herra oli antanut taidollisuuden, kaikki, joiden sydän vaati heitä ryhtymään työhön suorittaaksensa sen.
+Job 11:10 - Jos hän liitää paikalle ja vangitsee ja kutsuu oikeuden kokoon, niin kuka voi häntä estää?
+Jesaja 60:18 - Ei kuulu enää väkivaltaa sinun maassasi, ei tuhoa, ei turmiota sinun rajaisi sisällä, ja sinä kutsut pelastuksen muuriksesi ja kiitoksen portiksesi.
+Luukas 15:9 - Ja löydettyään hän kutsuu kokoon ystävättärensä ja naapurinaiset ja sanoo: 'Iloitkaa minun kanssani, sillä minä löysin rahan, jonka olin kadottanut'.
+Psalmit 49:4 - Minun suuni puhuu viisautta, minun sydämeni ajatus on ymmärrystä.
+Luukas 14:17 - Ja illallisajan tullessa hän lähetti palvelijansa sanomaan kutsutuille: 'Tulkaa, sillä kaikki on jo valmiina'.
+Apostolien teot 24:25 - Mutta kun Paavali puhui vanhurskaudesta ja itsensähillitsemisestä ja tulevasta tuomiosta, peljästyi Feeliks ja sanoi: "Mene tällä haavaa pois, mutta kun minulle sopii, kutsutan sinut taas".
+Apostolien teot 5:21 - Sen kuultuansa he menivät päivän koittaessa pyhäkköön ja opettivat. Niin saapui ylimmäinen pappi ja ne, jotka olivat hänen puolellansa, ja he kutsuivat koolle neuvoston ja israelilaisten vanhinten kokouksen; ja he lähettivät noutamaan heitä vankilasta.
+Sananlaskut 24:7 - Kovin on korkea hullulle viisaus, ei hän suutansa avaa portissa.
+Jesaja 29:14 - sentähden, katso, minä vielä teen tälle kansalle kummia tekoja — kummia ja ihmeitä, ja sen viisaitten viisaus häviää, ja sen ymmärtäväisten ymmärrys katoaa.
+Johannes 19:17 - Ja kantaen itse omaa ristiänsä hän meni ulos niin sanotulle Pääkallonpaikalle, jota kutsutaan hebreankielellä Golgataksi.
+Matteus 9:13 - Mutta menkää ja oppikaa, mitä tämä on: 'Laupeutta minä tahdon enkä uhria'. Sillä en minä ole tullut kutsumaan vanhurskaita, vaan syntisiä."
+2. Mooseksen kirja 9:27 - Niin farao kutsutti Mooseksen ja Aaronin ja sanoi heille: "Minä olen tehnyt syntiä tällä kertaa. Herra on oikeassa, mutta minä ja minun kansani olemme väärässä.
+2. Mooseksen kirja 8:25 - (21) Niin farao kutsutti Mooseksen ja Aaronin ja sanoi: "Menkää ja uhratkaa Jumalallenne tässä maassa".
+1. Aikakirja 22:6 - Ja hän kutsui poikansa Salomon ja käski hänen rakentaa temppelin Herralle, Israelin Jumalalle.
+Matteus 5:19 - Sentähden, joka purkaa yhdenkään näistä pienimmistä käskyistä ja sillä tavalla opettaa ihmisiä, se pitää pienimmäksi taivasten valtakunnassa kutsuttaman; mutta joka niitä noudattaa ja niin opettaa, se pitää kutsuttaman suureksi taivasten valtakunnassa.
+Ruut 1:21 - Rikkaana minä lähdin, mutta tyhjänä Herra antaa minun palata. Miksi siis kutsutte minua Noomiksi, kun Herra on minua vastaan todistanut ja Kaikkivaltias on tuottanut minulle onnettomuutta?"
+Sananlaskut 13:1 - Viisas poika kuulee isän kuritusta, mutta pilkkaaja ei ota nuhdetta kuullaksensa.
+Tuomarien kirja 10:17 - Ja ammonilaiset kutsuttiin koolle, ja he leiriytyivät Gileadiin; mutta israelilaiset kokoontuivat ja leiriytyivät Mispaan.
+Markus 12:43 - Ja hän kutsui opetuslapsensa tykönsä ja sanoi heille: "Totisesti minä sanon teille: tämä köyhä leski pani enemmän kuin kaikki muut, jotka panivat uhriarkkuun.
+1. Kuningasten kirja 1:26 - Mutta minut, sinun palvelijasi, pappi Saadokin, Benajan, Joojadan pojan, ja sinun palvelijasi Salomon hän on jättänyt kutsumatta.
+2. Aikakirja 1:2 - Ja Salomo antoi kutsun koko Israelille, tuhannen- ja sadanpäämiehille, tuomareille ja kaikille ruhtinaille koko Israelissa, perhekunta-päämiehille;
+1. Mooseksen kirja 31:4 - Niin Jaakob kutsutti Raakelin ja Leean kedolle laumansa luo,
+Joosua 10:24 - Ja kun he olivat tuoneet nämä kuninkaat Joosuan eteen, niin Joosua kutsui kaikki Israelin miehet ja sanoi sotaväen päälliköille, jotka olivat seuranneet häntä: "Astukaa esiin ja pankaa jalkanne näiden kuninkaiden niskalle". Niin he astuivat esiin ja panivat jalkansa heidän niskallensa.
+Ilmestyskirja 19:13 - ja hänellä oli yllään vereen kastettu vaippa, ja nimi, jolla häntä kutsutaan, on Jumalan Sana.
+Apostolien teot 28:17 - Kolmen päivän kuluttua Paavali kutsui kokoon juutalaisten ensimmäiset. Ja kun he olivat kokoontuneet, sanoi hän heille: "Miehet, veljet! Vaikka en ole mitään tehnyt kansaamme tai isiemme tapoja vastaan, annettiin minut kuitenkin Jerusalemista vankina roomalaisten käsiin.
+1. Mooseksen kirja 29:22 - Silloin Laaban kutsui kokoon kaikki sen paikkakunnan asukkaat ja laittoi pidot;
+Luukas 15:26 - Ja hän kutsui luoksensa yhden palvelijoista ja tiedusteli, mitä se oli.
+2. Samuelin kirja 11:13 - Daavid kutsui hänet luoksensa syömään ja juomaan ja juotti hänet juovuksiin. Mutta illalla hän meni maata vuoteelleen herransa palvelijain joukkoon eikä mennyt kotiinsa.
+Tuomarien kirja 12:2 - Jefta vastasi heille: "Minulla ja minun kansallani oli kova taistelu ammonilaisten kanssa; silloin minä kutsuin teitä, mutta te ette tulleet auttamaan minua heidän käsistään.
+1. Kuningasten kirja 1:25 - Sillä hän on tänä päivänä mennyt ja teurastanut paljon härkiä, juottovasikoita ja lampaita ja kutsunut kaikki kuninkaan pojat, sotapäälliköt ja pappi Ebjatarin; ja katso, he syövät ja juovat hänen edessään, ja he huutavat: 'Eläköön kuningas Adonia!'
+Roomalaiskirje 8:28 - Mutta me tiedämme, että kaikki yhdessä vaikuttaa niiden parhaaksi, jotka Jumalaa rakastavat, niiden, jotka hänen aivoituksensa mukaan ovat kutsutut.
+Apostolien teot 1:23 - Ja he asettivat ehdolle kaksi, Joosefin, jota kutsuttiin Barsabbaaksi, lisänimeltä Justukseksi, ja Mattiaan.
+Jesaja 66:4 - niin minäkin valitsen heidän vaivaamisensa ja annan heille tulla sen, mitä he pelkäävät, koska ei kukaan vastannut, kun minä kutsuin, koska he eivät kuulleet, kun minä puhuin, vaan tekivät sitä, mikä on pahaa minun silmissäni, ja valitsivat sen, mikä ei ole minulle otollista.
+1. Kuningasten kirja 4:29 - (9) Ja Jumala antoi Salomolle viisautta ja ymmärrystä ylen runsaasti ja älyä niin laajalti, kuin on hiekkaa meren rannalla,
+Jesaja 48:15 - Minä, minä olen puhunut, minä olen hänet kutsunut, olen hänet tuonut, ja hän on menestynyt teillänsä.
+4. Mooseksen kirja 10:7 - Mutta seurakuntaa kokoonkutsuttaessa puhaltakaa torveen, hälytyssoittoa soittamatta.
+Matteus 23:7 - ja tahtovat mielellään, että heitä tervehditään toreilla, ja että ihmiset kutsuvat heitä nimellä 'rabbi'.
+Psalmit 119:130 - Kun sinun sanasi avautuvat, niin ne valaisevat ja antavat yksinkertaiselle ymmärrystä.
+Sananlaskut 18:15 - Tietoa hankkii ymmärtäväisen sydän, tietoa etsii viisasten korva.
+Sananlaskut 13:20 - Vaella viisasten kanssa, niin viisastut; tyhmäin seuratoverin käy pahoin.
+Job 11:6 - ja ilmaisisi sinulle viisauden salaisuudet, että hänellä on ymmärrystä monin verroin! Silloin huomaisit, että Jumala on painanut unhoon montakin pahaa tekoasi.
+Sananlaskut 11:30 - Vanhurskaan hedelmä on elämän puu, ja viisas voittaa sieluja.
+2. Mooseksen kirja 34:15 - Älä siis tee liittoa maan asukasten kanssa, ettet, kun he kulkevat haureudessa jumaliensa jäljessä ja uhraavat jumalillensa ja kutsuvat sinua, sinä söisi heidän uhristaan,
+Jesaja 13:3 - Minä olen antanut käskyn vihkiytyneilleni ja kutsunut urhoni vihani työhön, ylvääni, riemuitsevaiseni.
+Job 17:5 - Ystäviä kutsutaan osajaolle, mutta omilta lapsilta raukeavat silmät.
+Jesaja 56:7 - ne minä tuon pyhälle vuorelleni ja ilahutan heitä rukoushuoneessani, ja heidän polttouhrinsa ja teurasuhrinsa ovat otolliset minun alttarillani, sillä minun huoneeni on kutsuttava kaikkien kansojen rukoushuoneeksi.
+Markus 6:2 - Ja kun tuli sapatti, rupesi hän opettamaan synagoogassa; ja häntä kuullessaan monet hämmästyivät ja sanoivat: "Mistä tällä on kaikki tämä, ja mikä on se viisaus, joka on hänelle annettu? Ja mitä senkaltaiset voimalliset teot, jotka tapahtuvat hänen kättensä kautta?
+Apostolien teot 10:32 - Niin lähetä nyt Joppeen ja kutsu tykösi Simon, jota myös Pietariksi kutsutaan; hän majailee nahkuri Simonin talossa meren rannalla.'
+Sakarja 3:10 - Sinä päivänä te kutsutte, kukin ystävänsä, viinipuun ja viikunapuun alle."
+5. Mooseksen kirja 29:2 - (29:1) Ja Mooses kutsui kokoon kaiken Israelin ja sanoi heille: "Te olette nähneet kaiken, minkä Herra teki teidän silmienne edessä Egyptin maassa faraolle ja kaikille hänen palvelijoilleen ja koko hänen maalleen,
+Job 34:16 - Jos sinulla on ymmärrystä, niin kuule tätä, ota korviisi sanojeni ääni.
+1. Mooseksen kirja 41:8 - Mutta aamulla hänen mielensä oli levoton, ja hän kutsutti eteensä kaikki Egyptin tietäjät ja kaikki viisaat; ja farao kertoi heille unensa, mutta ei ollut sitä, joka olisi voinut selittää ne faraolle.
+1. Mooseksen kirja 49:1 - Sitten Jaakob kutsui poikansa ja sanoi: "Kokoontukaa, niin minä ilmoitan teille, mitä teille päivien lopulla tapahtuu.
+2. Pietarin kirje 1:10 - Pyrkikää sentähden, veljet, sitä enemmän tekemään kutsumisenne ja valitsemisenne lujaksi; sillä jos sen teette, ette koskaan lankea;
+Hesekiel 38:21 - Ja minä kutsun häntä vastaan kaikille vuorilleni miekan, sanoo Herra, Herra: toisen miekka on oleva toista vastaan.
+Markus 2:17 - Sen kuullessaan Jeesus sanoi heille: "Eivät terveet tarvitse parantajaa, vaan sairaat. En minä ole tullut kutsumaan vanhurskaita, vaan syntisiä."
+Heprealaiskirje 11:8 - Uskon kautta oli Aabraham kuuliainen, kun hänet kutsuttiin lähtemään siihen maahan, jonka hän oli saava perinnöksi, ja hän lähti tietämättä, minne oli saapuva.
+Saarnaaja 9:18 - Viisaus on parempi kuin sota-aseet, mutta yksi ainoa syntinen saattaa hukkaan paljon hyvää.
+Sananlaskut 10:13 - Ymmärtäväisen huulilta löytyy viisaus, mutta joka on mieltä vailla, sille vitsa selkään!
+Markus 10:49 - Silloin Jeesus seisahtui ja sanoi: "Kutsukaa hänet tänne". Ja he kutsuivat sokean, sanoen hänelle: "Ole turvallisella mielellä, nouse; hän kutsuu sinua".
+Hoosea 11:2 - Aina kun kutsujat heitä kutsuivat, he menivät pois heidän kasvojensa edestä, uhrasivat baaleille ja polttivat uhreja epäjumalille.
+Matteus 22:14 - Sillä monet ovat kutsutut, mutta harvat valitut."
+Jooel 2:32 - (5) Ja jokainen, joka huutaa avuksi Herran nimeä, pelastuu. Sillä Siionin vuorella ja Jerusalemissa ovat pelastuneet, niinkuin Herra on sanonut; ja pakoonpäässeitten joukossa ovat ne, jotka Herra kutsuu.
+Daniel 5:11 - Sinun valtakunnassasi on mies, jossa on pyhien jumalien henki ja jolla sinun isäsi päivinä havaittiin olevan valistus ja ymmärrys ynnä viisaus, samankaltainen kuin jumalien; hänet asetti isäsi, kuningas Nebukadnessar, tietäjäin, noitien, kaldealaisten ja tähtienselittäjäin päämieheksi — sinun isäsi, kuningas —
+1. Korinttilaiskirje 1:1 - Paavali, Kristuksen Jeesuksen kutsuttu apostoli Jumalan tahdosta, ja veli Soostenes
+1. Mooseksen kirja 16:11 - Vielä Herran enkeli puhui hänelle: "Katso, sinä olet raskaana ja synnytät pojan ja kutsut hänet Ismaeliksi , sillä Herra on kuullut sinun hätäsi.
+Sananlaskut 8:14 - Minulla on neuvo ja neuvokkuus; minä olen ymmärrys, minulla on voima.
+Markus 8:1 - Niinä päivinä, kun paljon kansaa taas oli koolla eikä heillä ollut mitään syötävää, kutsui hän opetuslapsensa tykönsä ja sanoi heille:
+1. Samuelin kirja 3:16 - Mutta Eeli kutsui Samuelin ja sanoi: "Samuel, poikani!" Hän vastasi: "Tässä olen".
+Ilmestyskirja 12:9 - Ja suuri lohikäärme, se vanha käärme, jota perkeleeksi ja saatanaksi kutsutaan, koko maanpiirin villitsijä, heitettiin maan päälle, ja hänen enkelinsä heitettiin hänen kanssansa.
+1. Kuningasten kirja 12:20 - Mutta kun koko Israel kuuli, että Jerobeam oli tullut takaisin, lähettivät he kutsumaan hänet kansankokoukseen ja tekivät hänet koko Israelin kuninkaaksi. Daavidin sukua ei seurannut kukaan muu kuin Juudan sukukunta yksin.
+Sananlaskut 12:15 - Hullun tie on hänen omissa silmissään oikea, mutta joka neuvoa kuulee, on viisas.
+Tuomarien kirja 8:1 - Mutta Efraimin miehet sanoivat hänelle: "Miksi teit meille sen, ettet kutsunut meitä, kun menit taistelemaan midianilaisia vastaan?" Ja he riitelivät kovasti häntä vastaan.
+Markus 9:35 - Ja hän istuutui, kutsui ne kaksitoista ja sanoi heille: "Jos joku tahtoo olla ensimmäinen, on hänen oltava kaikista viimeinen ja kaikkien palvelija".
+Apostolien teot 12:25 - Ja Barnabas ja Saulus palasivat Jerusalemista toimitettuansa avustustehtävän ja toivat sieltä mukanaan Johanneksen, jota myös Markukseksi kutsuttiin.
+1. Korinttilaiskirje 7:18 - Jos joku on kutsuttu ympärileikattuna, älköön hän pyrkikö ympärileikkaamattomaksi; jos joku on kutsuttu ympärileikkaamatonna, älköön ympärileikkauttako itseään.
+Sananlaskut 13:15 - Hyvä ymmärrys tuottaa suosiota, mutta uskottomien tie on koleikkoa.
+Jesaja 45:4 - Palvelijani Jaakobin ja valittuni Israelin tähden minä kutsuin sinut nimeltä ja annoin sinulle kunnianimen, vaikka sinä et minua tuntenut.
+Jeremia 50:29 - Kutsukaa ampujat kokoon Baabelia vastaan, kaikki jousenjännittäjät: leiriytykää sen ympärille, älköön pääskö pakoon ainoakaan. Maksakaa sille sen tekojen mukaan; kaiken sen mukaan, mitä se on tehnyt, tehkää sillekin. Sillä se on uhitellut Herraa, Israelin Pyhää.
+Psalmit 119:34 - Anna minulle ymmärrys ottaakseni sinun laistasi vaarin ja noudattaakseni sitä kaikesta sydämestäni.
+Sananlaskut 13:10 - Ylpeys tuottaa pelkkää toraa, mutta jotka ottavat neuvon varteen, niillä on viisaus.
+Johannes 2:2 - Ja myös Jeesus ja hänen opetuslapsensa olivat kutsutut häihin.
+Sananlaskut 29:9 - Viisas mies kun käräjöi hullun miehen kanssa, niin tämä reutoo ja nauraa eikä asetu.
+2. Mooseksen kirja 12:31 - Ja hän kutsutti yöllä Mooseksen ja Aaronin ja sanoi: "Nouskaa ja menkää pois minun kansani joukosta, sekä te että israelilaiset; menkää ja palvelkaa Herraa, niinkuin olette puhuneet.
+Apostolien teot 1:19 - Ja se tuli kaikkien Jerusalemin asukasten tietoon; ja niin sitä peltoa kutsutaan heidän kielellään Akeldamaksi, se on: Veripelloksi.
+Sananlaskut 30:2 - Sillä järjetön olen minä mieheksi, ei ole minulla ihmisymmärrystä;
+2. Mooseksen kirja 28:1 - "Ja kutsu eteesi israelilaisten joukosta veljesi Aaron poikineen, että he pappeina palvelisivat minua, Aaron ja hänen poikansa Naadab ja Abihu, Eleasar ja Iitamar.
+Roomalaiskirje 1:1 - Paavali, Jeesuksen Kristuksen palvelija, kutsuttu apostoli, erotettu julistamaan Jumalan evankeliumia,
+1. Kuningasten kirja 2:42 - lähetti kuningas kutsumaan Siimein ja sanoi hänelle: "Enkö minä ole vannottanut sinua Herran kautta ja varoittanut sinua sanoen: 'Jona päivänä sinä lähdet ja menet sinne tai tänne, sinä päivänä on sinun, tiedä se, kuolemalla kuoltava'? Ja sinä sanoit minulle: 'Hyvä on; minä olen kuullut'.
+Matteus 23:9 - Ja isäksenne älkää kutsuko ketään maan päällä, sillä yksi on teidän Isänne, hän, joka on taivaissa.
+Job 12:12 - "Vanhuksilla on viisautta, ja pitkä-ikäisillä ymmärrystä." —
+Apostolien teot 16:10 - Ja kun hän oli nähnyt sen näyn, niin me kohta tahdoimme päästä lähtemään Makedoniaan, sillä me käsitimme, että Jumala oli kutsunut meitä julistamaan heille evankeliumia.
+Jeremia 36:4 - Silloin Jeremia kutsui Baarukin, Neerian pojan, ja Baaruk kirjoitti kirjakääröön Jeremian suusta kaikki ne sanat, jotka Herra oli hänelle puhunut.
+Luukas 8:2 - niin myös muutamia naisia, jotka olivat parannetut pahoista hengistä ja taudeista: Maria, Magdaleenaksi kutsuttu, josta seitsemän riivaajaa oli lähtenyt ulos,
+Jesaja 32:5 - Ei houkkaa enää kutsuta jaloksi, eikä petollista enää sanota yleväksi.
+Luukas 14:16 - Niin hän sanoi hänelle: "Eräs mies laittoi suuret illalliset ja kutsui monta.
+Apostolien teot 13:1 - Ja Antiokian seurakunnassa oli profeettoja ja opettajia: Barnabas ja Simeon, jota kutsuttiin Nigeriksi, ja Lukius, kyreneläinen, ja Manaen, neljännysruhtinas Herodeksen kasvinkumppani, ja Saulus.
+Sananlaskut 1:24 - Kun minä kutsuin ja te estelitte, kun ojensin kättäni eikä kenkään kuunnellut,
+Sananlaskut 2:10 - sillä viisaus tulee sydämeesi, ja tieto tulee sielullesi suloiseksi,
+1. Kuningasten kirja 1:9 - Ja Adonia teurasti lampaita, raavaita ja juottovasikoita Soohelet-kiven luona, joka on Roogelin lähteen ääressä. Ja hän kutsui kaikki veljensä, kuninkaan pojat, ja kaikki Juudan miehet, kuninkaan palvelijat;
+Psalmit 50:4 - Hän kutsuu taivaat ylhäältä ja maan, tuomitakseen kansansa:
+Luukas 2:47 - Ja kaikki, jotka häntä kuulivat, ihmettelivät hänen ymmärrystänsä ja vastauksiansa.
+Jesaja 4:3 - Ja ne, jotka Siionissa ovat säilyneet ja Jerusalemissa jäljelle jääneet, kutsutaan pyhiksi, kaikki, jotka ovat kirjoitetut Jerusalemissa elävien lukuun —
+Daniel 2:2 - Silloin kuningas käski kutsua tietäjät ja noidat, velhot ja kaldealaiset ilmoittamaan kuninkaalle hänen unensa; ja he tulivat ja astuivat kuninkaan eteen.
+Apostolien teot 10:5 - Niin lähetä nyt miehiä Joppeen noutamaan eräs Simon, jota myös Pietariksi kutsutaan;
+Sananlaskut 14:16 - Viisas pelkää ja karttaa pahaa, mutta tyhmä on huoleton ja suruton.
+1. Samuelin kirja 9:9 - — Muinoin sanottiin Israelissa, kun mentiin kysymään Jumalalta, näin: "Tulkaa, menkäämme näkijän luo". Sillä sitä, jota nyt sanotaan profeetaksi, kutsuttiin muinoin näkijäksi. —
+Matteus 22:3 - Ja hän lähetti palvelijansa kutsumaan häihin kutsuvieraita, mutta nämä eivät tahtoneet tulla.
+Sananlaskut 20:1 - Viini on pilkkaaja, väkijuoma remunpitäjä; eikä ole viisas kenkään, joka siitä hoipertelee.
+1. Mooseksen kirja 24:58 - Ja he kutsuivat Rebekan ja sanoivat hänelle: "Tahdotko lähteä tämän miehen kanssa?" Hän vastasi: "Tahdon".
+Job 14:15 - Sinä kutsuisit, ja minä vastaisin sinulle, sinä ikävöitsisit kättesi tekoa.
+1. Mooseksen kirja 46:33 - Kun siis farao kutsuu teidät eteensä ja kysyy: 'Mikä teidän ammattinne on?'
+Saarnaaja 7:19 - (20) Viisaus auttaa viisasta voimakkaammin kuin kymmenen vallanpitäjää, jotka ovat kaupungissa.
+2. Aikakirja 10:3 - Ja he lähettivät kutsumaan hänet. Niin Jerobeam ja koko Israel tuli saapuville, ja he puhuivat Rehabeamille sanoen:
+1. Mooseksen kirja 28:19 - Ja hän kutsui paikan Beeteliksi ; mutta ennen oli kaupungin nimenä Luus.
+Sananlaskut 2:3 - niin, jos kutsut ymmärrystä ja ääneesi huudat taitoa,
+Johannes 9:18 - Mutta juutalaiset eivät uskoneet hänestä, että hän oli ollut sokea ja saanut näkönsä, ennenkuin kutsuivat sen näkönsä saaneen vanhemmat
+1. Mooseksen kirja 17:5 - Niin älköön sinua enää kutsuttako Abramiksi, vaan nimesi olkoon Aabraham , sillä minä teen sinusta kansojen paljouden isän.
+1. Samuelin kirja 16:3 - Kutsu sitten Iisai uhrille, niin minä ilmoitan sinulle, mitä sinun on tehtävä; ja voitele minulle se, jonka minä sinulle osoitan."
+2. Samuelin kirja 14:20 - Antaakseen asialle toisen muodon on palvelijasi Jooab näin tehnyt; mutta herrani on viisas niinkuin Jumalan enkeli ja tietää kaiken, mitä maan päällä tapahtuu."
+1. Mooseksen kirja 24:57 - He vastasivat: "Kutsukaamme tänne tyttö ja kysykäämme häneltä itseltään".
+1. Kuningasten kirja 22:13 - Ja sanansaattaja, joka oli mennyt kutsumaan Miikaa, puhui hänelle sanoen: "Katso, kaikki profeetat ovat yhdestä suusta luvanneet kuninkaalle hyvää; olkoon sinun sanasi heidän sanansa kaltainen, ja lupaa sinäkin hyvää".
+Luukas 7:19 - Niin Johannes kutsui luoksensa opetuslapsistaan kaksi ja lähetti heidät Herran tykö kysymään: "Oletko sinä se tuleva, vai pitääkö meidän toista odottaman?"
+Apostolien teot 8:10 - ja häntä kuuntelivat kaikki, pienet ja suuret, ja sanoivat: "Tämä mies on se Jumalan voima, jota kutsutaan 'suureksi'".
+Sananlaskut 9:1 - Viisaus on talonsa rakentanut, veistänyt seitsemän pylvästänsä.
+Sananlaskut 18:6 - Tyhmän huulet tuovat mukanaan riidan, ja hänen suunsa kutsuu lyöntejä.
+2. Kuningasten kirja 10:19 - Kutsukaa nyt minun luokseni kaikki Baalin profeetat, kaikki hänen palvelijansa ja kaikki hänen pappinsa, älköönkä kukaan jääkö pois; sillä minä aion uhrata suuret uhrit Baalille. Eloon ei jää kukaan, joka jää pois." Mutta Jeehu menetteli kavalasti, tuhotakseen Baalin palvelijat.
+Markus 6:7 - Ja hän kutsui tykönsä ne kaksitoista ja alkoi lähettää heitä kaksittain ja antoi heille vallan saastaisia henkiä vastaan.
+Heprealaiskirje 2:11 - Sillä sekä hän, joka pyhittää, että ne, jotka pyhitetään, ovat kaikki alkuisin yhdestä. Sentähden hän ei häpeä kutsua heitä veljiksi,
+2. Korinttilaiskirje 1:23 - Mutta minä kutsun Jumalan sieluni todistajaksi, että minä teitä säästääkseni en vielä tullut Korinttoon;
+Jesaja 31:2 - Mutta myös hän on viisas, ja hän tuottaa onnettomuuden; hän ei peruuta sanojansa, vaan nousee pahantekijäin sukua vastaan ja väärintekijäin apuuntuloa vastaan.
+Daniel 10:1 - Persian kuninkaan Kooreksen kolmantena hallitusvuotena ilmoitettiin sana Danielille, jota kutsuttiin Beltsassariksi; ja se sana on totuus ja merkitsee suurta vaivaa. Ja hän ymmärsi sanan, ja hän käsitti näyn.
+Sananlaskut 10:1 - Salomon sananlaskut. Viisas poika on isällensä iloksi, mutta tyhmä poika on äidillensä murheeksi.
+Apostolien teot 15:37 - Niin Barnabas tahtoi ottaa mukaan Johanneksenkin, jota kutsuttiin Markukseksi.
+1. Mooseksen kirja 41:14 - Silloin farao kutsutti Joosefin eteensä. Ja hänet tuotiin kiiruusti vankikuopasta. Ja hän ajatti hiuksensa ja muutti vaatteensa ja tuli faraon eteen.
+Sananlaskut 1:20 - Viisaus huutaa kadulla, antaa äänensä kuulua toreilla;
+5. Mooseksen kirja 3:14 - Jaair, Manassen poika, valtasi koko Argobin seudun aina gesurilaisten ja maakatilaisten alueeseen saakka, ja hän kutsui nämä seudut, se on Baasanin, oman nimensä mukaan Jaairin leirikyliksi, niinkuin niitä kutsutaan vielä tänäkin päivänä.
+Sananlaskut 9:8 - Älä nuhtele pilkkaajaa, ettei hän sinua vihaisi; nuhtele viisasta, niin hän sinua rakastaa.
+2. Samuelin kirja 9:2 - Saulin perheessä oli ollut palvelija nimeltä Siiba, ja hänet he kutsuivat Daavidin eteen. Ja kuningas sanoi hänelle: "Oletko sinä Siiba?" Hän vastasi: "Palvelijasi on".
+Job 32:13 - Älkää sanoko: 'Meitä vastassa on ilmetty viisaus, vain Jumala voi hänet torjua, ei ihminen'.
+2. Aikakirja 18:8 - Niin Israelin kuningas kutsui erään hoviherran ja sanoi: "Nouda kiiruusti Miika, Jimlan poika".
+Luukas 14:8 - "Kun joku on kutsunut sinut häihin, älä asetu aterioimaan ensimmäiselle sijalle; sillä, jos hän on kutsunut jonkun sinua arvollisemman,
+Roomalaiskirje 8:30 - mutta jotka hän on edeltämäärännyt, ne hän on myös kutsunut; ja jotka hän on kutsunut, ne hän on myös vanhurskauttanut; mutta jotka hän on vanhurskauttanut, ne hän on myös kirkastanut.
+Valitusvirret 2:22 - Sinä kutsuit kuin juhlapäivän viettoon minun peljättäjäni joka taholta; eikä jäänyt Herran vihan päivänä pelastunutta, ei pakoonpäässyttä. Jotka minä olin vaalinut ja isoiksi saanut, ne minun vihamieheni lopetti.
+Efesolaiskirje 1:18 - ja valaisisi teidän sydämenne silmät, että tietäisitte, mikä on se toivo, johon hän on teidät kutsunut, kuinka suuri hänen perintönsä kirkkaus hänen pyhissään
+Haggai 1:11 - Ja minä olen kutsunut kuivuuden maahan ja vuorille, viljalle, viinille ja öljylle, ja mitä vain maa tuottaa, ja ihmisille ja eläimille ja kaikelle kätten vaivannäölle."
+Matteus 22:4 - Vielä hän lähetti toisia palvelijoita lausuen: 'Sanokaa kutsutuille: Katso, minä olen valmistanut ateriani, minun härkäni ja syöttilääni ovat teurastetut, ja kaikki on valmiina; tulkaa häihin'.
+Jesaja 62:12 - Ja heitä kutsutaan "pyhäksi kansaksi", "Herran lunastetuiksi"; ja sinua kutsutaan "halutuksi", "kaupungiksi, joka ei ole hyljätty".
+1. Mooseksen kirja 3:6 - Ja vaimo näki, että siitä puusta oli hyvä syödä ja että se oli ihana katsella ja suloinen puu antamaan ymmärrystä; ja hän otti sen hedelmästä ja söi ja antoi myös miehellensä, joka oli hänen kanssansa, ja hänkin söi.
+Apostolien teot 5:40 - Niin he noudattivat hänen neuvoansa. Ja he kutsuivat apostolit sisään ja pieksättivät heitä ja kielsivät heitä puhumasta Jeesuksen nimeen ja päästivät heidät menemään.
+2. Mooseksen kirja 33:7 - Mutta Mooses otti majan ja pystytti sen leirin ulkopuolelle, jonkun matkan päähän leiristä, ja kutsui sen ilmestysmajaksi; ja jokaisen, jolla oli kysyttävää Herralta, oli mentävä ilmestysmajalle, leirin ulkopuolelle.
+1. Kuningasten kirja 16:24 - Hän osti Samarian vuoren Semeriltä kahdella talentilla hopeata ja rakensi vuorelle kaupungin ja kutsui rakentamansa kaupungin Samariaksi Semerin, vuoren omistajan, nimen mukaan.
+Joosua 6:6 - Silloin Joosua, Nuunin poika, kutsui papit ja sanoi heille: "Ottakaa liitonarkki, ja seitsemän pappia kantakoon seitsemää oinaansarvista pasunaa Herran arkin edellä".
+Joosua 23:2 - kutsui Joosua kaiken Israelin, sen vanhimmat, päämiehet, tuomarit ja päällysmiehet ja sanoi heille: "Minä olen käynyt vanhaksi ja iäkkääksi.
+1. Kuningasten kirja 2:36 - Sen jälkeen kuningas lähetti kutsumaan Siimein ja sanoi hänelle: "Rakenna itsellesi talo Jerusalemiin ja asu siellä, menemättä sieltä sinne tai tänne.
+Tuomarien kirja 18:12 - He nousivat Juudan Kirjat-Jearimiin ja leiriytyivät sinne. Sentähden kutsutaan sitä paikkaa vielä tänäkin päivänä "Daanin leiriksi"; se on Kirjat-Jearimin takana.
+Job 19:16 - Minä kutsun palvelijaani, eikä hän vastaa; minun suuni täytyy nöyrästi rukoilla häntä.
+Markus 3:23 - Niin hän kutsui heidät luoksensa ja sanoi heille vertauksilla: "Kuinka saatana voi ajaa ulos saatanan?
+Joosua 24:1 - Sitten Joosua kokosi kaikki Israelin sukukunnat Sikemiin ja kutsui Israelin vanhimmat, sen päämiehet, tuomarit ja päällysmiehet, ja he asettuivat Jumalan eteen.
+Matteus 15:10 - Ja hän kutsui kansan tykönsä ja sanoi heille: "Kuulkaa ja ymmärtäkää.
+Sananlaskut 8:4 - "Teitä minä kutsun, miehet, ja ihmislapsille kaikuu minun ääneni.
+Job 12:13 - "Jumalalla on viisaus ja voima, hänellä neuvo ja ymmärrys.
+Apostolien teot 3:2 - Silloin kannettiin esille miestä, joka oli ollut rampa hamasta äitinsä kohdusta ja jonka he joka päivä panivat pyhäkön niin kutsutun Kauniin portin pieleen anomaan almua pyhäkköön meneviltä.
+Sananlaskut 16:21 - Jolla on viisas sydän, sitä ymmärtäväiseksi sanotaan, ja huulten suloisuus antaa opetukselle tehoa.
+Jesaja 47:1 - Astu alas ja istu tomuun, sinä neitsyt, tytär Baabel, istu maahan, valtaistuinta vailla, sinä Kaldean tytär; sillä ei sinua enää kutsuta hempeäksi ja hekumalliseksi.
+Joosua 9:22 - Silloin Joosua kutsui heidät ja puhui heille sanoen: "Miksi olette pettäneet meidät ja sanoneet: 'Me asumme hyvin kaukana teistä', vaikka asutte täällä meidän keskellämme?
+Jesaja 46:11 - Minä olen kutsunut kotkan päivänkoitosta, kaukaisesta maasta neuvopäätökseni miehen. Minkä olen puhunut, sen minä myös toteutan; mitä olen aivoitellut, sen minä myös teen.
+5. Mooseksen kirja 3:9 - siidonilaiset kutsuvat Hermonia Sirjoniksi, mutta amorilaiset kutsuvat sitä Seniriksi —
+Sananlaskut 27:11 - Viisastu, poikani, ja ilahuta minun sydämeni, niin minä voin antaa herjaajalleni vastauksen.
+Jesaja 58:13 - Jos sinä pidätät jalkasi sapattia rikkomasta, niin ettet toimita omia asioitasi minun pyhäpäivänäni, vaan kutsut sapatin ilopäiväksi, Herran pyhäpäivän kunnioitettavaksi ja kunnioitat sitä, niin ettet toimita omia toimiasi, et aja omia asioitasi etkä puhu joutavia,
+1. Mooseksen kirja 27:42 - Mutta Rebekalle ilmoitettiin hänen vanhemman poikansa Eesaun aikeista; ja hän kutsutti luokseen nuoremman poikansa Jaakobin ja sanoi hänelle: "Katso, veljesi Eesau uhkaa kostaa sinulle ja tappaa sinut.
+Galatalaiskirje 1:6 - Minua kummastuttaa, että te niin äkkiä käännytte hänestä, joka on kutsunut teidät Kristuksen armossa, pois toisenlaiseen evankeliumiin,
+Apostolien teot 10:7 - Ja kun enkeli, joka Korneliusta puhutteli, oli mennyt pois, kutsui tämä kaksi palvelijaansa ja hurskaan sotamiehen uskollisimpiensa joukosta
+1. Samuelin kirja 28:15 - Ja Samuel sanoi Saulille: "Miksi sinä olet häirinnyt minua ja nostattanut minut?" Saul vastasi: "Minä olen suuressa hädässä: filistealaiset sotivat minua vastaan, ja Jumala on poistunut minusta eikä vastaa minulle enää, ei profeettain kautta eikä unissa. Niin minä kutsutin sinut, että ilmoittaisit minulle, mitä minun on tehtävä."
+1. Mooseksen kirja 1:8 - Ja Jumala kutsui vahvuuden taivaaksi. Ja tuli ehtoo, ja tuli aamu, toinen päivä.
+1. Aikakirja 22:12 - Antakoon vain Herra sinulle älyä ja ymmärrystä ja asettakoon sinut Israelia hallitsemaan ja noudattamaan Herran, Jumalasi, lakia.
+1. Samuelin kirja 3:8 - Ja Herra kutsui Samuelia vielä kolmannen kerran; niin hän nousi ja meni Eelin tykö ja sanoi: "Tässä olen, sinä kutsuit minua". Silloin Eeli ymmärsi, että Herra oli kutsunut poikasta.
+1. Samuelin kirja 9:13 - Kun tulette kaupunkiin, tapaatte hänet, ennenkuin hän menee uhrikukkulalle aterioimaan; sillä kansa ei aterioi, ennenkuin hän tulee. Kun hän on siunannut uhrin, sitten vasta kutsuvieraat aterioivat. Menkää siis sinne, sillä juuri nyt te hänet tapaatte."
+Saarnaaja 2:16 - Sillä ei jää viisaasta, niinkuin ei tyhmästäkään, ikuista muistoa, kun kerran tulevina päivinä kaikki unhotetaan; ja eikö kuole viisas niinkuin tyhmäkin?
+Hoosea 14:10 - Kuka on viisas ja ymmärtää nämä? Kuka taitava ja käsittää nämä? Sillä Herran tiet ovat suorat: vanhurskaat niillä vaeltavat, mutta luopiot niillä kompastuvat.
+Jesaja 40:14 - Kenen kanssa hän on neuvotellut, joka olisi hänelle ymmärrystä antanut ja opettanut oikean polun, opettanut hänelle tiedon ja osoittanut hänelle ymmärryksen tien?
+Job 34:34 - Ymmärtäväiset miehet sanovat minulle, viisas mies, joka minua kuulee, virkkaa:
+Job 37:24 - Sentähden peljätkööt häntä ihmiset; hän ei katso keneenkään, joka on omasta mielestään viisas."
+1. Mooseksen kirja 20:9 - Ja Abimelek kutsui Aabrahamin ja sanoi hänelle: "Mitä oletkaan meille tehnyt! Mitä minä olen rikkonut sinua vastaan, koska olet saattanut minut ja minun valtakuntani syypääksi näin suureen rikokseen? Sinä olet tehnyt minulle, mitä ei sovi tehdä."
+2. Mooseksen kirja 2:20 - Ja hän sanoi tyttärillensä: "Missä hän on? Miksi te niin jätitte miehen? Kutsukaa hänet aterioimaan meidän kanssamme."
+1. Kuningasten kirja 1:41 - Mutta Adonia ja kaikki kutsuvieraat, jotka olivat hänen kanssaan, kuulivat sen, juuri kun olivat lopettaneet syöntinsä. Ja kun Jooab kuuli pasunan äänen, sanoi hän: "Mitä tuo huuto ja pauhu kaupungissa tietää?"
+Sananlaskut 15:2 - Viisasten kieli puhuu tietoa taitavasti, mutta tyhmäin suu purkaa hulluutta.
+Sananlaskut 15:20 - Viisas poika on isällensä iloksi, mutta tyhmä ihminen halveksii äitiänsä.
+Jesaja 41:9 - jonka minä olen ottanut maan ääristä ja kutsunut maan kaukaisimmilta periltä, jolle minä sanoin: "Sinä olet minun palvelijani, sinut minä olen valinnut enkä sinua halpana pitänyt",
+Ester 2:14 - Illalla hän meni, ja aamulla hän palasi toiseen vaimolaan kuninkaan hoviherran Saasgaan, sivuvaimojen vartijan, huostaan; ei hän enää mennyt kuninkaan tykö, paitsi jos kuningas oli häneen mieltynyt ja hänet nimeltään kutsuttiin.
+2. Samuelin kirja 18:18 - Mutta Absalom oli eläessään hankkinut ja pystyttänyt itsellensä patsaan, joka on Kuninkaanlaaksossa; sillä hän sanoi: "Minulla ei ole poikaa, joka säilyttäisi minun nimeni muiston". Patsaan hän oli kutsunut nimensä mukaan, ja sen nimi on vielä tänäkin päivänä Absalomin muistomerkki.
+Apostolien teot 20:1 - Kun meteli oli asettunut, kutsui Paavali opetuslapset luoksensa; ja rohkaistuaan heitä hän jätti heidät hyvästi ja lähti matkustamaan Makedoniaan.
+1. Korinttilaiskirje 1:2 - Korintossa olevalle Jumalan seurakunnalle, Kristuksessa Jeesuksessa pyhitetyille, jotka ovat kutsutut ja pyhät, ynnä kaikille, jotka avuksi huutavat meidän Herramme Jeesuksen Kristuksen nimeä kaikissa paikkakunnissa, niin omissaan kuin meidänkin.
+Galatalaiskirje 1:15 - Mutta kun hän, joka äitini kohdusta saakka on minut erottanut ja kutsunut armonsa kautta, näki hyväksi
+Tuomarien kirja 12:1 - Ja Efraimin miehet kutsuttiin koolle, ja he lähtivät pohjoiseen päin ja sanoivat Jeftalle: "Miksi lähdit sotimaan ammonilaisia vastaan kutsumatta meitä tulemaan kanssasi? Me poltamme tulella sinun talosi pääsi päältä."
+Matteus 2:7 - Silloin Herodes kutsui salaa tietäjät tykönsä ja tutkiskeli heiltä tarkoin, mihin aikaan tähti oli ilmestynyt.
+Sananlaskut 8:12 - Minä, viisaus, olen perehtynyt mielevyyteen, olen löytänyt tiedon ja taidollisuuden.
+Luukas 11:49 - Sentähden Jumalan viisaus sanookin: 'Minä lähetän heille profeettoja ja apostoleja, ja muutamat niistä he tappavat ja toisia vainoavat,
+1. Kuningasten kirja 4:30 - (10) niin että Salomon viisaus oli suurempi kuin kaikkien Idän miesten ja kaikkien egyptiläisten viisaus.
+Markus 1:20 - Ja kohta hän kutsui heidät; ja he jättivät isänsä, Sebedeuksen, palkkalaisineen venheeseen ja lähtivät seuraamaan häntä.
+Efesolaiskirje 4:4 - yksi ruumis ja yksi henki, niinkuin te olette kutsututkin yhteen ja samaan toivoon, jonka te kutsumuksessanne saitte;
+Jesaja 49:1 - Kuulkaa minua, te merensaaret, ja tarkatkaa, kaukaiset kansat. Herra on minut kutsunut hamasta äidinkohdusta saakka, hamasta äitini helmasta minun nimeni maininnut.
+Roomalaiskirje 1:6 - joihin tekin, Jeesuksen Kristuksen kutsumat, kuulutte:
+Matteus 22:8 - Sitten hän sanoi palvelijoillensa: 'Häät ovat valmistetut, mutta kutsutut eivät olleet arvollisia.
+Markus 3:31 - Ja hänen äitinsä ja veljensä tulivat, seisahtuivat ulkopuolelle ja lähettivät hänen luoksensa kutsumaan häntä.
+Luukas 6:13 - Ja päivän tultua hän kutsui tykönsä opetuslapsensa ja valitsi heistä kaksitoista, joille hän myös antoi apostolin nimen:
+5. Mooseksen kirja 5:1 - Ja Mooses kutsui kokoon kaiken Israelin ja sanoi heille: "Kuule, Israel, nämä käskyt ja oikeudet, jotka minä tänä päivänä julistan teidän korvienne kuullen. Oppikaa ne ja noudattakaa niitä tarkoin.
+Apostolien teot 11:13 - ja hän kertoi meille, kuinka hän oli nähnyt enkelin seisovan hänen huoneessaan ja sanovan: 'Lähetä Joppeen noutamaan Simon, jota myös Pietariksi kutsutaan;
+Apostolien teot 23:23 - Sitten hän kutsui luoksensa kaksi sadanpäämiestä ja sanoi heille: "Pitäkää yön kolmannesta hetkestä lähtien kaksisataa sotamiestä valmiina lähtemään Kesareaan ja seitsemänkymmentä ratsumiestä ja kaksisataa keihäsmiestä,
+2. Mooseksen kirja 7:11 - Ja faraokin kutsui maansa viisaat ja velhot; ja nämä Egyptin tietäjät tekivät samoin taioillansa:
+Job 28:20 - Mistä siis tulee viisaus ja missä on ymmärryksen asuinpaikka?
+Apostolien teot 15:22 - Silloin apostolit ja vanhimmat ja koko seurakunta näkivät hyväksi valita keskuudestaan muutamia miehiä ja lähettää heidät Antiokiaan Paavalin ja Barnabaan mukana, nimittäin Juudaan, jota kutsuttiin Barsabbaaksi, ja Silaan, jotka olivat johtavia miehiä veljien joukossa;
+Aamos 7:4 - Tämän näytti minulle Herra, Herra: Katso, Herra, Herra kutsui tulen toimittamaan tuomiota, ja se kulutti suuren syvyyden, ja se kulutti peltomaan.
+2. Samuelin kirja 9:9 - Sitten kuningas kutsui Siiban, Saulin palvelijan, ja sanoi hänelle: "Kaiken, mikä on ollut Saulin ja koko hänen sukunsa omaa, minä annan sinun herrasi pojalle.
+Job 17:10 - Mutta te kaikki, tulkaa jälleen tänne; en löydä minä viisasta joukostanne.
+Matteus 5:9 - Autuaita ovat rauhantekijät, sillä heidät pitää Jumalan lapsiksi kutsuttaman.
+Ester 8:9 - Niin kutsuttiin kuninkaan kirjurit silloin, kolmannessa kuussa, se on siivan-kuussa, sen kahdentenakymmenentenä kolmantena päivänä, ja kirjoitettiin, aivan niinkuin Mordokai käski, määräys juutalaisille sekä satraapeille, käskynhaltijoille ja maaherroille sataan kahteenkymmeneen seitsemään maakuntaan, Intiasta Etiopiaan saakka, kuhunkin maakuntaan sen omalla kirjoituksella ja kullekin kansalle sen omalla kielellä; myös juutalaisille heidän kirjoituksellaan ja kielellään.
+Jesaja 48:13 - Minun käteni on perustanut maan, minun oikea käteni on levittänyt taivaan; minä kutsun ne, ja siinä ne ovat.
+3. Mooseksen kirja 10:4 - Ja Mooses kutsui Miisaelin ja Elsafanin, Aaronin sedän Ussielin pojat, ja sanoi heille: "Astukaa esiin ja kantakaa sukulaisenne pyhäkön läheisyydestä leirin ulkopuolelle".
+1. Kuningasten kirja 1:10 - mutta profeetta Naatanin, Benajan, urhot ja veljensä Salomon hän jätti kutsumatta.
+Roomalaiskirje 9:25 - niinkuin hän myös Hoosean kirjassa sanoo: "Minä olen kutsuva kansakseni sen, joka ei ollut minun kansani, ja rakkaakseni sen, joka ei ollut minun rakkaani.
+2. Samuelin kirja 15:11 - Ja Absalomin kanssa oli Jerusalemista kutsuvieraina mennyt kaksisataa miestä, jotka menivät sinne aivan viattomina, tietämättä mitään koko asiasta.
+1. Mooseksen kirja 2:23 - Ja mies sanoi: "Tämä on nyt luu minun luistani ja liha minun lihastani; hän kutsuttakoon miehettäreksi, sillä hän on miehestä otettu".
+Johannes 9:24 - Niin he kutsuivat toistamiseen miehen, joka oli ollut sokea, ja sanoivat hänelle: "Anna kunnia Jumalalle; me tiedämme, että se mies on syntinen".
+Jaakobin kirje 3:13 - Kuka on viisas ja ymmärtäväinen teidän joukossanne? Tuokoon hän näkyviin tekonsa hyvällä vaelluksellaan viisauden sävyisyydessä.
+1. Mooseksen kirja 26:20 - Mutta Gerarin paimenet alkoivat riidellä Iisakin paimenten kanssa, sanoen: "Vesi on meidän". Niin hän kutsui kaivon Eesekiksi , koska he olivat riidelleet hänen kanssaan.
+Sananlaskut 1:6 - ymmärtääkseen sananlaskuja ja vertauksia, viisasten sanoja ja heidän ongelmiansa.
+Sananlaskut 15:7 - Viisasten huulet kylvävät tietoa, mutta tyhmäin sydän ei ole vakaa.
+2. Mooseksen kirja 2:8 - Faraon tytär vastasi hänelle: "Mene!" Niin tyttö meni ja kutsui lapsen äidin.
+Tuomarien kirja 14:15 - Seitsemäntenä päivänä he sanoivat Simsonin vaimolle: "Viekoittele miehesi selittämään meille arvoitus, muuten me poltamme sinut ja sinun isäsi talon tulella. Oletteko kutsuneet meidät tänne köyhdyttääksenne meitä, vai kuinka?"
+2. Kuningasten kirja 6:11 - Aramin kuninkaan sydän tuli tästä levottomaksi, ja hän kutsui palvelijansa ja sanoi heille: "Ettekö voi ilmaista minulle, kuka meikäläisistä pitää Israelin kuninkaan puolta?"
+Daniel 5:14 - Minä olen kuullut sinusta, että sinussa on jumalien henki ja että sinussa on havaittu valistus, taito ja erinomainen viisaus.
+Sananlaskut 16:16 - Parempi kultaa on hankkia viisautta, kalliimpi hopeata hankkia ymmärrystä.
+2. Mooseksen kirja 19:7 - Kun Mooses tuli takaisin, kutsui hän kokoon kansan vanhimmat ja puhui heille kaikki ne sanat, jotka Herra oli hänen käskenyt puhua.
+Luukas 15:21 - Mutta poika sanoi hänelle: 'Isä, minä olen tehnyt syntiä taivasta vastaan ja sinun edessäsi enkä enää ansaitse, että minua sinun pojaksesi kutsutaan'.
+Jesaja 54:6 - Sillä niinkuin hyljätyn, syvästi murheellisen vaimon on Herra sinut kutsunut — nuoruuden vaimon, joka on ollut halveksittu, sanoo sinun Jumalasi.
+1. Samuelin kirja 16:8 - Niin Iisai kutsui Abinadabin ja toi hänet Samuelin eteen. Mutta hän sanoi: "Ei ole Herra tätäkään valinnut".
+1. Kuningasten kirja 12:3 - mutta he lähettivät kutsumaan hänet — niin Jerobeam ja koko Israelin seurakunta tuli saapuville, ja he puhuivat Rehabeamille sanoen:
+Matteus 15:32 - Ja Jeesus kutsui opetuslapsensa tykönsä ja sanoi: "Minun käy sääliksi kansaa, sillä he ovat jo kolme päivää olleet minun tykönäni, eikä heillä ole mitään syötävää; enkä minä tahdo laskea heitä syömättä menemään, etteivät nääntyisi matkalla".
+Sananlaskut 8:11 - Sillä parempi on viisaus kuin helmet, eivät mitkään kalleudet vedä sille vertaa.
+Sananlaskut 8:33 - Kuritusta kuulkaa, niin viisastutte; älkää sen antako mennä menojaan.
+Tuomarien kirja 18:23 - Ja he huusivat daanilaisille; nämä kääntyivät ja kysyivät Miikalta: "Mikä sinun on, kun väkesi on noin kutsuttu koolle?"
+Sananlaskut 21:22 - Viisas ryntää sankarien kaupunkiin ja kukistaa varustuksen, joka oli sen turva.
+Sananlaskut 28:11 - Rikas mies on omissa silmissään viisas, mutta ymmärtäväinen köyhä ottaa hänestä selvän.
+4. Mooseksen kirja 22:20 - Niin Jumala tuli Bileamin tykö yöllä ja sanoi hänelle: "Jos nämä miehet ovat tulleet kutsumaan sinua, niin nouse ja lähde heidän kanssaan, mutta tee vain se, mitä minä sinulle sanon".
+Jesaja 43:1 - Mutta nyt, näin sanoo Herra, joka loi sinut, Jaakob, joka valmisti sinut, Israel: Älä pelkää, sillä minä olen lunastanut sinut, minä olen sinut nimeltä kutsunut; sinä olet minun.
+Jeremia 23:6 - Hänen päivinänsä pelastetaan Juuda ja Israel asuu turvassa. Ja tämä on hänen nimensä, jolla häntä kutsutaan: 'Herra on meidän vanhurskautemme'.
+2. Mooseksen kirja 10:24 - Niin farao kutsui Mooseksen ja sanoi: "Menkää ja palvelkaa Herraa; ainoastaan lampaanne ja karjanne jääkööt tänne. Myöskin vaimonne ja lapsenne menkööt teidän mukananne."
+Matteus 22:45 - Jos siis Daavid kutsuu häntä Herraksi, kuinka hän on hänen poikansa?"
+Jeremia 9:23 - (22) Näin sanoo Herra: Älköön viisas kerskatko viisaudestansa, älköön väkevä kerskatko väkevyydestänsä, älköön rikas kerskatko rikkaudestansa;
+1. Korinttilaiskirje 1:26 - Sillä katsokaa, veljet, omaa kutsumistanne: ei ole monta inhimillisesti viisasta, ei monta mahtavaa, ei monta jalosukuista,
+Saarnaaja 7:12 - (13) Sillä viisauden varjossa on kuin rahan varjossa, mutta tieto on hyödyllisempi: viisaus pitää haltijansa elossa.
+Jesaja 55:5 - Katso, sinä olet kutsuva pakanoita, joita sinä et tunne, ja pakanat, jotka eivät sinua tunne, rientävät sinun tykösi Herran, sinun Jumalasi, tähden, Israelin Pyhän tähden, sillä hän kirkastaa sinut.
+Jesaja 33:6 - Ja hän on sinun aikojesi vakuus, avun runsaus, viisaus ja ymmärrys; Herran pelko on oleva Siionin aarre.
+Sananlaskut 6:6 - Mene, laiska, muurahaisen tykö, katso sen menoja ja viisastu,
+1. Korinttilaiskirje 3:20 - ja vielä: "Herra tuntee viisasten ajatukset, hän tietää ne turhiksi".
+Matteus 22:9 - Menkää siis teiden risteyksiin ja kutsukaa häihin, keitä tapaatte.'
+2. Mooseksen kirja 8:8 - (4) Niin farao kutsui Mooseksen ja Aaronin ja sanoi: "Rukoilkaa Herraa, että hän ottaisi pois sammakot vaivaamasta minua ja minun kansaani, niin minä päästän kansan uhraamaan Herralle".
+Aamos 5:16 - Sillä näin sanoo Herra, Jumala Sebaot, Herra: Kaikilla toreilla on valitus, kaikilla kaduilla sanotaan: "Voi! Voi!" Peltomiehiä kutsutaan surun viettoon ja itkuvirren taitajia valittajaisiin.
+Johannes 11:28 - Ja tämän sanottuaan hän meni ja kutsui salaa sisarensa Marian sanoen: "Opettaja on täällä ja kutsuu sinua".
+2. Samuelin kirja 14:33 - Silloin Jooab meni kuninkaan tykö ja kertoi hänelle tämän. Ja hän kutsui Absalomin, ja tämä tuli kuninkaan tykö ja kumartui kasvoilleen maahan kuninkaan eteen. Ja kuningas suuteli Absalomia.
+Jeremia 20:3 - Kun Pashur seuraavana päivänä päästi Jeremian jalkapuusta, sanoi Jeremia hänelle: "Herra ei kutsu sinua nimellä Pashur, vaan Maagor-Missabib .
+Filippiläiskirje 4:7 - ja Jumalan rauha, joka on kaikkea ymmärrystä ylempi, on varjeleva teidän sydämenne ja ajatuksenne Kristuksessa Jeesuksessa.
+Apostolien teot 28:20 - Tästä syystä minä nyt olen kutsunut teidät, saadakseni nähdä ja puhutella teitä; sillä Israelin toivon tähden minä kannan tätä kahletta."
+Sananlaskut 9:12 - Jos olet viisas, olet omaksi hyväksesi viisas; ja jos olet pilkkaaja, saat sinä sen yksin kestää."
+5. Mooseksen kirja 31:14 - Ja Herra sanoi Moosekselle: "Katso, lähestyy aika, jolloin sinun on kuoltava. Kutsu Joosua, ja asettukaa ilmestysmajaan, niin minä asetan hänet virkaansa." Niin Mooses ja Joosua menivät ja asettuivat ilmestysmajaan.
+1. Samuelin kirja 13:4 - Ja koko Israel kuuli sen sanoman, että Saul oli lyönyt kuoliaaksi filistealaisten maaherran ja että Israel oli joutunut filistealaisten vihoihin. Niin kansa kutsuttiin koolle Gilgaliin, seuraamaan Saulia.
+Tuomarien kirja 10:4 - Ja hänellä oli kolmekymmentä poikaa, jotka ratsastivat kolmellakymmenellä aasilla; ja heillä oli kolmekymmentä kaupunkia, joita vielä tänäkin päivänä kutsutaan Jaairin leirikyliksi ja jotka ovat Gileadin maassa.
+Johannes 4:16 - Jeesus sanoi hänelle: "Mene, kutsu miehesi ja tule tänne".
+Sananlaskut 23:15 - Poikani, jos sinun sydämesi viisastuu, niin minunkin sydämeni iloitsee;
+Johannes 2:9 - Mutta kun edeskäypä maistoi vettä, joka oli muuttunut viiniksi, eikä tiennyt, mistä se oli tullut — mutta palvelijat, jotka veden olivat ammentaneet, tiesivät sen — kutsui edeskäypä yljän
+Heprealaiskirje 9:15 - Ja sentähden hän on uuden liiton välimies, että, koska hänen kuolemansa on tapahtunut lunastukseksi ensimmäisen liiton aikuisista rikkomuksista, ne, jotka ovat kutsutut, saisivat luvatun iankaikkisen perinnön.
+1. Korinttilaiskirje 6:5 - Teidän häpeäksenne minä tämän sanon. Eikö teidän joukossanne sitten ole yhtäkään viisasta, joka voisi ratkaista veljien välin?
+Jeremia 35:17 - Sentähden, näin sanoo Herra, Jumala Sebaot, Israelin Jumala: Katso, minä annan tulla Juudalle ja kaikille Jerusalemin asukkaille kaiken sen onnettomuuden, jolla minä olen heitä uhannut, koska he eivät kuulleet, kun minä heille puhuin, eivät vastanneet, kun minä heitä kutsuin."
+Sananlaskut 16:14 - Kuninkaan viha on kuoleman sanansaattaja, mutta sen lepyttää viisas mies.
+Sakarja 8:3 - Näin sanoo Herra: Minä käännyn jälleen Siionin puoleen ja tulen asumaan Jerusalemin keskelle, ja Jerusalemia kutsutaan Uskolliseksi Kaupungiksi ja Herran Sebaotin vuorta Pyhäksi Vuoreksi.
+Galatalaiskirje 5:8 - Houkutus siihen ei ole hänestä, joka teitä kutsuu.
+Luukas 19:29 - Ja tapahtui, kun hän tuli lähelle Beetfagea ja Betaniaa, sille vuorelle, jota kutsutaan Öljymäeksi, että hän lähetti kaksi opetuslastaan
+1. Korinttilaiskirje 3:19 - Sillä tämän maailman viisaus on hullutus Jumalan silmissä. Sillä kirjoitettu on: "Hän vangitsee viisaat heidän viekkauteensa";
+Tuomarien kirja 16:19 - Ja hän nukutti hänet polvilleen ja kutsui miehen, joka leikkasi hänen päänsä seitsemän palmikkoa. Niin hän alkoi saada hänet masennetuksi, ja hänen voimansa poistui hänestä.
+Sananlaskut 30:24 - Neljä on maassa vähäisintä, mutta viisaan viisasta silti:
+4. Mooseksen kirja 13:17 - (16) Nämä olivat niiden miesten nimet, jotka Mooses lähetti maata vakoilemaan. Mutta Mooses kutsui Hoosean, Nuunin pojan, Joosuaksi.
+Sananlaskut 4:7 - Viisauden alku on: hanki viisautta, ja kaikella muulla hankkimallasi hanki ymmärrystä.
+Saarnaaja 4:13 - Parempi on köyhä, mutta viisas nuorukainen kuin vanha ja tyhmä kuningas, joka ei enää ymmärrä ottaa varoituksesta vaaria.
+2. Mooseksen kirja 19:20 - Ja Herra astui alas Siinain vuorelle, vuoren kukkulalle, ja Herra kutsui Mooseksen vuoren kukkulalle; ja Mooses nousi sinne ylös.
+2. Kuningasten kirja 3:13 - Ja Elisa sanoi Israelin kuninkaalle: "Mitä minulla on tekemistä sinun kanssasi? Mene isäsi ja äitisi profeettain tykö." Israelin kuningas sanoi hänelle: "Ei niin! Sillä Herra on kutsunut nämä kolme kuningasta kokoon antaakseen heidät Mooabin käsiin."
+1. Kuningasten kirja 15:22 - Mutta kuningas Aasa kutsui kokoon kaiken Juudan, vapauttamatta ketään. Ja he veivät pois kivet ja puut, joilla Baesa oli linnoittanut Raamaa. Niillä kuningas Aasa linnoitti Geban, joka on Benjaminissa, ja Mispan.
+4. Mooseksen kirja 12:5 - Silloin Herra astui alas pilvenpatsaassa, asettui majan ovelle ja kutsui Aaronia ja Mirjamia; molemmat menivät sinne.
+1. Kuningasten kirja 3:11 - Ja Jumala sanoi hänelle: "Koska sinä anoit tätä etkä anonut itsellesi pitkää ikää, et rikkautta etkä vihamiestesi henkeä, vaan anoit itsellesi ymmärrystä kuullaksesi, mikä oikein on,
+Ilmestyskirja 19:9 - Ja hän sanoi minulle: "Kirjoita: Autuaat ne, jotka ovat kutsutut Karitsan hääaterialle!" Vielä hän sanoi minulle: "Nämä sanat ovat totiset Jumalan sanat".
+Jesaja 48:1 - Kuulkaa tämä, Jaakobin heimo, te, joita kutsutaan Israelin nimellä ja jotka olette lähteneet Juudan lähteestä, jotka vannotte Herran nimeen ja tunnustatte Israelin Jumalan, mutta ette totuudessa ettekä vanhurskaudessa —
+Apostolien teot 10:1 - Ja Kesareassa oli mies, nimeltä Kornelius, sadanpäämies niin kutsutussa italialaisessa sotaväenosastossa.
+Sananlaskut 3:7 - Älä ole viisas omissa silmissäsi. Pelkää Herraa ja karta pahaa.
+Apostolien teot 6:2 - Niin ne kaksitoista kutsuivat kokoon opetuslasten joukon ja sanoivat: "Ei ole soveliasta, että me laiminlyömme Jumalan sanan toimittaaksemme pöytäpalvelusta.
+Sananlaskut 14:1 - Vaimojen viisaus talon rakentaa, mutta hulluus sen omin käsin purkaa.
+Psalmit 119:66 - Opeta minulle hyvä ymmärrys ja tieto, sillä sinun käskyihisi minä panen uskallukseni.
+Psalmit 119:144 - Sinun todistuksesi ovat iankaikkisesti vanhurskaat; anna minulle ymmärrys, että minä eläisin.
+Ilmestyskirja 17:14 - He sotivat Karitsaa vastaan, mutta Karitsa on voittava heidät, sillä hän on herrain Herra ja kuningasten Kuningas; ja kutsutut ja valitut ja uskolliset voittavat hänen kanssansa."
+Apostolien teot 23:18 - Niin hän otti hänet mukaansa, vei hänet päällikön luo ja sanoi: "Vanki Paavali kutsui minut luokseen ja pyysi tuomaan sinun luoksesi tämän nuorukaisen, jolla on jotakin puhuttavaa sinulle".
+2. Kuningasten kirja 7:10 - Niin he tulivat ja kutsuivat kaupungin portinvartijat ja ilmoittivat heille sanoen: "Me tulimme aramilaisten leiriin, ja katso, siellä ei ollut ketään eikä kuulunut ihmisääntä; siellä oli vain hevosia ja aaseja kytkettyinä kiinni, ja teltat olivat, niinkuin olivat olleet".
+Matteus 20:32 - Silloin Jeesus seisahtui ja kutsui heidät tykönsä ja sanoi: "Mitä tahdotte, että minä teille tekisin?"
+Saarnaaja 2:13 - niin minä näin, että viisaus on hyödyllisempi tyhmyyttä, niinkuin valo on pimeyttä hyödyllisempi.
+2. Mooseksen kirja 35:30 - Ja Mooses sanoi israelilaisille: "Katsokaa, Herra on nimeltään kutsunut Besalelin, Uurin pojan, Huurin pojanpojan, Juudan sukukunnasta,
+Tuomarien kirja 7:23 - Ja Israelin miehet kutsuttiin koolle Naftalista, Asserista ja koko Manassesta, ja he ajoivat midianilaisia takaa.
+Ilmestyskirja 17:9 - Tässä on ymmärrys, jossa viisaus on: Ne seitsemän päätä ovat seitsemän vuorta, joiden päällä nainen istuu; ne ovat myös seitsemän kuningasta;
+Sananlaskut 10:23 - Tyhmälle on iloksi ilkityön teko, mutta ymmärtäväiselle miehelle viisaus.
+Psalmit 119:125 - Minä olen sinun palvelijasi, anna minulle ymmärrys, että minä sinun todistuksesi tuntisin.
+Markus 10:42 - Mutta Jeesus kutsui heidät tykönsä ja sanoi heille: "Te tiedätte, että ne, joita kansojen ruhtinaiksi katsotaan, herroina niitä hallitsevat, ja että kansojen mahtavat käyttävät valtaansa niitä kohtaan.
+Luukas 14:7 - Ja huomatessaan, kuinka kutsutut valitsivat itselleen ensimmäisiä sijoja, hän puhui heille vertauksen ja sanoi heille:
+Job 9:4 - Hän on viisas mieleltään ja väkevä voimaltaan kuka on niskoitellut häntä vastaan ja jäänyt rankaisematta?
+2. Samuelin kirja 20:5 - Niin Amasa meni kutsumaan koolle Juudaa; mutta hän viipyi ohi sen ajan, jonka hän oli määrännyt.
+Saarnaaja 9:15 - Mutta siellä oli köyhä, viisas mies, ja hän pelasti kaupungin viisaudellaan. Mutta ei kukaan ihminen muistanut sitä köyhää miestä.
+2. Mooseksen kirja 10:16 - Silloin farao kutsutti kiiruusti Mooseksen ja Aaronin ja sanoi: "Minä olen rikkonut Herraa, teidän Jumalaanne, ja teitä vastaan.
+Jesaja 45:12 - Minä olen tehnyt maan ja luonut ihmisen maan päälle; minun käteni ovat levittäneet taivaan, minä olen kutsunut koolle kaikki sen joukot.
+2. Kuningasten kirja 3:21 - Kun kaikki mooabilaiset kuulivat, että kuninkaat olivat lähteneet sotaan heitä vastaan, kutsuttiin koolle kaikki miekkaan vyöttäytyvät ja myös vanhemmat miehet, ja he asettuivat rajalle.
+Apostolien teot 2:39 - Sillä teille ja teidän lapsillenne tämä lupaus on annettu ja kaikille, jotka kaukana ovat, ketkä ikinä Herra, meidän Jumalamme, kutsuu."
+Apostolien teot 10:23 - Niin hän kutsui heidät sisään ja piti heitä vierainansa. Seuraavana päivänä Pietari nousi ja lähti heidän kanssaan, ja muutamat veljet Joppesta seurasivat hänen mukanaan.
+Luukas 19:15 - Ja saatuansa kuninkuuden ja palattuansa hän käski kutsua eteensä ne palvelijat, joille hän oli antanut rahat, saadakseen tietää, mitä kukin oli asioimisellaan ansainnut.
+5. Mooseksen kirja 25:8 - Silloin hänen kaupunkinsa vanhimmat kutsukoot hänet ja puhutelkoot häntä. Ja jos hän pysyy päätöksessään ja sanoo: 'En suostu ottamaan häntä vaimokseni',
+1. Samuelin kirja 9:24 - Niin keittäjä otti reiden, ja mitä siihen kuului, ja pani sen Saulin eteen. Ja Samuel sanoi: "Katso, tässä pannaan sinun eteesi se, mikä on varattu; syö siitä. Sillä juuri täksi hetkeksi se säästettiin sinua varten, kun minä sanoin: 'Minä olen kutsunut kansan'." Niin Saul aterioi Samuelin kanssa sinä päivänä.
+1. Korinttilaiskirje 7:15 - Mutta jos se, joka ei usko, eroaa, niin erotkoon; veli ja sisar eivät ole semmoisissa tapauksissa orjuutetut; sillä rauhaan on Jumala teidät kutsunut.
+4. Mooseksen kirja 22:5 - Hän lähetti sanansaattajat Bileamin, Beorin pojan, tykö Petoriin, joka on Eufrat-virran varrella, heimolaistensa maahan, kutsumaan häntä ja käski sanoa hänelle: "Katso, Egyptistä on lähtenyt liikkeelle kansa; katso, se on tulvinut yli maan ja asettunut minua lähelle.
+1. Mooseksen kirja 1:10 - Ja Jumala kutsui kuivan maaksi, ja paikan, mihin vedet olivat kokoontuneet, hän kutsui mereksi. Ja Jumala näki, että se oli hyvä.
+Luukas 16:5 - Ja hän kutsui luoksensa jokaisen herransa velallisista ja sanoi ensimmäiselle: 'Paljonko sinä olet velkaa minun herralleni?'
+Jaakobin kirje 3:17 - Mutta ylhäältä tuleva viisaus on ensiksikin puhdas, sitten rauhaisa, lempeä, taipuisa, täynnä laupeutta ja hyviä hedelmiä, se ei epäile, ei teeskentele.
+2. Kuningasten kirja 4:15 - Hän sanoi: "Kutsu hänet". Niin tämä kutsui hänet, ja hän astui ovelle.
+Daniel 12:4 - Mutta sinä, Daniel, lukitse nämä sanat ja sinetöi tämä kirja lopun aikaan asti. Monet sitä tutkivat, ja ymmärrys lisääntyy.
+Jaakobin kirje 3:15 - Tämä ei ole se viisaus, joka ylhäältä tulee, vaan se on maallista, sielullista, riivaajien viisautta.
+1. Samuelin kirja 10:17 - Sitten Samuel kutsui kansan koolle Herran eteen Mispaan.
+Jeremia 11:16 - 'Vihreä öljypuu, ihana, kaunishedelmäinen' — sillä nimellä Herra sinua kutsui. Suuren jylinän pauhatessa hän sytytti sen tuleen, ja sen oksat turmeltuivat.
+Jesaja 65:12 - teidät minä määrään miekan omiksi, ja kaikki te kumarrutte teurastettaviksi, sentähden ettette vastanneet, kun minä kutsuin, ettekä kuulleet, kun minä puhuin, vaan teitte sitä, mikä on pahaa minun silmissäni, ja valitsitte sen, mikä ei ole minulle otollista.
+Joosua 22:1 - Sitten Joosua kutsui ruubenilaiset, gaadilaiset ja toisen puolen Manassen sukukuntaa
+Tuomarien kirja 7:24 - Ja Gideon oli lähettänyt sanansaattajia koko Efraimin vuoristoon, sanomaan: "Tulkaa alas midianilaisia vastaan ja vallatkaa heidän tieltään vedet aina Beet-Baaraan asti sekä Jordan". Niin kaikki Efraimin miehet kutsuttiin koolle, ja he valtasivat vedet aina Beet-Baaraan asti sekä Jordanin.
+---
+
+**OHJEET:**
+1. Käy läpi kaikki kandidaattijakeet.
+2. Valitse niistä temaattisesti relevantit.
+3. Aseta `laajenna_kontekstia`-arvoksi `true` **VAIN**, jos uskot jakeen teologisen ytimen jäävän ymmärtämättä ilman sitä **seuraavia** jakeita. Muutoin aseta arvoksi `false`.
+4. Palauta vastauksesi JSON-muotoisena listana objekteja:
+[{"viite": "Kirjan nimi Luku:Jae", "laajenna_kontekstia": false}]
+
+SAATU RAAKAVASTAUS:
+{
+   "data": [
+      {
+         "viite": "Sananlaskut 21:30 - Ei auta viisaus, ei ymmärrys, ei mikään neuvo Herraa vastaan.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Samuelin kirja 12:6 - Samuel sanoi kansalle: 'Todistaja on Herra, joka kutsui Mooseksen ja Aaronin ja johdatti teidän isänne Egyptin maasta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Apostolien teot 24:2 - Ja kun Paavali oli kutsuttu esille, rupesi Tertullus syyttämään ja sanoi:",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Esra 2:61 - Ja pappien poikain joukossa olivat Habaijan jälkeläiset, Koosin jälkeläiset ja Barsillain jälkeläiset, sen, joka oli ottanut vaimon gileadilaisen Barsillain tyttäristä ja jota kutsuttiin heidän nimellään.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Roomalaiskirje 1:7 - kaikille Roomassa oleville Jumalan rakkaille, kutsutuille pyhille. Armo teille ja rauha Jumalalta, meidän Isältämme, ja Herralta Jeesukselta Kristukselta!",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 18:4 - Hän poisti uhrikukkulat, murskasi patsaat, hakkasi maahan asera-karsikon ja löi palasiksi vaskikäärmeen, jonka Mooses oli tehnyt; sillä niihin aikoihin asti israelilaiset olivat polttaneet uhreja sille; sitä kutsuttiin nimellä Nehustan.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Sananlaskut 21:30 - Ei auta viisaus, ei ymmärrys, ei mikään neuvo Herraa vastaan.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Samuelin kirja 12:6 - Samuel sanoi kansalle: 'Todistaja on Herra, joka kutsui Mooseksen ja Aaronin ja johdatti teidän isänne Egyptin maasta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Apostolien teot 24:2 - Ja kun Paavali oli kutsuttu esille, rupesi Tertullus syyttämään ja sanoi:",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Esra 2:61 - Ja pappien poikain joukossa olivat Habaijan jälkeläiset, Koosin jälkeläiset ja Barsillain jälkeläiset, sen, joka oli ottanut vaimon gileadilaisen Barsillain tyttäristä ja jota kutsuttiin heidän nimellään.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Roomalaiskirje 1:7 - kaikille Roomassa oleville Jumalan rakkaille, kutsutuille pyhille. Armo teille ja rauha Jumalalta, meidän Isältämme, ja Herralta Jeesukselta Kristukselta!",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 18:4 - Hän poisti uhrikukkulat, murskasi patsaat, hakkasi maahan asera-karsikon ja löi palasiksi vaskikäärmeen, jonka Mooses oli tehnyt; sillä niihin aikoihin asti israelilaiset olivat polttaneet uhreja sille; sitä kutsuttiin nimellä Nehustan.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Sananlaskut 7:4 - Sano viisaudelle: 'Sinä olet sisareni', kutsu ymmärrystä sukulaiseksi,",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Sananlaskut 11:2 - Mihin ylpeys tulee, sinne tulee häpeäkin, mutta nöyräin tykönä on viisaus.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jesaja 51:2 - Katsokaa Aabrahamia, isäänne, ja Saaraa, joka teidät synnytti. Sillä hän oli vain yksi, kun minä hänet kutsuin; mutta minä siunasin hänet ja enensin hänet.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 10:20 - Niin Jeehu sanoi: 'Kuuluttakaa pyhä juhlakokous Baalin kunniaksi'. Ja se kutsuttiin koolle.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Kuningasten kirja 12:7 - Silloin kuningas Jooas kutsui pappi Joojadan ja muut papit ja sanoi heille: 'Miksi te ette ole korjanneet mitään, mikä temppelissä on rappeutunutta? Nyt te ette enää saa ottaa rahaa tuttaviltanne, vaan teidän on annettava se siihen, mikä temppelissä on rappeutunutta.'",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Ruut 1:20 - Mutta hän vastasi heille: 'Älkää kutsuko minua Noomiksi , kutsukaa minua Maaraksi , sillä Kaikkivaltias on antanut minulle paljon katkerata murhetta.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Mooseksen kirja 16:14 - Sentähden kutsutaan kaivoa nimellä Lahai-Roin kaivo ; se on Kaadeksen ja Beredin välillä.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "1. Korinttilaiskirje 10:27 - Jos joku, joka ei usko, kutsuu teitä ja te tahdotte mennä hänen luokseen, niin syökää kaikkea, mitä eteenne pannaan, kyselemättä mitään omantunnon tähden.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Jeremia 3:19 - Minä ajattelin: Kuinka asetankaan sinut lasten joukkoon ja annan sinulle suloisen maan, ihanan perintöosan, ihanimman kansojen maista! Ja ajattelin: Sinä olet kutsuva minua isäksi etkä ole koskaan kääntyvä minusta pois.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "2. Mooseksen kirja 12:21 - Ja Mooses kutsui kaikki Israelin vanhimmat ja sanoi heille: 'Menkää ja ottakaa lammas kutakin perhekuntaanne kohti ja teurastakaa pääsiäislammas.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Luukas 15:6 - Ja kun hän tulee kotiin, kutsuu hän kokoon ystävänsä ja naapurinsa ja sanoo heille: 'Iloitkaa minun kanssani, sillä minä löysin lampaani, joka oli kadonnut'.",
+         "laajenna_kontekstia": false
+      },
+      {
+         "viite": "Job 12:2 - 'Totisesti, te yksin olette kansa, ja teidän mukananne kuolee viisaus! ",
+         "laajenna_kontekstia": false
+      }]}
+-------------------- DEBUG-LOKI PÄÄTTYY --------------------
+
+  (2/11) Käsitellään osiota 2.1.: Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?...
+    - Löytyi 307 kandidaattijaetta.
+    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
