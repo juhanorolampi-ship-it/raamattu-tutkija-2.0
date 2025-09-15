@@ -73,9 +73,9 @@ def main():
         page_title="Älykäs Raamattu-tutkija 2.5", layout="wide")
     st.title("📖 Älykäs Raamattu-tutkija v.2.5 (Älykäs Haku)")
 
-    # Määritellään tiedostojen raakalinkit GitHubissa
-    URL_BIBLE_JSON = "https://raw.githubusercontent.com/juhanorolampi-ship-it/raamattu-tutkija-2.0/refs/heads/version-2.5/bible.json"
-    URL_DICTIONARY_JSON = "https://raw.githubusercontent.com/juhanorolampi-ship-it/raamattu-tutkija-2.0/refs/heads/version-2.5/bible_dictionary.json"
+   # Määritellään tiedostojen raakalinkit GitHubissa
+    URL_BIBLE_JSON = "https://raw.githubusercontent.com/juhanorolampi-ship-it/raamattu-tutkija-2.0/version-2.5/bible.json"
+    URL_DICTIONARY_JSON = "https://raw.githubusercontent.com/juhanorolampi-ship-it/raamattu-tutkija-2.0/version-2.5/bible_dictionary.json"
 
     # Alustukset
     if "step" not in st.session_state:
