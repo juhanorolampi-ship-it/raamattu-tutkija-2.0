@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: TARKENNETTU HAKUSUUNNITELMA (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 14.85 sekuntia.
+Aikaa kului: 14.55 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -19,8 +19,7 @@ Aikaa kului: 14.85 sekuntia.
       "kutsuttu",
       "viisaus",
       "viisas",
-      "ymmärrys",
-      "erottamiskyky"
+      "ymmärrys"
     ],
     "2.1.": [
       "väärä",
@@ -38,7 +37,7 @@ Aikaa kului: 14.85 sekuntia.
       "ovelat",
       "sanat",
       "hajaannus",
-      "hajaannuksen",
+      "hajaannusta",
       "moraalittomuus",
       "eriseura",
       "eriseurat"
@@ -62,16 +61,13 @@ Aikaa kului: 14.85 sekuntia.
       "käsky",
       "käskyt",
       "ohje",
-      "ohjeet",
-      "toimia",
-      "toiminta"
+      "ohjeet"
     ],
     "3.1.": [
       "heikko",
       "heikot",
       "veli",
       "veljet",
-      "sisaret",
       "eksynyt",
       "eksyneet",
       "lammasta",
@@ -85,7 +81,7 @@ Aikaa kului: 14.85 sekuntia.
       "kasvaa",
       "kasvamme",
       "armo",
-      "armolliset",
+      "armon",
       "kypsymättömyys",
       "kapina",
       "eksytys"
@@ -96,7 +92,8 @@ Aikaa kului: 14.85 sekuntia.
       "iloitkaa",
       "pelastua",
       "pelastaa",
-      "pelastuneet",
+      "pelastettu",
+      "pelastetut",
       "Jumalan työ"
     ],
     "4.2.": [
@@ -107,14 +104,14 @@ Aikaa kului: 14.85 sekuntia.
       "nuoret",
       "uskova",
       "uskovat",
-      "evankelioimispalo",
-      "sammuttaa"
+      "evankelioida",
+      "evankelioiminen"
     ],
     "4.3.": [
       "opetuslapseus",
-      "opetuslapseuttaminen",
-      "opettaa",
-      "oppi",
+      "opetuslapseuttaa",
+      "opetuslapsi",
+      "opetuslapset",
       "raamattu",
       "raamatun",
       "tuntemus"
@@ -122,13 +119,13 @@ Aikaa kului: 14.85 sekuntia.
     "4.4.": [
       "liike",
       "liikkeet",
-      "arvioida",
       "Jumalan työ",
       "opillinen",
       "opilliset",
       "vaara",
-      "vaarallinen",
+      "vaarat",
       "koetella",
+      "koetelkaa",
       "hyvä",
       "hyvää"
     ],
@@ -149,7 +146,7 @@ Aikaa kului: 14.85 sekuntia.
 --- VAIHE 2: JAKEIDEN KERÄYS (-1/+1, ÄLYKÄS OTANTA) ---
 ================================================================================
 
-Löytyi 103 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 103.
+Löytyi 100 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 100.
 Suoritetaan haut...
 Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 
@@ -158,11 +155,10 @@ Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 ================================================================================
 
 Liian yleiset hakusanat (otettu 200 kpl satunnaisotos):
-  - 'armo' (1152 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'hyvää' (532 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'käsky' (1511 -> 200 osumaa), 'oppi' (567 -> 200 osumaa), 'veli' (2871 -> 200 osumaa)
+  - 'armo' (1152 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'hyvää' (532 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'käsky' (1511 -> 200 osumaa), 'veli' (2871 -> 200 osumaa)
 
 Käsitellään osiot ja suodatetaan jakeet erissä...
   (1/11) Suodatetaan osiolle 1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"

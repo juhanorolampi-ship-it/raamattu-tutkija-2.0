@@ -16,6 +16,13 @@ load_dotenv()
 # Alustetaan Groq-client
 groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
+# --- MALLIASETUKSET ---
+# Nämä ovat Groqin virallisesti suosittelemat mallit (syyskuu 2025).
+# Jos ne joskus poistuvat käytöstä, päivitä vain nämä kaksi riviä.
+FAST_MODEL = "llama-3.1-8b-instant"
+POWERFUL_MODEL = "llama-3.3-70b-versatile"
+
+
 TEOLOGINEN_PERUSOHJE = (
     "Olet teologinen assistentti. Perusta kaikki vastauksesi ja tulkintasi "
     "ainoastaan sinulle annettuihin KR33/38-raamatunjakeisiin ja käyttäjän "
@@ -192,7 +199,7 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
     try:
         return json.loads(vastaus_str), usage
     except json.JSONDecodeError:
-        print("VIRHE: Hakusuunnitelman JSON-jäsennys epäonnistui.")
+        print("VIRHE: Hakusuunnitelman JSON-jäsennys eponnistui.")
         return None, usage
 
 
@@ -235,9 +242,8 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
         "muuttumattomat merkkijonot, kukin omalla rivillään. "
         "Älä lisää numerointeja, selityksiä tai mitään muuta."
     )
-    # KORJATTU MALLINIMI TÄSSÄ
     vastaus_str, usage = tee_api_kutsu(
-        prompt, "llama3-8b-8192", temperature=0.0)
+        prompt, FAST_MODEL, temperature=0.0)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe kontekstin valinnassa: {vastaus_str}")
@@ -301,9 +307,8 @@ def pisteyta_ja_jarjestele(
                 "jaeviitteet ja arvoina kokonaisluvut 1-10."
             )
 
-            # KORJATTU MALLINIMI TÄSSÄ
             vastaus_str, usage = tee_api_kutsu(
-                prompt, "llama3-70b-8192", is_json=True, temperature=0.1)
+                prompt, POWERFUL_MODEL, is_json=True, temperature=0.1)
             paivita_token_laskuri_callback(usage)
 
             if vastaus_str and not vastaus_str.startswith("API-VIRHE:"):
