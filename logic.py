@@ -69,14 +69,6 @@ def luo_kanoninen_avain(jae_str, book_name_to_id_map):
     return (book_id, int(chapter), int(verse))
 
 
-def luo_osio_avain(osion_numero_str):
-    """Muuntaa osionumeron (esim. '10.2.1') lajittelua varten."""
-    try:
-        return [int(part) for part in osion_numero_str.split('.')]
-    except (ValueError, AttributeError):
-        return [float('inf')]
-
-
 def erota_jaeviite(jae_kokonainen):
     """Erottaa ja palauttaa jaeviitteen tekoälyä varten."""
     try:
@@ -157,7 +149,7 @@ def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
 
 def luo_hakusuunnitelma(pääaihe, syote_teksti):
     """
-    Luo älykkään hakusuunnitelman analysoimalla käyttäjän syötettä.
+    Luo älykkään hakusuunnitelman, joka sisältää valmiiksi rikastettuja avainsanoja.
     """
     prompt = (
         f"{TEOLOGINEN_PERUSOHJE}\n\n"
@@ -166,22 +158,26 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
         f"PÄÄAIHE: {pääaihe}\n\n"
         "KÄYTTÄJÄN SYÖTE:\n---\n{syote_teksti}\n---\n\n"
         "OHJEET:\n"
-        "1. **Tarkista ja viimeistele sisällysluettelo:** Lue käyttäjän syötteestä "
-        " löytyvä sisällysluettelo ja palauta se loogisena ja selkeänä.\n"
-        "2. **Luo kohdennetut hakusanat:** Luo JOKAISELLE sisällysluettelon "
-        "osiolle oma, räätälöity lista hakusanoja (5-15 kpl).\n"
-        "3. **Palauta vastaus TARKALLEEN seuraavassa JSON-muodossa:**\n\n"
+        "1. **Tarkista ja viimeistele sisällysluettelo.**\n"
+        "2. **Luo kohdennetut hakusanat JOKAISELLE osiolle.**\n"
+        "3. **TÄRKEÄ SÄÄNTÖ HAKUSANOILLE:** Kun luot avainsanoja, anna jokaiselle "
+        "käsitteelle 2-4 keskeistä muotoa, synonyymiä tai taivutusmuotoa, "
+        "jotka löytyvät todennäköisesti KR33/38-Raamatusta. Ryhmittele samaan "
+        "listaan toisiinsa liittyvät sanat. Esimerkiksi: "
+        "`[\"kutsu\", \"kutsua\", \"kutsuttu\"]` tai `[\"eksytys\", \"eksyttää\", \"harhaoppi\"]`. "
+        "Tämä on kriittistä haun onnistumiseksi.\n"
+        "4. **Palauta vastaus TARKALLEEN seuraavassa JSON-muodossa:**\n\n"
         '{{\n'
         '  "vahvistettu_sisallysluettelo": "1. Otsikko...",\n'
         '  "hakukomennot": {{\n'
-        '    "1.": ["avainsana1", "avainsana2"],\n'
-        '    "1.1.": ["avainsana3", "avainsana4"]\n'
+        '    "1.": ["kutsu", "kutsua", "kutsuttu", "viisaus"],\n'
+        '    "2.1.": ["ahneus", "ahne", "petos", "pettää"]\n'
         '  }}\n'
         '}}\n'
     )
     final_prompt = prompt.format(pääaihe=pääaihe, syote_teksti=syote_teksti)
     vastaus_str, usage = tee_api_kutsu(
-        final_prompt, "gemini-1.5-pro-latest", is_json=True, temperature=0.2)
+        final_prompt, "gemini-1.5-pro-latest", is_json=True, temperature=0.3)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe hakusuunnitelman luonnissa: {vastaus_str}")
@@ -192,57 +188,6 @@ def luo_hakusuunnitelma(pääaihe, syote_teksti):
     except json.JSONDecodeError:
         print("VIRHE: Hakusuunnitelman JSON-jäsennys epäonnistui.")
         return None, usage
-
-
-def rikasta_avainsanat(avainsanat, paivita_token_laskuri_callback):
-    """
-    Laajentaa annetut avainsanat erissä käyttäen nopeaa Groq-mallia.
-    """
-    BATCH_SIZE = 15
-    final_results = {}
-
-    for i in range(0, len(avainsanat), BATCH_SIZE):
-        batch = avainsanat[i:i + BATCH_SIZE]
-        print(
-            f"Rikastetaan avainsanoja, erä {i//BATCH_SIZE + 1}/{(len(avainsanat) + BATCH_SIZE - 1)//BATCH_SIZE}...")
-
-        prompt = (
-            "Olet suomen kielen asiantuntija. Tehtäväsi on laajentaa alla oleva lista "
-            "suomenkielisiä avainsanoja. Palauta JSON-objekti, jossa avaimena on "
-            "alkuperäinen sana ja arvona on lista, joka sisältää alkuperäisen sanan "
-            "sekä 1-3 siihen liittyvää sanaa tai taivutusmuotoa, jotka todennäköisesti "
-            "löytyvät Raamatusta (KR33/38).\n\n"
-            "Esimerkki:\n"
-            '{\n'
-            '  "opetuslapseuttaminen": ["opetuslapseuttaminen", "opetuslapsi", "opettaa"],\n'
-            '  "hengellinen kypsyys": ["hengellinen kypsyys", "kypsyys", "kasvu"]\n'
-            '}\n\n'
-            "AVAINSANAT:\n---\n"
-            f"{json.dumps(batch, ensure_ascii=False)}\n"
-            "---\n\n"
-            "VASTAUSOHJE: Palauta VAIN JSON-objekti."
-        )
-
-        vastaus_str, usage = tee_api_kutsu(
-            prompt, "llama-3.1-8b-instant", is_json=True, temperature=0.1
-        )
-        paivita_token_laskuri_callback(usage)
-
-        if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
-            print(f"API-virhe erän rikastamisessa: {vastaus_str}")
-            final_results.update({sana: [sana] for sana in batch})
-            continue
-
-        try:
-            batch_results = json.loads(vastaus_str)
-            final_results.update(batch_results)
-        except json.JSONDecodeError:
-            print("VIRHE: Erän rikastamisen JSON-jäsennys epäonnistui.")
-            final_results.update({sana: [sana] for sana in batch})
-
-        time.sleep(0.5)
-
-    return final_results
 
 
 def etsi_ja_laajenna(book_data_map, book_name_map, sana, ennen, jälkeen):
@@ -335,7 +280,7 @@ def pisteyta_ja_jarjestele(
             batch = jae_viitteet_lista[i:i + BATCH_SIZE]
             print(
                 f"  - Pisteytetään jakeita osiolle {osio_nro}, erä {i//BATCH_SIZE + 1}/{(len(jae_viitteet_lista) + BATCH_SIZE - 1)//BATCH_SIZE}...")
-            
+
             prompt = (
                 "Olet teologinen asiantuntija. Pisteytä jokainen alla oleva "
                 f"Raamatun jae asteikolla 1-10 sen mukaan, kuinka relevantti se on "
