@@ -1,4 +1,4 @@
-# logic.py
+# logic.py Vakaa versio 2.0, jossa mekaaninen haku ja otanta
 import io
 import json
 import re

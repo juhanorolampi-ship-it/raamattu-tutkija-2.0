@@ -1,4 +1,4 @@
-# run_full_diagnostics.py
+# run_full_diagnostics.py Vakaa versio 2.0, jossa mekaaninen haku ja otanta
 import os
 import logging
 import time
