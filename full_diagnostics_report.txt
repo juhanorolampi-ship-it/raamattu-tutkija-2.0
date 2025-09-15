@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: TARKENNETTU HAKUSUUNNITELMA (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 12.72 sekuntia.
+Aikaa kului: 14.27 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -28,93 +28,98 @@ Aikaa kului: 12.72 sekuntia.
       "eksyttää",
       "eksytys",
       "harha",
+      "harhaoppi",
       "ahneus",
       "ahne",
       "petos",
       "pettää",
       "mielistely",
       "ovela",
+      "hajottaa",
       "hajaannus",
-      "moraalittomuus",
-      "eriseura"
+      "moraalittomuus"
     ],
     "2.2.": [
       "eksyttää",
       "eksytys",
-      "harha",
-      "valhe",
-      "profeetta",
-      "väärä profeetta"
+      "harhauttaa",
+      "lankeemus",
+      "synti",
+      "epäusko",
+      "luopumus"
     ],
     "2.3.": [
       "harhaoppi",
-      "eksytys",
-      "nuhdella",
+      "väärä",
+      "opettaja",
+      "nuhtelu",
       "ojentaa",
       "varoittaa",
+      "erottaa",
       "karttaa",
-      "erottaa"
+      "paha"
     ],
     "3.1.": [
       "heikko",
       "veljes",
+      "sisar",
       "eksynyt",
-      "sudenkorento",
-      "lammas",
       "kärsivällisyys",
       "rakkaus",
-      "ojentaa"
+      "armo",
+      "ojentaa",
+      "sudenkorento",
+      "susi",
+      "lammas"
     ],
     "3.2.": [
       "kasvu",
+      "hengellinen",
+      "kypsymättömyys",
       "armo",
       "kärsivällisyys",
-      "kypsymättömyys",
-      "kapina"
+      "matka",
+      "opetuslapsi"
     ],
     "4.1.": [
       "ilo",
+      "kiitollisuus",
       "pelastus",
-      "pelastaa",
       "hedelmä",
-      "Jumalan työ"
+      "Jumalan työ",
+      "armo"
     ],
     "4.2.": [
       "rakkaus",
       "nuori",
       "uskova",
-      "vanhempi",
-      "uskova",
-      "isä",
-      "äiti",
-      "uskossa",
-      "evankeliumi"
+      "kärsivällisyys",
+      "armo",
+      "opetus",
+      "ohjaus"
     ],
     "4.3.": [
       "opetuslapseus",
       "opetuslapsi",
+      "kasvu",
       "raamattu",
-      "raamatun tuntemus",
+      "opetus",
       "kärsivällisyys",
-      "rakkaus"
+      "armo",
+      "tottelevaisuus"
     ],
     "4.4.": [
       "koetella",
       "hyvä",
-      "arvioida",
-      "liike",
+      "paha",
+      "erottaa",
+      "viisaus",
+      "tunnistaa",
+      "Jumalan työ",
+      "harha",
+      "eksytys",
       "opillinen",
       "vaara"
-    ],
-    "5.": [
-      "totuus",
-      "rakkaus",
-      "armo",
-      "kärsivällisyys",
-      "valppaus",
-      "eksytys",
-      "suojella",
-      "hoivata"
     ]
   }
 }
@@ -123,7 +128,7 @@ Aikaa kului: 12.72 sekuntia.
 --- VAIHE 2: JAKEIDEN KERÄYS (-1/+1, ÄLYKÄS OTANTA) ---
 ================================================================================
 
-Löytyi 66 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 66.
+Löytyi 65 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 65.
 Suoritetaan haut...
 Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 
@@ -132,13 +137,36 @@ Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 ================================================================================
 
 Liian yleiset hakusanat (otettu 200 kpl satunnaisotos):
-  - 'armo' (1152 -> 200 osumaa), 'hedelmä' (624 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'isä' (3967 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'profeetta' (714 -> 200 osumaa), 'äiti' (631 -> 200 osumaa)
+  - 'armo' (1152 -> 200 osumaa), 'hedelmä' (624 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'matka' (581 -> 200 osumaa), 'opetus' (708 -> 200 osumaa), 'paha' (1642 -> 200 osumaa), 'synti' (1491 -> 200 osumaa)
 
 Käsitellään osiot ja suodatetaan jakeet erissä...
-  (1/11) Suodatetaan osiolle 1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+  (1/10) Suodatetaan osiolle 1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+  (2/10) Suodatetaan osiolle 2.1....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+  (3/10) Suodatetaan osiolle 2.2....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+  (4/10) Suodatetaan osiolle 2.3....
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
