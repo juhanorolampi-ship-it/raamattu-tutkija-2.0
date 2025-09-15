@@ -26,13 +26,27 @@ TEOLOGINEN_PERUSOHJE = (
     "pyri tulkitsemaan jakeita koko Raamatun kokonaisilmoituksen valossa."
 )
 
-def lataa_raamattu(tiedostonimi="bible.json"):
-    """Lataa ja jäsentää Raamattu-datan JSON-tiedostosta."""
+def lataa_raamattu(tiedostonimi="bible.json", sanakirja_tiedosto="bible_dictionary.json"):
+    """Lataa Raamattu-datan JA valmiin sanakirjan tiedostoista."""
+    # Ladataan Raamatun päädata
     try:
         with open(tiedostonimi, "r", encoding="utf-8") as f:
             bible_data = json.load(f)
     except FileNotFoundError:
-        return None
+        print(f"KRIITTINEN VIRHE: {tiedostonimi} ei löytynyt.")
+        return None, None
+        
+    # Ladataan valmis sanakirja
+    try:
+        with open(sanakirja_tiedosto, "r", encoding="utf-8") as f:
+            # Muutetaan lista takaisin set-rakenteeksi nopeita hakuja varten
+            raamattu_sanakirja = set(json.load(f))
+        print(f"Ladattu {len(raamattu_sanakirja)} sanaa Raamattu-sanakirjasta.")
+    except FileNotFoundError:
+        print(f"KRIITTINEN VIRHE: {sanakirja_tiedosto} ei löytynyt. Aja create_dictionary.py ensin.")
+        return None, None
+
+    # Jäsennellään kirjat kuten ennenkin
     book_map = {}
     book_name_map = {}
     book_data_map = {}
@@ -52,12 +66,15 @@ def lataa_raamattu(tiedostonimi="bible.json"):
                 key = name.lower().replace(".", "").replace(" ", "")
                 if key:
                     book_map[key] = (book_id, book_content)
+    
     sorted_aliases = sorted(
         list(set(alias for alias in book_map if alias)),
         key=len, reverse=True)
+        
+    # Palautetaan kaikki tarvittava data, MUKAAN LUKIEN sanakirja
     return (
         bible_data, book_map, book_name_map, book_data_map,
-        sorted_aliases, book_name_to_id_map
+        sorted_aliases, book_name_to_id_map, raamattu_sanakirja
     )
 
 def luo_kanoninen_avain(jae_str, book_name_to_id_map):
@@ -206,8 +223,10 @@ def suodata_semanttisesti(kandidaattijakeet, osion_teema):
     if not kandidaattijakeet:
         return [], None
     prompt = (
-        "Tehtävä: Olet teologinen asiantuntija. Valitse alla olevasta jaelistasta "
-        "noin 20-30 **kaikkein relevanteinta** jaetta, jotka liittyvät annettuun teemaan.\n\n"
+        "Tehtävä: Olet teologinen asiantuntija. Valitse ja palauta alla olevasta jaelistasta "
+        "kaikki jakeet, jotka ovat temaattisesti relevantteja annettuun teemaan. "
+        "On parempi palauttaa hieman enemmän jakeita kuin liian vähän. "
+        "Jos olet epävarma, sisällytä jae mukaan.\n\n"
         f"**Teema:**\n{osion_teema}\n\n"
         "**Kandidaattijakeet:**\n---\n"
         f"{'\n'.join(kandidaattijakeet)}\n"
@@ -220,7 +239,7 @@ def suodata_semanttisesti(kandidaattijakeet, osion_teema):
         print(f"API-virhe semanttisessa suodatuksessa: {vastaus_str}")
         return [], usage
     alkuperaiset_set = set(kandidaattijakeet)
-    palautetut_set = set(vastaus_str.strip().split('\n'))
+    palautetut_set = set(line for line in vastaus_str.strip().split('\n') if line.strip())
     return list(alkuperaiset_set.intersection(palautetut_set)), usage
 
 def pisteyta_ja_jarjestele(

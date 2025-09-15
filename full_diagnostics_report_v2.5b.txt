@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: TARKENNETTU HAKUSUUNNITELMA (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 15.32 sekuntia.
+Aikaa kului: 13.15 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -23,133 +23,106 @@ Aikaa kului: 15.32 sekuntia.
     ],
     "2.1.": [
       "väärä",
-      "vääriä",
+      "valhe",
       "opettaja",
-      "opettajat",
-      "eksyttäjä",
-      "eksyttäjät",
+      "eksyttää",
+      "eksytys",
+      "harha",
       "ahneus",
       "ahne",
       "petos",
       "pettää",
       "mielistely",
       "ovela",
-      "ovelat",
-      "sanat",
       "hajaannus",
-      "hajaannusta",
       "moraalittomuus",
-      "eriseura",
-      "eriseurat"
+      "eriseura"
     ],
     "2.2.": [
-      "esimerkki",
-      "esimerkkejä",
       "eksyttää",
-      "eksynyt",
-      "eksyneet",
-      "Jumalan kansa",
+      "eksytys",
       "harha",
-      "harhaan"
+      "lankeemus",
+      "synti",
+      "houkutus"
     ],
     "2.3.": [
       "harhaoppi",
-      "harhaopit",
-      "vääristää",
-      "vääristellä",
-      "evankeliumi",
-      "käsky",
-      "käskyt",
-      "ohje",
-      "ohjeet",
-      "toimia",
-      "toiminta"
+      "väärä oppi",
+      "eksytys",
+      "nuhtelu",
+      "ojentaa",
+      "varoittaa",
+      "erottaa"
     ],
     "3.1.": [
       "heikko",
-      "heikot",
-      "veli",
-      "veljet",
-      "sisaret",
+      "veljes",
+      "sisar",
       "eksynyt",
-      "eksyneet",
-      "lammasta",
-      "lampaat",
+      "sudenkorento",
+      "susi",
+      "lammas",
       "kärsivällisyys",
-      "ojentaa",
-      "ojentaminen"
+      "rakkaus",
+      "armo",
+      "ojentaa"
     ],
     "3.2.": [
       "kasvu",
-      "kasvaa",
-      "kasvamassa",
+      "hengellinen",
+      "kypsyys",
       "armo",
-      "armoa",
-      "kypsymättömyys",
-      "kapina",
-      "eksytys"
+      "kärsivällisyys",
+      "matka",
+      "opetuslapsi"
     ],
     "4.1.": [
       "ilo",
-      "iloita",
-      "pelastua",
-      "pelastuneet",
-      "Jumalan työ",
-      "epätäydellinen",
-      "epätäydellisissä"
+      "kiitollisuus",
+      "pelastus",
+      "hedelmä",
+      "Jumalan työ"
     ],
     "4.2.": [
       "rakkaus",
-      "rakastava",
-      "rakastavia",
+      "armo",
+      "kärsivällisyys",
       "nuori",
-      "nuoret",
       "uskova",
-      "uskovat",
-      "sammuttaa",
-      "evankelioimispalo",
-      "huoli",
-      "huolenaihe",
-      "huolenaiheita"
+      "opetus",
+      "kasvatus"
     ],
     "4.3.": [
       "opetuslapseus",
-      "opetuslapseuttaminen",
-      "terve",
-      "oppi",
-      "Raamattu",
-      "raamatuntuntemus",
+      "opetuslapsi",
+      "kasvu",
+      "raamattu",
+      "opetus",
       "kärsivällisyys",
-      "rakkaus"
+      "rakkaus",
+      "terve oppi"
     ],
     "4.4.": [
-      "liike",
-      "liikkeet",
-      "arvioida",
-      "Jumalan työ",
-      "inhimillinen",
-      "ylilyönti",
-      "ylilyönnit",
-      "opillinen",
-      "opilliset",
-      "vaara",
-      "vaarallinen",
       "koetella",
       "hyvä",
-      "hyvää"
+      "paha",
+      "erottaa",
+      "Jumalan työ",
+      "harha",
+      "eksytys",
+      "oppi",
+      "liike",
+      "uskonnollinen"
     ],
     "5.": [
       "totuus",
       "rakkaus",
-      "valpas",
+      "armo",
+      "kärsivällisyys",
       "valppaus",
-      "armollinen",
-      "kärsivällinen",
-      "suojella",
-      "lauma",
-      "hoivata",
-      "karitsa",
-      "karitsat"
+      "suojelus",
+      "hoiva"
     ]
   }
 }
@@ -163,23 +136,32 @@ Aikaa kului: 15.32 sekuntia.
     - Löytyi 668 kandidaattijaetta.
     - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-    - Suodatuksen jälkeen jäljellä 1 jaetta.
+    - Suodatuksen jälkeen jäljellä 4 jaetta.
 
   (2/11) Käsitellään osiota 2.1.: Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?...
-    - Vaihe 2.1: Etsitään mekaanisesti 19 avainsanalla...
-    - Löytyi 419 kandidaattijaetta.
+    - Vaihe 2.1: Etsitään mekaanisesti 15 avainsanalla...
+    - Löytyi 421 kandidaattijaetta.
     - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-    - Suodatuksen jälkeen jäljellä 0 jaetta.
+    - Suodatuksen jälkeen jäljellä 125 jaetta.
 
   (3/11) Käsitellään osiota 2.2.: Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista...
-    - Vaihe 2.1: Etsitään mekaanisesti 8 avainsanalla...
-    - Löytyi 66 kandidaattijaetta.
+    - Vaihe 2.1: Etsitään mekaanisesti 6 avainsanalla...
+    - Löytyi 616 kandidaattijaetta.
     - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
     - Suodatuksen jälkeen jäljellä 0 jaetta.
 
   (4/11) Käsitellään osiota 2.3.: Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?...
-    - Vaihe 2.1: Etsitään mekaanisesti 11 avainsanalla...
-    - Löytyi 708 kandidaattijaetta.
+    - Vaihe 2.1: Etsitään mekaanisesti 7 avainsanalla...
+    - Löytyi 51 kandidaattijaetta.
     - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+    - Suodatuksen jälkeen jäljellä 0 jaetta.
+
+  (5/11) Käsitellään osiota 3.1.: Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?...
+    - Vaihe 2.1: Etsitään mekaanisesti 11 avainsanalla...
+    - Löytyi 870 kandidaattijaetta.
+    - Vaihe 2.2: Suodatetaan semanttisesti Groqilla...
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+    - Suodatuksen jälkeen jäljellä 0 jaetta.
