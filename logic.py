@@ -116,6 +116,31 @@ def lue_ladattu_tiedosto(uploaded_file):
     return ""
 
 
+def hae_jae_viitteella(viite_str, book_data_map, book_name_map_by_id):
+    """Hakee tarkan jakeen tekstin viitteen perusteella."""
+    match = re.match(r'^(.*?)\s+(\d+):(\d+)', viite_str.strip())
+    if not match:
+        return None
+
+    kirja_nimi_str, luku, jae = match.groups()
+
+    # Etsitään oikea kirjan ID nimen perusteella
+    kirja_id = None
+    for b_id, b_name in book_name_map_by_id.items():
+        if b_name.lower() == kirja_nimi_str.lower().strip():
+            kirja_id = b_id
+            break
+
+    if kirja_id:
+        try:
+            oikea_nimi = book_name_map_by_id[kirja_id]
+            jae_teksti = book_data_map[kirja_id]['chapter'][luku]['verse'][jae]['text']
+            return f"{oikea_nimi} {luku}:{jae} - {jae_teksti}"
+        except KeyError:
+            return None
+    return None
+
+
 def tee_api_kutsu(prompt, model_name, is_json=False, temperature=0.3):
     """Tekee API-kutsun ja palauttaa tekstin sekä käyttötiedot."""
     try:
