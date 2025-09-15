@@ -9,7 +9,7 @@ Syötetiedosto 'syote.txt' ladattu onnistuneesti.
 ================================================================================
 --- VAIHE 1: TARKENNETTU HAKUSUUNNITELMA (GEMINI PRO) ---
 ================================================================================
-Aikaa kului: 14.27 sekuntia.
+Aikaa kului: 14.85 sekuntia.
 {
   "vahvistettu_sisallysluettelo": "1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä\n2. Raamatun selkeä varoitus: Tunnista ja vältä eksytystä\n2.1. Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?\n2.2. Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista\n2.3. Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?\n3. Tasapaino ja oikea asenne: Erottelua, ei tuomitsemista\n3.1. Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?\n3.2. Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa\n4. Sovellus nykyaikaan: Suomen nuorten herätys ja sen haasteet\n4.1. Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista\n4.2. Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?\n4.3. Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?\n4.4. Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?\n5. Yhteenveto: Totuus rakkaudessa",
   "hakukomennot": {
@@ -19,107 +19,128 @@ Aikaa kului: 14.27 sekuntia.
       "kutsuttu",
       "viisaus",
       "viisas",
-      "ymmärrys"
+      "ymmärrys",
+      "erottamiskyky"
     ],
     "2.1.": [
       "väärä",
-      "valhe",
+      "vääriä",
       "opettaja",
-      "eksyttää",
-      "eksytys",
-      "harha",
-      "harhaoppi",
+      "opettajat",
+      "eksyttäjä",
+      "eksyttäjät",
       "ahneus",
       "ahne",
       "petos",
       "pettää",
       "mielistely",
       "ovela",
-      "hajottaa",
+      "ovelat",
+      "sanat",
       "hajaannus",
-      "moraalittomuus"
+      "hajaannuksen",
+      "moraalittomuus",
+      "eriseura",
+      "eriseurat"
     ],
     "2.2.": [
+      "esimerkki",
+      "esimerkkejä",
       "eksyttää",
-      "eksytys",
-      "harhauttaa",
-      "lankeemus",
-      "synti",
-      "epäusko",
-      "luopumus"
+      "eksynyt",
+      "eksyneet",
+      "Jumalan kansa",
+      "harha",
+      "harhaan"
     ],
     "2.3.": [
       "harhaoppi",
-      "väärä",
-      "opettaja",
-      "nuhtelu",
-      "ojentaa",
-      "varoittaa",
-      "erottaa",
-      "karttaa",
-      "paha"
+      "harhaopit",
+      "vääristää",
+      "vääristellä",
+      "evankeliumi",
+      "käsky",
+      "käskyt",
+      "ohje",
+      "ohjeet",
+      "toimia",
+      "toiminta"
     ],
     "3.1.": [
       "heikko",
-      "veljes",
-      "sisar",
+      "heikot",
+      "veli",
+      "veljet",
+      "sisaret",
       "eksynyt",
+      "eksyneet",
+      "lammasta",
+      "lampaat",
       "kärsivällisyys",
-      "rakkaus",
-      "armo",
       "ojentaa",
-      "sudenkorento",
-      "susi",
-      "lammas"
+      "ojentaminen"
     ],
     "3.2.": [
       "kasvu",
-      "hengellinen",
-      "kypsymättömyys",
+      "kasvaa",
+      "kasvamme",
       "armo",
-      "kärsivällisyys",
-      "matka",
-      "opetuslapsi"
+      "armolliset",
+      "kypsymättömyys",
+      "kapina",
+      "eksytys"
     ],
     "4.1.": [
       "ilo",
-      "kiitollisuus",
-      "pelastus",
-      "hedelmä",
-      "Jumalan työ",
-      "armo"
+      "iloita",
+      "iloitkaa",
+      "pelastua",
+      "pelastaa",
+      "pelastuneet",
+      "Jumalan työ"
     ],
     "4.2.": [
       "rakkaus",
+      "rakastaa",
+      "rakastakaa",
       "nuori",
+      "nuoret",
       "uskova",
-      "kärsivällisyys",
-      "armo",
-      "opetus",
-      "ohjaus"
+      "uskovat",
+      "evankelioimispalo",
+      "sammuttaa"
     ],
     "4.3.": [
       "opetuslapseus",
-      "opetuslapsi",
-      "kasvu",
+      "opetuslapseuttaminen",
+      "opettaa",
+      "oppi",
       "raamattu",
-      "opetus",
-      "kärsivällisyys",
-      "armo",
-      "tottelevaisuus"
+      "raamatun",
+      "tuntemus"
     ],
     "4.4.": [
+      "liike",
+      "liikkeet",
+      "arvioida",
+      "Jumalan työ",
+      "opillinen",
+      "opilliset",
+      "vaara",
+      "vaarallinen",
       "koetella",
       "hyvä",
-      "paha",
-      "erottaa",
-      "viisaus",
-      "tunnistaa",
-      "Jumalan työ",
-      "harha",
-      "eksytys",
-      "opillinen",
-      "vaara"
+      "hyvää"
+    ],
+    "5.": [
+      "totuus",
+      "rakkaus",
+      "valpas",
+      "valppaus",
+      "armollinen",
+      "kärsivällinen",
+      "suojella",
+      "hoivata"
     ]
   }
 }
@@ -128,7 +149,7 @@ Aikaa kului: 14.27 sekuntia.
 --- VAIHE 2: JAKEIDEN KERÄYS (-1/+1, ÄLYKÄS OTANTA) ---
 ================================================================================
 
-Löytyi 65 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 65.
+Löytyi 103 uniikkia avainsanaa. Siivouksen jälkeen jäljellä 103.
 Suoritetaan haut...
 Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 
@@ -137,36 +158,11 @@ Kaikki haut suoritettu ja tulokset tallennettu välimuistiin.
 ================================================================================
 
 Liian yleiset hakusanat (otettu 200 kpl satunnaisotos):
-  - 'armo' (1152 -> 200 osumaa), 'hedelmä' (624 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'matka' (581 -> 200 osumaa), 'opetus' (708 -> 200 osumaa), 'paha' (1642 -> 200 osumaa), 'synti' (1491 -> 200 osumaa)
+  - 'armo' (1152 -> 200 osumaa), 'hyvä' (1821 -> 200 osumaa), 'hyvää' (532 -> 200 osumaa), 'ilo' (1523 -> 200 osumaa), 'kutsu' (1355 -> 200 osumaa), 'käsky' (1511 -> 200 osumaa), 'oppi' (567 -> 200 osumaa), 'veli' (2871 -> 200 osumaa)
 
 Käsitellään osiot ja suodatetaan jakeet erissä...
-  (1/10) Suodatetaan osiolle 1....
+  (1/11) Suodatetaan osiolle 1....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (2/10) Suodatetaan osiolle 2.1....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (3/10) Suodatetaan osiolle 2.2....
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-  (4/10) Suodatetaan osiolle 2.3....
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"

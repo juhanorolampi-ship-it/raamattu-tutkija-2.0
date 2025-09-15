@@ -235,8 +235,9 @@ def valitse_relevantti_konteksti(kontekstijakeet, osion_teema):
         "muuttumattomat merkkijonot, kukin omalla rivillään. "
         "Älä lisää numerointeja, selityksiä tai mitään muuta."
     )
+    # KORJATTU MALLINIMI TÄSSÄ
     vastaus_str, usage = tee_api_kutsu(
-    prompt, "llama-3.3-70b-versatile", is_json=True, temperature=0.1)
+        prompt, "llama3-8b-8192", temperature=0.0)
 
     if not vastaus_str or vastaus_str.startswith("API-VIRHE:"):
         print(f"API-virhe kontekstin valinnassa: {vastaus_str}")
@@ -300,6 +301,7 @@ def pisteyta_ja_jarjestele(
                 "jaeviitteet ja arvoina kokonaisluvut 1-10."
             )
 
+            # KORJATTU MALLINIMI TÄSSÄ
             vastaus_str, usage = tee_api_kutsu(
                 prompt, "llama3-70b-8192", is_json=True, temperature=0.1)
             paivita_token_laskuri_callback(usage)
