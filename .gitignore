@@ -5,9 +5,16 @@
 __pycache__/
 *.pyc
 
-# Secrets file
+# Secrets files
 .env
-
-# Streamlit secrets
 .streamlit/secrets.toml
-full_diagnostics_report_v2.txt
+
+# Estä käyttäjän syötetiedosto
+syote.txt
+
+# Estä diagnostiikka- ja raporttitiedostot nimen osan perusteella
+*report*.txt
+*diagnostics*.txt
+
+# Estä generoidut JSON-logit
+*log*.json
