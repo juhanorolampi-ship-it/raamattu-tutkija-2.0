@@ -1,7 +1,6 @@
 streamlit
 google-generativeai
+groq
 python-docx
 PyPDF2
-pyspellchecker
-python-dotenv
-groq
+requests

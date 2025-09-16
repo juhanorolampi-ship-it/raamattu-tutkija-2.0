@@ -1,19 +1,16 @@
-# app.py Vakaa versio 2.0, jossa mekaaninen haku ja otanta
+# app.py
 import re
-import random
 from collections import defaultdict
 import streamlit as st
 import google.generativeai as genai
 
 from logic import (
     lataa_raamattu, luo_kanoninen_avain, lue_ladattu_tiedosto,
-    luo_hakusuunnitelma, etsi_ja_laajenna,
-    valitse_relevantti_konteksti, pisteyta_ja_jarjestele
+    luo_hakusuunnitelma, validoi_avainsanat_ai, etsi_mekaanisesti,
+    suodata_semanttisesti, pisteyta_ja_jarjestele, hae_jae_viitteella
 )
 
-# --- ASETUKSET ---
-MAX_HITS = 500  # Raja, jonka jälkeen sana tulkitaan yleiseksi
-SAMPLE_SIZE = 75 # Otannan koko liian yleisille sanoille
+# Poistetaan vanhentuneet asetukset (MAX_HITS, jne.)
 
 # --- APUFUNKTIOT ---
 
@@ -73,8 +70,12 @@ DEFAULT_INSTRUCTIONS = (
 def main():
     """Sovelluksen pääfunktio, joka ohjaa näkymiä."""
     st.set_page_config(
-        page_title="Älykäs Raamattu-tutkija 2.0", layout="wide")
-    st.title("📖 Älykäs Raamattu-tutkija v.2.0 (Vakaa)")
+        page_title="Älykäs Raamattu-tutkija 2.5", layout="wide")
+    st.title("📖 Älykäs Raamattu-tutkija v.2.5 (Älykäs Haku)")
+
+   # Määritellään tiedostojen raakalinkit GitHubissa
+    URL_BIBLE_JSON = "https://raw.githubusercontent.com/juhanorolampi-ship-it/raamattu-tutkija-2.0/version-2.5/bible.json"
+    URL_DICTIONARY_JSON = "https://raw.githubusercontent.com/juhanorolampi-ship-it/raamattu-tutkija-2.0/version-2.5/bible_dictionary.json"
 
     # Alustukset
     if "step" not in st.session_state:
@@ -89,11 +90,18 @@ def main():
             "API-avainta (GEMINI_API_KEY) ei löydy Streamlitin secreteistä.")
         st.stop()
 
-    raamattu_data = lataa_raamattu()
-    if not raamattu_data:
-        st.error("KRIITTINEN VIRHE: Raamatun lataus epäonnistui.")
+    raamattu_resurssit = lataa_raamattu(URL_BIBLE_JSON, URL_DICTIONARY_JSON)
+    if not raamattu_resurssit:
+        st.error(
+            "KRIITTINEN VIRHE: Raamatun ja/tai sanakirjan lataus epäonnistui. "
+            "Varmista, että tiedostot ovat saatavilla GitHubissa."
+        )
         st.stop()
-    _, _, book_name_map, book_data_map, _, book_name_to_id_map = raamattu_data
+
+    (
+        _, _, book_name_map, book_data_map, _,
+        book_name_to_id_map, raamattu_sanakirja
+    ) = raamattu_resurssit
 
     # --- SIVUPALKKI ---
     with st.sidebar:
@@ -155,11 +163,11 @@ def main():
         )
         haku_tapa = st.radio(
             "Valitse jakeiden keräystapa:",
-            ["Nopea haku", "Tarkka haku (Älykäs otanta)"],
+            ["Yksinkertainen haku", "Älykäs haku (Suositus)"],
             index=1,
             help=(
-                "**Nopea haku:** Etsii avainsanat ja ottaa mekaanisesti mukaan sitä edeltävän ja seuraavan jakeen. Nopea, mutta voi tuottaa epätarkkoja tuloksia.\n\n"
-                "**Tarkka haku:** Käyttää monivaiheista tekoälyprosessia, joka tuottaa laadukkaimman tuloksen. Ottaa yleisistä hakusanoista älykkään otannan."
+                "**Yksinkertainen haku:** Tekee nopean mekaanisen haun avainsanoilla. Laaja, mutta voi sisältää epärelevantteja osumia.\n\n"
+                "**Älykäs haku:** Käyttää monivaiheista tekoälyprosessia (esihaku + suodatus) tuottaakseen laadukkaimman ja kohdennetuimman tuloksen."
             )
         )
         if st.button("Kerää jakeet →", type="primary"):
@@ -168,68 +176,87 @@ def main():
 
             osio_kohtaiset_jakeet = defaultdict(set)
             hakukomennot = st.session_state.suunnitelma["hakukomennot"]
+            p_bar = st.progress(0, text="Valmistellaan...")
 
-            p_bar = st.progress(0, text="Valmistellaan hakua...")
-
-            if haku_tapa == "Nopea haku":
-                p_bar.progress(0.1, text="Kerätään jakeita...")
+            # Vaihe 1.5: Älykäs avainsanojen validointi
+            p_bar.progress(0.1, text="Vaihe 1.5: Validoidaan avainsanoja...")
+            with st.spinner("Tarkistetaan avainsanojen raamatullisuutta (AI)..."):
+                kaikki_avainsanat = list(set(
+                    sana for avainsanalista in hakukomennot.values()
+                    for sana in avainsanalista
+                ))
+                hyvaksytyt_sanat_setti = validoi_avainsanat_ai(
+                    kaikki_avainsanat, paivita_token_laskuri
+                )
+                puhdistetut_komennot = {}
                 for osio, avainsanat in hakukomennot.items():
-                    for sana in avainsanat:
-                        if sana:
-                            jakeet = etsi_ja_laajenna(
-                                book_data_map, book_name_map, sana, 1, 1)
-                            osio_kohtaiset_jakeet[osio].update(jakeet)
-                p_bar.progress(1.0, text="Jakeet kerätty!")
+                    puhdistetut_komennot[osio] = [
+                        s for s in avainsanat if s in hyvaksytyt_sanat_setti
+                    ]
+            hakukomennot = puhdistetut_komennot
 
-            else:  # Tarkka haku (Älykäs otanta)
-                p_bar.progress(0.1, text="Suoritetaan haut välimuistiin...")
-                uniikit_sanat = sorted(list(set(
-                    sana for avainsanat in hakukomennot.values() for sana in avainsanat if sana
-                )))
-                
-                with st.spinner("Haetaan kaikkia avainsanoja Raamatusta..."):
-                    haku_cache = {
-                        sana: etsi_ja_laajenna(book_data_map, book_name_map, sana, 1, 1)
-                        for sana in uniikit_sanat
-                    }
+            # Vaihe 2: Jakeiden keräys valitulla tavalla
+            p_bar.progress(0.3, text="Vaihe 2: Kerätään jakeita...")
+            total_sections = len(hakukomennot)
+            for i, (osio_nro, avainsanat) in enumerate(hakukomennot.items()):
+                progress_percent = 0.3 + (i / total_sections) * 0.7
+                teema_match = re.search(
+                    r"^{}\.?\s*(.*)".format(re.escape(osio_nro.strip('.'))),
+                    st.session_state.final_sisallysluettelo, re.MULTILINE
+                )
+                teema = teema_match.group(1).strip() if teema_match else ""
+                p_bar.progress(
+                    progress_percent,
+                    text=f"({i+1}/{total_sections}) Haetaan: {teema}..."
+                )
+                if not teema or not avainsanat:
+                    continue
 
-                p_bar.progress(0.3, text="Käsitellään yleisiä sanoja...")
-                with st.expander("Hakusanojen tehokkuusraportti"):
-                    for sana, osumat in haku_cache.items():
-                        if len(osumat) > MAX_HITS:
-                            st.write(f"Sana '{sana}' on yleinen ({len(osumat)} osumaa) -> Otetaan {SAMPLE_SIZE} jakeen satunnaisotos.")
-                            haku_cache[sana] = set(random.sample(list(osumat), SAMPLE_SIZE))
+                kandidaatit = etsi_mekaanisesti(
+                    avainsanat, book_data_map, book_name_map
+                )
 
-                p_bar.progress(0.5, text="Suodatetaan jakeita osioille... (Groq)")
-                total_sections = len(hakukomennot)
-                for i, (osio, avainsanat) in enumerate(hakukomennot.items()):
-                    progress_text = f"Suodatetaan osiolle {osio} ({i+1}/{total_sections})"
-                    p_bar.progress(0.5 + (i / total_sections) * 0.5, text=progress_text)
-                    
-                    osumat_yhteensa = set()
-                    for sana in avainsanat:
-                        if sana in haku_cache:
-                            osumat_yhteensa.update(haku_cache[sana])
+                if haku_tapa == "Älykäs haku (Suositus)" and kandidaatit:
+                    valinnat, (usage, _, _) = suodata_semanttisesti(
+                        kandidaatit, teema
+                    )
+                    paivita_token_laskuri(usage)
+                    for valinta in valinnat:
+                        if not isinstance(valinta, dict):
+                            continue
+                        viite_str = valinta.get("viite")
+                        laajenna = valinta.get("laajenna_kontekstia", False)
+                        if not viite_str:
+                            continue
 
-                    if osumat_yhteensa:
-                        otsikko_match = re.search(
-                            r"^{}\.?\s*(.*)".format(re.escape(osio.strip('.'))),
-                            st.session_state.final_sisallysluettelo, re.MULTILINE)
-                        teema = otsikko_match.group(1) if otsikko_match else ""
+                        jae = hae_jae_viitteella(
+                            viite_str, book_data_map, book_name_map
+                        )
+                        if jae:
+                            osio_kohtaiset_jakeet[osio_nro].add(jae)
+                            if laajenna:
+                                match = re.match(r'^(.*?)\s+(\d+):(\d+)', jae)
+                                if not match:
+                                    continue
+                                b_name, ch, v_num = match.groups()
+                                for j in range(1, 3):
+                                    next_v = hae_jae_viitteella(
+                                        f"{b_name} {ch}:{int(v_num) + j}",
+                                        book_data_map, book_name_map
+                                    )
+                                    if next_v:
+                                        osio_kohtaiset_jakeet[osio_nro].add(
+                                            next_v
+                                        )
+                elif kandidaatit:  # Yksinkertainen haku
+                    osio_kohtaiset_jakeet[osio_nro].update(kandidaatit)
 
-                        # Pilkotaan jakeet eriin, jos niitä on paljon
-                        osumat_lista = sorted(list(osumat_yhteensa))
-                        VERSE_BATCH_SIZE = 100
-                        for j in range(0, len(osumat_lista), VERSE_BATCH_SIZE):
-                            batch = osumat_lista[j:j + VERSE_BATCH_SIZE]
-                            relevantit, usage = valitse_relevantti_konteksti("\n".join(batch), teema)
-                            paivita_token_laskuri(usage)
-                            osio_kohtaiset_jakeet[osio].update(relevantit)
-                
-                p_bar.progress(1.0, text="Jakeet kerätty!")
-
+            p_bar.progress(1.0, text="Jakeiden keräys valmis!")
             st.session_state.osio_kohtaiset_jakeet = {
-                k: sorted(list(v), key=lambda j: luo_kanoninen_avain(j, book_name_to_id_map))
+                k: sorted(
+                    list(v),
+                    key=lambda j: luo_kanoninen_avain(j, book_name_to_id_map)
+                )
                 for k, v in osio_kohtaiset_jakeet.items()
             }
             st.session_state.step = "review_verses"
